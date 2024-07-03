@@ -1,53 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Javier Pacheco</title>
-    <link>https://jpachecoxyz.github.io/</link>
-    <description>Recent content on Javier Pacheco</description>
-    <generator>Hugo -- 0.128.0</generator>
-    <language>en</language>
-    <copyright>Javier Pacheco</copyright>
-    <lastBuildDate>Tue, 02 Jul 2024 02:57:50 -0500</lastBuildDate>
-    <atom:link href="https://jpachecoxyz.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <title>My New Hugo Site</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 03 Jul 2024 05:39:15 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Voidstrap a tui void linux installator</title>
+      <link>http://localhost:1313/posts/voidstrap-a-tui-void-linux-installator/</link>
+      <pubDate>Wed, 03 Jul 2024 05:39:15 -0500</pubDate>
+      <guid>http://localhost:1313/posts/voidstrap-a-tui-void-linux-installator/</guid>
+      <description>This is the first post of the 2024, this is a project that I am working on in the last year, is a minimialist voidlinux instalator it is based in some recomendations in a guides that some friends of my have but &amp;ldquo;semiautomated&amp;rdquo;.&#xA;VoidStrap installer. A basic minimalist installer of void-linux with some packages to get ready to enjoy this amazing GNU/Linux distribution.&#xA;Usage: Running install.sh Download the iso, and once in root inside the live, git clone this repo: (You need to update inside the iso and install git)</description>
+    </item>
     <item>
       <title>Toggle screencast record.</title>
-      <link>https://jpachecoxyz.github.io/posts/screncast/</link>
-      <pubDate>Tue, 02 Jul 2024 02:57:50 -0500</pubDate>
-      <guid>https://jpachecoxyz.github.io/posts/screncast/</guid>
-      <description>A shell script that records the screen on wayland.</description>
+      <link>http://localhost:1313/posts/screencast/</link>
+      <pubDate>Wed, 03 Jul 2024 05:37:59 -0500</pubDate>
+      <guid>http://localhost:1313/posts/screencast/</guid>
+      <description>Toggle record screen script. This script record the screen with the wf-recorder tool, it can be the hole screen or a specific area of it. The script is going to store the video in /tmp/screencast.mp4, this script only store one video, personally I think that have more than one record is a mess, more if you only wants to share a quick screencast to telegram, irc, cinny or even to share it through 0x0.</description>
     </item>
     <item>
       <title>About Me</title>
-      <link>https://jpachecoxyz.github.io/about/</link>
-      <pubDate>Tue, 02 Jul 2024 00:57:17 -0500</pubDate>
-      <guid>https://jpachecoxyz.github.io/about/</guid>
-      <description>Greetings! I&amp;rsquo;m Javier Pacheco, a dedicated Industrial Maintenance Engineer with a rich academic foundation from the prestigious UTM in H. Matamoros Tamaulipas,Mexico. Over the span of 12 fruitful years, I&amp;rsquo;ve been an integral part of the automotive industry, contributing my expertise in a multitude of critical domains.
-My journey began with a profound fascination for the intricate mechanisms that power manufacturing and industrial processes. At UTM, I honed my skills, diving deep into the realms of engineering, automation, and problem-solving.</description>
-    </item>
-    <item>
-      <title>Git y el manejo de configuración</title>
-      <link>https://jpachecoxyz.github.io/posts/my_nix_configuration/</link>
-      <pubDate>Tue, 02 Jul 2024 00:36:05 -0500</pubDate>
-      <guid>https://jpachecoxyz.github.io/posts/my_nix_configuration/</guid>
-      <description>Introducción. Esta es una explicación de como generar un repositorio con sistema de versiones (git), para almacenar y controlar la configuración de nuestro entorno en NixOS.
-Configuraciones iniciales. Comencemos con la preparación para poder empezar el repositorio de manera limpia y sin advertencias de ningún tipo.
-Configurando el entorno de git. Antes de empezar a generar el repositorio, debemos de declarar nuestro usuario y correo en git, para saber quien esta haciendo los cambios, puede sonar tonto, ya que estamos manejando nuestros propios dotfiles, pero para efectos de trabajo y colaboraciones, estas cosas son necesarias.</description>
-    </item>
-    <item>
-      <title>Pymetrics</title>
-      <link>https://jpachecoxyz.github.io/posts/pymetrics/</link>
-      <pubDate>Mon, 01 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://jpachecoxyz.github.io/posts/pymetrics/</guid>
-      <description>A pythin GUI app to mage a maintenance log</description>
-    </item>
-    <item>
-      <title>Voidstrap a tui void linux installator</title>
-      <link>https://jpachecoxyz.github.io/posts/voidstrap-a-tui-void-linux-installator/</link>
-      <pubDate>Mon, 01 Jan 2024 14:34:00 -0600</pubDate>
-      <guid>https://jpachecoxyz.github.io/posts/voidstrap-a-tui-void-linux-installator/</guid>
-      <description>This is the first post of the 2024, this is a project that I am working on in the last year, is a minimialist voidlinux instalator it is based in some recomendations in a guides that some friends of my have but &amp;ldquo;semiautomated&amp;rdquo;.
-VoidStrap installer. A basic minimalist installer of void-linux with some packages to get ready to enjoy this amazing GNU/Linux distribution.
-Usage: Running install.sh Download the iso, and once in root inside the live, git clone this repo: (You need to update inside the iso and install git)</description>
+      <link>http://localhost:1313/about/about/</link>
+      <pubDate>Wed, 03 Jul 2024 05:35:47 -0500</pubDate>
+      <guid>http://localhost:1313/about/about/</guid>
+      <description>Greetings! I&amp;rsquo;m Javier Pacheco, a dedicated Industrial Maintenance Engineer with a rich academic foundation from the prestigious UTM in H. Matamoros Tamaulipas,Mexico. Over the span of 12 fruitful years, I&amp;rsquo;ve been an integral part of the automotive industry, contributing my expertise in a multitude of critical domains.&#xA;My journey began with a profound fascination for the intricate mechanisms that power manufacturing and industrial processes. At UTM, I honed my skills, diving deep into the realms of engineering, automation, and problem-solving.</description>
     </item>
   </channel>
 </rss>

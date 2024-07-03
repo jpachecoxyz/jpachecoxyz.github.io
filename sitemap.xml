@@ -2,55 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://jpachecoxyz.github.io/categories/</loc>
-    <lastmod>2024-07-02T02:57:50-05:00</lastmod>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2024-07-03T05:34:28-05:00</lastmod>
   </url><url>
-    <loc>https://jpachecoxyz.github.io/categories/hyprland/</loc>
-    <lastmod>2024-07-02T02:57:50-05:00</lastmod>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2024-07-03T05:34:28-05:00</lastmod>
   </url><url>
-    <loc>https://jpachecoxyz.github.io/</loc>
-    <lastmod>2024-07-02T02:57:50-05:00</lastmod>
+    <loc>http://localhost:1313/series/</loc>
   </url><url>
-    <loc>https://jpachecoxyz.github.io/posts/</loc>
-    <lastmod>2024-07-02T02:57:50-05:00</lastmod>
-  </url><url>
-    <loc>https://jpachecoxyz.github.io/categories/script/</loc>
-    <lastmod>2024-07-02T02:57:50-05:00</lastmod>
-  </url><url>
-    <loc>https://jpachecoxyz.github.io/posts/screncast/</loc>
-    <lastmod>2024-07-02T02:57:50-05:00</lastmod>
-  </url><url>
-    <loc>https://jpachecoxyz.github.io/about/</loc>
-    <lastmod>2024-07-02T00:57:17-05:00</lastmod>
-  </url><url>
-    <loc>https://jpachecoxyz.github.io/categories/emacs/</loc>
-    <lastmod>2024-07-02T00:57:17-05:00</lastmod>
-  </url><url>
-    <loc>https://jpachecoxyz.github.io/categories/hugo/</loc>
-    <lastmod>2024-07-02T00:57:17-05:00</lastmod>
-  </url><url>
-    <loc>https://jpachecoxyz.github.io/posts/my_nix_configuration/</loc>
-    <lastmod>2024-07-02T00:36:05-05:00</lastmod>
-  </url><url>
-    <loc>https://jpachecoxyz.github.io/categories/nix/</loc>
-    <lastmod>2024-07-02T00:36:05-05:00</lastmod>
-  </url><url>
-    <loc>https://jpachecoxyz.github.io/categories/project/</loc>
-    <lastmod>2024-07-01T21:43:37-05:00</lastmod>
-  </url><url>
-    <loc>https://jpachecoxyz.github.io/posts/pymetrics/</loc>
-    <lastmod>2024-07-01T21:43:37-05:00</lastmod>
-  </url><url>
-    <loc>https://jpachecoxyz.github.io/categories/python/</loc>
-    <lastmod>2024-07-01T21:43:37-05:00</lastmod>
-  </url><url>
-    <loc>https://jpachecoxyz.github.io/posts/voidstrap-a-tui-void-linux-installator/</loc>
-    <lastmod>2024-07-01T09:29:06-05:00</lastmod>
-  </url><url>
-    <loc>https://jpachecoxyz.github.io/search/</loc>
-  </url><url>
-    <loc>https://jpachecoxyz.github.io/series/</loc>
-  </url><url>
-    <loc>https://jpachecoxyz.github.io/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
   </url>
 </urlset>
