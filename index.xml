@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Site</title>
+    <link>https://example.org/</link>
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 03 Jul 2024 05:39:15 -0500</lastBuildDate>
+    <atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Voidstrap a tui void linux installator</title>
+      <link>https://example.org/projects/voidstrap-a-tui-void-linux-installator/</link>
+      <pubDate>Wed, 03 Jul 2024 05:39:15 -0500</pubDate>
+      <guid>https://example.org/projects/voidstrap-a-tui-void-linux-installator/</guid>
+      <description>This is the first post of the 2024, this is a project that I am working on in the last year, is a minimialist voidlinux instalator it is based in some recomendations in a guides that some friends of my have but &amp;ldquo;semiautomated&amp;rdquo;.&#xA;VoidStrap installer. A basic minimalist installer of void-linux with some packages to get ready to enjoy this amazing GNU/Linux distribution.&#xA;Usage: Running install.sh Download the iso, and once in root inside the live, git clone this repo: (You need to update inside the iso and install git)</description>
+    </item>
+    <item>
+      <title>Toggle screencast record.</title>
+      <link>https://example.org/posts/screencast/</link>
+      <pubDate>Wed, 03 Jul 2024 05:37:59 -0500</pubDate>
+      <guid>https://example.org/posts/screencast/</guid>
+      <description>Toggle record screen script. This script record the screen with the wf-recorder tool, it can be the hole screen or a specific area of it. The script is going to store the video in /tmp/screencast.mp4, this script only store one video, personally I think that have more than one record is a mess, more if you only wants to share a quick screencast to telegram, irc, cinny or even to share it through 0x0.</description>
+    </item>
+    <item>
+      <title>About Me</title>
+      <link>https://example.org/about/about/</link>
+      <pubDate>Wed, 03 Jul 2024 05:35:47 -0500</pubDate>
+      <guid>https://example.org/about/about/</guid>
+      <description>Greetings! I&amp;rsquo;m Javier Pacheco, a dedicated Industrial Maintenance Engineer with a rich academic foundation from the prestigious UTM in H. Matamoros Tamaulipas,Mexico. Over the span of 12 fruitful years, I&amp;rsquo;ve been an integral part of the automotive industry, contributing my expertise in a multitude of critical domains.&#xA;My journey began with a profound fascination for the intricate mechanisms that power manufacturing and industrial processes. At UTM, I honed my skills, diving deep into the realms of engineering, automation, and problem-solving.</description>
+    </item>
+  </channel>
+</rss>
