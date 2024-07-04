@@ -47,41 +47,43 @@
 
 
   
+
+
+
+
+
   
-
-
-
-
+  
+  
 
 
 <!-- Open Graph image and Twitter Card metadata -->
 
-<title itemprop="name">Javier Pacheco</title>
-<meta property="og:title" content=Javier&#32;Pacheco />
-<meta name="twitter:title" content=Javier&#32;Pacheco />
-<meta itemprop="name" content=Javier&#32;Pacheco />
-<meta name="application-name" content=Javier&#32;Pacheco />
+<title itemprop="name">Javier Pacheco - Voidstrap a tui void linux installator</title>
+<meta property="og:title" content=Javier&#32;Pacheco&#32;-&#32;Voidstrap&#32;a&#32;tui&#32;void&#32;linux&#32;installator />
+<meta name="twitter:title" content=Javier&#32;Pacheco&#32;-&#32;Voidstrap&#32;a&#32;tui&#32;void&#32;linux&#32;installator />
+<meta itemprop="name" content=Javier&#32;Pacheco&#32;-&#32;Voidstrap&#32;a&#32;tui&#32;void&#32;linux&#32;installator />
+<meta name="application-name" content=Javier&#32;Pacheco&#32;-&#32;Voidstrap&#32;a&#32;tui&#32;void&#32;linux&#32;installator />
 <meta property="og:site_name" content="Javier Pacheco - Blog" />
 
 
-<meta name="description" content="Welcome to my blog." />
-<meta itemprop="description" content="Welcome to my blog." />
-<meta property="og:description" content="Welcome to my blog." />
-<meta name="twitter:description" content="Welcome to my blog." />
+<meta name="description" content="" />
+<meta itemprop="description" content="" />
+<meta property="og:description" content="" />
+<meta name="twitter:description" content="" />
 
 
-<base href="https://jpachecoxyz.github.io/" />
-<link rel="canonical" href="https://jpachecoxyz.github.io/" itemprop="url" />
-<meta name="url" content="https://jpachecoxyz.github.io/" />
-<meta name="twitter:url" content="https://jpachecoxyz.github.io/" />
-<meta property="og:url" content="https://jpachecoxyz.github.io/" />
+<base href="https://jpachecoxyz.github.io/projects/voidstrap-a-tui-void-linux-installator/" />
+<link rel="canonical" href="https://jpachecoxyz.github.io/projects/voidstrap-a-tui-void-linux-installator/" itemprop="url" />
+<meta name="url" content="https://jpachecoxyz.github.io/projects/voidstrap-a-tui-void-linux-installator/" />
+<meta name="twitter:url" content="https://jpachecoxyz.github.io/projects/voidstrap-a-tui-void-linux-installator/" />
+<meta property="og:url" content="https://jpachecoxyz.github.io/projects/voidstrap-a-tui-void-linux-installator/" />
 
 
 <meta property="og:updated_time" content="2024-07-03T05:39:15-05:00" />
 
 
 <link rel="sitemap" type="application/xml" title="Sitemap" href='https://jpachecoxyz.github.io/sitemap.xml' />
-<link href="https://jpachecoxyz.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Javier Pacheco - Blog" />
 
 <meta name="robots" content="index,follow" />
 <meta name="googlebot" content="index,follow" />
@@ -329,19 +331,16 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 </aside>
 
             <main class="content container">
-                <div class="posts">
-    
-    
-    <article class="post">
-        <div class="info">
+                <div class="post">
+  <div class="info">
   <h1 class="post-title">
-    <a href="https://jpachecoxyz.github.io/about/about/">About Me</a>
+    <a href="https://jpachecoxyz.github.io/projects/voidstrap-a-tui-void-linux-installator/">Voidstrap a tui void linux installator</a>
   </h1>
 
   <div class="headline">
     <div>
       
-      <time datetime=" 2024-07-03T05:35:47-0500" class="post-date">
+      <time datetime=" 2024-07-03T05:39:15-0500" class="post-date">
         July 3, 2024
       </time>
       
@@ -351,7 +350,7 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
           
         
 
-        <span>2 mins read</span>
+        <span>3 mins read</span>
       </span>
     </div>
 
@@ -364,22 +363,110 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
   
 </div>
 
-        
-        Greetings! I&rsquo;m Javier Pacheco, a dedicated Industrial Maintenance Engineer with a rich academic foundation from the prestigious UTM in H. Matamoros Tamaulipas,Mexico. Over the span of 12 fruitful years, I&rsquo;ve been an integral part of the automotive industry, contributing my expertise in a multitude of critical domains.
-My journey began with a profound fascination for the intricate mechanisms that power manufacturing and industrial processes. At UTM, I honed my skills, diving deep into the realms of engineering, automation, and problem-solving.
-        
-        <div class="read-more-link">
-            <a href="/about/about/">Read More…</a>
-        </div>
-        
-        
-    </article>
+  <p></p>
+<!-- raw HTML omitted -->
+<p>This is the first post of the 2024, this is a project that I am working on in the last
+year, is a minimialist voidlinux instalator it is based in some recomendations in
+a guides that some friends of my have but &ldquo;semiautomated&rdquo;.</p>
+<!-- raw HTML omitted -->
+<h2 id="voidstrap-installer-dot">VoidStrap installer.</h2>
+<p>A basic minimalist installer of <code>void-linux</code> with some packages to get ready to enjoy
+this amazing GNU/Linux distribution.</p>
+<h2 id="usage">Usage:</h2>
+<h3 id="running-install-dot-sh">Running install.sh</h3>
+<p>Download the iso, and once in root inside the live, git clone this repo:
+(You need to update inside the iso and install <code>git</code>)</p>
+<p>NOTE: there are 3 <code>branches:</code></p>
+<dl>
+<dt>main</dt>
+<dd>This will install <code>void-musl</code>.</dd>
+<dt>glibc</dt>
+<dd>This will install <code>void-glibc</code>.</dd>
+<dt>dual</dt>
+<dd>This will install <code>void-glibc</code> dual boot with <code>Windows</code>.
+<ul>
+<li><strong>This branch is tested only with <code>Windows</code>, I never try it with other distributions.</strong></li>
+<li>If you want musl you can change the link to the mirror in the <code>install.sh</code> script:</li>
+</ul>
+</dd>
+</dl>
+<!-- raw HTML omitted -->
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>- Change this in line 11:
+</span></span><span style="display:flex;"><span>export XBPS_ARCH=x86_64 &amp;&amp; xbps-install -Suy -R http://mirrors.servercentral.com/voidlinux/current -r /mnt \
+</span></span><span style="display:flex;"><span>- For this:
+</span></span><span style="display:flex;"><span>export XBPS_ARCH=x86_64-musl &amp;&amp; xbps-install -Suy -R http://mirrors.servercentral.com/voidlinux/current/musl -r /mnt \
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git clone https://git.disroot.org/jpacheco/voidstrap
+</span></span><span style="display:flex;"><span>cd voidstrap
+</span></span><span style="display:flex;"><span>sh install.sh
+</span></span></code></pre></div><p>Once there the script will open <code>cfdisk</code>, and you need to format the HDD in this
+specific format:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>- /dev/sdX1 -&gt; as the boot partition.
+</span></span><span style="display:flex;"><span>- /dev/sdY2 -&gt; as the swap partition.
+</span></span><span style="display:flex;"><span>- /dev/sdZ3 -&gt; as the root partition.
+</span></span></code></pre></div><p>NOTE: Replace X,Y &amp; Z for your partition name.
+I consider to have this structure of partition, but you can change it, but you must
+change the code in <code>postinstall.sh</code> when the scripts make the <code>fstab</code> archive.</p>
+<p><strong>Make sure you do a backup of your files before doing crazy things and trust anyone script</strong></p>
+<p>When the <code>install.sh</code> script finish, you need to run the postinstall script located in <code>/root folder:</code></p>
+<h3 id="running-postinstall-dot-sh">Running postinstall.sh</h3>
+<p>This script its going to create some configuration files, like: <code>fstab</code>, <code>rc.conf</code>,
+change the password of <code>root</code>, and add user(s).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>xchroot /mnt
+</span></span></code></pre></div><p>Then run the <code>chroot.sh</code> script.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sh /root/postinstall.sh
+</span></span></code></pre></div><p>When the <code>postinsall.sh</code> script finishes, you only need to reboot and enjoy your
+<strong>Void-Linux</strong> distribution.</p>
+<p>When it finish you need to run the <code>postinstall.sh</code> script, that is going to install
+the <strong>X server</strong> and some other &ldquo;necessary&rdquo; packages.</p>
+<h2 id="the-custom-dot-sh-script">The custom.sh script</h2>
+<p>This is going to install my personal dotfiles, and a specific packages that I use:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sh /root/custom.sh
+</span></span></code></pre></div><p>But you can specify your dotfiles repositories and others that you require whit some parameters:</p>
+<pre tabindex="0"><code class="language-nil" data-lang="nil">sh custom.sh -r https://codeberg.org/jpacheco/dotfiles # specify a repo url.
+sh custom.sh -p otherprogfile.csv # especify a custom package archive to install.
+sh custom.sh -b dev # especify the name of a custom branch in case of needed.
+</code></pre><h2 id="references">References:</h2>
+<ul>
+<li><a href="https://codeberg.org/jpacheco/voidstrap" target="_blank">Voidstrap.</a></li>
+<li><a href="https://docs.voidlinux.org/" target="_blank">Voidlinux Documentation.</a></li>
+<li><a href="https://git.disroot.org/tuxliban/tutoriales_void/src/branch/master/Gu%C3%ADas" target="_blank">Tuxliban guides.</a></li>
+</ul>
+
+  
+  <hr>
+<div class="footer">
+    
+	    
+	    
+    
 </div>
 
-
-
+  
+</div>
             </main>
             
+  
+    <div class="article-toc ">
+    <div class="toc-wrapper">
+      <h4 id="contents"></h4>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#voidstrap-installer-dot">VoidStrap installer.</a></li>
+    <li><a href="#usage">Usage:</a>
+      <ul>
+        <li><a href="#running-install-dot-sh">Running install.sh</a></li>
+        <li><a href="#running-postinstall-dot-sh">Running postinstall.sh</a></li>
+      </ul>
+    </li>
+    <li><a href="#the-custom-dot-sh-script">The custom.sh script</a></li>
+    <li><a href="#references">References:</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+  
+
         </div>
     </body>
 </html>
