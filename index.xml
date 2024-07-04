@@ -6,7 +6,7 @@
     <description>Recent content on Javier Pacheco - Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 03 Jul 2024 05:39:15 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jul 2024 16:16:49 -0500</lastBuildDate>
     <atom:link href="https://jpachecoxyz.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Voidstrap a tui void linux installator</title>
@@ -28,6 +28,13 @@
       <pubDate>Wed, 03 Jul 2024 05:35:47 -0500</pubDate>
       <guid>https://jpachecoxyz.github.io/about/about/</guid>
       <description>Greetings! I&amp;rsquo;m Javier Pacheco, a dedicated Industrial Maintenance Engineer with a rich academic foundation from the prestigious UTM in H. Matamoros Tamaulipas,Mexico. Over the span of 12 fruitful years, I&amp;rsquo;ve been an integral part of the automotive industry, contributing my expertise in a multitude of critical domains.&#xA;My journey began with a profound fascination for the intricate mechanisms that power manufacturing and industrial processes. At UTM, I honed my skills, diving deep into the realms of engineering, automation, and problem-solving.</description>
+    </item>
+    <item>
+      <title>Curso PLC basico</title>
+      <link>https://jpachecoxyz.github.io/projects/curso_plc/</link>
+      <pubDate>Sat, 01 Jul 2023 00:00:00 -0500</pubDate>
+      <guid>https://jpachecoxyz.github.io/projects/curso_plc/</guid>
+      <description>Module 1: Introducion to PLCs Que es un PLC. El Controlador Lógico Programable (o Programmable Logic Control) es un cerebro de control especializado en el manejo de entradas y salidas. Su programación es muy básica y se basa en diagramas de contactores de modo similar a los circuitos electromecánicos o bien, en el álgebra booleana.&#xA;Para que sirve? El PLC monitorea entradas, realiza acciones de acuerdo a su programa y controla las salidas para automatizar un proceso o máquina.</description>
     </item>
   </channel>
 </rss>
