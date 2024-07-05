@@ -2,23 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://jpachecoxyz.github.io/tags/emacs/</loc>
-    <lastmod>2024-07-05T18:06:28-05:00</lastmod>
-  </url><url>
-    <loc>https://jpachecoxyz.github.io/tags/hugo/</loc>
-    <lastmod>2024-07-05T18:06:28-05:00</lastmod>
-  </url><url>
     <loc>https://jpachecoxyz.github.io/</loc>
-    <lastmod>2024-07-05T18:06:28-05:00</lastmod>
-  </url><url>
-    <loc>https://jpachecoxyz.github.io/posts/</loc>
-    <lastmod>2024-07-05T18:06:28-05:00</lastmod>
-  </url><url>
-    <loc>https://jpachecoxyz.github.io/tags/</loc>
-    <lastmod>2024-07-05T18:06:28-05:00</lastmod>
-  </url><url>
-    <loc>https://jpachecoxyz.github.io/posts/your-blog-in-emacs/</loc>
-    <lastmod>2024-07-05T18:06:28-05:00</lastmod>
+    <lastmod>2024-07-05T18:51:21-05:00</lastmod>
   </url><url>
     <loc>https://jpachecoxyz.github.io/tags/job/</loc>
     <lastmod>2024-07-05T00:59:09-05:00</lastmod>
@@ -29,47 +14,56 @@
     <loc>https://jpachecoxyz.github.io/tags/personal/</loc>
     <lastmod>2024-07-05T00:59:09-05:00</lastmod>
   </url><url>
+    <loc>https://jpachecoxyz.github.io/posts/</loc>
+    <lastmod>2024-07-05T18:51:21-05:00</lastmod>
+  </url><url>
+    <loc>https://jpachecoxyz.github.io/tags/</loc>
+    <lastmod>2024-07-05T18:51:21-05:00</lastmod>
+  </url><url>
     <loc>https://jpachecoxyz.github.io/tags/installer/</loc>
-    <lastmod>2024-07-05T18:06:28-05:00</lastmod>
+    <lastmod>2024-07-05T18:51:21-05:00</lastmod>
   </url><url>
     <loc>https://jpachecoxyz.github.io/tags/linux/</loc>
-    <lastmod>2024-07-05T18:06:28-05:00</lastmod>
+    <lastmod>2024-07-05T18:51:21-05:00</lastmod>
   </url><url>
     <loc>https://jpachecoxyz.github.io/projects/</loc>
-    <lastmod>2024-07-05T18:06:28-05:00</lastmod>
+    <lastmod>2024-07-05T18:51:21-05:00</lastmod>
   </url><url>
     <loc>https://jpachecoxyz.github.io/tags/void/</loc>
-    <lastmod>2024-07-05T18:06:28-05:00</lastmod>
+    <lastmod>2024-07-05T18:51:21-05:00</lastmod>
   </url><url>
     <loc>https://jpachecoxyz.github.io/projects/voidstrap/</loc>
-    <lastmod>2024-07-05T18:06:28-05:00</lastmod>
+    <lastmod>2024-07-05T18:51:21-05:00</lastmod>
   </url><url>
     <loc>https://jpachecoxyz.github.io/tags/hyprland/</loc>
-    <lastmod>2024-07-05T18:06:28-05:00</lastmod>
+    <lastmod>2024-07-05T18:51:20-05:00</lastmod>
   </url><url>
     <loc>https://jpachecoxyz.github.io/posts/screen-record/</loc>
-    <lastmod>2024-07-05T18:06:28-05:00</lastmod>
+    <lastmod>2024-07-05T18:51:20-05:00</lastmod>
   </url><url>
     <loc>https://jpachecoxyz.github.io/tags/script/</loc>
-    <lastmod>2024-07-05T18:06:28-05:00</lastmod>
+    <lastmod>2024-07-05T18:51:20-05:00</lastmod>
   </url><url>
     <loc>https://jpachecoxyz.github.io/tags/shell/</loc>
-    <lastmod>2024-07-05T18:06:28-05:00</lastmod>
+    <lastmod>2024-07-05T18:51:20-05:00</lastmod>
   </url><url>
     <loc>https://jpachecoxyz.github.io/tags/wayland/</loc>
-    <lastmod>2024-07-05T18:06:28-05:00</lastmod>
+    <lastmod>2024-07-05T18:51:20-05:00</lastmod>
   </url><url>
     <loc>https://jpachecoxyz.github.io/posts/efetch/</loc>
-    <lastmod>2024-07-05T18:06:28-05:00</lastmod>
+    <lastmod>2024-07-05T18:51:21-05:00</lastmod>
+  </url><url>
+    <loc>https://jpachecoxyz.github.io/tags/emacs/</loc>
+    <lastmod>2024-07-05T18:51:21-05:00</lastmod>
   </url><url>
     <loc>https://jpachecoxyz.github.io/tags/fetch/</loc>
-    <lastmod>2024-07-05T18:06:28-05:00</lastmod>
+    <lastmod>2024-07-05T18:51:21-05:00</lastmod>
   </url><url>
     <loc>https://jpachecoxyz.github.io/about/</loc>
-    <lastmod>2024-07-05T18:06:28-05:00</lastmod>
+    <lastmod>2024-07-05T18:51:20-05:00</lastmod>
   </url><url>
     <loc>https://jpachecoxyz.github.io/about/about/</loc>
-    <lastmod>2024-07-05T18:06:28-05:00</lastmod>
+    <lastmod>2024-07-05T18:51:20-05:00</lastmod>
   </url><url>
     <loc>https://jpachecoxyz.github.io/series/</loc>
   </url>
