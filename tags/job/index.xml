@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Job on Javier Pacheco - Blog</title>
+    <link>http://localhost:1313/tags/job/</link>
+    <description>Recent content in Job on Javier Pacheco - Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 05 Jul 2024 00:59:09 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/job/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Role in my Job</title>
+      <link>http://localhost:1313/posts/my-job/</link>
+      <pubDate>Thu, 04 Jul 2024 23:08:00 -0500</pubDate>
+      <guid>http://localhost:1313/posts/my-job/</guid>
+      <description>Nullam eu ante vel est convallis dignissim. Fusce suscipit, wisi nec facilisis facilisis, est dui fermentum leo, quis tempor ligula erat quis odio. Nunc porta vulputate tellus. Nunc rutrum turpis sed pede. Sed bibendum. Aliquam posuere. Nunc aliquet, augue nec adipiscing interdum, lacus tellus malesuada massa, quis varius mi purus non odio. Pellentesque condimentum, magna ut suscipit hendrerit, ipsum augue ornare nulla, non luctus diam neque sit amet urna. Curabitur vulputate vestibulum lorem.</description>
+    </item>
+  </channel>
+</rss>
