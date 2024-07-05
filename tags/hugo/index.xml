@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo on Javier Pacheco - Blog</title>
-    <link>http://localhost:1313/tags/hugo/</link>
+    <link>https://jpachecoxyz.github.io/tags/hugo/</link>
     <description>Recent content in Hugo on Javier Pacheco - Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 04 Jul 2024 20:18:22 -0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 Jul 2024 18:06:28 -0500</lastBuildDate>
+    <atom:link href="https://jpachecoxyz.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Section 2</title>
-      <link>http://localhost:1313/projects/post2/</link>
-      <pubDate>Thu, 04 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/post2/</guid>
-      <description>Content for post 2&amp;hellip;</description>
+      <title>Your blog in emacs.</title>
+      <link>https://jpachecoxyz.github.io/posts/your-blog-in-emacs/</link>
+      <pubDate>Fri, 05 Jul 2024 18:06:00 -0500</pubDate>
+      <guid>https://jpachecoxyz.github.io/posts/your-blog-in-emacs/</guid>
+      <description>What do you need?. In order to start developing your blog site within emacs you need to require ox-hugo, an emacs package for export your org files to a marckdown files. I&amp;rsquo;m not going to write about how to install ox-hugo because I asuming that you already knows how to install emacs packages.&#xA;Of course we are going to use hugo, so we also need it installed, so this is what we need:</description>
     </item>
   </channel>
 </rss>
