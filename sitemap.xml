@@ -2,97 +2,71 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/fixed/about/</loc>
-  </url><url>
-    <loc>http://localhost:1313/fixed/altab/</loc>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2024-07-05T18:51:21-05:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/job/</loc>
+    <loc>https://jpachecoxyz.github.io/tags/job/</loc>
     <lastmod>2024-07-05T00:59:09-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/my-job/</loc>
+    <loc>https://jpachecoxyz.github.io/</loc>
+    <lastmod>2024-07-05T18:51:21-05:00</lastmod>
+  </url><url>
+    <loc>https://jpachecoxyz.github.io/posts/my-job/</loc>
     <lastmod>2024-07-05T00:59:09-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/personal/</loc>
+    <loc>https://jpachecoxyz.github.io/tags/personal/</loc>
     <lastmod>2024-07-05T00:59:09-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://jpachecoxyz.github.io/posts/</loc>
     <lastmod>2024-07-05T18:51:21-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://jpachecoxyz.github.io/tags/</loc>
     <lastmod>2024-07-05T18:51:21-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/installer/</loc>
+    <loc>https://jpachecoxyz.github.io/tags/installer/</loc>
     <lastmod>2024-07-05T18:51:21-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/linux/</loc>
+    <loc>https://jpachecoxyz.github.io/tags/linux/</loc>
     <lastmod>2024-07-05T18:51:21-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/projects/</loc>
+    <loc>https://jpachecoxyz.github.io/projects/</loc>
     <lastmod>2024-07-05T18:51:21-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/void/</loc>
+    <loc>https://jpachecoxyz.github.io/tags/void/</loc>
     <lastmod>2024-07-05T18:51:21-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/projects/voidstrap/</loc>
+    <loc>https://jpachecoxyz.github.io/projects/voidstrap/</loc>
     <lastmod>2024-07-05T18:51:21-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/hyprland/</loc>
+    <loc>https://jpachecoxyz.github.io/tags/hyprland/</loc>
     <lastmod>2024-07-05T18:51:20-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/screen-record/</loc>
+    <loc>https://jpachecoxyz.github.io/posts/screen-record/</loc>
     <lastmod>2024-07-05T18:51:20-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/script/</loc>
+    <loc>https://jpachecoxyz.github.io/tags/script/</loc>
     <lastmod>2024-07-05T18:51:20-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/shell/</loc>
+    <loc>https://jpachecoxyz.github.io/tags/shell/</loc>
     <lastmod>2024-07-05T18:51:20-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/wayland/</loc>
+    <loc>https://jpachecoxyz.github.io/tags/wayland/</loc>
     <lastmod>2024-07-05T18:51:20-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/efetch/</loc>
+    <loc>https://jpachecoxyz.github.io/posts/efetch/</loc>
     <lastmod>2024-07-05T18:51:21-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/emacs/</loc>
+    <loc>https://jpachecoxyz.github.io/tags/emacs/</loc>
     <lastmod>2024-07-05T18:51:21-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/fetch/</loc>
+    <loc>https://jpachecoxyz.github.io/tags/fetch/</loc>
     <lastmod>2024-07-05T18:51:21-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://jpachecoxyz.github.io/about/about/</loc>
     <lastmod>2024-07-05T18:51:20-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/about/</loc>
+    <loc>https://jpachecoxyz.github.io/about/</loc>
     <lastmod>2024-07-05T18:51:20-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2018-07-13T04:32:38+00:00</lastmod>
+    <loc>https://jpachecoxyz.github.io/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/micro/example-micropub-post/</loc>
-    <lastmod>2018-07-13T04:32:38+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/micro/</loc>
-    <lastmod>2018-07-13T04:32:38+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/micro/</loc>
-    <lastmod>2018-07-13T04:32:38+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/2014-01-02-introducing-lanyon/</loc>
-    <lastmod>2014-01-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/</loc>
-    <lastmod>2014-01-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/2014-01-01-example-content/</loc>
-    <lastmod>2014-01-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/2013-12-31-whats-jekyll/</loc>
-    <lastmod>2013-12-31T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/fixed/</loc>
+    <loc>https://jpachecoxyz.github.io/series/</loc>
   </url>
 </urlset>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Emacs on Javier Pacheco - Blog</title>
+    <title>Emacs on jpacheco.xyz</title>
     <link>https://jpachecoxyz.github.io/tags/emacs/</link>
-    <description>Recent content in Emacs on Javier Pacheco - Blog</description>
+    <description>Recent content in Emacs on jpacheco.xyz</description>
     <generator>Hugo</generator>
-    <language>en-us</language>
+    <language>en</language>
     <lastBuildDate>Fri, 05 Jul 2024 18:51:21 -0500</lastBuildDate>
     <atom:link href="https://jpachecoxyz.github.io/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
     <item>
