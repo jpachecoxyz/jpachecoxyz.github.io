@@ -1,7 +1,11 @@
 h1, h2, h3, h4, h5, h6 {
   font-size: 1rem;
   font-weight: 600;
-  font-family: "JetBrains Mono"
+  font-family: "Iosevka Nerd Font Mono";
+}
+
+li {
+  font-family: "Iosevka Nerd Font Mono";
 }
 
 .sidebar-about h1 {
