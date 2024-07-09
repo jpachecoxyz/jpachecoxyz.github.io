@@ -3,12 +3,12 @@ document.querySelectorAll('pre > code').forEach((codeblock) => {
 
     const copybutton = document.createElement('button');
     copybutton.classList.add('copy-code');
-    copybutton.innerHTML = 'copy';
+    copybutton.innerHTML = '<i class="fa fa-clipboard"></i>';
 
     function copyingDone() {
-        copybutton.innerHTML = 'copied!';
+        copybutton.innerHTML = '<i class="fa fa-check"></i>';
         setTimeout(() => {
-            copybutton.innerHTML = 'copy';
+            copybutton.innerHTML = '<i class="fa fa-clipboard"></i>';
         }, 2000);
     }
 
