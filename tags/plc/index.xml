@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Plc on jpacheco.xyz</title>
+    <link>https://jpachecoxyz.github.io/tags/plc/</link>
+    <description>Recent content in Plc on jpacheco.xyz</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 09 Jul 2024 03:10:09 -0500</lastBuildDate>
+    <atom:link href="https://jpachecoxyz.github.io/tags/plc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Curso PLC</title>
+      <link>https://jpachecoxyz.github.io/projects/curso-plc/</link>
+      <pubDate>Tue, 09 Jul 2024 03:10:00 -0500</pubDate>
+      <guid>https://jpachecoxyz.github.io/projects/curso-plc/</guid>
+      <description>Module 1: Introducion to PLCs Que es un PLC. El Controlador Lógico Programable (o Programmable Logic Control) es un cerebro de control especializado en el manejo de entradas y salidas. Su programación es muy básica y se basa en diagramas de contactores de modo similar a los circuitos electromecánicos o bien, en el álgebra booleana.&#xA;Para que sirve? El PLC monitorea entradas, realiza acciones de acuerdo a su programa y controla las salidas para automatizar un proceso o máquina.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,53 +1,45 @@
-(function() {
-    'use strict';
-  
-    if(!document.queryCommandSupported('copy')) {
-        return;
+document.querySelectorAll('pre > code').forEach((codeblock) => {
+    const container = codeblock.parentNode.parentNode;
+
+    const copybutton = document.createElement('button');
+    copybutton.classList.add('copy-code');
+    copybutton.innerHTML = 'copy';
+
+    function copyingDone() {
+        copybutton.innerHTML = 'copied!';
+        setTimeout(() => {
+            copybutton.innerHTML = 'copy';
+        }, 2000);
     }
-  
-    function flashCopyMessage(el, msg) {
-        if (msg === 'Copied!') {
-            el.innerHTML = '<i class="fa fa-check"></i>'; // Checkmark icon
-        } else {
-            el.innerHTML = '<i class="fa fa-clipboard"></i>'; // Clipboard icon
+
+    copybutton.addEventListener('click', (cb) => {
+        if ('clipboard' in navigator) {
+            navigator.clipboard.writeText(codeblock.textContent);
+            copyingDone();
+            return;
         }
-        setTimeout(function() {
-            el.innerHTML = '<i class="fa fa-clipboard"></i>'; // Revert back to clipboard icon
-        }, 1000);
-    }
-  
-    function selectText(node) {
-        var selection = window.getSelection();
-        var range = document.createRange();
-        range.selectNodeContents(node);
+
+        const range = document.createRange();
+        range.selectNodeContents(codeblock);
+        const selection = window.getSelection();
         selection.removeAllRanges();
         selection.addRange(range);
-        return selection;
+        try {
+            document.execCommand('copy');
+            copyingDone();
+        } catch (e) { };
+        selection.removeRange(range);
+    });
+
+    if (container.classList.contains("highlight")) {
+        container.appendChild(copybutton);
+    } else if (container.parentNode.firstChild == container) {
+        
+    } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+        
+        codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+    } else {
+        
+        codeblock.parentNode.appendChild(copybutton);
     }
-  
-    function addCopyButton(containerEl) {
-        var copyBtn = document.createElement("button");
-        copyBtn.className = "highlight-copy-btn";
-        copyBtn.innerHTML = '<i class="fa fa-clipboard"></i>'; // Clipboard icon
-  
-        var codeEl = containerEl.firstElementChild;
-        copyBtn.addEventListener('click', function() {
-            try {
-                var selection = selectText(codeEl);
-                document.execCommand('copy');
-                selection.removeAllRanges();
-  
-                flashCopyMessage(copyBtn, 'Copied!');
-            } catch(e) {
-                console && console.log(e);
-                flashCopyMessage(copyBtn, 'Failed :\'(');
-            }
-        });
-  
-        containerEl.appendChild(copyBtn);
-    }
-  
-    // Add copy button to code blocks
-    var highlightBlocks = document.getElementsByClassName('highlight');
-    Array.prototype.forEach.call(highlightBlocks, addCopyButton);
-})();
+});;
