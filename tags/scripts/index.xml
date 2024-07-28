@@ -6,14 +6,14 @@
     <description>Recent content in Scripts on jpacheco.xyz</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 28 Jul 2024 15:36:22 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 28 Jul 2024 15:38:48 -0500</lastBuildDate>
     <atom:link href="https://jpachecoxyz.github.io/tags/scripts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Shell-utils</title>
       <link>https://jpachecoxyz.github.io/projects/shell-utils/</link>
       <pubDate>Thu, 04 Jul 2024 00:00:00 +0000</pubDate>
       <guid>https://jpachecoxyz.github.io/projects/shell-utils/</guid>
-      <description>Overview Welcome to the Shell Utilities repository! This project provides a collection of shell scripts tailored for different window managers and environments, including i3, Hyprland, and Sway, on X11 and Wayland.&#xA;Repository Structure The repository is organized into directories based on the environment and window manager:&#xA;. ├── wayland │ ├── hyprland │ └── sway └── x11 └── i3 wayland/hyprland Scripts for Hyprland on Wayland. wayland/sway Scripts for Sway on Wayland.</description>
+      <description>Overview Welcome to the Shell Utilities repository This project provides a collection of shell scripts tailored for different window managers and environments, including i3, Hyprland, and Sway, on X11 and Wayland.&#xA;Repository Structure The repository is organized into directories based on the environment and window manager:&#xA;. ├── wayland │ ├── hyprland │ └── sway └── x11 └── i3 wayland/hyprland Scripts for Hyprland on Wayland. wayland/sway Scripts for Sway on Wayland.</description>
     </item>
   </channel>
 </rss>
