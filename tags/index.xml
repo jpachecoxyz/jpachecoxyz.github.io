@@ -6,7 +6,7 @@
     <description>Recent content in Tags on jpacheco.xyz</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 10 Jul 2024 05:36:12 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 28 Jul 2024 14:42:07 -0500</lastBuildDate>
     <atom:link href="https://jpachecoxyz.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Index</title>
@@ -30,6 +30,20 @@
       <description></description>
     </item>
     <item>
+      <title>Scripts</title>
+      <link>https://jpachecoxyz.github.io/tags/scripts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jpachecoxyz.github.io/tags/scripts/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Shell</title>
+      <link>https://jpachecoxyz.github.io/tags/shell/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jpachecoxyz.github.io/tags/shell/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Void</title>
       <link>https://jpachecoxyz.github.io/tags/void/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -48,13 +62,6 @@
       <link>https://jpachecoxyz.github.io/tags/script/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://jpachecoxyz.github.io/tags/script/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Shell</title>
-      <link>https://jpachecoxyz.github.io/tags/shell/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jpachecoxyz.github.io/tags/shell/</guid>
       <description></description>
     </item>
     <item>
