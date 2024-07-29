@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta property="og:image" content="/images/jp.jpg" />
+<meta property="og:image:secure_url" content="/images/jp.jpg" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="400" />
+<meta property="og:image:height" content="300" />
+<meta property="og:image:alt" content="jpacheco.xyz - Blog" />
+
+    <head><title>Share Screen in Hyprland. &ndash; jpacheco.xyz</title>
+<meta name="description" content="Welcome to my blog.">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8"/>
+<meta name="robots" content="noindex" /> 
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css" integrity="sha512-IW0nhlW5MgNydsXJO40En2EoCkTTjZhI3yuODrZIc8cQ4h1XcF53PsqDHa09NqnkXuIe0Oiyyj171BqZFwISBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<link rel="stylesheet" href="https://jpachecoxyz.github.io/css/palettes/zenburn.css">
+<link rel="stylesheet" href="https://jpachecoxyz.github.io/css/risotto.css">
+<link rel="stylesheet" href="https://jpachecoxyz.github.io/css/custom.css">
+
+
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono" rel="stylesheet">
+<link href="https://iosevka-webfonts.github.io/iosevka/iosevka.css" rel="stylesheet" />
+<link href='https://fonts.googleapis.com/css?family=IBM Plex Mono' rel='stylesheet'>
+<link href="https://github.com/mshaugh/nerdfont-webfonts/blob/master/build/iosevka-nerd-font-mono.css" rel="stylesheet">
+
+
+<link rel="icon" href="https://jpachecoxyz.github.io/favicon.ico">
+
+
+
+
+
+
+
+
+
+
+</head>
+
+    <body>
+
+        <div class="page">
+
+            <header class="page__header"><nav class="page__nav main-nav">
+    <ul>
+      <li class="nomarker"><h1 class="page__logo"><a href="https://jpachecoxyz.github.io/" class="page__logo-inner">jpacheco.xyz</a></h1></li>
+    
+    
+    <li class="main-nav__item"><a class="nav-main-item" href="https://jpachecoxyz.github.io/about/" title="">About</a></li>
+    
+    <li class="main-nav__item"><a class="nav-main-item active" href="https://jpachecoxyz.github.io/posts/" title="Posts">Posts</a></li>
+    
+    <li class="main-nav__item"><a class="nav-main-item" href="https://jpachecoxyz.github.io/projects/" title="Projects">Projects</a></li>
+    
+    </ul>
+</nav>
+
+</header>
+
+            <section class="page__body">
+    <header class="content__header">
+        <h1>Share Screen in Hyprland.</h1>
+    </header>
+    <div class="content__body">
+        <h2 id="the-issue">The issue:</h2>
+<p>We have a telegram group, in where we share emacs things and some other related to programming and linux in the most part of the time. So one day one of the members says that we can share screens and have a kind of podcast and talk about our environment configurations (sway/hyprland), so I was very curious about it so he invite me to another telegram group, this telegram group is for his YouTube channel, for test my hyprland configuration because he told me that he has troubles in his hyprland configuration using manjaro.</p>
+<p>Now that I face the error, I realize that in my <code>home-manager</code> compilation I had this error since I was using this tool in <code>nixOS</code>, but because I never use it, I never let it importance, so now I realize that this thing need to be solved because I going to use it in the future.</p>
+<p>So I installed <code>telegram-dektop</code>, and try to share my configuration and guess what; yes I was unable to share my screen. It failed and pop ups some errors.</p>
+<style>.org-center { margin-left: auto; margin-right: auto; text-align: center; }</style>
+<div class="org-center">
+<figure><img src="/images/content/screen-issue.png"
+    alt="Figure 1: Here is a picture showing no screen-sharing."><figcaption>
+      <p><span class="figure-number">Figure 1: </span>Here is a picture showing no screen-sharing.</p>
+    </figcaption>
+</figure>
+
+</div>
+<h2 id="things-that-i-try-before-to-solve-the-problem-dot">Things that I try before to solve the problem.</h2>
+<p>My main distribution at the time (2024-07-28) is <code>nixOS</code>, so I think that this could be a missing declaration in some programs, like <code>xdg-dektop-portal-hyprland</code>, because of that I was researching issues in <code>nixOS</code> &amp; <code>hyprland</code>, but nothing solve the problem.</p>
+<style>.org-center { margin-left: auto; margin-right: auto; text-align: center; }</style>
+<div class="org-center">
+<figure><img src="/images/content/screen-issue-2.png"
+    alt="Figure 2: After trying things, the result was the same."><figcaption>
+      <p><span class="figure-number">Figure 2: </span>After trying things, the result was the same.</p>
+    </figcaption>
+</figure>
+
+</div>
+<p>So nothing that I found fix the problem, most of the issues in github was too old, or nothing to do with <code>nixOS</code>, so the last thing that I could do was compile <code>xdg-desktop-portal-hyprland</code> by source, but in <code>nixOS</code> I would install some compilers and other things that I not currently use, but it was the last option.</p>
+<h2 id="solving-the-problem-dot">Solving the problem.</h2>
+<p>So once in my job, with the mind more clean, I go to the hyprland <a href="https://wiki.hyprland.org/Useful-Utilities/xdg-desktop-portal-hyprland/">wiki</a>, and at the bottom there were some tips to debugging if some errors appears.</p>
+<p>So I add this in my <code>Hyprland</code> configuration file:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cfg" data-lang="cfg"><span style="display:flex;"><span><span style="color:#a6e22e">exec-once</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">dbus-update-activation-environment --systemd --all</span>
+</span></span></code></pre></div><style>.org-center { margin-left: auto; margin-right: auto; text-align: center; }</style>
+<div class="org-center">
+<figure><img src="/images/content/screen-conf.png"
+    alt="Figure 3: After trying things, the result was the same."><figcaption>
+      <p><span class="figure-number">Figure 3: </span>After trying things, the result was the same.</p>
+    </figcaption>
+</figure>
+
+</div>
+<p>That&rsquo;s it, that little command above solve my 1 day pain trying to share my screen. So I hope this little post be helpful for you if you encounter the same issue as me.</p>
+<style>.org-center { margin-left: auto; margin-right: auto; text-align: center; }</style>
+<div class="org-center">
+<figure><img src="/images/content/screen-solve.png"
+    alt="Figure 4: After trying things, the result was the same."><figcaption>
+      <p><span class="figure-number">Figure 4: </span>After trying things, the result was the same.</p>
+    </figcaption>
+</figure>
+
+</div>
+<p>Thanks for read me.</p>
+
+    </div>
+    <footer class="content__footer"></footer>
+
+            </section>
+
+            <section class="page__aside">
+                <div class="aside__about">
+<div class="aside__about">
+    
+    
+<h1 class="about__title">Javier Pacheco</h1>
+<p class="about__description">Welcome to my blog.</p>
+</div>
+
+
+<ul class="aside__social-links">
+    
+    <li>
+        <a href="https://github.com/jpachecoxyz" rel="me" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>&nbsp;
+    </li>
+    
+    <li>
+        <a href="https://youtube.com/@jp-codepath" rel="me" aria-label="Youtube" title="Youtube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>&nbsp;
+    </li>
+    
+    <li>
+        <a href="https://linkedin.com/in/jpachecom4" rel="me" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>&nbsp;
+    </li>
+    
+    <li>
+        <a href="mailto:javier@jpacheco.xyz" rel="me" aria-label="Email" title="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>&nbsp;
+    </li>
+    
+</ul>
+</div>
+                <hr>
+                <div class="aside__content">
+    <p>How to share screen in hyprland in apps like: telegram-desktop.</p>
+    
+        <p>
+            By [Javier Pacheco], 
+            2024-07-29
+        </p>
+    
+
+    
+	    <hr>
+	    On this page:
+	    <nav id="TableOfContents">
+  <ol>
+    <li><a href="#the-issue">The issue:</a></li>
+    <li><a href="#things-that-i-try-before-to-solve-the-problem-dot">Things that I try before to solve the problem.</a></li>
+    <li><a href="#solving-the-problem-dot">Solving the problem.</a></li>
+  </ol>
+</nav>
+    
+
+                </div>
+            </section>
+
+            <footer class="page__footer">
+
+<p class="advertisement"># :(){ :|:& };: </p>
+
+
+
+
+
+<script src="/js/copy-code.js"></script>
+
+</footer>
+
+        </div>
+    </body>
+
+</html>
