@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>About on jpacheco.xyz</title>
+    <link>https://jpachecoxyz.github.io/tags/about/</link>
+    <description>Recent content in About on jpacheco.xyz</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 29 Jul 2024 20:47:10 -0500</lastBuildDate>
+    <atom:link href="https://jpachecoxyz.github.io/tags/about/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About me.</title>
+      <link>https://jpachecoxyz.github.io/about/about/</link>
+      <pubDate>Fri, 05 Jan 2024 18:00:00 -0600</pubDate>
+      <guid>https://jpachecoxyz.github.io/about/about/</guid>
+      <description>Greetings! I&amp;rsquo;m Javier Pacheco, a dedicated Industrial Maintenance Engineer with a rich academic foundation from the prestigious UTM in H. Matamoros Tamaulipas,Mexico. Over the span of 12 fruitful years, I&amp;rsquo;ve been an integral part of the automotive industry, contributing my expertise in a multitude of critical domains.&#xA;My journey began with a profound fascination for the intricate mechanisms that power manufacturing and industrial processes. At UTM, I honed my skills, diving deep into the realms of engineering, automation, and problem-solving.</description>
+    </item>
+  </channel>
+</rss>
