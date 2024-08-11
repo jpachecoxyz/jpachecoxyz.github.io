@@ -6,12 +6,12 @@
     <description>Recent content in Wayland on jpacheco.xyz</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 30 Jul 2024 14:09:21 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 11 Aug 2024 03:02:05 -0500</lastBuildDate>
     <atom:link href="https://jpachecoxyz.github.io/tags/wayland/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Share Screen in Hyprland.</title>
       <link>https://jpachecoxyz.github.io/posts/share-screen-hyprland/</link>
-      <pubDate>Mon, 29 Jul 2024 12:34:00 -0500</pubDate>
+      <pubDate>Sun, 11 Aug 2024 02:52:00 -0500</pubDate>
       <guid>https://jpachecoxyz.github.io/posts/share-screen-hyprland/</guid>
       <description>The issue: We have a telegram group, in where we share emacs things and some other related to programming and linux in the most part of the time. So one day one of the members says that we can share screens and have a kind of podcast and talk about our environment configurations (sway/hyprland), so I was very curious about it so he invite me to another telegram group, this telegram group is for his YouTube channel, for test my hyprland configuration because he told me that he has troubles in his hyprland configuration using manjaro.</description>
     </item>

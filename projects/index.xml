@@ -6,8 +6,15 @@
     <description>Recent content in Projects on jpacheco.xyz</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 30 Jul 2024 14:09:21 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 11 Aug 2024 03:02:05 -0500</lastBuildDate>
     <atom:link href="https://jpachecoxyz.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pymetrics</title>
+      <link>https://jpachecoxyz.github.io/projects/pymetrics/</link>
+      <pubDate>Sun, 11 Aug 2024 03:00:00 -0500</pubDate>
+      <guid>https://jpachecoxyz.github.io/projects/pymetrics/</guid>
+      <description>Overview Managing and monitoring the performance of industrial machines is critical to ensuring minimal downtime and maximizing productivity. The need for an effective system to store and analyze maintenance data became apparent when the maintenance manager contacted me with a specific problem. They struggled to create KPI graphs because they lacked a proper system to store all the necessary data. To address this challenge, I developed a maintenance log app that efficiently tracks and records machine failures, repair time, shutdown time, and the technicians involved in the repairs.</description>
+    </item>
     <item>
       <title>Shell-utils</title>
       <link>https://jpachecoxyz.github.io/projects/shell-utils/</link>

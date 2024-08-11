@@ -1,16 +1,4 @@
-h1 {
-  font-size: 1.20rem;
-  font-weight: 800;
-  font-family: "Iosevka Nerd Font Mono";
-}
-
-h2 {
-  font-size: 1.10rem;
-  font-weight: 700;
-  font-family: "Iosevka Nerd Font Mono";
-}
-
-h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
   font-size: 1rem;
   font-weight: 600;
   font-family: "Iosevka Nerd Font Mono";
