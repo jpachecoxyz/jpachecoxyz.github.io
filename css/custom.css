@@ -1,20 +1,11 @@
-@font-face {
-    font-family: 'Iosevka Nerd Font';
-    src: url('../fonts/IosevkaNerdFontMono-Regular.woff2') format('woff2'),
-         url('../fonts/IosevkaNerdFontMono-Regular.woff') format('woff'),
-         url('../fonts/IosevkaNerdFontMono-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 h1, h2, h3, h4, h5, h6 {
-  font-size: 1rem;
-  font-weight: 600;
-  font-family: "Iosevka Nerd Font Mono";
+	font-size: 1rem;
+	font-weight: 600;
+	font-family: "Iosevka Web";
 }
 
 li {
-	font-family: "Iosevka Nerd Font Mono";
+	font-family: "Iosevka Web";
 }
 
 .sidebar-about h1 {
