@@ -1,466 +1,162 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto">
+<html lang="en">
+<meta property="og:image" content="/images/jp.jpg" />
+<meta property="og:image:secure_url" content="/images/jp.jpg" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="400" />
+<meta property="og:image:height" content="300" />
+<meta property="og:image:alt" content="jpacheco.xyz - Blog" />
 
-<head><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>Share Screen in Hyprland. | jpacheco.xyz</title>
-<meta name="keywords" content="hyprland, linux, wayland">
-<meta name="description" content="How to share screen in hyprland in apps like: telegram-desktop.">
-<meta name="author" content="Javier Pacheco">
-<link rel="canonical" href="https://jpacheco.xyz/posts/share-screen-hyprland/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.min.cd0c10bc3cbe679e2e41b40a4edfe5a6f5e2a27e696a2b7f0aa7e1b9874ad556.css" integrity="sha256-zQwQvDy&#43;Z54uQbQKTt/lpvXion5pait/CqfhuYdK1VY=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://jpacheco.xyz/favicon.ico">
-<link rel="apple-touch-icon" href="https://jpacheco.xyz/apple-touch-icon.png">
-<link rel="alternate" hreflang="en" href="https://jpacheco.xyz/posts/share-screen-hyprland/">
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Share Screen in Hyprland. | jpacheco.xyz" />
-<meta name="twitter:description" content="How to share screen in hyprland in apps like: telegram-desktop." />
-<meta property="og:title" content="Share Screen in Hyprland. | jpacheco.xyz" />
-<meta property="og:description" content="How to share screen in hyprland in apps like: telegram-desktop." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://jpacheco.xyz/posts/share-screen-hyprland/" />
-    <meta property="og:image" content="https://jpacheco.xyz/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"/>
-<meta property="article:section" content="posts" />
-  <meta property="article:published_time" content="2024-08-11T02:52:00-05:00" />
-  <meta property="article:modified_time" content="2024-08-11T03:19:56-05:00" /><meta property="og:site_name" content="jpachecoxyz" />
+    <head><title>Share Screen in Hyprland. &ndash; jpacheco.xyz</title>
+<meta name="description" content="Welcome to my blog.">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8"/>
+<meta name="robots" content="noindex" /> 
 
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://jpacheco.xyz/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Share Screen in Hyprland.",
-      "item": "https://jpacheco.xyz/posts/share-screen-hyprland/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Share Screen in Hyprland. | jpacheco.xyz",
-  "name": "Share Screen in Hyprland.",
-  "description": "How to share screen in hyprland in apps like: telegram-desktop.",
-  "keywords": [
-    "hyprland", "linux", "wayland"
-  ],
-  "wordCount" : "372",
-  "inLanguage": "en",
-  "datePublished": "2024-08-11T02:52:00-05:00",
-  "dateModified": "2024-08-11T03:19:56-05:00",
-  "author":[{
-    "@type": "Person",
-    "name": "Javier Pacheco"
-  }],
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://jpacheco.xyz/posts/share-screen-hyprland/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "jpacheco.xyz",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://jpacheco.xyz/favicon.ico"
-    }
-  }
-}
-</script>
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    </style>
-</noscript>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css" integrity="sha512-IW0nhlW5MgNydsXJO40En2EoCkTTjZhI3yuODrZIc8cQ4h1XcF53PsqDHa09NqnkXuIe0Oiyyj171BqZFwISBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<link rel="stylesheet" href="https://jpachecoxyz.github.io/css/palettes/zenburn.css">
+<link rel="stylesheet" href="https://jpachecoxyz.github.io/css/risotto.css">
+<link rel="stylesheet" href="https://jpachecoxyz.github.io/css/custom.css">
+
+
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono" rel="stylesheet">
+<link href="https://iosevka-webfonts.github.io/iosevka/iosevka.css" rel="stylesheet" />
+<link href='https://fonts.googleapis.com/css?family=IBM Plex Mono' rel='stylesheet'>
+<link href="https://github.com/mshaugh/nerdfont-webfonts/blob/master/build/iosevka-nerd-font-mono.css" rel="stylesheet">
+
+
+<link rel="icon" href="https://jpachecoxyz.github.io/favicon.ico">
+
+
+
+
+
+
+
+
+
 
 </head>
 
-<body class=" dark type-posts kind-page layout-" id="top"><script data-no-instant>
-function switchTheme(theme) {
-  switch (theme) {
-    case 'light':
-      document.body.classList.remove('dark');
-      break;
-    case 'dark':
-      document.body.classList.add('dark');
-      break;
+    <body>
+
+        <div class="page">
+
+            <header class="page__header"><nav class="page__nav main-nav">
+    <ul>
+      <li class="nomarker"><h1 class="page__logo"><a href="https://jpachecoxyz.github.io/" class="page__logo-inner">jpacheco.xyz</a></h1></li>
     
-    default:
-      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-      }
-  }
-}
+    
+    <li class="main-nav__item"><a class="nav-main-item" href="https://jpachecoxyz.github.io/about/" title="">About</a></li>
+    
+    <li class="main-nav__item"><a class="nav-main-item active" href="https://jpachecoxyz.github.io/posts/" title="Posts">Posts</a></li>
+    
+    <li class="main-nav__item"><a class="nav-main-item" href="https://jpachecoxyz.github.io/projects/" title="Projects">Projects</a></li>
+    
+    </ul>
+</nav>
 
-function isDarkTheme() {
-  return document.body.className.includes("dark");
-}
-
-function getPrefTheme() {
-  return localStorage.getItem("pref-theme");
-}
-
-function setPrefTheme(theme) {
-  switchTheme(theme)
-  localStorage.setItem("pref-theme", theme);
-}
-
-const toggleThemeCallbacks = {}
-toggleThemeCallbacks['main'] = (isDark) => {
-  
-  if (isDark) {
-    setPrefTheme('light');
-  } else {
-    setPrefTheme('dark');
-  }
-}
-
-
-
-
-window.addEventListener('toggle-theme', function() {
-  
-  const isDark = isDarkTheme()
-  for (const key in toggleThemeCallbacks) {
-    toggleThemeCallbacks[key](isDark)
-  }
-});
-
-
-function toggleThemeListener() {
-  
-  window.dispatchEvent(new CustomEvent('toggle-theme'));
-}
-
-</script>
-<script>
-  
-  (function() {
-    const defaultTheme = 'dark';
-    const prefTheme = getPrefTheme();
-    const theme = prefTheme ? prefTheme : defaultTheme;
-
-    switchTheme(theme);
-  })();
-</script>
-
-<header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="https://jpacheco.xyz/" accesskey="h" title="jpacheco.xyz (Alt + H)">jpacheco.xyz</a>
-            <span class="logo-switches">
-            </span>
-        </div>
-        <ul id="menu">
-            <li>
-                <a href="https://jpacheco.xyz/about/" title="About"
-                >About
-                </a>
-            </li>
-            <li>
-                <a href="https://jpacheco.xyz/posts/" title="Posts" class="active"
-                >Posts
-                </a>
-            </li>
-            <li>
-                <a href="https://jpacheco.xyz/projects/" title="Projects"
-                >Projects
-                </a>
-            </li>
-            <li>
-                <a href="https://jpacheco.xyz/search/" title="Search (Alt &#43; /)"data-no-instant accesskey=/
-                >Search
-                </a>
-            </li>
-        </ul>
-    </nav>
 </header>
-<main class="main post">
 
-<article class="post-single">
-  <header class="post-header">
-    <div class="breadcrumbs"><a href="https://jpacheco.xyz/">Home</a>&nbsp;»&nbsp;<a href="https://jpacheco.xyz/posts/">Posts</a></div><h1 class="post-title">Share Screen in Hyprland.</h1>
-    <div class="post-description">How to share screen in hyprland in apps like: telegram-desktop.</div>
-    <div class="post-meta"><span class="meta-item">
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar" style="user-select: text;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2" style="user-select: text;"></rect><line x1="16" y1="2" x2="16" y2="6" style="user-select: text;"></line><line x1="8" y1="2" x2="8" y2="6" style="user-select: text;"></line><line x1="3" y1="10" x2="21" y2="10" style="user-select: text;"></line></svg>
-  <span>August 11, 2024</span></span><span class="meta-item">
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon" style="user-select: text;"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" style="user-select: text;"></path><line x1="7" y1="7" x2="7" y2="7" style="user-select: text;"></line></svg>
-  <span class="post-tags"><a href="https://jpacheco.xyz/tags/hyprland/">Hyprland</a><a href="https://jpacheco.xyz/tags/linux/">Linux</a><a href="https://jpacheco.xyz/tags/wayland/">Wayland</a></span></span><span class="meta-item">
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15 15"></polyline></svg>
-  <span>2 min</span></span>
-
-      
-      
-    </div>
-  </header> <div class="toc side right">
-    <details  open>
-        <summary accesskey="c" title="(Alt + C)">
-            <span class="details">Table of Contents</span>
-        </summary>
-
-        <div class="inner"><ul>
-                <li>
-                    <a href="#the-issue" aria-label="The issue:">The issue:</a></li>
-                <li>
-                    <a href="#things-that-i-try-before-to-solve-the-problem-dot" aria-label="Things that I try before to solve the problem.">Things that I try before to solve the problem.</a></li>
-                <li>
-                    <a href="#solving-the-problem-dot" aria-label="Solving the problem.">Solving the problem.</a>
-                </li>
-            </ul>
-        </div>
-    </details>
-</div>
-
-  <div class="post-content"><h2 id="the-issue">The issue:<a hidden class="anchor" aria-hidden="true" href="#the-issue">¶</a></h2>
+            <section class="page__body">
+    <header class="content__header">
+        <h1>Share Screen in Hyprland.</h1>
+    </header>
+    <div class="content__body">
+        <h2 id="the-issue">The issue:</h2>
 <p>We have a telegram group, in where we share emacs things and some other related to programming and linux in the most part of the time. So one day one of the members says that we can share screens and have a kind of podcast and talk about our environment configurations (sway/hyprland), so I was very curious about it so he invite me to another telegram group, this telegram group is for his YouTube channel, for test my hyprland configuration because he told me that he has troubles in his hyprland configuration using manjaro.</p>
 <p>Now that I face the error, I realize that in my <code>home-manager</code> compilation I had this error since I was using this tool in <code>nixOS</code>, but because I never use it, I never let it importance, so now I realize that this thing need to be solved because I going to use it in the future.</p>
 <p>So I installed <code>telegram-dektop</code>, and try to share my configuration and guess what; yes I was unable to share my screen. It failed and pop ups some errors.</p>
-<h2 id="things-that-i-try-before-to-solve-the-problem-dot">Things that I try before to solve the problem.<a hidden class="anchor" aria-hidden="true" href="#things-that-i-try-before-to-solve-the-problem-dot">¶</a></h2>
+<h2 id="things-that-i-try-before-to-solve-the-problem-dot">Things that I try before to solve the problem.</h2>
 <p>My main distribution at the time (2024-07-28) is <code>nixOS</code>, so I think that this could be a missing declaration in some programs, like <code>xdg-dektop-portal-hyprland</code>, because of that I was researching issues in <code>nixOS</code> &amp; <code>hyprland</code>, but nothing solve the problem.</p>
 <p>So nothing that I found fix the problem, most of the issues in github was too old, or nothing to do with <code>nixOS</code>, so the last thing that I could do was compile <code>xdg-desktop-portal-hyprland</code> by source, but in <code>nixOS</code> I would install some compilers and other things that I not currently use, but it was the last option.</p>
-<h2 id="solving-the-problem-dot">Solving the problem.<a hidden class="anchor" aria-hidden="true" href="#solving-the-problem-dot">¶</a></h2>
+<h2 id="solving-the-problem-dot">Solving the problem.</h2>
 <p>So once in my job, with the mind more clean, I go to the hyprland <a href="https://wiki.hyprland.org/Useful-Utilities/xdg-desktop-portal-hyprland/">wiki</a>, and at the bottom there were some tips to debugging if some errors appears.</p>
 <p>So I add this in my <code>Hyprland</code> configuration file:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cfg" data-lang="cfg"><span class="line"><span class="cl"><span class="na">exec-once</span> <span class="o">=</span> <span class="s">dbus-update-activation-environment --systemd --all</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cfg" data-lang="cfg"><span style="display:flex;"><span><span style="color:#a6e22e">exec-once</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">dbus-update-activation-environment --systemd --all</span>
 </span></span></code></pre></div><p>That&rsquo;s it, that little command above solve my 1 day pain trying to share my screen. So I hope this little post be helpful for you if you encounter the same issue as me.</p>
 <p>Thanks for read me.</p>
 
+    </div>
+    <footer class="content__footer"></footer>
 
-  </div>
+            </section>
 
-  <footer class="post-footer">
-<nav class="paginav">
-  <a class="next" href="https://jpacheco.xyz/posts/screen-record/">
-    <span class="title">Next Page&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right" style="user-select: text;"><line x1="5" y1="12" x2="19" y2="12" style="user-select: text;"></line><polyline points="12 5 19 12 12 19" style="user-select: text;"></polyline></svg>
-    </span>
-    <br>
-    <span>Screen Record</span>
-  </a>
+            <section class="page__aside">
+                <div class="aside__about">
+<div class="aside__about">
+    
+    
+<h1 class="about__title">Javier Pacheco</h1>
+<p class="about__description">Welcome to my blog.</p>
+</div>
+
+
+<ul class="aside__social-links">
+    
+    <li>
+        <a href="https://github.com/jpachecoxyz" rel="me" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>&nbsp;
+    </li>
+    
+    <li>
+        <a href="https://youtube.com/@jp-codepath" rel="me" aria-label="Youtube" title="Youtube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>&nbsp;
+    </li>
+    
+    <li>
+        <a href="https://linkedin.com/in/jpachecom4" rel="me" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>&nbsp;
+    </li>
+    
+    <li>
+        <a href="mailto:javier@jpacheco.xyz" rel="me" aria-label="Email" title="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>&nbsp;
+    </li>
+    
+</ul>
+</div>
+                <hr>
+                <div class="aside__content">
+    <p>How to share screen in hyprland in apps like: telegram-desktop.</p>
+    
+        <p>
+            By [Javier Pacheco], 
+            2024-08-11
+        </p>
+    
+
+    
+	    <hr>
+	    On this page:
+	    <nav id="TableOfContents">
+  <ol>
+    <li><a href="#the-issue">The issue:</a></li>
+    <li><a href="#things-that-i-try-before-to-solve-the-problem-dot">Things that I try before to solve the problem.</a></li>
+    <li><a href="#solving-the-problem-dot">Solving the problem.</a></li>
+  </ol>
 </nav>
-
-  </footer>
-    <div class="comments-separator"></div>
-</article>
-    </main>
-    
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-    <path d="M12 6H0l6-6z" />
-  </svg>
-</a>
-
-<script>
-  (function() {
-     
-    const disableThemeToggle = '1' == '1';
-    if (disableThemeToggle) {
-      return;
-    }
-
-    let button = document.getElementById("theme-toggle")
-    
-    button.removeEventListener('click', toggleThemeListener)
-    
-    button.addEventListener('click', toggleThemeListener)
-  })();
-</script>
-
-<script>
-  (function () {
-    let menu = document.getElementById('menu')
-    if (menu) {
-      menu.scrollLeft = localStorage.getItem("menu-scroll-position");
-      menu.onscroll = function () {
-        localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-      }
-    }
-
-    const disableSmoothScroll = '' == '1';
-    const enableInstantClick = '' == '1';
-    
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || disableSmoothScroll || enableInstantClick) {
-      return;
-    }
-    
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-        var id = this.getAttribute("href").substr(1);
-        document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-          behavior: "smooth"
-        });
-        if (id === "top") {
-          history.replaceState(null, null, " ");
-        } else {
-          history.pushState(null, null, `#${id}`);
-        }
-      });
-    });
-  })();
-</script>
-<script>
-  var mybutton = document.getElementById("top-link");
-  window.onscroll = function () {
-    if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-      mybutton.style.visibility = "visible";
-      mybutton.style.opacity = "1";
-    } else {
-      mybutton.style.visibility = "hidden";
-      mybutton.style.opacity = "0";
-    }
-  };
-</script>
-<script>
-  if (window.scrollListeners) {
-    
-    for (const listener of scrollListeners) {
-      window.removeEventListener('scroll', listener)
-    }
-  }
-  window.scrollListeners = []
-</script>
-
-
-
-<script src="/js/medium-zoom.min.js" data-no-instant
-></script>
-<script>
-  document.querySelectorAll('pre > code').forEach((codeblock) => {
-    const container = codeblock.parentNode.parentNode;
-
-    const copybutton = document.createElement('button');
-    copybutton.classList.add('copy-code');
-    copybutton.innerText = 'copy';
-
-    function copyingDone() {
-      copybutton.innerText = 'copied!';
-      setTimeout(() => {
-        copybutton.innerText = 'copy';
-      }, 2000);
-    }
-
-    copybutton.addEventListener('click', (cb) => {
-      if ('clipboard' in navigator) {
-        navigator.clipboard.writeText(codeblock.textContent);
-        copyingDone();
-        return;
-      }
-
-      const range = document.createRange();
-      range.selectNodeContents(codeblock);
-      const selection = window.getSelection();
-      selection.removeAllRanges();
-      selection.addRange(range);
-      try {
-        document.execCommand('copy');
-        copyingDone();
-      } catch (e) { };
-      selection.removeRange(range);
-    });
-
-    if (container.classList.contains("highlight")) {
-      container.appendChild(copybutton);
-    } else if (container.parentNode.firstChild == container) {
-      
-    } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
-      
-      codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
-    } else {
-      
-      codeblock.parentNode.appendChild(copybutton);
-    }
-  });
-</script>
-
-
-
-
-<script>
-  
-  
-  (function() {
-    const enableTocScroll = '1' == '1'
-    if (!enableTocScroll) {
-      return
-    }
-    if (!document.querySelector('.toc')) {
-      console.log('no toc found, ignore toc scroll')
-      return
-    }
     
 
-    
-    const scrollListeners = window.scrollListeners
-    const headings = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id]');
-    const activeClass = 'active';
+                </div>
+            </section>
 
-    
-    let activeHeading = headings[0];
-    getLinkByHeading(activeHeading).classList.add(activeClass);
+            <footer class="page__footer">
 
-    const onScroll = () => {
-      const passedHeadings = [];
-      for (const h of headings) {
-        
-        if (getOffsetTop(h) < 5) {
-          passedHeadings.push(h)
-        } else {
-          break;
-        }
-      }
-      if (passedHeadings.length > 0) {
-        newActiveHeading = passedHeadings[passedHeadings.length - 1];
-      } else {
-        newActiveHeading = headings[0];
-      }
-      if (activeHeading != newActiveHeading) {
-        getLinkByHeading(activeHeading).classList.remove(activeClass);
-        activeHeading = newActiveHeading;
-        getLinkByHeading(activeHeading).classList.add(activeClass);
-      }
-    }
+<p class="advertisement"># :(){ :|:& };: </p>
 
-    let timer = null;
-    const scrollListener = () => {
-      if (timer !== null) {
-        clearTimeout(timer)
-      }
-      timer = setTimeout(onScroll, 50)
-    }
-    window.addEventListener('scroll', scrollListener, false);
-    scrollListeners.push(scrollListener)
 
-    function getLinkByHeading(heading) {
-      const id = encodeURI(heading.getAttribute('id')).toLowerCase();
-      return document.querySelector(`.toc ul li a[href="#${id}"]`);
-    }
 
-    function getOffsetTop(heading) {
-      if (!heading.getClientRects().length) {
-        return 0;
-      }
-      let rect = heading.getBoundingClientRect();
-      return rect.top
-    }
-  })();
-  </script>
 
-</body>
+
+<script src="/js/copy-code.js"></script>
+
+</footer>
+
+        </div>
+    </body>
 
 </html>
