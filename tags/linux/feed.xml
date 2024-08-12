@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Linux on jpachecoxyz</title>
+    <link>https://jpacheco.xyz/tags/linux/</link>
+    <description>Recent content in Linux on jpachecoxyz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 11 Aug 2024 02:52:00 -0500</lastBuildDate><atom:link href="https://jpacheco.xyz/tags/linux/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Share Screen in Hyprland.</title>
+      <link>https://jpacheco.xyz/posts/share-screen-hyprland/</link>
+      <pubDate>Sun, 11 Aug 2024 02:52:00 -0500</pubDate>
+      
+      <guid>https://jpacheco.xyz/posts/share-screen-hyprland/</guid>
+      <description>How to share screen in hyprland in apps like: telegram-desktop.</description>
+      <content:encoded><![CDATA[<h2 id="the-issue">The issue:</h2>
+<p>We have a telegram group, in where we share emacs things and some other related to programming and linux in the most part of the time. So one day one of the members says that we can share screens and have a kind of podcast and talk about our environment configurations (sway/hyprland), so I was very curious about it so he invite me to another telegram group, this telegram group is for his YouTube channel, for test my hyprland configuration because he told me that he has troubles in his hyprland configuration using manjaro.</p>
+<p>Now that I face the error, I realize that in my <code>home-manager</code> compilation I had this error since I was using this tool in <code>nixOS</code>, but because I never use it, I never let it importance, so now I realize that this thing need to be solved because I going to use it in the future.</p>
+<p>So I installed <code>telegram-dektop</code>, and try to share my configuration and guess what; yes I was unable to share my screen. It failed and pop ups some errors.</p>
+<h2 id="things-that-i-try-before-to-solve-the-problem-dot">Things that I try before to solve the problem.</h2>
+<p>My main distribution at the time (2024-07-28) is <code>nixOS</code>, so I think that this could be a missing declaration in some programs, like <code>xdg-dektop-portal-hyprland</code>, because of that I was researching issues in <code>nixOS</code> &amp; <code>hyprland</code>, but nothing solve the problem.</p>
+<p>So nothing that I found fix the problem, most of the issues in github was too old, or nothing to do with <code>nixOS</code>, so the last thing that I could do was compile <code>xdg-desktop-portal-hyprland</code> by source, but in <code>nixOS</code> I would install some compilers and other things that I not currently use, but it was the last option.</p>
+<h2 id="solving-the-problem-dot">Solving the problem.</h2>
+<p>So once in my job, with the mind more clean, I go to the hyprland <a href="https://wiki.hyprland.org/Useful-Utilities/xdg-desktop-portal-hyprland/">wiki</a>, and at the bottom there were some tips to debugging if some errors appears.</p>
+<p>So I add this in my <code>Hyprland</code> configuration file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cfg" data-lang="cfg"><span class="line"><span class="cl"><span class="na">exec-once</span> <span class="o">=</span> <span class="s">dbus-update-activation-environment --systemd --all</span>
+</span></span></code></pre></div><p>That&rsquo;s it, that little command above solve my 1 day pain trying to share my screen. So I hope this little post be helpful for you if you encounter the same issue as me.</p>
+<p>Thanks for read me.</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Shell-utils</title>
+      <link>https://jpacheco.xyz/projects/shell-utils/</link>
+      <pubDate>Thu, 04 Jul 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://jpacheco.xyz/projects/shell-utils/</guid>
+      <description>A github repo that stores shell scripts utilities for x and wayland.</description>
+      <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>Welcome to the Shell Utilities <a href="https://github.com/jpachecoxyz/shell-utils">repository</a> This project provides a collection of shell scripts tailored for different window managers and environments, including i3, Hyprland, and Sway, on X11 and Wayland.</p>
+<h2 id="repository-structure">Repository Structure</h2>
+<p>The repository is organized into directories based on the environment and window manager:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">.
+</span></span><span class="line"><span class="cl">├── wayland
+</span></span><span class="line"><span class="cl">│   ├── hyprland
+</span></span><span class="line"><span class="cl">│   └── sway
+</span></span><span class="line"><span class="cl">└── x11
+</span></span><span class="line"><span class="cl">    └── i3
+</span></span></code></pre></div><dl>
+<dt>wayland/hyprland</dt>
+<dd>Scripts for Hyprland on Wayland.</dd>
+<dt>wayland/sway</dt>
+<dd>Scripts for Sway on Wayland.</dd>
+<dt>x11/i3</dt>
+<dd>Scripts for i3 on X11.</dd>
+</dl>
+<h2 id="installation">Installation</h2>
+<p>To install the scripts, use the provided <code>install.sh</code> script. You can install scripts for a specific window manager or all at once.</p>
+<p>NOTE: The <code>install.sh</code> scripts use <code>$HOME/.local/bin</code> as the target, you can edit this variable inside the script, or copy the files manually somewhere as you have your path.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># Install scripts for a specific window manager</span>
+</span></span><span class="line"><span class="cl">./install.sh sway
+</span></span><span class="line"><span class="cl">./install.sh hyprland
+</span></span><span class="line"><span class="cl">./install.sh i3
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Install all scripts</span>
+</span></span><span class="line"><span class="cl">./install.sh all
+</span></span></code></pre></div><h2 id="usage">Usage</h2>
+<p>Each script includes usage instructions in the comments at the top. You can run a script directly from the terminal or integrate it into your workflow.</p>
+<h2 id="contributing">Contributing</h2>
+<p>We welcome contributions! If you&rsquo;d like to contribute, please follow these steps:</p>
+<ol>
+<li>Fork the repository.</li>
+<li>Create a new branch for your feature or fix.</li>
+<li>Make your changes and commit them with descriptive messages.</li>
+<li>Push your changes to your fork.</li>
+<li>Submit a pull request to the main repository.</li>
+</ol>
+<h2 id="contact">Contact</h2>
+<p>For questions or suggestions, please open an issue on GitHub or contact <a href="mailto:javier@jpacheco.xyz">Javier pacheco</a>.</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Void linux bootstrap.</title>
+      <link>https://jpacheco.xyz/projects/voidstrap/</link>
+      <pubDate>Thu, 04 Jul 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://jpacheco.xyz/projects/voidstrap/</guid>
+      <description>A void linux semi-automated installer.</description>
+      <content:encoded><![CDATA[<div class="PREVIEW">
+<p>This is the first post of the 2024, this is a project that I am working on in the last
+year, is a minimialist voidlinux instalator it is based in some recomendations in
+a guides that some friends of my have but &ldquo;semiautomated&rdquo;.</p>
+</div>
+<h2 id="voidstrap-installer-dot">VoidStrap installer.</h2>
+<p>A basic minimalist installer of <code>void-linux</code> with some packages to get ready to enjoy
+this amazing GNU/Linux distribution.</p>
+<h2 id="usage">Usage:</h2>
+<h3 id="running-install-dot-sh">Running install.sh</h3>
+<p>Download the iso, and once in root inside the live, git clone this repo:
+(You need to update inside the iso and install <code>git</code>)</p>
+<p>NOTE: there are 3 <code>branches:</code></p>
+<dl>
+<dt>main</dt>
+<dd>This will install <code>void-musl</code>.</dd>
+<dt>glibc</dt>
+<dd>This will install <code>void-glibc</code>.</dd>
+<dt>dual</dt>
+<dd>This will install <code>void-glibc</code> dual boot with <code>Windows</code>.
+<ul>
+<li><strong>This branch is tested only with <code>Windows</code>, I never try it with other distributions.</strong></li>
+<li>If you want musl you can change the link to the mirror in the <code>install.sh</code> script:</li>
+</ul>
+</dd>
+</dl>
+<!--listend-->
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">- Change this in line 11:
+</span></span><span class="line"><span class="cl">export XBPS_ARCH=x86_64 &amp;&amp; xbps-install -Suy -R http://mirrors.servercentral.com/voidlinux/current -r /mnt \
+</span></span><span class="line"><span class="cl">- For this:
+</span></span><span class="line"><span class="cl">export XBPS_ARCH=x86_64-musl &amp;&amp; xbps-install -Suy -R http://mirrors.servercentral.com/voidlinux/current/musl -r /mnt \
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">git clone https://git.disroot.org/jpacheco/voidstrap
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> voidstrap
+</span></span><span class="line"><span class="cl">sh install.sh
+</span></span></code></pre></div><p>Once there the script will open <code>cfdisk</code>, and you need to format the HDD in this
+specific format:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">- /dev/sdX1 -&gt; as the boot partition.
+</span></span><span class="line"><span class="cl">- /dev/sdY2 -&gt; as the swap partition.
+</span></span><span class="line"><span class="cl">- /dev/sdZ3 -&gt; as the root partition.
+</span></span></code></pre></div><p>NOTE: Replace X,Y &amp; Z for your partition name.
+I consider to have this structure of partition, but you can change it, but you must
+change the code in <code>postinstall.sh</code> when the scripts make the <code>fstab</code> archive.</p>
+<p><strong>Make sure you do a backup of your files before doing crazy things and trust anyone script</strong></p>
+<p>When the <code>install.sh</code> script finish, you need to run the postinstall script located in <code>/root folder:</code></p>
+<h3 id="running-postinstall-dot-sh">Running postinstall.sh</h3>
+<p>This script its going to create some configuration files, like: <code>fstab</code>, <code>rc.conf</code>,
+change the password of <code>root</code>, and add user(s).</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">xchroot /mnt
+</span></span></code></pre></div><p>Then run the <code>chroot.sh</code> script.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sh /root/postinstall.sh
+</span></span></code></pre></div><p>When the <code>postinsall.sh</code> script finishes, you only need to reboot and enjoy your
+<strong>Void-Linux</strong> distribution.</p>
+<p>When it finish you need to run the <code>postinstall.sh</code> script, that is going to install
+the <strong>X server</strong> and some other &ldquo;necessary&rdquo; packages.</p>
+<h2 id="the-custom-dot-sh-script">The custom.sh script</h2>
+<p>This is going to install my personal dotfiles, and a specific packages that I use:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sh /root/custom.sh
+</span></span></code></pre></div><p>But you can specify your dotfiles repositories and others that you require whit some parameters:</p>
+<pre tabindex="0"><code class="language-nil" data-lang="nil">sh custom.sh -r https://codeberg.org/jpacheco/dotfiles # specify a repo url.
+sh custom.sh -p otherprogfile.csv # especify a custom package archive to install.
+sh custom.sh -b dev # especify the name of a custom branch in case of needed.
+</code></pre><h2 id="references">References:</h2>
+<ul>
+<li><a href="https://codeberg.org/jpacheco/voidstrap">Voidstrap.</a></li>
+<li><a href="https://docs.voidlinux.org/">Voidlinux Documentation.</a></li>
+<li><a href="https://git.disroot.org/tuxliban/tutoriales_void/src/branch/master/Gu%C3%ADas">Tuxliban guides.</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

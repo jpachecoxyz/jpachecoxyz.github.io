@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Script on jpachecoxyz</title>
+    <link>https://jpacheco.xyz/tags/script/</link>
+    <description>Recent content in Script on jpachecoxyz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 15 Mar 2024 04:14:00 -0500</lastBuildDate><atom:link href="https://jpacheco.xyz/tags/script/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Screen Record</title>
+      <link>https://jpacheco.xyz/posts/screen-record/</link>
+      <pubDate>Fri, 15 Mar 2024 04:14:00 -0500</pubDate>
+      
+      <guid>https://jpacheco.xyz/posts/screen-record/</guid>
+      <description>Script to record in hyprland</description>
+      <content:encoded><![CDATA[<p>This script record the screen with the <code>wf-recorder</code> tool, it can be the hole screen or a specific area of it.
+The script is going to store the video in <code>/tmp/screencast.mp4</code>, this script only store one video, personally I think that have more than one record is a mess, more if you only wants to share a quick screencast to <em>telegram, irc, cinny</em> or even to share it through <code>0x0.st</code>.</p>
+<h2 id="description-and-main-variables">Description and main variables:</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># Created By: Javier Pacheco - javier@jpacheco.xyz</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Created On: 29/03/24</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Project: Screen recorder in wayland</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Dependencies: wf-recorder wl-copy and a launcher like dmenu, fuzzel, etc.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">SOUND_CARD</span><span class="o">=</span><span class="k">$(</span>pactl list sources <span class="p">|</span> awk <span class="s1">&#39;/Name/ &amp;&amp; /.monitor/ {print $2}&#39;</span><span class="k">)</span>
+</span></span></code></pre></div><h2 id="recording-functions">Recording functions:</h2>
+<p>Those functions have enable the sound recording, so if you have some music, video, etc running it will record the sound but not the mic.</p>
+<h3 id="screencast">screencast:</h3>
+<p>This option is going to record a specific area of the screen.
+This area is going to be specified by <code>slurp</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">screencast<span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">   wf-recorder --audio<span class="o">=</span><span class="nv">$SOUND_CARD</span> -f /tmp/screencast.mp4
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></div><h3 id="area">area:</h3>
+<p>This option is going to record a specific area of the screen.
+This area is going to be specified by <code>slurp</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">area<span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">   wf-recorder --audio<span class="o">=</span><span class="nv">$SOUND_CARD</span> -g <span class="s2">&#34;</span><span class="k">$(</span>slurp<span class="k">)</span><span class="s2">&#34;</span> -f /tmp/screencast.mp4
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></div><h2 id="useful-functions">Useful functions:</h2>
+<p>These functions are tools that ensures this script works correctly. For example if all ready have a existing file recorded, it will removed to record a new one, because this script only will create one video always, and also have a function to kill the process when it finished.</p>
+<h3 id="check-internet-connection">check internet connection:</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">check_connection<span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    ping -c <span class="m">1</span> google.com 1&gt; /dev/null 2&gt;<span class="p">&amp;</span><span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></div><h3 id="share">share:</h3>
+<p>This option is going to upload the video to <code>0x0.st</code> and copy the url to the clipboard using <code>wc-copy</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">share<span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">   notify-send <span class="s2">&#34;uploading..&#34;</span> <span class="s2">&#34;video is upoading to 0x0.st&#34;</span>
+</span></span><span class="line"><span class="cl">   curl -F <span class="s2">&#34;file=@/tmp/screencast.mp4&#34;</span> https://0x0.st <span class="p">|</span> wl-copy <span class="o">&amp;&amp;</span> notify-send <span class="s2">&#34;Video stored in 0x0.st&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></div><h3 id="kill-existing-process">Kill existing process:</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">kill_proc<span class="o">(){</span>
+</span></span><span class="line"><span class="cl">    pkill --signal SIGINT wf-recorder
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -eq <span class="m">0</span> <span class="o">]</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">then</span>
+</span></span><span class="line"><span class="cl">        notify-send <span class="s2">&#34;Video stored&#34;</span> <span class="s2">&#34;Video was stored in /tmp/screencast.mp4&#34;</span>
+</span></span><span class="line"><span class="cl">        pkill --signal SIGINT wf-recorder
+</span></span><span class="line"><span class="cl">        <span class="nb">exit</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl">    <span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></div><h3 id="remove-existing-video">Remove existing video:</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">remove_vid<span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="o">[</span> -f /tmp/screencast.mp4 <span class="o">]</span> <span class="o">&amp;&amp;</span> rm /tmp/screencast.mp4
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></div><h2 id="sequence">Sequence:</h2>
+<p>This is were the scripts actually starts, first of all look if the script is already running, if not then ask for a recording option:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">kill_proc
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">OPT</span><span class="o">=</span><span class="k">$(</span><span class="nb">printf</span> <span class="s2">&#34;screencast\narea\nshare\nquit&#34;</span> <span class="p">|</span> fuzzel --dmenu -p <span class="s1">&#39;Select an option: &#39;</span> <span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">case</span> <span class="nv">$OPT</span> in
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;screencast&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">        sleep <span class="m">1</span>
+</span></span><span class="line"><span class="cl">        remove_vid
+</span></span><span class="line"><span class="cl">        sleep <span class="m">1</span>
+</span></span><span class="line"><span class="cl">        screencast<span class="p">;;</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;area&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">        sleep <span class="m">1</span>
+</span></span><span class="line"><span class="cl">        remove_vid
+</span></span><span class="line"><span class="cl">        sleep <span class="m">1</span>
+</span></span><span class="line"><span class="cl">        area<span class="p">;;</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;share&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">        check_connection <span class="o">&amp;&amp;</span> share <span class="o">||</span> notify-send <span class="s2">&#34;Error&#34;</span> <span class="s2">&#34;check your internet connection&#34;</span> <span class="p">;;</span>
+</span></span><span class="line"><span class="cl">    *<span class="p">|</span>quit<span class="o">)</span> <span class="nb">exit</span> 0<span class="p">;;</span>
+</span></span><span class="line"><span class="cl"><span class="k">esac</span>
+</span></span></code></pre></div>]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

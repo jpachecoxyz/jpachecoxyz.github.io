@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Python on jpachecoxyz</title>
+    <link>https://jpacheco.xyz/tags/python/</link>
+    <description>Recent content in Python on jpachecoxyz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 11 Aug 2024 03:00:00 -0500</lastBuildDate><atom:link href="https://jpacheco.xyz/tags/python/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pymetrics</title>
+      <link>https://jpacheco.xyz/projects/pymetrics/</link>
+      <pubDate>Sun, 11 Aug 2024 03:00:00 -0500</pubDate>
+      
+      <guid>https://jpacheco.xyz/projects/pymetrics/</guid>
+      <description>A GUI app written in python to store maintenace logs.</description>
+      <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>Managing and monitoring the performance of industrial machines is critical to ensuring minimal downtime and maximizing productivity. The need for an effective system to store and analyze maintenance data became apparent when the maintenance manager contacted me with a specific problem. They struggled to create KPI graphs because they lacked a proper system to store all the necessary data. To address this challenge, I developed a maintenance log app that efficiently tracks and records machine failures, repair time, shutdown time, and the technicians involved in the repairs. The data is stored in a CSV format, making it easy to create KPI (Key Performance Indicator) graphs in Excel for analysis.</p>
+<h2 id="features">Features</h2>
+<dl>
+<dt>Machine Failure Logging</dt>
+<dd>Record each instance of machine failure with timestamps.</dd>
+<dt>Repair Time Tracking</dt>
+<dd>Log the start and end times of repairs to calculate the total repair duration.</dd>
+<dt>Shutdown Time Monitoring</dt>
+<dd>Track the total time a machine is down due to failures and repairs.</dd>
+<dt>Technician Assignment</dt>
+<dd>Assign technicians to specific repair tasks and log their involvement.</dd>
+</dl>
+<h2 id="how-the-project-started">How the Project Started</h2>
+<p>The project began when the maintenance manager reached out to me with a significant issue: they were unable to create KPI graphs due to the lack of a system for storing maintenance data. Understanding the importance of this data for monitoring machine performance, I developed the maintenance log app in Python to solve the problem. By providing a structured way to capture and store all relevant data, the app enables easy analysis and KPI generation.</p>
+<h2 id="benefits">Benefits</h2>
+<p>The maintenance log app provides several key benefits:</p>
+<ul>
+<li><strong>Enhanced Data Management:</strong> All data is stored in a standardized CSV format, which can be easily imported into Excel for further analysis.</li>
+<li>*Improved KPI Tracking: By analyzing the recorded data, maintenance teams can generate KPI graphs in Excel to monitor performance metrics such as Mean Time to Repair (MTTR) and Mean Time Between Failures (MTBF).</li>
+<li>Informed Decision-Making:* The insights gained from the KPI graphs help in making informed decisions to improve machine reliability and reduce downtime.</li>
+</ul>
+<h2 id="technical-details">Technical Details</h2>
+<p>The app is built using Python, leveraging its robust data handling capabilities. The CSV format is chosen for its simplicity and compatibility with various data analysis tools.</p>
+<h2 id="usage">Usage</h2>
+<p>The application is designed to be user-friendly, requiring minimal input from the maintenance team. The data entry process is streamlined, allowing technicians to quickly log failures and repairs without interrupting their workflow.</p>
+<h2 id="how-to-get-started">How to Get Started</h2>
+<p>You can access the source code and instructions for setting up the maintenance log app on GitHub: <a href="https://github.com/jpachecoxyz/pymetrics">Pymetrics Repository</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>This maintenance log app is a practical tool for any industrial maintenance team looking to improve their machine monitoring and maintenance processes. By providing a clear view of machine performance through KPI graphs, it helps teams identify trends and make data-driven decisions. The app was born out of a real-world need, and I&rsquo;m excited to see how it can help others in similar situations.</p>
+<p>Feel free to explore the project and contribute to its development by visiting the <a href="https://github.com/jpachecoxyz/pymetrics">Pymetrics Repository</a> on GitHub.</p>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Scripts on jpachecoxyz</title>
+    <link>https://jpacheco.xyz/tags/scripts/</link>
+    <description>Recent content in Scripts on jpachecoxyz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 04 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://jpacheco.xyz/tags/scripts/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Shell-utils</title>
+      <link>https://jpacheco.xyz/projects/shell-utils/</link>
+      <pubDate>Thu, 04 Jul 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://jpacheco.xyz/projects/shell-utils/</guid>
+      <description>A github repo that stores shell scripts utilities for x and wayland.</description>
+      <content:encoded><![CDATA[<h2 id="overview">Overview</h2>
+<p>Welcome to the Shell Utilities <a href="https://github.com/jpachecoxyz/shell-utils">repository</a> This project provides a collection of shell scripts tailored for different window managers and environments, including i3, Hyprland, and Sway, on X11 and Wayland.</p>
+<h2 id="repository-structure">Repository Structure</h2>
+<p>The repository is organized into directories based on the environment and window manager:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">.
+</span></span><span class="line"><span class="cl">├── wayland
+</span></span><span class="line"><span class="cl">│   ├── hyprland
+</span></span><span class="line"><span class="cl">│   └── sway
+</span></span><span class="line"><span class="cl">└── x11
+</span></span><span class="line"><span class="cl">    └── i3
+</span></span></code></pre></div><dl>
+<dt>wayland/hyprland</dt>
+<dd>Scripts for Hyprland on Wayland.</dd>
+<dt>wayland/sway</dt>
+<dd>Scripts for Sway on Wayland.</dd>
+<dt>x11/i3</dt>
+<dd>Scripts for i3 on X11.</dd>
+</dl>
+<h2 id="installation">Installation</h2>
+<p>To install the scripts, use the provided <code>install.sh</code> script. You can install scripts for a specific window manager or all at once.</p>
+<p>NOTE: The <code>install.sh</code> scripts use <code>$HOME/.local/bin</code> as the target, you can edit this variable inside the script, or copy the files manually somewhere as you have your path.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># Install scripts for a specific window manager</span>
+</span></span><span class="line"><span class="cl">./install.sh sway
+</span></span><span class="line"><span class="cl">./install.sh hyprland
+</span></span><span class="line"><span class="cl">./install.sh i3
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Install all scripts</span>
+</span></span><span class="line"><span class="cl">./install.sh all
+</span></span></code></pre></div><h2 id="usage">Usage</h2>
+<p>Each script includes usage instructions in the comments at the top. You can run a script directly from the terminal or integrate it into your workflow.</p>
+<h2 id="contributing">Contributing</h2>
+<p>We welcome contributions! If you&rsquo;d like to contribute, please follow these steps:</p>
+<ol>
+<li>Fork the repository.</li>
+<li>Create a new branch for your feature or fix.</li>
+<li>Make your changes and commit them with descriptive messages.</li>
+<li>Push your changes to your fork.</li>
+<li>Submit a pull request to the main repository.</li>
+</ol>
+<h2 id="contact">Contact</h2>
+<p>For questions or suggestions, please open an issue on GitHub or contact <a href="mailto:javier@jpacheco.xyz">Javier pacheco</a>.</p>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>
