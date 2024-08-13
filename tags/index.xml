@@ -4,10 +4,15 @@
     <title>Tags on jpachecoxyz</title>
     <link>https://jpacheco.xyz/tags/</link>
     <description>Recent content in Tags on jpachecoxyz</description>
+    <image>
+      <title>jpachecoxyz</title>
+      <url>https://jpacheco.xyz/jp.jpg</url>
+      <link>https://jpacheco.xyz/jp.jpg</link>
+    </image>
     <generator>Hugo -- 0.126.1</generator>
     <language>en-us</language>
     <copyright>Javier Pacheco</copyright>
-    <lastBuildDate>Tue, 13 Aug 2024 05:24:11 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 13 Aug 2024 17:39:59 -0500</lastBuildDate>
     <atom:link href="https://jpacheco.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Emacs</title>

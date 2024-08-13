@@ -4,6 +4,11 @@
     <title>Categories on jpachecoxyz</title>
     <link>https://jpacheco.xyz/categories/</link>
     <description>Recent content in Categories on jpachecoxyz</description>
+    <image>
+      <title>jpachecoxyz</title>
+      <url>https://jpacheco.xyz/jp.jpg</url>
+      <link>https://jpacheco.xyz/jp.jpg</link>
+    </image>
     <generator>Hugo -- 0.126.1</generator>
     <language>en-us</language>
     <copyright>Javier Pacheco</copyright>
