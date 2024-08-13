@@ -1,3 +1,3 @@
 User-agent: *
 Disallow:
-Sitemap: https:jpacheco.xyz
+Sitemap: https://jpacheco.xyz/sitemap.xml

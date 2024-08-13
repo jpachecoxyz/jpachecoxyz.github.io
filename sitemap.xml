@@ -2,80 +2,80 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https:jpacheco.xyztags/index/</loc>
+    <loc>https://jpacheco.xyz/tags/index/</loc>
     <lastmod>2024-08-11T03:19:56-05:00</lastmod>
   </url><url>
-    <loc>https:jpacheco.xyz</loc>
+    <loc>https://jpacheco.xyz/</loc>
     <lastmod>2024-08-11T03:19:56-05:00</lastmod>
   </url><url>
-    <loc>https:jpacheco.xyztags/maintenance/</loc>
+    <loc>https://jpacheco.xyz/tags/maintenance/</loc>
     <lastmod>2024-08-11T03:19:56-05:00</lastmod>
   </url><url>
-    <loc>https:jpacheco.xyzprojects/</loc>
+    <loc>https://jpacheco.xyz/projects/</loc>
     <lastmod>2024-08-11T03:19:56-05:00</lastmod>
   </url><url>
-    <loc>https:jpacheco.xyzprojects/pymetrics/</loc>
+    <loc>https://jpacheco.xyz/projects/pymetrics/</loc>
     <lastmod>2024-08-11T03:19:56-05:00</lastmod>
   </url><url>
-    <loc>https:jpacheco.xyztags/python/</loc>
+    <loc>https://jpacheco.xyz/tags/python/</loc>
     <lastmod>2024-08-11T03:19:56-05:00</lastmod>
   </url><url>
-    <loc>https:jpacheco.xyztags/</loc>
+    <loc>https://jpacheco.xyz/tags/</loc>
     <lastmod>2024-08-11T03:19:56-05:00</lastmod>
   </url><url>
-    <loc>https:jpacheco.xyztags/hyprland/</loc>
+    <loc>https://jpacheco.xyz/tags/hyprland/</loc>
     <lastmod>2024-08-11T03:19:56-05:00</lastmod>
   </url><url>
-    <loc>https:jpacheco.xyztags/linux/</loc>
+    <loc>https://jpacheco.xyz/tags/linux/</loc>
     <lastmod>2024-08-11T03:19:56-05:00</lastmod>
   </url><url>
-    <loc>https:jpacheco.xyzposts/</loc>
+    <loc>https://jpacheco.xyz/posts/</loc>
     <lastmod>2024-08-11T03:19:56-05:00</lastmod>
   </url><url>
-    <loc>https:jpacheco.xyzposts/share-screen-hyprland/</loc>
+    <loc>https://jpacheco.xyz/posts/share-screen-hyprland/</loc>
     <lastmod>2024-08-11T03:19:56-05:00</lastmod>
   </url><url>
-    <loc>https:jpacheco.xyztags/wayland/</loc>
+    <loc>https://jpacheco.xyz/tags/wayland/</loc>
     <lastmod>2024-08-11T03:19:56-05:00</lastmod>
   </url><url>
-    <loc>https:jpacheco.xyztags/installer/</loc>
+    <loc>https://jpacheco.xyz/tags/installer/</loc>
     <lastmod>2024-08-11T03:19:56-05:00</lastmod>
   </url><url>
-    <loc>https:jpacheco.xyztags/scripts/</loc>
+    <loc>https://jpacheco.xyz/tags/scripts/</loc>
     <lastmod>2024-08-11T03:19:56-05:00</lastmod>
   </url><url>
-    <loc>https:jpacheco.xyztags/shell/</loc>
+    <loc>https://jpacheco.xyz/tags/shell/</loc>
     <lastmod>2024-08-11T03:19:56-05:00</lastmod>
   </url><url>
-    <loc>https:jpacheco.xyzprojects/shell-utils/</loc>
+    <loc>https://jpacheco.xyz/projects/shell-utils/</loc>
     <lastmod>2024-08-11T03:19:56-05:00</lastmod>
   </url><url>
-    <loc>https:jpacheco.xyztags/void/</loc>
+    <loc>https://jpacheco.xyz/tags/void/</loc>
     <lastmod>2024-08-11T03:19:56-05:00</lastmod>
   </url><url>
-    <loc>https:jpacheco.xyzprojects/voidstrap/</loc>
+    <loc>https://jpacheco.xyz/projects/voidstrap/</loc>
     <lastmod>2024-08-11T03:19:56-05:00</lastmod>
   </url><url>
-    <loc>https:jpacheco.xyzposts/screen-record/</loc>
+    <loc>https://jpacheco.xyz/posts/screen-record/</loc>
     <lastmod>2024-08-11T03:19:56-05:00</lastmod>
   </url><url>
-    <loc>https:jpacheco.xyztags/script/</loc>
+    <loc>https://jpacheco.xyz/tags/script/</loc>
     <lastmod>2024-08-11T03:19:56-05:00</lastmod>
   </url><url>
-    <loc>https:jpacheco.xyzposts/efetch/</loc>
+    <loc>https://jpacheco.xyz/posts/efetch/</loc>
     <lastmod>2024-08-11T03:19:56-05:00</lastmod>
   </url><url>
-    <loc>https:jpacheco.xyztags/emacs/</loc>
+    <loc>https://jpacheco.xyz/tags/emacs/</loc>
     <lastmod>2024-08-11T03:19:56-05:00</lastmod>
   </url><url>
-    <loc>https:jpacheco.xyztags/fetch/</loc>
+    <loc>https://jpacheco.xyz/tags/fetch/</loc>
     <lastmod>2024-08-11T03:19:56-05:00</lastmod>
   </url><url>
-    <loc>https:jpacheco.xyzabout/</loc>
+    <loc>https://jpacheco.xyz/about/</loc>
     <lastmod>2024-08-11T03:19:56-05:00</lastmod>
   </url><url>
-    <loc>https:jpacheco.xyzcategories/</loc>
+    <loc>https://jpacheco.xyz/categories/</loc>
   </url><url>
-    <loc>https:jpacheco.xyzsearch/</loc>
+    <loc>https://jpacheco.xyz/search/</loc>
   </url>
 </urlset>
