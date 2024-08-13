@@ -580,7 +580,9 @@ mark {
     margin-inline-start:auto}
 
 .social-icons {
-    padding: 12px 0
+  display: flex;
+  justify-content: center; /* Centers the icons horizontally */
+  align-items: center;     /* Centers the icons vertically (if necessary) */
 }
 
 .social-icons a {
