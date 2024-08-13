@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Categories on jpacheco.xyz</title>
-    <link>https://jpachecoxyz.github.io/categories/</link>
-    <description>Recent content in Categories on jpacheco.xyz</description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <atom:link href="https://jpachecoxyz.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <title>Categories on jpachecoxyz</title>
+    <link>https:jpacheco.xyzcategories/</link>
+    <description>Recent content in Categories on jpachecoxyz</description>
+    <generator>Hugo -- 0.126.1</generator>
+    <language>en-us</language>
+    <copyright>Javier Pacheco</copyright>
+    <atom:link href="https:jpacheco.xyzcategories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

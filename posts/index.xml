@@ -1,33 +1,34 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Posts on jpacheco.xyz</title>
-    <link>https://jpachecoxyz.github.io/posts/</link>
-    <description>Recent content in Posts on jpacheco.xyz</description>
-    <generator>Hugo</generator>
-    <language>en</language>
+    <title>Posts on jpachecoxyz</title>
+    <link>https:jpacheco.xyzposts/</link>
+    <description>Recent content in Posts on jpachecoxyz</description>
+    <generator>Hugo -- 0.126.1</generator>
+    <language>en-us</language>
+    <copyright>Javier Pacheco</copyright>
     <lastBuildDate>Sun, 11 Aug 2024 03:19:56 -0500</lastBuildDate>
-    <atom:link href="https://jpachecoxyz.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https:jpacheco.xyzposts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Share Screen in Hyprland.</title>
-      <link>https://jpachecoxyz.github.io/posts/share-screen-hyprland/</link>
+      <link>https:jpacheco.xyzposts/share-screen-hyprland/</link>
       <pubDate>Sun, 11 Aug 2024 02:52:00 -0500</pubDate>
-      <guid>https://jpachecoxyz.github.io/posts/share-screen-hyprland/</guid>
-      <description>The issue: We have a telegram group, in where we share emacs things and some other related to programming and linux in the most part of the time. So one day one of the members says that we can share screens and have a kind of podcast and talk about our environment configurations (sway/hyprland), so I was very curious about it so he invite me to another telegram group, this telegram group is for his YouTube channel, for test my hyprland configuration because he told me that he has troubles in his hyprland configuration using manjaro.</description>
+      <guid>https:jpacheco.xyzposts/share-screen-hyprland/</guid>
+      <description>How to share screen in hyprland in apps like: telegram-desktop.</description>
     </item>
     <item>
       <title>Screen Record</title>
-      <link>https://jpachecoxyz.github.io/posts/screen-record/</link>
+      <link>https:jpacheco.xyzposts/screen-record/</link>
       <pubDate>Fri, 15 Mar 2024 04:14:00 -0500</pubDate>
-      <guid>https://jpachecoxyz.github.io/posts/screen-record/</guid>
-      <description>This script record the screen with the wf-recorder tool, it can be the hole screen or a specific area of it. The script is going to store the video in /tmp/screencast.mp4, this script only store one video, personally I think that have more than one record is a mess, more if you only wants to share a quick screencast to telegram, irc, cinny or even to share it through 0x0.st.</description>
+      <guid>https:jpacheco.xyzposts/screen-record/</guid>
+      <description>Script to record in hyprland</description>
     </item>
     <item>
       <title>Efetch.el</title>
-      <link>https://jpachecoxyz.github.io/posts/efetch/</link>
+      <link>https:jpacheco.xyzposts/efetch/</link>
       <pubDate>Sat, 13 Jan 2024 04:11:00 -0600</pubDate>
-      <guid>https://jpachecoxyz.github.io/posts/efetch/</guid>
-      <description>Embrace a new level of Emacs mastery with efetch.el – a powerful and user-friendly Emacs Fetching Tool. Designed for enthusiasts who crave insights into their Emacs environment, efetch.el provides a seamless way to peek under the hood of your setup. With just a simple command, unlock a left-side buffer showcasing key details such as Emacs version, host information, user details, installed packages, active theme, and default font. Customizable and accessible, this tool not only delivers a quick snapshot of your Emacs configuration but also opens the door for collaborative enhancements.</description>
+      <guid>https:jpacheco.xyzposts/efetch/</guid>
+      <description>A emacs fetching tool.</description>
     </item>
   </channel>
 </rss>

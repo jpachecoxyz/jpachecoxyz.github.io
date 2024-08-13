@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Emacs on jpacheco.xyz</title>
-    <link>https://jpachecoxyz.github.io/tags/emacs/</link>
-    <description>Recent content in Emacs on jpacheco.xyz</description>
-    <generator>Hugo</generator>
-    <language>en</language>
+    <title>Emacs on jpachecoxyz</title>
+    <link>https:jpacheco.xyztags/emacs/</link>
+    <description>Recent content in Emacs on jpachecoxyz</description>
+    <generator>Hugo -- 0.126.1</generator>
+    <language>en-us</language>
+    <copyright>Javier Pacheco</copyright>
     <lastBuildDate>Sun, 11 Aug 2024 03:19:56 -0500</lastBuildDate>
-    <atom:link href="https://jpachecoxyz.github.io/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https:jpacheco.xyztags/emacs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Efetch.el</title>
-      <link>https://jpachecoxyz.github.io/posts/efetch/</link>
+      <link>https:jpacheco.xyzposts/efetch/</link>
       <pubDate>Sat, 13 Jan 2024 04:11:00 -0600</pubDate>
-      <guid>https://jpachecoxyz.github.io/posts/efetch/</guid>
-      <description>Embrace a new level of Emacs mastery with efetch.el – a powerful and user-friendly Emacs Fetching Tool. Designed for enthusiasts who crave insights into their Emacs environment, efetch.el provides a seamless way to peek under the hood of your setup. With just a simple command, unlock a left-side buffer showcasing key details such as Emacs version, host information, user details, installed packages, active theme, and default font. Customizable and accessible, this tool not only delivers a quick snapshot of your Emacs configuration but also opens the door for collaborative enhancements.</description>
+      <guid>https:jpacheco.xyzposts/efetch/</guid>
+      <description>A emacs fetching tool.</description>
     </item>
   </channel>
 </rss>
