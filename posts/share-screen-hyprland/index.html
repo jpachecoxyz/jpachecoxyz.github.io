@@ -30,27 +30,16 @@
 
     </style>
 </noscript>
-
-
-
-
-
-
-
-
   
 
 <meta property="og:title" content="Share Screen in Hyprland." />
 <meta property="og:description" content="How to share screen in hyprland in apps like: telegram-desktop." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://jpacheco.xyz/posts/share-screen-hyprland/" />
-<meta property="og:image" content="https://jpacheco.xyz/images/jp.jpg" />
-<meta property="article:section" content="posts" />
+<meta property="og:url" content="https://jpacheco.xyz/posts/share-screen-hyprland/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-08-11T02:52:00-05:00" />
 <meta property="article:modified_time" content="2024-08-13T22:29:07-05:00" />
 
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://jpacheco.xyz/images/jp.jpg" />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Share Screen in Hyprland."/>
 <meta name="twitter:description" content="How to share screen in hyprland in apps like: telegram-desktop."/>
 
@@ -88,7 +77,7 @@
   "articleBody": "The issue: We have a telegram group, in where we share emacs things and some other related to programming and linux in the most part of the time. So one day one of the members says that we can share screens and have a kind of podcast and talk about our environment configurations (sway/hyprland), so I was very curious about it so he invite me to another telegram group, this telegram group is for his YouTube channel, for test my hyprland configuration because he told me that he has troubles in his hyprland configuration using manjaro.\nNow that I face the error, I realize that in my home-manager compilation I had this error since I was using this tool in nixOS, but because I never use it, I never let it importance, so now I realize that this thing need to be solved because I going to use it in the future.\nSo I installed telegram-dektop, and try to share my configuration and guess what; yes I was unable to share my screen. It failed and pop ups some errors.\nThings that I try before to solve the problem. My main distribution at the time (2024-07-28) is nixOS, so I think that this could be a missing declaration in some programs, like xdg-dektop-portal-hyprland, because of that I was researching issues in nixOS \u0026 hyprland, but nothing solve the problem.\nSo nothing that I found fix the problem, most of the issues in github was too old, or nothing to do with nixOS, so the last thing that I could do was compile xdg-desktop-portal-hyprland by source, but in nixOS I would install some compilers and other things that I not currently use, but it was the last option.\nSolving the problem. So once in my job, with the mind more clean, I go to the hyprland wiki, and at the bottom there were some tips to debugging if some errors appears.\nSo I add this in my Hyprland configuration file:\n1 exec-once = dbus-update-activation-environment --systemd --all That’s it, that little command above solve my 1 day pain trying to share my screen. So I hope this little post be helpful for you if you encounter the same issue as me.\nThanks for read me.\n",
   "wordCount" : "373",
   "inLanguage": "en",
-  "image": "https://jpacheco.xyz/images/jp.jpg","datePublished": "2024-08-11T02:52:00-05:00",
+  "datePublished": "2024-08-11T02:52:00-05:00",
   "dateModified": "2024-08-13T22:29:07-05:00",
   "author":[{
     "@type": "Person",
