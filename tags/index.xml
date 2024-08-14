@@ -2,123 +2,123 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on ⚙️  jpachecoxyz 💻</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://jpacheco.xyz/tags/</link>
     <description>Recent content in Tags on ⚙️  jpachecoxyz 💻</description>
-    <generator>Hugo -- 0.128.0</generator>
+    <generator>Hugo -- 0.126.1</generator>
     <language>en-us</language>
     <copyright>Javier Pacheco</copyright>
     <lastBuildDate>Wed, 14 Aug 2024 04:48:32 -0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://jpacheco.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Emacs</title>
-      <link>http://localhost:1313/tags/emacs/</link>
+      <link>https://jpacheco.xyz/tags/emacs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/emacs/</guid>
+      <guid>https://jpacheco.xyz/tags/emacs/</guid>
       <description></description>
     </item>
     <item>
       <title>Index</title>
-      <link>http://localhost:1313/tags/index/</link>
+      <link>https://jpacheco.xyz/tags/index/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/index/</guid>
+      <guid>https://jpacheco.xyz/tags/index/</guid>
       <description></description>
     </item>
     <item>
       <title>Nvim</title>
-      <link>http://localhost:1313/tags/nvim/</link>
+      <link>https://jpacheco.xyz/tags/nvim/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/nvim/</guid>
+      <guid>https://jpacheco.xyz/tags/nvim/</guid>
       <description></description>
     </item>
     <item>
       <title>Programming</title>
-      <link>http://localhost:1313/tags/programming/</link>
+      <link>https://jpacheco.xyz/tags/programming/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/programming/</guid>
+      <guid>https://jpacheco.xyz/tags/programming/</guid>
       <description></description>
     </item>
     <item>
       <title>Writting</title>
-      <link>http://localhost:1313/tags/writting/</link>
+      <link>https://jpacheco.xyz/tags/writting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/writting/</guid>
+      <guid>https://jpacheco.xyz/tags/writting/</guid>
       <description></description>
     </item>
     <item>
       <title>Maintenance</title>
-      <link>http://localhost:1313/tags/maintenance/</link>
+      <link>https://jpacheco.xyz/tags/maintenance/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/maintenance/</guid>
+      <guid>https://jpacheco.xyz/tags/maintenance/</guid>
       <description></description>
     </item>
     <item>
       <title>Python</title>
-      <link>http://localhost:1313/tags/python/</link>
+      <link>https://jpacheco.xyz/tags/python/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/python/</guid>
+      <guid>https://jpacheco.xyz/tags/python/</guid>
       <description></description>
     </item>
     <item>
       <title>Hyprland</title>
-      <link>http://localhost:1313/tags/hyprland/</link>
+      <link>https://jpacheco.xyz/tags/hyprland/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/hyprland/</guid>
+      <guid>https://jpacheco.xyz/tags/hyprland/</guid>
       <description></description>
     </item>
     <item>
       <title>Linux</title>
-      <link>http://localhost:1313/tags/linux/</link>
+      <link>https://jpacheco.xyz/tags/linux/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/linux/</guid>
+      <guid>https://jpacheco.xyz/tags/linux/</guid>
       <description></description>
     </item>
     <item>
       <title>Wayland</title>
-      <link>http://localhost:1313/tags/wayland/</link>
+      <link>https://jpacheco.xyz/tags/wayland/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/wayland/</guid>
+      <guid>https://jpacheco.xyz/tags/wayland/</guid>
       <description></description>
     </item>
     <item>
       <title>Installer</title>
-      <link>http://localhost:1313/tags/installer/</link>
+      <link>https://jpacheco.xyz/tags/installer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/installer/</guid>
+      <guid>https://jpacheco.xyz/tags/installer/</guid>
       <description></description>
     </item>
     <item>
       <title>Scripts</title>
-      <link>http://localhost:1313/tags/scripts/</link>
+      <link>https://jpacheco.xyz/tags/scripts/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/scripts/</guid>
+      <guid>https://jpacheco.xyz/tags/scripts/</guid>
       <description></description>
     </item>
     <item>
       <title>Shell</title>
-      <link>http://localhost:1313/tags/shell/</link>
+      <link>https://jpacheco.xyz/tags/shell/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/shell/</guid>
+      <guid>https://jpacheco.xyz/tags/shell/</guid>
       <description></description>
     </item>
     <item>
       <title>Void</title>
-      <link>http://localhost:1313/tags/void/</link>
+      <link>https://jpacheco.xyz/tags/void/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/void/</guid>
+      <guid>https://jpacheco.xyz/tags/void/</guid>
       <description></description>
     </item>
     <item>
       <title>Script</title>
-      <link>http://localhost:1313/tags/script/</link>
+      <link>https://jpacheco.xyz/tags/script/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/script/</guid>
+      <guid>https://jpacheco.xyz/tags/script/</guid>
       <description></description>
     </item>
     <item>
       <title>Fetch</title>
-      <link>http://localhost:1313/tags/fetch/</link>
+      <link>https://jpacheco.xyz/tags/fetch/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/fetch/</guid>
+      <guid>https://jpacheco.xyz/tags/fetch/</guid>
       <description></description>
     </item>
   </channel>
