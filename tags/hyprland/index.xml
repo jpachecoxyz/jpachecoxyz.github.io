@@ -4,10 +4,15 @@
     <title>Hyprland on jpachecoxyz</title>
     <link>https://jpacheco.xyz/tags/hyprland/</link>
     <description>Recent content in Hyprland on jpachecoxyz</description>
+    <image>
+      <title>jpachecoxyz</title>
+      <url>https://jpacheco.xyz/images/jp.jpg</url>
+      <link>https://jpacheco.xyz/images/jp.jpg</link>
+    </image>
     <generator>Hugo -- 0.128.0</generator>
     <language>en-us</language>
     <copyright>Javier Pacheco</copyright>
-    <lastBuildDate>Tue, 13 Aug 2024 22:29:07 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 14 Aug 2024 04:48:32 -0500</lastBuildDate>
     <atom:link href="https://jpacheco.xyz/tags/hyprland/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Share Screen in Hyprland.</title>
