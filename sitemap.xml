@@ -2,104 +2,104 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://jpacheco.xyz/projects/pymetrics/</loc>
+    <loc>http://localhost:1313/projects/pymetrics/</loc>
     <lastmod>2024-08-15T11:33:06-05:00</lastmod>
   </url><url>
-    <loc>https://jpacheco.xyz/tags/blog/</loc>
+    <loc>http://localhost:1313/tags/blog/</loc>
     <lastmod>2024-08-15T11:33:06-05:00</lastmod>
   </url><url>
-    <loc>https://jpacheco.xyz/tags/emacs/</loc>
+    <loc>http://localhost:1313/tags/emacs/</loc>
     <lastmod>2024-08-15T11:33:06-05:00</lastmod>
   </url><url>
-    <loc>https://jpacheco.xyz/posts/my-blog-in-emacs/</loc>
+    <loc>http://localhost:1313/posts/my-blog-in-emacs/</loc>
     <lastmod>2024-08-15T11:33:06-05:00</lastmod>
   </url><url>
-    <loc>https://jpacheco.xyz/tags/hugo/</loc>
+    <loc>http://localhost:1313/tags/hugo/</loc>
     <lastmod>2024-08-15T11:33:06-05:00</lastmod>
   </url><url>
-    <loc>https://jpacheco.xyz/tags/index/</loc>
+    <loc>http://localhost:1313/tags/index/</loc>
     <lastmod>2024-08-15T11:33:06-05:00</lastmod>
   </url><url>
-    <loc>https://jpacheco.xyz/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2024-08-15T11:33:06-05:00</lastmod>
   </url><url>
-    <loc>https://jpacheco.xyz/posts/</loc>
+    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2024-08-15T11:33:06-05:00</lastmod>
   </url><url>
-    <loc>https://jpacheco.xyz/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2024-08-15T11:33:06-05:00</lastmod>
   </url><url>
-    <loc>https://jpacheco.xyz/posts/emacs-vs-nvim/</loc>
+    <loc>http://localhost:1313/posts/emacs-vs-nvim/</loc>
     <lastmod>2024-08-15T11:33:06-05:00</lastmod>
   </url><url>
-    <loc>https://jpacheco.xyz/tags/nvim/</loc>
+    <loc>http://localhost:1313/tags/nvim/</loc>
     <lastmod>2024-08-15T11:33:06-05:00</lastmod>
   </url><url>
-    <loc>https://jpacheco.xyz/tags/programming/</loc>
+    <loc>http://localhost:1313/tags/programming/</loc>
     <lastmod>2024-08-15T11:33:06-05:00</lastmod>
   </url><url>
-    <loc>https://jpacheco.xyz/tags/writting/</loc>
+    <loc>http://localhost:1313/tags/writting/</loc>
     <lastmod>2024-08-15T11:33:06-05:00</lastmod>
   </url><url>
-    <loc>https://jpacheco.xyz/tags/maintenance/</loc>
+    <loc>http://localhost:1313/tags/maintenance/</loc>
     <lastmod>2024-08-15T11:33:06-05:00</lastmod>
   </url><url>
-    <loc>https://jpacheco.xyz/projects/</loc>
+    <loc>http://localhost:1313/projects/</loc>
     <lastmod>2024-08-15T11:33:06-05:00</lastmod>
   </url><url>
-    <loc>https://jpacheco.xyz/tags/python/</loc>
+    <loc>http://localhost:1313/tags/python/</loc>
     <lastmod>2024-08-15T11:33:06-05:00</lastmod>
   </url><url>
-    <loc>https://jpacheco.xyz/tags/hyprland/</loc>
+    <loc>http://localhost:1313/tags/hyprland/</loc>
     <lastmod>2024-08-15T11:33:06-05:00</lastmod>
   </url><url>
-    <loc>https://jpacheco.xyz/tags/linux/</loc>
+    <loc>http://localhost:1313/tags/linux/</loc>
     <lastmod>2024-08-15T11:33:06-05:00</lastmod>
   </url><url>
-    <loc>https://jpacheco.xyz/posts/share-screen-hyprland/</loc>
+    <loc>http://localhost:1313/posts/share-screen-hyprland/</loc>
     <lastmod>2024-08-15T11:33:06-05:00</lastmod>
   </url><url>
-    <loc>https://jpacheco.xyz/tags/wayland/</loc>
+    <loc>http://localhost:1313/tags/wayland/</loc>
     <lastmod>2024-08-15T11:33:06-05:00</lastmod>
   </url><url>
-    <loc>https://jpacheco.xyz/tags/installer/</loc>
+    <loc>http://localhost:1313/tags/installer/</loc>
     <lastmod>2024-08-15T11:33:06-05:00</lastmod>
   </url><url>
-    <loc>https://jpacheco.xyz/tags/scripts/</loc>
+    <loc>http://localhost:1313/tags/scripts/</loc>
     <lastmod>2024-08-15T11:33:06-05:00</lastmod>
   </url><url>
-    <loc>https://jpacheco.xyz/tags/shell/</loc>
+    <loc>http://localhost:1313/tags/shell/</loc>
     <lastmod>2024-08-15T11:33:06-05:00</lastmod>
   </url><url>
-    <loc>https://jpacheco.xyz/projects/shell-utils/</loc>
+    <loc>http://localhost:1313/projects/shell-utils/</loc>
     <lastmod>2024-08-15T11:33:06-05:00</lastmod>
   </url><url>
-    <loc>https://jpacheco.xyz/tags/void/</loc>
+    <loc>http://localhost:1313/tags/void/</loc>
     <lastmod>2024-08-15T11:33:06-05:00</lastmod>
   </url><url>
-    <loc>https://jpacheco.xyz/projects/voidstrap/</loc>
+    <loc>http://localhost:1313/projects/voidstrap/</loc>
     <lastmod>2024-08-15T11:33:06-05:00</lastmod>
   </url><url>
-    <loc>https://jpacheco.xyz/posts/screen-record/</loc>
+    <loc>http://localhost:1313/posts/screen-record/</loc>
     <lastmod>2024-08-15T11:33:06-05:00</lastmod>
   </url><url>
-    <loc>https://jpacheco.xyz/tags/script/</loc>
+    <loc>http://localhost:1313/tags/script/</loc>
     <lastmod>2024-08-15T11:33:06-05:00</lastmod>
   </url><url>
-    <loc>https://jpacheco.xyz/posts/efetch/</loc>
+    <loc>http://localhost:1313/posts/efetch/</loc>
     <lastmod>2024-08-15T11:33:06-05:00</lastmod>
   </url><url>
-    <loc>https://jpacheco.xyz/tags/fetch/</loc>
+    <loc>http://localhost:1313/tags/fetch/</loc>
     <lastmod>2024-08-15T11:33:06-05:00</lastmod>
   </url><url>
-    <loc>https://jpacheco.xyz/tags/about/</loc>
+    <loc>http://localhost:1313/tags/about/</loc>
     <lastmod>2024-08-15T11:33:06-05:00</lastmod>
   </url><url>
-    <loc>https://jpacheco.xyz/about/</loc>
+    <loc>http://localhost:1313/about/</loc>
     <lastmod>2024-08-15T11:33:06-05:00</lastmod>
   </url><url>
-    <loc>https://jpacheco.xyz/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>https://jpacheco.xyz/search/</loc>
+    <loc>http://localhost:1313/search/</loc>
   </url>
 </urlset>
