@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Shell on jpacheco.xyz</title>
-    <link>https://jpacheco.xyz/tags/shell/</link>
+    <link>http://localhost:1313/tags/shell/</link>
     <description>Recent content in Shell on jpacheco.xyz</description>
     <generator>Hugo -- 0.126.1</generator>
     <language>en-us</language>
     <copyright>Javier Pacheco</copyright>
     <lastBuildDate>Thu, 04 Jul 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://jpacheco.xyz/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/shell/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Shell-utils</title>
-      <link>https://jpacheco.xyz/projects/shell-utils/</link>
+      <link>http://localhost:1313/projects/shell-utils/</link>
       <pubDate>Thu, 04 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://jpacheco.xyz/projects/shell-utils/</guid>
+      <guid>http://localhost:1313/projects/shell-utils/</guid>
       <description>A github repo that stores shell scripts utilities for x and wayland.</description>
     </item>
     <item>
       <title>Screen Record</title>
-      <link>https://jpacheco.xyz/posts/screen-record/</link>
+      <link>http://localhost:1313/posts/screen-record/</link>
       <pubDate>Fri, 15 Mar 2024 04:14:00 -0500</pubDate>
-      <guid>https://jpacheco.xyz/posts/screen-record/</guid>
+      <guid>http://localhost:1313/posts/screen-record/</guid>
       <description>Script to record in hyprland</description>
     </item>
   </channel>

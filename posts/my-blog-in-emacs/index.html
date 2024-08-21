@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
@@ -9,18 +9,18 @@
 <meta name="keywords" content="emacs, blog, hugo">
 <meta name="description" content="A overview of how I write and develop my web blog using emacs &amp; hugo">
 <meta name="author" content="Javier Pacheco">
-<link rel="canonical" href="https://jpacheco.xyz/posts/my-blog-in-emacs/">
+<link rel="canonical" href="http://localhost:1313/posts/my-blog-in-emacs/">
 
 
 <link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://jpacheco.xyz/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://jpacheco.xyz/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://jpacheco.xyz/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://jpacheco.xyz/apple-touch-icon.png">
-<link rel="mask-icon" href="https://jpacheco.xyz/safari-pinned-tab.svg">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://jpacheco.xyz/posts/my-blog-in-emacs/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/my-blog-in-emacs/">
 <noscript>
     <style>
         #theme-toggle,
@@ -39,9 +39,10 @@
 
 <meta property="og:title" content="How I made my blog with emacs and hugo" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://jpacheco.xyz/posts/my-blog-in-emacs/" />
-<meta property="og:image" content="https://jpacheco.xyz/" />
-<meta property="og:description" content="I have been using emacs most of the time for writting, and of course when I started to make my blog I have been use it (emacs) since of it. In the beginig when I start writing I was using some scripts and tips from system crafters he use htmlize and some lisp scripting. It was ok but then I have been watching some lukesmith videos and see this video about him switching to HUGO, so I decided to check HUGO too." />
+<meta property="og:url" content="http://localhost:1313/posts/my-blog-in-emacs/" />
+<meta property="og:image" content="http://localhost:1313/" />
+<meta property="og:description" content="e toc = true &#43;&#43;&#43;
+I have been using emacs most of the time for writting, and of course when I started to make my blog I have been use it (emacs) since of it. In the beginig when I start writing I was using some scripts and tips from system crafters he use htmlize and some lisp scripting. It was ok but then I have been watching some lukesmith videos and see this video about him switching to HUGO, so I decided to check HUGO too." />
 
 
   
@@ -49,7 +50,7 @@
 <meta property="og:title" content="How I made my blog with emacs and hugo" />
 <meta property="og:description" content="A overview of how I write and develop my web blog using emacs &amp; hugo" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://jpacheco.xyz/posts/my-blog-in-emacs/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="http://localhost:1313/posts/my-blog-in-emacs/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-08-14T20:41:00-05:00" />
 <meta property="article:modified_time" content="2024-08-14T20:41:00-05:00" />
 
@@ -67,13 +68,13 @@
       "@type": "ListItem",
       "position":  1 ,
       "name": "Posts",
-      "item": "https://jpacheco.xyz/posts/"
+      "item": "http://localhost:1313/posts/"
     }, 
     {
       "@type": "ListItem",
       "position":  2 ,
       "name": "How I made my blog with emacs and hugo",
-      "item": "https://jpacheco.xyz/posts/my-blog-in-emacs/"
+      "item": "http://localhost:1313/posts/my-blog-in-emacs/"
     }
   ]
 }
@@ -88,8 +89,8 @@
   "keywords": [
     "emacs", "blog", "hugo"
   ],
-  "articleBody": " I have been using emacs most of the time for writting, and of course when I started to make my blog I have been use it (emacs) since of it. In the beginig when I start writing I was using some scripts and tips from system crafters he use htmlize and some lisp scripting. It was ok but then I have been watching some lukesmith videos and see this video about him switching to HUGO, so I decided to check HUGO too.\nFigure 1: A overview of how my org file looks like.\nWhat software and packages do I use?. Yep! I use emacs 🤓 and ox-hugo.\nAnd to build the static web I use HUGO and git.\n1 2 3 (use-package ox-hugo :ensure t :after ox) Code Snippet 1: This is what I have in my emacs configuration. Org and its configuration. HUGO uses markdown to manage the sites, posts, etc. but because we where using emacs, (we don’t like others than org syntax), so there are a lot of variables that ox-hugo handle in order to been exported to markdown syntax.\nIn my case I like to develop my whole blog into a single org-file\n1 2 3 4 5 6 7 8 9 10 #+begin_src org #+TITLE: jpacheco.xyz #+AUTHOR: Javier Pacheco #+DESCRIPTION: My website posts \u0026 projects. #+hugo_base_dir: ~/webdev/blog/ #+startup: content #+hugo_custom_front_matter: toc true #+hugo_auto_set_lastmod: t #+date: 2024-07-04 #+seq_todo: TODO(t) WAIT(w@/!) | DONE(d!) Code Snippet 2: My metadata in my org-file. These are the most important and relevant to use within HUGO:\n#+HUGO_BASE_DIR: This declare where you HUGO site is located, basically in the path where you run hugo new site my-site.\n#+HUGO_CUSTOM_FRONT_MATTER: This is for enable/disable the toc of the posts when ox-hugo exported to md format.\nWriting the posts. Write a post is very easy to start, you only need to add a org lvl-1 header, and add a more metadata (properties). The sub-headers of the post are going to be org-lvl-3 headers, and so on.\n1 2 3 4 5 6 7 * TODO How I made my blog with emacs and hugo :emacs:blog:hugo: :PROPERTIES: :EXPORT_FILE_NAME: my-blog-in-emacs :EXPORT_DESCRIPTION: A overview of how I write and develop my web blog using emacs \u0026 hugo :DATE: 08-14-2024 :EXPORT_HUGO_SECTION: posts :END: Code Snippet 3: Example of an article. :EXPORT_FILE_NAME: This is how your file is going to be stored, you may or not add the .md extension.\n:EXPORT_HUGO_SECTION: Here is the tricky part, if you have multiple sections like: post, projects, topics, etc. this is where the file is going to be stored.\nIf the sub-header starts with a TODO, when exported the md metadata is going to have draftt: true, which means even the archive is going to be created when you run hugo to create your site that md archive is going to be ignored until you finish (remove the TODO or change it to DONE.).\nAnd that’s it, you can search more options for manage the front matter in hugo in this page.\nThanks for reading.\n",
-  "wordCount" : "502",
+  "articleBody": "e toc = true +++\nI have been using emacs most of the time for writting, and of course when I started to make my blog I have been use it (emacs) since of it. In the beginig when I start writing I was using some scripts and tips from system crafters he use htmlize and some lisp scripting. It was ok but then I have been watching some lukesmith videos and see this video about him switching to HUGO, so I decided to check HUGO too.\n",
+  "wordCount" : "87",
   "inLanguage": "en",
   "datePublished": "2024-08-14T20:41:00-05:00",
   "dateModified": "2024-08-14T20:41:00-05:00",
@@ -99,14 +100,14 @@
   }],
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://jpacheco.xyz/posts/my-blog-in-emacs/"
+    "@id": "http://localhost:1313/posts/my-blog-in-emacs/"
   },
   "publisher": {
     "@type": "Organization",
     "name": "jpacheco.xyz",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://jpacheco.xyz/favicon.ico"
+      "url": "http://localhost:1313/favicon.ico"
     }
   }
 }
@@ -118,33 +119,33 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://jpacheco.xyz/" accesskey="h" title="jpacheco.xyz (Alt + H)">jpacheco.xyz</a>
+            <a href="http://localhost:1313/" accesskey="h" title="jpacheco.xyz (Alt + H)">jpacheco.xyz</a>
             <div class="logo-switches">
             </div>
         </div>
         <ul id="menu">
             <li>
-                <a href="https://jpacheco.xyz/about" title="About">
+                <a href="http://localhost:1313/about" title="About">
                     <span>About</span>
                 </a>
             </li>
             <li>
-                <a href="https://jpacheco.xyz/posts" title="Posts">
+                <a href="http://localhost:1313/posts" title="Posts">
                     <span>Posts</span>
                 </a>
             </li>
             <li>
-                <a href="https://jpacheco.xyz/projects" title="Projects">
+                <a href="http://localhost:1313/projects" title="Projects">
                     <span>Projects</span>
                 </a>
             </li>
             <li>
-                <a href="https://jpacheco.xyz/tags" title="Tags">
+                <a href="http://localhost:1313/tags" title="Tags">
                     <span>Tags</span>
                 </a>
             </li>
             <li>
-                <a href="https://jpacheco.xyz/search" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="http://localhost:1313/search" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
                 </a>
             </li>
@@ -155,14 +156,14 @@
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://jpacheco.xyz/">Home</a>&nbsp;»&nbsp;<a href="https://jpacheco.xyz/posts/">Posts</a></div>
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
       How I made my blog with emacs and hugo
     </h1>
     <div class="post-description">
       A overview of how I write and develop my web blog using emacs &amp; hugo
     </div>
-    <div class="post-meta"><span title='2024-08-14 20:41:00 -0500 CDT'>August 14, 2024</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Javier Pacheco&nbsp;|&nbsp;<a href="https://github.com/jpachecoxyz/blog/tree/main/content/posts/my-blog-in-emacs.md" rel="noopener noreferrer" target="_blank">Suggest Changes</a>
+    <div class="post-meta"><span title='2024-08-14 20:41:00 -0500 CDT'>August 14, 2024</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Javier Pacheco&nbsp;|&nbsp;<a href="https://github.com/jpachecoxyz/blog/tree/main/content/posts/my-blog-in-emacs.md" rel="noopener noreferrer" target="_blank">Suggest Changes</a>
 
 </div>
   </header> <div class="toc">
@@ -184,18 +185,20 @@
     </details>
 </div>
 
-  <div class="post-content"><div class="PREVIEW">
+  <div class="post-content"><p>e
+toc = true
++++</p>
+<div class="PREVIEW">
 <p>I have been using emacs most of the time for writting, and of course when I started to make my blog I have been use it (emacs) since of it. In the beginig when I start writing I was using some scripts and tips from <a href="https://systemcrafters.net/">system crafters</a> he use htmlize and some <em>lisp</em> scripting. It was ok but then I have been watching some <a href="https://www.youtube.com/@LukeSmithxyz">lukesmith</a> videos and see this <a href="https://www.youtube.com/watch?v=jAXKSKb3etk&amp;pp=ygUOaHVnbyBsdWtlc21pdGg%3D">video</a> about him switching to <code>HUGO</code>, so I decided to check <code>HUGO</code> too.</p>
 </div>
 <style>.org-center { margin-left: auto; margin-right: auto; text-align: center; }</style>
-<div class="org-center">
-<figure>
+<div clas<figure>
     <img loading="lazy" src="/posts/images/my-blog-in-emacs/overview.png"
          alt="Figure 1: A overview of how my org file looks like."/> <figcaption>
             <p><span class="figure-number">Figure 1: </span>A overview of how my org file looks like.</p>
         </figcaption>
 </figure>
-
+ looks like." >}}
 </div>
 <h2 id="what-software-and-packages-do-i-use-dot">What software and packages do I use?.<a hidden class="anchor" aria-hidden="true" href="#what-software-and-packages-do-i-use-dot">#</a></h2>
 <p>Yep! I use <code>emacs</code> 🤓 and <code>ox-hugo</code>.</p>
@@ -296,24 +299,24 @@
 <p>Here is the tricky part, if you have multiple sections like: post, projects, topics, etc. this is where the file is going to be stored.</p>
 <p>If the sub-header starts with a TODO, when exported the md metadata is going to have <code>draftt: true</code>, which means even the archive is going to be created when you run hugo to create your site that md archive is going to be ignored until you finish (remove the TODO or change it to DONE.).</p>
 <p>And that&rsquo;s it, you can search more options for manage the front matter in hugo in this <a href="https://ox-hugo.scripter.co/">page.</a></p>
-<p>Thanks for reading.</p>
+<p>Tha</p>
 
 
   </div>
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://jpacheco.xyz/tags/emacs/">Emacs</a></li>
-      <li><a href="https://jpacheco.xyz/tags/blog/">Blog</a></li>
-      <li><a href="https://jpacheco.xyz/tags/hugo/">Hugo</a></li>
+      <li><a href="http://localhost:1313/tags/emacs/">Emacs</a></li>
+      <li><a href="http://localhost:1313/tags/blog/">Blog</a></li>
+      <li><a href="http://localhost:1313/tags/hugo/">Hugo</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="https://jpacheco.xyz/posts/install-telega-nixos/">
+  <a class="prev" href="http://localhost:1313/posts/install-telega-nixos/">
     <span class="title">« Prev</span>
     <br>
     <span>Install Telega in NixOS - Emacs.</span>
   </a>
-  <a class="next" href="https://jpacheco.xyz/posts/emacs-vs-nvim/">
+  <a class="next" href="http://localhost:1313/posts/emacs-vs-nvim/">
     <span class="title">Next »</span>
     <br>
     <span>Emacs vs Neovim</span>
@@ -324,7 +327,7 @@
 <ul class="share-buttons">
     <li>
         <a target="_blank" rel="noopener noreferrer" aria-label="share How I made my blog with emacs and hugo on x"
-            href="https://x.com/intent/tweet/?text=How%20I%20made%20my%20blog%20with%20emacs%20and%20hugo&amp;url=https%3a%2f%2fjpacheco.xyz%2fposts%2fmy-blog-in-emacs%2f&amp;hashtags=emacs%2cblog%2chugo">
+            href="https://x.com/intent/tweet/?text=How%20I%20made%20my%20blog%20with%20emacs%20and%20hugo&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2fmy-blog-in-emacs%2f&amp;hashtags=emacs%2cblog%2chugo">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />
@@ -333,7 +336,7 @@
     </li>
     <li>
         <a target="_blank" rel="noopener noreferrer" aria-label="share How I made my blog with emacs and hugo on linkedin"
-            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fjpacheco.xyz%2fposts%2fmy-blog-in-emacs%2f&amp;title=How%20I%20made%20my%20blog%20with%20emacs%20and%20hugo&amp;summary=How%20I%20made%20my%20blog%20with%20emacs%20and%20hugo&amp;source=https%3a%2f%2fjpacheco.xyz%2fposts%2fmy-blog-in-emacs%2f">
+            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2fmy-blog-in-emacs%2f&amp;title=How%20I%20made%20my%20blog%20with%20emacs%20and%20hugo&amp;summary=How%20I%20made%20my%20blog%20with%20emacs%20and%20hugo&amp;source=http%3a%2f%2flocalhost%3a1313%2fposts%2fmy-blog-in-emacs%2f">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
@@ -342,7 +345,7 @@
     </li>
     <li>
         <a target="_blank" rel="noopener noreferrer" aria-label="share How I made my blog with emacs and hugo on facebook"
-            href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fjpacheco.xyz%2fposts%2fmy-blog-in-emacs%2f">
+            href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2fmy-blog-in-emacs%2f">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
@@ -351,7 +354,7 @@
     </li>
     <li>
         <a target="_blank" rel="noopener noreferrer" aria-label="share How I made my blog with emacs and hugo on telegram"
-            href="https://telegram.me/share/url?text=How%20I%20made%20my%20blog%20with%20emacs%20and%20hugo&amp;url=https%3a%2f%2fjpacheco.xyz%2fposts%2fmy-blog-in-emacs%2f">
+            href="https://telegram.me/share/url?text=How%20I%20made%20my%20blog%20with%20emacs%20and%20hugo&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2fmy-blog-in-emacs%2f">
             <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />

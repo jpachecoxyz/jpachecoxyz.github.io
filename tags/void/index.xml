@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Void on jpacheco.xyz</title>
-    <link>https://jpacheco.xyz/tags/void/</link>
+    <link>http://localhost:1313/tags/void/</link>
     <description>Recent content in Void on jpacheco.xyz</description>
     <generator>Hugo -- 0.126.1</generator>
     <language>en-us</language>
     <copyright>Javier Pacheco</copyright>
     <lastBuildDate>Thu, 04 Jul 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://jpacheco.xyz/tags/void/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/void/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Void linux bootstrap.</title>
-      <link>https://jpacheco.xyz/projects/voidstrap/</link>
+      <link>http://localhost:1313/projects/voidstrap/</link>
       <pubDate>Thu, 04 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://jpacheco.xyz/projects/voidstrap/</guid>
+      <guid>http://localhost:1313/projects/voidstrap/</guid>
       <description>A void linux semi-automated installer.</description>
     </item>
   </channel>
