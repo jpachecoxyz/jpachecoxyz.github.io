@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>Install Telega in NixOS - Emacs. | jpacheco.xyz</title>
-<meta name="keywords" content="emacs, post, linux, tecnology">
+<meta name="keywords" content="emacs, linux, tecnology">
 <meta name="description" content="How to install Telega server in NixOS.">
 <meta name="author" content="Javier Pacheco">
 <link rel="canonical" href="https://jpacheco.xyz/posts/install-telega-nixos/">
@@ -87,7 +87,7 @@ Telega telega.el is full featured unofficial client for Telegram platform for GN
   "name": "Install Telega in NixOS - Emacs.",
   "description": "How to install Telega server in NixOS.",
   "keywords": [
-    "emacs", "post", "linux", "tecnology"
+    "emacs", "linux", "tecnology"
   ],
   "articleBody": "What is telega?. According to it Github repository:\nTelega telega.el is full featured unofficial client for Telegram platform for GNU Emacs. As you may know, my main OS, at this time (2024-08-21) is NixOS, so I was trying to install Telega in my emacs, but as you can imagine, the file system hierarchy don’t works “normal” in NixOS, so is a little tricky set up the environment to actually make Telega works.\nRequisites: gnumake. (To compile). cmake (To compile). tdlib (Version \u003e 1.8.29). Process of installation. install the dependencies using your configuration.nix, home-manager, or wathever method you use to install packages in NixOS. Install Telega in emacs. 1 2 (use-package telega :ensure t) Code Snippet 1:\rExample of telega installation unsing use-package.\rNow, because we are in NixOS, the file system hierarchy don’t works same as in linux or macOS, so we need to declare where telega is going to see the tdlib libraries, so: 1 (setq telega-server-lib-prefix \"/home/user/.nix-profile/\") Compile Telega-server inside emacs. 1 M-x telega-server-build With that, Telega must be compiled, and ready to go.\n",
   "wordCount" : "176",
@@ -247,7 +247,6 @@ Telega telega.el is full featured unofficial client for Telegram platform for GN
   <footer class="post-footer">
     <ul class="post-tags">
       <li><a href="https://jpacheco.xyz/tags/emacs/">Emacs</a></li>
-      <li><a href="https://jpacheco.xyz/tags/post/">Post</a></li>
       <li><a href="https://jpacheco.xyz/tags/linux/">Linux</a></li>
       <li><a href="https://jpacheco.xyz/tags/tecnology/">Tecnology</a></li>
     </ul>
@@ -268,7 +267,7 @@ Telega telega.el is full featured unofficial client for Telegram platform for GN
 <ul class="share-buttons">
     <li>
         <a target="_blank" rel="noopener noreferrer" aria-label="share Install Telega in NixOS - Emacs. on x"
-            href="https://x.com/intent/tweet/?text=Install%20Telega%20in%20NixOS%20-%20Emacs.&amp;url=https%3a%2f%2fjpacheco.xyz%2fposts%2finstall-telega-nixos%2f&amp;hashtags=emacs%2cpost%2clinux%2ctecnology">
+            href="https://x.com/intent/tweet/?text=Install%20Telega%20in%20NixOS%20-%20Emacs.&amp;url=https%3a%2f%2fjpacheco.xyz%2fposts%2finstall-telega-nixos%2f&amp;hashtags=emacs%2clinux%2ctecnology">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />

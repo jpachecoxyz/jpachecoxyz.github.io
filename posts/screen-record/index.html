@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>Screen Record | jpacheco.xyz</title>
-<meta name="keywords" content="post, linux, script">
+<meta name="keywords" content="linux, script">
 <meta name="description" content="Script to record in hyprland">
 <meta name="author" content="Javier Pacheco">
 <link rel="canonical" href="https://jpacheco.xyz/posts/screen-record/">
@@ -86,7 +86,7 @@
   "name": "Screen Record",
   "description": "Script to record in hyprland",
   "keywords": [
-    "post", "linux", "script"
+    "linux", "script"
   ],
   "articleBody": "This script record the screen with the wf-recorder tool, it can be the hole screen or a specific area of it. The script is going to store the video in /tmp/screencast.mp4, this script only store one video, personally I think that have more than one record is a mess, more if you only wants to share a quick screencast to telegram, irc, cinny or even to share it through 0x0.st.\nDescription and main variables: 1 2 3 4 5 6 # Created By: Javier Pacheco - javier@jpacheco.xyz # Created On: 29/03/24 # Project: Screen recorder in wayland # Dependencies: wf-recorder wl-copy and a launcher like dmenu, fuzzel, etc. SOUND_CARD=$(pactl list sources | awk '/Name/ \u0026\u0026 /.monitor/ {print $2}') Recording functions: Those functions have enable the sound recording, so if you have some music, video, etc running it will record the sound but not the mic.\nscreencast: This option is going to record a specific area of the screen. This area is going to be specified by slurp.\n1 2 3 screencast() { wf-recorder --audio=$SOUND_CARD -f /tmp/screencast.mp4 } area: This option is going to record a specific area of the screen. This area is going to be specified by slurp.\n1 2 3 area() { wf-recorder --audio=$SOUND_CARD -g \"$(slurp)\" -f /tmp/screencast.mp4 } Main functions: These functions are tools that ensures this script works correctly. For example if all ready have a existing file recorded, it will removed to record a new one, because this script only will create one video always, and also have a function to kill the process when it finished.\ncheck internet connection: 1 2 3 check_connection() { ping -c 1 google.com 1\u003e /dev/null 2\u003e\u00261 } share: This option is going to upload the video to 0x0.st and copy the url to the clipboard using wc-copy.\n1 2 3 4 share() { notify-send \"uploading..\" \"video is upoading to 0x0.st\" curl -F \"file=@/tmp/screencast.mp4\" https://0x0.st | wl-copy \u0026\u0026 notify-send \"Video stored in 0x0.st\" } Kill existing process: 1 2 3 4 5 6 7 8 9 kill_proc(){ pkill --signal SIGINT wf-recorder if [ $? -eq 0 ]; then notify-send \"Video stored\" \"Video was stored in /tmp/screencast.mp4\" pkill --signal SIGINT wf-recorder exit 0 fi } Remove existing video: 1 2 3 remove_vid() { [ -f /tmp/screencast.mp4 ] \u0026\u0026 rm /tmp/screencast.mp4 } Sequence: This is were the scripts actually starts, first of all look if the script is already running, if not then ask for a recording option:\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 kill_proc OPT=$(printf \"screencast\\narea\\nshare\\nquit\" | fuzzel --dmenu -p 'Select an option: ' ) case $OPT in 'screencast') sleep 1 remove_vid sleep 1 screencast;; 'area') sleep 1 remove_vid sleep 1 area;; 'share') check_connection \u0026\u0026 share || notify-send \"Error\" \"check your internet connection\" ;; *|quit) exit 0;; esac The whole code. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 # Created By: Javier Pacheco - javier@jpacheco.xyz # Created On: 29/03/24 # Project: Screen recorder in wayland # Dependencies: wf-recorder wl-copy and a launcher like dmenu, fuzzel, etc. SOUND_CARD=$(pactl list sources | awk '/Name/ \u0026\u0026 /.monitor/ {print $2}') screencast() { wf-recorder --audio=$SOUND_CARD -f /tmp/screencast.mp4 } area() { wf-recorder --audio=$SOUND_CARD -g \"$(slurp)\" -f /tmp/screencast.mp4 } check_connection() { ping -c 1 google.com 1\u003e /dev/null 2\u003e\u00261 } share() { notify-send \"uploading..\" \"video is upoading to 0x0.st\" curl -F \"file=@/tmp/screencast.mp4\" https://0x0.st | wl-copy \u0026\u0026 notify-send \"Video stored in 0x0.st\" } kill_proc(){ pkill --signal SIGINT wf-recorder if [ $? -eq 0 ]; then notify-send \"Video stored\" \"Video was stored in /tmp/screencast.mp4\" pkill --signal SIGINT wf-recorder exit 0 fi } remove_vid() { [ -f /tmp/screencast.mp4 ] \u0026\u0026 rm /tmp/screencast.mp4 } kill_proc OPT=$(printf \"screencast\\narea\\nshare\\nquit\" | fuzzel --dmenu -p 'Select an option: ' ) case $OPT in 'screencast') sleep 1 remove_vid sleep 1 screencast;; 'area') sleep 1 remove_vid sleep 1 area;; 'share') check_connection \u0026\u0026 share || notify-send \"Error\" \"check your internet connection\" ;; *|quit) exit 0;; esac ",
   "wordCount" : "697",
@@ -495,7 +495,6 @@ This area is going to be specified by <code>slurp</code>.</p>
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://jpacheco.xyz/tags/post/">Post</a></li>
       <li><a href="https://jpacheco.xyz/tags/linux/">Linux</a></li>
       <li><a href="https://jpacheco.xyz/tags/script/">Script</a></li>
     </ul>
@@ -516,7 +515,7 @@ This area is going to be specified by <code>slurp</code>.</p>
 <ul class="share-buttons">
     <li>
         <a target="_blank" rel="noopener noreferrer" aria-label="share Screen Record on x"
-            href="https://x.com/intent/tweet/?text=Screen%20Record&amp;url=https%3a%2f%2fjpacheco.xyz%2fposts%2fscreen-record%2f&amp;hashtags=post%2clinux%2cscript">
+            href="https://x.com/intent/tweet/?text=Screen%20Record&amp;url=https%3a%2f%2fjpacheco.xyz%2fposts%2fscreen-record%2f&amp;hashtags=linux%2cscript">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />

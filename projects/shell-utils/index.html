@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>Shell-utils | jpacheco.xyz</title>
-<meta name="keywords" content="project, linux, script">
+<meta name="keywords" content="linux, script">
 <meta name="description" content="A github repo that stores shell scripts utilities for x and wayland.">
 <meta name="author" content="Javier Pacheco">
 <link rel="canonical" href="https://jpacheco.xyz/projects/shell-utils/">
@@ -88,7 +88,7 @@ Repository Structure The repository is organized into directories based on the e
   "name": "Shell-utils",
   "description": "A github repo that stores shell scripts utilities for x and wayland.",
   "keywords": [
-    "project", "linux", "script"
+    "linux", "script"
   ],
   "articleBody": "Overview Welcome to the Shell Utilities repository This project provides a collection of shell scripts tailored for different window managers and environments, including i3, Hyprland, and Sway, on X11 and Wayland.\nRepository Structure The repository is organized into directories based on the environment and window manager:\n1 2 3 4 5 6 . ├── wayland │ ├── hyprland │ └── sway └── x11 └── i3 wayland/hyprland Scripts for Hyprland on Wayland. wayland/sway Scripts for Sway on Wayland. x11/i3 Scripts for i3 on X11. Installation To install the scripts, use the provided install.sh script. You can install scripts for a specific window manager or all at once.\nNOTE: The install.sh scripts use $HOME/.local/bin as the target, you can edit this variable inside the script, or copy the files manually somewhere as you have your path.\n1 2 3 4 5 6 7 # Install scripts for a specific window manager ./install.sh sway ./install.sh hyprland ./install.sh i3 # Install all scripts ./install.sh all Usage Each script includes usage instructions in the comments at the top. You can run a script directly from the terminal or integrate it into your workflow.\nContributing We welcome contributions! If you’d like to contribute, please follow these steps:\nFork the repository. Create a new branch for your feature or fix. Make your changes and commit them with descriptive messages. Push your changes to your fork. Submit a pull request to the main repository. Contact For questions or suggestions, please open an issue on GitHub or contact Javier Pacheco.\n",
   "wordCount" : "251",
@@ -264,7 +264,6 @@ Repository Structure The repository is organized into directories based on the e
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://jpacheco.xyz/tags/project/">Project</a></li>
       <li><a href="https://jpacheco.xyz/tags/linux/">Linux</a></li>
       <li><a href="https://jpacheco.xyz/tags/script/">Script</a></li>
     </ul>
@@ -285,7 +284,7 @@ Repository Structure The repository is organized into directories based on the e
 <ul class="share-buttons">
     <li>
         <a target="_blank" rel="noopener noreferrer" aria-label="share Shell-utils on x"
-            href="https://x.com/intent/tweet/?text=Shell-utils&amp;url=https%3a%2f%2fjpacheco.xyz%2fprojects%2fshell-utils%2f&amp;hashtags=project%2clinux%2cscript">
+            href="https://x.com/intent/tweet/?text=Shell-utils&amp;url=https%3a%2f%2fjpacheco.xyz%2fprojects%2fshell-utils%2f&amp;hashtags=linux%2cscript">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />

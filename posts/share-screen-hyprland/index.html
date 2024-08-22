@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>Share Screen in Hyprland. | jpacheco.xyz</title>
-<meta name="keywords" content="hyprland, linux, wayland">
+<meta name="keywords" content="linux, wayland">
 <meta name="description" content="How to share screen in hyprland in apps like: telegram-desktop.">
 <meta name="author" content="Javier Pacheco">
 <link rel="canonical" href="https://jpacheco.xyz/posts/share-screen-hyprland/">
@@ -86,7 +86,7 @@
   "name": "Share Screen in Hyprland.",
   "description": "How to share screen in hyprland in apps like: telegram-desktop.",
   "keywords": [
-    "hyprland", "linux", "wayland"
+    "linux", "wayland"
   ],
   "articleBody": "The issue: We have a telegram group, in where we share emacs things and some other related to programming and linux in the most part of the time. So one day one of the members says that we can share screens and have a kind of podcast and talk about our environment configurations (sway/hyprland), so I was very curious about it so he invite me to another telegram group, this telegram group is for his YouTube channel, for test my hyprland configuration because he told me that he has troubles in his hyprland configuration using manjaro.\nNow that I face the error, I realize that in my home-manager compilation I had this error since I was using this tool in nixOS, but because I never use it, I never let it importance, so now I realize that this thing need to be solved because I going to use it in the future.\nSo I installed telegram-dektop, and try to share my configuration and guess what; yes I was unable to share my screen. It failed and pop ups some errors.\nThings that I try before to solve the problem. My main distribution at the time (2024-07-28) is nixOS, so I think that this could be a missing declaration in some programs, like xdg-dektop-portal-hyprland, because of that I was researching issues in nixOS \u0026 hyprland, but nothing solve the problem.\nSo nothing that I found fix the problem, most of the issues in github was too old, or nothing to do with nixOS, so the last thing that I could do was compile xdg-desktop-portal-hyprland by source, but in nixOS I would install some compilers and other things that I not currently use, but it was the last option.\nSolving the problem. So once in my job, with the mind more clean, I go to the hyprland wiki, and at the bottom there were some tips to debugging if some errors appears.\nSo I add this in my Hyprland configuration file:\n1 exec-once = dbus-update-activation-environment --systemd --all That’s it, that little command above solve my 1 day pain trying to share my screen. So I hope this little post be helpful for you if you encounter the same issue as me.\nThanks for read me.\n",
   "wordCount" : "373",
@@ -210,7 +210,6 @@
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://jpacheco.xyz/tags/hyprland/">Hyprland</a></li>
       <li><a href="https://jpacheco.xyz/tags/linux/">Linux</a></li>
       <li><a href="https://jpacheco.xyz/tags/wayland/">Wayland</a></li>
     </ul>
@@ -231,7 +230,7 @@
 <ul class="share-buttons">
     <li>
         <a target="_blank" rel="noopener noreferrer" aria-label="share Share Screen in Hyprland. on x"
-            href="https://x.com/intent/tweet/?text=Share%20Screen%20in%20Hyprland.&amp;url=https%3a%2f%2fjpacheco.xyz%2fposts%2fshare-screen-hyprland%2f&amp;hashtags=hyprland%2clinux%2cwayland">
+            href="https://x.com/intent/tweet/?text=Share%20Screen%20in%20Hyprland.&amp;url=https%3a%2f%2fjpacheco.xyz%2fposts%2fshare-screen-hyprland%2f&amp;hashtags=linux%2cwayland">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />

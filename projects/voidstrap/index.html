@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>Void linux bootstrap. | jpacheco.xyz</title>
-<meta name="keywords" content="project, linux, tecnology, script">
+<meta name="keywords" content="linux, tecnology, script">
 <meta name="description" content="A void linux semi-automated installer.">
 <meta name="author" content="Javier Pacheco">
 <link rel="canonical" href="https://jpacheco.xyz/projects/voidstrap/">
@@ -88,7 +88,7 @@ Usage: Running install.sh Download the iso, and once in root inside the live, gi
   "name": "Void linux bootstrap.",
   "description": "A void linux semi-automated installer.",
   "keywords": [
-    "project", "linux", "tecnology", "script"
+    "linux", "tecnology", "script"
   ],
   "articleBody": "\rThis is the first post of the 2024, this is a project that I am working on in the last year, is a minimialist voidlinux instalator it is based in some recomendations in a guides that some friends of my have but “semiautomated”.\nVoidStrap installer. A basic minimalist installer of void-linux with some packages to get ready to enjoy this amazing GNU/Linux distribution.\nUsage: Running install.sh Download the iso, and once in root inside the live, git clone this repo: (You need to update inside the iso and install git)\nNOTE: there are 3 branches:\nmain This will install void-musl. glibc This will install void-glibc. dual This will install void-glibc dual boot with Windows. This branch is tested only with Windows, I never try it with other distributions. If you want musl you can change the link to the mirror in the install.sh script: 1 2 3 4 - Change this in line 11: export XBPS_ARCH=x86_64 \u0026\u0026 xbps-install -Suy -R http://mirrors.servercentral.com/voidlinux/current -r /mnt \\ - For this: export XBPS_ARCH=x86_64-musl \u0026\u0026 xbps-install -Suy -R http://mirrors.servercentral.com/voidlinux/current/musl -r /mnt \\ 1 2 3 git clone https://git.disroot.org/jpacheco/voidstrap cd voidstrap sh install.sh Once there the script will open cfdisk, and you need to format the HDD in this specific format:\n1 2 3 - /dev/sdX1 -\u003e as the boot partition. - /dev/sdY2 -\u003e as the swap partition. - /dev/sdZ3 -\u003e as the root partition. NOTE: Replace X,Y \u0026 Z for your partition name. I consider to have this structure of partition, but you can change it, but you must change the code in postinstall.sh when the scripts make the fstab archive.\nMake sure you do a backup of your files before doing crazy things and trust anyone script\nWhen the install.sh script finish, you need to run the postinstall script located in /root folder:\nRunning postinstall.sh This script its going to create some configuration files, like: fstab, rc.conf, change the password of root, and add user(s).\n1 xchroot /mnt Then run the chroot.sh script.\n1 sh /root/postinstall.sh When the postinsall.sh script finishes, you only need to reboot and enjoy your Void-Linux distribution.\nWhen it finish you need to run the postinstall.sh script, that is going to install the X server and some other “necessary” packages.\nThe custom.sh script This is going to install my personal dotfiles, and a specific packages that I use:\n1 sh /root/custom.sh But you can specify your dotfiles repositories and others that you require whit some parameters:\n1 2 3 sh custom.sh -r https://codeberg.org/jpacheco/dotfiles # specify a repo url. sh custom.sh -p otherprogfile.csv # especify a custom package archive to install. sh custom.sh -b dev # especify the name of a custom branch in case of needed. References: Voidstrap. Voidlinux Documentation. Tuxliban guides. ",
   "wordCount" : "452",
@@ -325,7 +325,6 @@ the <strong>X server</strong> and some other &ldquo;necessary&rdquo; packages.</
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://jpacheco.xyz/tags/project/">Project</a></li>
       <li><a href="https://jpacheco.xyz/tags/linux/">Linux</a></li>
       <li><a href="https://jpacheco.xyz/tags/tecnology/">Tecnology</a></li>
       <li><a href="https://jpacheco.xyz/tags/script/">Script</a></li>
@@ -347,7 +346,7 @@ the <strong>X server</strong> and some other &ldquo;necessary&rdquo; packages.</
 <ul class="share-buttons">
     <li>
         <a target="_blank" rel="noopener noreferrer" aria-label="share Void linux bootstrap. on x"
-            href="https://x.com/intent/tweet/?text=Void%20linux%20bootstrap.&amp;url=https%3a%2f%2fjpacheco.xyz%2fprojects%2fvoidstrap%2f&amp;hashtags=project%2clinux%2ctecnology%2cscript">
+            href="https://x.com/intent/tweet/?text=Void%20linux%20bootstrap.&amp;url=https%3a%2f%2fjpacheco.xyz%2fprojects%2fvoidstrap%2f&amp;hashtags=linux%2ctecnology%2cscript">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />
