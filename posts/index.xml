@@ -1,55 +1,76 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on jpacheco.xyz</title>
+    <title>Posts on </title>
     <link>https://jpacheco.xyz/posts/</link>
-    <description>Recent content in Posts on jpacheco.xyz</description>
-    <generator>Hugo -- 0.128.0</generator>
-    <language>en-us</language>
+    <description>Recent content in Posts on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
     <copyright>Javier Pacheco</copyright>
     <lastBuildDate>Wed, 21 Aug 2024 13:33:00 -0500</lastBuildDate>
     <atom:link href="https://jpacheco.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pymetrics</title>
+      <link>https://jpacheco.xyz/posts/pymetrics/</link>
+      <pubDate>Sun, 11 Aug 2024 03:00:00 -0500</pubDate>
+      <guid>https://jpacheco.xyz/posts/pymetrics/</guid>
+      <description>Overview Managing and monitoring the performance of industrial machines is critical to ensuring minimal downtime and maximizing productivity.</description>
+    </item>
     <item>
       <title>Install Telega in NixOS - Emacs.</title>
       <link>https://jpacheco.xyz/posts/install-telega-nixos/</link>
       <pubDate>Wed, 21 Aug 2024 13:33:00 -0500</pubDate>
       <guid>https://jpacheco.xyz/posts/install-telega-nixos/</guid>
-      <description>How to install Telega server in NixOS.</description>
+      <description>What is telega?</description>
     </item>
     <item>
       <title>How I made my blog with emacs and hugo</title>
       <link>https://jpacheco.xyz/posts/my-blog-in-emacs/</link>
       <pubDate>Wed, 14 Aug 2024 20:41:00 -0500</pubDate>
       <guid>https://jpacheco.xyz/posts/my-blog-in-emacs/</guid>
-      <description>A overview of how I write and develop my web blog using emacs &amp;amp; hugo</description>
+      <description>I have been using emacs most of the time for writting, and of course when I started to make my blog I have been use it (emacs) since of it.</description>
     </item>
     <item>
       <title>Emacs vs Neovim</title>
       <link>https://jpacheco.xyz/posts/emacs-vs-nvim/</link>
       <pubDate>Tue, 13 Aug 2024 05:06:00 -0500</pubDate>
       <guid>https://jpacheco.xyz/posts/emacs-vs-nvim/</guid>
-      <description>My opinion about emacs and neovim about writting and programming.</description>
+      <description>Neovim for Programming Efficiency and Speed: Neovim is highly efficient for programming due to its lightweight nature and focus on speed.</description>
     </item>
     <item>
       <title>Share Screen in Hyprland.</title>
       <link>https://jpacheco.xyz/posts/share-screen-hyprland/</link>
       <pubDate>Sun, 11 Aug 2024 02:52:00 -0500</pubDate>
       <guid>https://jpacheco.xyz/posts/share-screen-hyprland/</guid>
-      <description>How to share screen in hyprland in apps like: telegram-desktop.</description>
+      <description>The issue: We have a telegram group, in where we share emacs things and some other related to programming and linux in the most part of the time.</description>
+    </item>
+    <item>
+      <title>Shell-utils</title>
+      <link>https://jpacheco.xyz/posts/shell-utils/</link>
+      <pubDate>Thu, 04 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://jpacheco.xyz/posts/shell-utils/</guid>
+      <description>Overview Welcome to the Shell Utilities repository This project provides a collection of shell scripts tailored for different window managers and environments, including i3, Hyprland, and Sway, on X11 and Wayland.</description>
+    </item>
+    <item>
+      <title>Void linux bootstrap.</title>
+      <link>https://jpacheco.xyz/posts/voidstrap/</link>
+      <pubDate>Thu, 04 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://jpacheco.xyz/posts/voidstrap/</guid>
+      <description>This is the first post of the 2024, this is a project that I am working on in the last year, is a minimialist voidlinux instalator it is based in some recomendations in a guides that some friends of my have but &amp;ldquo;semiautomated&amp;rdquo;.</description>
     </item>
     <item>
       <title>Screen Record</title>
       <link>https://jpacheco.xyz/posts/screen-record/</link>
       <pubDate>Fri, 15 Mar 2024 04:14:00 -0500</pubDate>
       <guid>https://jpacheco.xyz/posts/screen-record/</guid>
-      <description>Script to record in hyprland</description>
+      <description>This script record the screen with the wf-recorder tool, it can be the hole screen or a specific area of it.</description>
     </item>
     <item>
       <title>Efetch.el</title>
       <link>https://jpacheco.xyz/posts/efetch/</link>
       <pubDate>Sat, 13 Jan 2024 04:11:00 -0600</pubDate>
       <guid>https://jpacheco.xyz/posts/efetch/</guid>
-      <description>A emacs fetching tool.</description>
+      <description>Embrace a new level of Emacs mastery with efetch.</description>
     </item>
   </channel>
 </rss>

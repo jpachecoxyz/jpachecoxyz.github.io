@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Wayland on jpacheco.xyz</title>
+    <title>Wayland on </title>
     <link>https://jpacheco.xyz/tags/wayland/</link>
-    <description>Recent content in Wayland on jpacheco.xyz</description>
-    <generator>Hugo -- 0.128.0</generator>
-    <language>en-us</language>
+    <description>Recent content in Wayland on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
     <copyright>Javier Pacheco</copyright>
     <lastBuildDate>Sun, 11 Aug 2024 03:00:00 -0500</lastBuildDate>
     <atom:link href="https://jpacheco.xyz/tags/wayland/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Pymetrics</title>
-      <link>https://jpacheco.xyz/projects/pymetrics/</link>
+      <link>https://jpacheco.xyz/posts/pymetrics/</link>
       <pubDate>Sun, 11 Aug 2024 03:00:00 -0500</pubDate>
-      <guid>https://jpacheco.xyz/projects/pymetrics/</guid>
-      <description>A GUI app written in python to store maintenace logs.</description>
+      <guid>https://jpacheco.xyz/posts/pymetrics/</guid>
+      <description>Overview Managing and monitoring the performance of industrial machines is critical to ensuring minimal downtime and maximizing productivity.</description>
     </item>
     <item>
       <title>Share Screen in Hyprland.</title>
       <link>https://jpacheco.xyz/posts/share-screen-hyprland/</link>
       <pubDate>Sun, 11 Aug 2024 02:52:00 -0500</pubDate>
       <guid>https://jpacheco.xyz/posts/share-screen-hyprland/</guid>
-      <description>How to share screen in hyprland in apps like: telegram-desktop.</description>
+      <description>The issue: We have a telegram group, in where we share emacs things and some other related to programming and linux in the most part of the time.</description>
     </item>
   </channel>
 </rss>

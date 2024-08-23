@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Personal on jpacheco.xyz</title>
+    <title>Personal on </title>
     <link>https://jpacheco.xyz/tags/personal/</link>
-    <description>Recent content in Personal on jpacheco.xyz</description>
-    <generator>Hugo -- 0.128.0</generator>
-    <language>en-us</language>
+    <description>Recent content in Personal on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
     <copyright>Javier Pacheco</copyright>
     <lastBuildDate>Wed, 14 Aug 2024 20:41:00 -0500</lastBuildDate>
     <atom:link href="https://jpacheco.xyz/tags/personal/index.xml" rel="self" type="application/rss+xml" />
@@ -14,7 +14,7 @@
       <link>https://jpacheco.xyz/posts/my-blog-in-emacs/</link>
       <pubDate>Wed, 14 Aug 2024 20:41:00 -0500</pubDate>
       <guid>https://jpacheco.xyz/posts/my-blog-in-emacs/</guid>
-      <description>A overview of how I write and develop my web blog using emacs &amp;amp; hugo</description>
+      <description>I have been using emacs most of the time for writting, and of course when I started to make my blog I have been use it (emacs) since of it.</description>
     </item>
   </channel>
 </rss>

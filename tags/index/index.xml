@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Index on jpacheco.xyz</title>
+    <title>Index on </title>
     <link>https://jpacheco.xyz/tags/index/</link>
-    <description>Recent content in Index on jpacheco.xyz</description>
-    <generator>Hugo -- 0.128.0</generator>
-    <language>en-us</language>
+    <description>Recent content in Index on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
     <copyright>Javier Pacheco</copyright>
-    <lastBuildDate></lastBuildDate>
+    <lastBuildDate>Wed, 21 Aug 2024 13:33:00 -0500</lastBuildDate>
     <atom:link href="https://jpacheco.xyz/tags/index/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Posts</title>
+      <link>https://jpacheco.xyz/posts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jpacheco.xyz/posts/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

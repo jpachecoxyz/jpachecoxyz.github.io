@@ -2,8 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://jpacheco.xyz/projects/pymetrics/</loc>
+    <loc>https://jpacheco.xyz/posts/pymetrics/</loc>
     <lastmod>2024-08-11T03:00:00-05:00</lastmod>
+  </url><url>
+    <loc>https://jpacheco.xyz/</loc>
+    <lastmod>2024-08-21T13:33:00-05:00</lastmod>
   </url><url>
     <loc>https://jpacheco.xyz/tags/emacs/</loc>
     <lastmod>2024-08-21T13:33:00-05:00</lastmod>
@@ -12,9 +15,6 @@
     <lastmod>2024-08-21T13:33:00-05:00</lastmod>
   </url><url>
     <loc>https://jpacheco.xyz/posts/install-telega-nixos/</loc>
-    <lastmod>2024-08-21T13:33:00-05:00</lastmod>
-  </url><url>
-    <loc>https://jpacheco.xyz/</loc>
     <lastmod>2024-08-21T13:33:00-05:00</lastmod>
   </url><url>
     <loc>https://jpacheco.xyz/tags/linux/</loc>
@@ -38,9 +38,6 @@
     <loc>https://jpacheco.xyz/posts/emacs-vs-nvim/</loc>
     <lastmod>2024-08-13T05:06:00-05:00</lastmod>
   </url><url>
-    <loc>https://jpacheco.xyz/projects/</loc>
-    <lastmod>2024-08-11T03:00:00-05:00</lastmod>
-  </url><url>
     <loc>https://jpacheco.xyz/tags/wayland/</loc>
     <lastmod>2024-08-11T03:00:00-05:00</lastmod>
   </url><url>
@@ -50,10 +47,10 @@
     <loc>https://jpacheco.xyz/tags/script/</loc>
     <lastmod>2024-07-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://jpacheco.xyz/projects/shell-utils/</loc>
+    <loc>https://jpacheco.xyz/posts/shell-utils/</loc>
     <lastmod>2024-07-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://jpacheco.xyz/projects/voidstrap/</loc>
+    <loc>https://jpacheco.xyz/posts/voidstrap/</loc>
     <lastmod>2024-07-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://jpacheco.xyz/posts/screen-record/</loc>
