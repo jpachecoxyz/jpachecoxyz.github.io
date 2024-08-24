@@ -1,0 +1,24 @@
+{
+   "list": [
+      {
+         "name":"Pymetrics",
+         "url":"https:github.com/jpachecoxyz/pymetrics",
+         "desc":"A GUI maintenance log written in python."
+      },
+      {
+         "name":"Shell-utils",
+         "url":"http://github.com/jpachecoxyz/shell-utils",
+         "desc":"A collection of usefull shell scripts."
+      },
+      {
+         "name":"Voidstrap",
+         "url":"http://github.com/jpachecoxyz/shell-utils",
+         "desc":"Void linux installation script."
+      },
+      {
+         "name":"Noobemacs",
+         "url":"https://github.com/engjpacheco/noobemacs",
+         "desc":"Noobemacs, a minimal emacs configuration with evil mode."
+      }
+   ]
+}
