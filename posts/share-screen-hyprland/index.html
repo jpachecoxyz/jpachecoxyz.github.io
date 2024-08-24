@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 <head>
   <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -8,16 +8,17 @@
   
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title> Share Screen in Hyprland. | </title>
+  <title> Share Screen in Hyprland. | jpacheco.xyz</title>
   <link rel = 'canonical' href = 'https://jpacheco.xyz/posts/share-screen-hyprland/'>
   <meta name="description" content="Hello! I’m Javier Pacheco, an enthusiast in automation and programming. I love innovating and automating processes to make life easier. I am passionate about Linux because it&#39;s Open Source, highly customizable &amp; encourages freedom and knowledge sharing. If you have any questions or would like to get in touch, send me an email.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta property="og:url" content="https://jpacheco.xyz/posts/share-screen-hyprland/">
+  <meta property="og:site_name" content="jpacheco.xyz">
   <meta property="og:title" content="Share Screen in Hyprland.">
   <meta property="og:description" content="How to share screen in hyprland in apps like: telegram-desktop.">
-  <meta property="og:locale" content="en">
+  <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2024-08-11T02:52:00-05:00">
@@ -38,7 +39,7 @@
   <link rel="stylesheet" href="https://jpacheco.xyz/css/styles.c05d68261bf086a9d7713c4f8a6215a3601608e267a816a7ee58f139b3d1aae51222aae2081c8e0c6bd35e1334773b7a16283022f31f92afd93bb37e5e822e66.css" integrity="sha512-wF1oJhvwhqnXcTxPimIVo2AWCOJnqBan7ljxObPRquUSIqriCByODGvTXhM0dzt6FigwIvMfkq/ZO7N&#43;XoIuZg=="> 
 
   
-  
+   <link rel="stylesheet" href="https://jpacheco.xyz/css/style.css"> 
   
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -49,7 +50,6 @@
   
 <link rel="icon" type="image/png" href="https://jpacheco.xyz/images/favicon.ico" />
 
-  
   
   
   
@@ -71,8 +71,6 @@
         <li><a href="/about">About</a></li>
          
         <li><a href="/posts">Writings</a></li>
-         
-        <li><a href="/tags">Tags</a></li>
          
         <li><a href="/search">Search</a></li>
         
@@ -232,7 +230,7 @@
 <h2 id="solving-the-problem-dot">Solving the problem.</h2>
 <p>So once in my job, with the mind more clean, I go to the hyprland <a href="https://wiki.hyprland.org/Useful-Utilities/xdg-desktop-portal-hyprland/">wiki</a>, and at the bottom there were some tips to debugging if some errors appears.</p>
 <p>So I add this in my <code>Hyprland</code> configuration file:</p>
-<div class="highlight"><pre tabindex="0" style="color:#ebdbb2;background-color:#282828;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cfg" data-lang="cfg"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">1</span><span><span style="color:#b8bb26;font-weight:bold">exec-once</span> <span style="color:#fe8019">=</span> <span style="color:#b8bb26">dbus-update-activation-environment --systemd --all</span>
+<div class="highlight"><pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cfg" data-lang="cfg"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1</span><span><span style="color:#cebc3a">exec-once</span> <span style="color:#54b1c7">=</span> <span style="color:#98c379">dbus-update-activation-environment --systemd --all</span>
 </span></span></code></pre></div><p>That&rsquo;s it, that little command above solve my 1 day pain trying to share my screen. So I hope this little post be helpful for you if you encounter the same issue as me.</p>
 <p>Thanks for read me.</p>
 
@@ -258,8 +256,6 @@
           <li><a href="/about">About</a></li>
          
           <li><a href="/posts">Writings</a></li>
-         
-          <li><a href="/tags">Tags</a></li>
          
           <li><a href="/search">Search</a></li>
         
@@ -366,8 +362,6 @@
         <li><a href="/about">About</a></li>
          
         <li><a href="/posts">Writings</a></li>
-         
-        <li><a href="/tags">Tags</a></li>
          
         <li><a href="/search">Search</a></li>
         

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>About on </title>
+    <title>About on jpacheco.xyz</title>
     <link>https://jpacheco.xyz/tags/about/</link>
-    <description>Recent content in About on </description>
+    <description>Recent content in About on jpacheco.xyz</description>
     <generator>Hugo</generator>
-    <language>en</language>
+    <language>en-us</language>
     <copyright>Javier Pacheco</copyright>
     <lastBuildDate>Fri, 05 Jan 2024 18:00:00 -0600</lastBuildDate>
     <atom:link href="https://jpacheco.xyz/tags/about/index.xml" rel="self" type="application/rss+xml" />

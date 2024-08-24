@@ -5,16 +5,13 @@
     <loc>https://jpacheco.xyz/posts/pymetrics/</loc>
     <lastmod>2024-08-11T03:00:00-05:00</lastmod>
   </url><url>
-    <loc>https://jpacheco.xyz/</loc>
-    <lastmod>2024-08-21T13:33:00-05:00</lastmod>
-  </url><url>
     <loc>https://jpacheco.xyz/tags/emacs/</loc>
     <lastmod>2024-08-21T13:33:00-05:00</lastmod>
   </url><url>
-    <loc>https://jpacheco.xyz/tags/index/</loc>
+    <loc>https://jpacheco.xyz/posts/install-telega-nixos/</loc>
     <lastmod>2024-08-21T13:33:00-05:00</lastmod>
   </url><url>
-    <loc>https://jpacheco.xyz/posts/install-telega-nixos/</loc>
+    <loc>https://jpacheco.xyz/</loc>
     <lastmod>2024-08-21T13:33:00-05:00</lastmod>
   </url><url>
     <loc>https://jpacheco.xyz/tags/linux/</loc>
@@ -68,5 +65,6 @@
     <loc>https://jpacheco.xyz/categories/</loc>
   </url><url>
     <loc>https://jpacheco.xyz/search/</loc>
+    <priority>0.1</priority>
   </url>
 </urlset>

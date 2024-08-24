@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 <head>
   <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -8,16 +8,17 @@
   
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title> How I made my blog with emacs and hugo | </title>
+  <title> How I made my blog with emacs and hugo | jpacheco.xyz</title>
   <link rel = 'canonical' href = 'https://jpacheco.xyz/posts/my-blog-in-emacs/'>
   <meta name="description" content="Hello! I’m Javier Pacheco, an enthusiast in automation and programming. I love innovating and automating processes to make life easier. I am passionate about Linux because it&#39;s Open Source, highly customizable &amp; encourages freedom and knowledge sharing. If you have any questions or would like to get in touch, send me an email.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta property="og:url" content="https://jpacheco.xyz/posts/my-blog-in-emacs/">
+  <meta property="og:site_name" content="jpacheco.xyz">
   <meta property="og:title" content="How I made my blog with emacs and hugo">
   <meta property="og:description" content="A overview of how I write and develop my web blog using emacs &amp; hugo">
-  <meta property="og:locale" content="en">
+  <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2024-08-14T20:41:00-05:00">
@@ -39,7 +40,7 @@
   <link rel="stylesheet" href="https://jpacheco.xyz/css/styles.c05d68261bf086a9d7713c4f8a6215a3601608e267a816a7ee58f139b3d1aae51222aae2081c8e0c6bd35e1334773b7a16283022f31f92afd93bb37e5e822e66.css" integrity="sha512-wF1oJhvwhqnXcTxPimIVo2AWCOJnqBan7ljxObPRquUSIqriCByODGvTXhM0dzt6FigwIvMfkq/ZO7N&#43;XoIuZg=="> 
 
   
-  
+   <link rel="stylesheet" href="https://jpacheco.xyz/css/style.css"> 
   
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -50,7 +51,6 @@
   
 <link rel="icon" type="image/png" href="https://jpacheco.xyz/images/favicon.ico" />
 
-  
   
   
   
@@ -72,8 +72,6 @@
         <li><a href="/about">About</a></li>
          
         <li><a href="/posts">Writings</a></li>
-         
-        <li><a href="/tags">Tags</a></li>
          
         <li><a href="/search">Search</a></li>
         
@@ -241,23 +239,23 @@
 <h2 id="what-software-and-packages-do-i-use-dot">What software and packages do I use?.</h2>
 <p>Yep! I use <code>emacs</code> 🤓 and <code>ox-hugo</code>.</p>
 <p>And to build the static web I use <a href="https://gohugo.io/getting-started/quick-start/">HUGO</a> and <code>git</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#ebdbb2;background-color:#282828;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elisp" data-lang="elisp"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">1</span><span>(<span style="color:#fabd2f">use-package</span> ox-hugo
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">2</span><span>  <span style="color:#fabd2f">:ensure</span> <span style="color:#d3869b">t</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">3</span><span>  <span style="color:#fabd2f">:after</span> ox)
+<div class="highlight"><pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elisp" data-lang="elisp"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1</span><span><span style="color:#abb2bf">(</span><span style="color:#e5c07b">use-package</span> <span style="color:#dcaeea">ox-hugo</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2</span><span>  <span style="color:#e5c07b">:ensure</span> <span style="color:#aa89ea;font-weight:bold">t</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">3</span><span>  <span style="color:#e5c07b">:after</span> <span style="color:#dcaeea">ox</span><span style="color:#abb2bf">)</span>
 </span></span></code></pre></div><!-- raw HTML omitted -->
 <h2 id="org-and-its-configuration-dot">Org and its configuration.</h2>
 <p><code>HUGO</code> uses markdown to manage the sites, posts, etc. but because we where using emacs, (we don&rsquo;t like others than org syntax), so there are a lot of variables that <code>ox-hugo</code> handle in order to been exported to markdown syntax.</p>
 <p>In my case I like to develop my whole blog into a single org-file</p>
-<div class="highlight"><pre tabindex="0" style="color:#ebdbb2;background-color:#282828;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elisp" data-lang="elisp"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59"> 1</span><span>#+begin_src org
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59"> 2</span><span>#+TITLE: jpacheco.xyz
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59"> 3</span><span>#+AUTHOR: Javier Pacheco
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59"> 4</span><span>#+DESCRIPTION: My website posts &amp; projects.
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59"> 5</span><span>#+hugo_base_dir: ~/webdev/blog/
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59"> 6</span><span>#+startup: content
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59"> 7</span><span>#+hugo_custom_front_matter: toc true
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59"> 8</span><span>#+hugo_auto_set_lastmod: <span style="color:#d3869b">t</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59"> 9</span><span>#+date: 2024-07-04
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">10</span><span>#+seq_todo: TODO(<span style="color:#d3869b">t</span>) WAIT(w@/!) | DONE(d!)
+<div class="highlight"><pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elisp" data-lang="elisp"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 1</span><span>#<span style="color:#dcaeea">+begin_src</span> <span style="color:#dcaeea">org</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 2</span><span>#<span style="color:#dcaeea">+TITLE:</span> <span style="color:#dcaeea">jpacheco.xyz</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 3</span><span>#<span style="color:#dcaeea">+AUTHOR:</span> <span style="color:#dcaeea">Javier</span> <span style="color:#dcaeea">Pacheco</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 4</span><span>#<span style="color:#dcaeea">+DESCRIPTION:</span> <span style="color:#dcaeea">My</span> <span style="color:#dcaeea">website</span> <span style="color:#dcaeea">posts</span> <span style="color:#dcaeea">&amp;</span> <span style="color:#dcaeea">projects.</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 5</span><span>#<span style="color:#dcaeea">+hugo_base_dir:</span> <span style="color:#dcaeea">~/webdev/blog/</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 6</span><span>#<span style="color:#dcaeea">+startup:</span> <span style="color:#dcaeea">content</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 7</span><span>#<span style="color:#dcaeea">+hugo_custom_front_matter:</span> <span style="color:#dcaeea">toc</span> <span style="color:#dcaeea">true</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 8</span><span>#<span style="color:#dcaeea">+hugo_auto_set_lastmod:</span> <span style="color:#aa89ea;font-weight:bold">t</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 9</span><span>#<span style="color:#dcaeea">+date:</span> <span style="color:#dcaeea">2024-07-04</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">10</span><span>#<span style="color:#dcaeea">+seq_todo:</span> <span style="color:#dcaeea">TODO</span><span style="color:#abb2bf">(</span><span style="color:#aa89ea;font-weight:bold">t</span><span style="color:#abb2bf">)</span> <span style="color:#dcaeea">WAIT</span><span style="color:#abb2bf">(</span><span style="color:#dcaeea">w@/!</span><span style="color:#abb2bf">)</span> <span style="color:#dcaeea">|</span> <span style="color:#dcaeea">DONE</span><span style="color:#abb2bf">(</span><span style="color:#dcaeea">d!</span><span style="color:#abb2bf">)</span>
 </span></span></code></pre></div><!-- raw HTML omitted -->
 <hr>
 <p>These are the most important and relevant to use within HUGO:</p>
@@ -271,13 +269,13 @@
 <p>This is for enable/disable the toc of the posts when ox-hugo exported to md format.</p>
 <h2 id="writing-the-posts-dot">Writing the posts.</h2>
 <p>Write a post is very easy to start, you only need to add a org lvl-1 header, and add a more metadata (properties). The sub-headers of the post are going to be org-lvl-3 headers, and so on.</p>
-<div class="highlight"><pre tabindex="0" style="color:#ebdbb2;background-color:#282828;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-org" data-lang="org"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">1</span><span><span style="color:#b8bb26;font-weight:bold">*</span> TODO How I made my blog with emacs and hugo               :emacs:blog:hugo:
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">2</span><span><span style="color:#928374;font-style:italic">   :PROPERTIES:
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">3</span><span><span style="color:#928374;font-style:italic"></span><span style="color:#928374;font-style:italic">   :EXPORT_FILE_NAME: my-blog-in-emacs
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">4</span><span><span style="color:#928374;font-style:italic">   :EXPORT_DESCRIPTION: A overview of how I write and develop my web blog using emacs &amp; hugo
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">5</span><span><span style="color:#928374;font-style:italic">   :DATE:     08-14-2024
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">6</span><span><span style="color:#928374;font-style:italic">   :EXPORT_HUGO_SECTION: posts
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">7</span><span><span style="color:#928374;font-style:italic"></span><span style="color:#928374;font-style:italic">   :END:</span>
+<div class="highlight"><pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-org" data-lang="org"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1</span><span><span style="color:#a2cbff;font-weight:bold">*</span> TODO<span style="font-weight:bold"> How I made my blog with emacs and hugo               :emacs:blog:hugo:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2</span><span><span style="color:#8a93a5;font-style:italic">   :PROPERTIES:
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">3</span><span><span style="color:#8a93a5;font-style:italic"></span><span style="color:#8a93a5;font-style:italic">   :EXPORT_FILE_NAME: my-blog-in-emacs
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">4</span><span><span style="color:#8a93a5;font-style:italic">   :EXPORT_DESCRIPTION: A overview of how I write and develop my web blog using emacs &amp; hugo
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">5</span><span><span style="color:#8a93a5;font-style:italic">   :DATE:     08-14-2024
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">6</span><span><span style="color:#8a93a5;font-style:italic">   :EXPORT_HUGO_SECTION: posts
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">7</span><span><span style="color:#8a93a5;font-style:italic"></span><span style="color:#8a93a5;font-style:italic">   :END:</span>
 </span></span></code></pre></div><!-- raw HTML omitted -->
 <hr>
 <ul>
@@ -314,8 +312,6 @@
           <li><a href="/about">About</a></li>
          
           <li><a href="/posts">Writings</a></li>
-         
-          <li><a href="/tags">Tags</a></li>
          
           <li><a href="/search">Search</a></li>
         
@@ -422,8 +418,6 @@
         <li><a href="/about">About</a></li>
          
         <li><a href="/posts">Writings</a></li>
-         
-        <li><a href="/tags">Tags</a></li>
          
         <li><a href="/search">Search</a></li>
         

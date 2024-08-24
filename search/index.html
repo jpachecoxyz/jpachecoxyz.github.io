@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 <head>
   <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -8,22 +8,23 @@
   
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title> Search | </title>
+  <title> Search Results | jpacheco.xyz</title>
   <link rel = 'canonical' href = 'https://jpacheco.xyz/search/'>
   <meta name="description" content="Hello! I’m Javier Pacheco, an enthusiast in automation and programming. I love innovating and automating processes to make life easier. I am passionate about Linux because it&#39;s Open Source, highly customizable &amp; encourages freedom and knowledge sharing. If you have any questions or would like to get in touch, send me an email.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta property="og:url" content="https://jpacheco.xyz/search/">
-  <meta property="og:title" content="Search">
-  <meta property="og:description" content="Hello! I’m Javier Pacheco, an enthusiast in automation and programming. I love innovating and automating processes to make life easier. I am passionate about Linux because it&#39;s Open Source, highly customizable &amp; encourages freedom and knowledge sharing. If you have any questions or would like to get in touch, send me an email.">
-  <meta property="og:locale" content="en">
+  <meta property="og:site_name" content="jpacheco.xyz">
+  <meta property="og:title" content="Search Results">
+  <meta property="og:description" content="This file exists solely to respond to /search URL with the related search layout template.">
+  <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Search">
-  <meta name="twitter:description" content="Hello! I’m Javier Pacheco, an enthusiast in automation and programming. I love innovating and automating processes to make life easier. I am passionate about Linux because it&#39;s Open Source, highly customizable &amp; encourages freedom and knowledge sharing. If you have any questions or would like to get in touch, send me an email.">
+  <meta name="twitter:title" content="Search Results">
+  <meta name="twitter:description" content="This file exists solely to respond to /search URL with the related search layout template.">
 
   
   
@@ -33,7 +34,7 @@
   <link rel="stylesheet" href="https://jpacheco.xyz/css/styles.c05d68261bf086a9d7713c4f8a6215a3601608e267a816a7ee58f139b3d1aae51222aae2081c8e0c6bd35e1334773b7a16283022f31f92afd93bb37e5e822e66.css" integrity="sha512-wF1oJhvwhqnXcTxPimIVo2AWCOJnqBan7ljxObPRquUSIqriCByODGvTXhM0dzt6FigwIvMfkq/ZO7N&#43;XoIuZg=="> 
 
   
-  
+   <link rel="stylesheet" href="https://jpacheco.xyz/css/style.css"> 
   
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -44,7 +45,6 @@
   
 <link rel="icon" type="image/png" href="https://jpacheco.xyz/images/favicon.ico" />
 
-  
   
   
   
@@ -59,7 +59,7 @@
     <div id="logo" style="background-image: url(https://jpacheco.xyz/images/logo.png)"></div>
   
   <div id="title">
-    <h1></h1>
+    <h1>jpacheco.xyz</h1>
   </div>
   </a>
   <div id="nav">
@@ -74,8 +74,6 @@
       
         <li><a href="/posts">Writings</a></li>
       
-        <li><a href="/tags">Tags</a></li>
-      
         <li><a href="/search">Search</a></li>
       
     </ul>
@@ -85,14 +83,32 @@
 
 
     
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <div class="content" itemprop="articleBody">
-  
+<main>
+    <form action="/search" method="GET">
+        <input type="search" name="q" id="search-query" placeholder="Search....">
+        <button type="submit">Search</button>
+    </form>
+    <div id="search-results"></div>
+    <div class="search-loading">Loading...</div>
+
+    <script id="search-result-template" type="text/x-js-template">
+    <div id="summary-${key}">
+        <h3><a href="${link}">${title}</a></h3>
+        <p>${snippet}</p>
+        <p>
+            <small>
+                ${ isset tags }Tags: ${tags}<br>${ end }
+            </small>
+        </p>
+    </div>
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.6.2/fuse.min.js" integrity="sha512-Nqw1tH3mpavka9cQCc5zWWEZNfIPdOYyQFjlV1NvflEtQ0/XI6ZQ+H/D3YgJdqSUJlMLAPRj/oXlaHCFbFCjoQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
-  
-  </div>
-</article>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</main>
+
 
 
     <footer id="footer">
@@ -108,8 +124,6 @@
         <li><a href="/about">About</a></li>
          
         <li><a href="/posts">Writings</a></li>
-         
-        <li><a href="/tags">Tags</a></li>
          
         <li><a href="/search">Search</a></li>
         
