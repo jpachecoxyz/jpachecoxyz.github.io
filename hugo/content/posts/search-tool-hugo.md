@@ -8,7 +8,7 @@ draft = false
 toc = true
 +++
 
-## As websites grow, incorporating a search feature becomes increasingly crucial. However, implementing search functionality can be challenging on a statically generated site since there's no server-side component to handle the search. Instead, the search must be performed on the client side within the browser using JavaScript. {#as-websites-grow-incorporating-a-search-feature-becomes-increasingly-crucial-dot-however-implementing-search-functionality-can-be-challenging-on-a-statically-generated-site-since-there-s-no-server-side-component-to-handle-the-search-dot-instead-the-search-must-be-performed-on-the-client-side-within-the-browser-using-javascript-dot}
+As websites grow, incorporating a search feature becomes increasingly crucial. However, implementing search functionality can be challenging on a statically generated site since there's no server-side component to handle the search. Instead, the search must be performed on the client side within the browser using JavaScript.
 
 Fortunately, there are existing solutions to address this issue. Below, we demonstrate one such solution that utilizes FuseJS and MarkJS. This implementation is inspired by a gist from eddiewebb, but it's built using plain JavaScript rather than jQuery.
 
