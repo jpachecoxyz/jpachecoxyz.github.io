@@ -248,3 +248,23 @@ function hide(elem) {
 function param(name) {
     return decodeURIComponent((location.search.split(name + '=')[1] || '').split('&')[0]).replace(/\+/g, ' ');
 }
+
+// Keybinds functions
+document.addEventListener('keydown', function(event) {
+    // Check if the Windows key (or Command key on macOS) and forward slash are pressed
+    if (event.metaKey && event.key === '/') {
+        // Prevent the default action if necessary
+        event.preventDefault();
+
+        // Navigate to the search page
+        window.location.href = '/search';
+
+        // Wait for the page to load and then focus on the search input
+        window.addEventListener('load', function() {
+            const searchInput = document.getElementById('search-query');
+            if (searchInput) {
+                searchInput.focus();
+            }
+        });
+    }
+});
