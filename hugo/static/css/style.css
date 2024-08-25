@@ -27,3 +27,7 @@ pre .code-copy-btn {
 	cursor: pointer;
 	letter-spacing: 0em;
 }
+
+mark {
+  background: cadetblue;
+}
