@@ -225,7 +225,7 @@
     
     <div class="content" itemprop="articleBody">
       <h2 id="what-is-telega">What is telega?.</h2>
-<p>According to it <a href="https://github.com/zevlg/telega.el">Github</a> repository:</p>
+<p>According to the <a href="https://github.com/zevlg/telega.el">Github</a> repository:</p>
 <dl>
 <dt>Telega</dt>
 <dd>telega.el is full featured unofficial client for Telegram platform for GNU Emacs.</dd>
@@ -246,11 +246,13 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2</span><span><span style="color:#e5c07b">:ensure</span> <span style="color:#aa89ea;font-weight:bold">t</span><span style="color:#abb2bf">)</span>
 </span></span></code></pre></div><!-- raw HTML omitted -->
 </li>
-<li>Now, because we are in <code>NixOS</code>, the file system hierarchy don&rsquo;t works same as in linux or macOS, so we need to declare where telega is going to see the <code>tdlib</code> libraries, so:
+<li>Now, because I use <code>NixOS</code> (by the way), you must know that the file system hierarchy don&rsquo;t works same as in linux or macOS, so I need to declare where telega is going to see the <code>tdlib</code> libraries, so:
 <div class="highlight"><pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elisp" data-lang="elisp"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1</span><span><span style="color:#abb2bf">(</span><span style="color:#e5c07b">setq</span> <span style="color:#dcaeea">telega-server-lib-prefix</span> <span style="color:#98c379">&#34;/home/user/.nix-profile/&#34;</span><span style="color:#abb2bf">)</span>
 </span></span></code></pre></div></li>
 <li>Compile Telega-server inside emacs.
 <div class="highlight"><pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1</span><span>M-x telega-server-build
+</span></span></code></pre></div>Or simply run telega:
+<div class="highlight"><pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1</span><span>M-x telega
 </span></span></code></pre></div></li>
 </ol>
 <p>With that, Telega must be compiled, and ready to go.</p>
