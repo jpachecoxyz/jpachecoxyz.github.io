@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=41955&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Shell-utils | jpacheco.xyz</title>
+<meta name="keywords" content="linux, script">
+<meta name="description" content="A github repo that stores shell scripts utilities for x and wayland.">
+<meta name="author" content="Javier Pacheco">
+<link rel="canonical" href="http://localhost:41955/projects/shell-utils/">
+
+
+<link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:41955/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:41955/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:41955/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:41955/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:41955/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:41955/projects/shell-utils/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+
+
+
+<meta property="og:title" content="Shell-utils" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:41955/projects/shell-utils/" />
+<meta property="og:image" content="http://localhost:41955/" />
+<meta property="og:description" content="Overview Welcome to the Shell Utilities repository This project provides a collection of shell scripts tailored for different window managers and environments, including i3, Hyprland, and Sway, on X11 and Wayland.
+Repository Structure The repository is organized into directories based on the environment and window manager:
+1 2 3 4 5 6 . ├── wayland │ ├── hyprland │ └── sway └── x11 └── i3 wayland/hyprland Scripts for Hyprland on Wayland." />
+
+
+  
+
+<meta property="og:title" content="Shell-utils" />
+<meta property="og:description" content="A github repo that stores shell scripts utilities for x and wayland." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:41955/projects/shell-utils/" /><meta property="article:section" content="projects" />
+<meta property="article:published_time" content="2024-07-04T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-07-04T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Shell-utils"/>
+<meta name="twitter:description" content="A github repo that stores shell scripts utilities for x and wayland."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Projects",
+      "item": "http://localhost:41955/projects/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Shell-utils",
+      "item": "http://localhost:41955/projects/shell-utils/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Shell-utils",
+  "name": "Shell-utils",
+  "description": "A github repo that stores shell scripts utilities for x and wayland.",
+  "keywords": [
+    "linux", "script"
+  ],
+  "articleBody": "Overview Welcome to the Shell Utilities repository This project provides a collection of shell scripts tailored for different window managers and environments, including i3, Hyprland, and Sway, on X11 and Wayland.\nRepository Structure The repository is organized into directories based on the environment and window manager:\n1 2 3 4 5 6 . ├── wayland │ ├── hyprland │ └── sway └── x11 └── i3 wayland/hyprland Scripts for Hyprland on Wayland. wayland/sway Scripts for Sway on Wayland. x11/i3 Scripts for i3 on X11. Installation To install the scripts, use the provided install.sh script. You can install scripts for a specific window manager or all at once.\nNOTE: The install.sh scripts use $HOME/.local/bin as the target, you can edit this variable inside the script, or copy the files manually somewhere as you have your path.\n1 2 3 4 5 6 7 # Install scripts for a specific window manager ./install.sh sway ./install.sh hyprland ./install.sh i3 # Install all scripts ./install.sh all Usage Each script includes usage instructions in the comments at the top. You can run a script directly from the terminal or integrate it into your workflow.\nContributing We welcome contributions! If you’d like to contribute, please follow these steps:\nFork the repository. Create a new branch for your feature or fix. Make your changes and commit them with descriptive messages. Push your changes to your fork. Submit a pull request to the main repository. Contact For questions or suggestions, please open an issue on GitHub or contact Javier Pacheco.\n",
+  "wordCount" : "251",
+  "inLanguage": "en",
+  "datePublished": "2024-07-04T00:00:00Z",
+  "dateModified": "2024-07-04T00:00:00Z",
+  "author":[{
+    "@type": "Person",
+    "name": "Javier Pacheco"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:41955/projects/shell-utils/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "jpacheco.xyz",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:41955/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class=" dark" id="top">
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:41955/" accesskey="h" title="jpacheco.xyz (Alt + H)">jpacheco.xyz</a>
+            <div class="logo-switches">
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:41955/about" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:41955/posts" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:41955/projects" title="Projects">
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:41955/tags" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:41955/search" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:41955/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:41955/projects/">Projects</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Shell-utils
+    </h1>
+    <div class="post-description">
+      A github repo that stores shell scripts utilities for x and wayland.
+    </div>
+    <div class="post-meta"><span title='2024-07-04 00:00:00 +0000 UTC'>July 4, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Javier Pacheco&nbsp;|&nbsp;<a href="https://github.com/jpachecoxyz/blog/tree/main/content/projects/shell-utils.md" rel="noopener noreferrer" target="_blank">Suggest Changes</a>
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#overview" aria-label="Overview">Overview</a></li>
+                <li>
+                    <a href="#repository-structure" aria-label="Repository Structure">Repository Structure</a></li>
+                <li>
+                    <a href="#installation" aria-label="Installation">Installation</a></li>
+                <li>
+                    <a href="#usage" aria-label="Usage">Usage</a></li>
+                <li>
+                    <a href="#contributing" aria-label="Contributing">Contributing</a></li>
+                <li>
+                    <a href="#contact" aria-label="Contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h2 id="overview">Overview<a hidden class="anchor" aria-hidden="true" href="#overview">#</a></h2>
+<p>Welcome to the Shell Utilities <a href="https://github.com/jpachecoxyz/shell-utils">repository</a> This project provides a collection of shell scripts tailored for different window managers and environments, including i3, Hyprland, and Sway, on X11 and Wayland.</p>
+<h2 id="repository-structure">Repository Structure<a hidden class="anchor" aria-hidden="true" href="#repository-structure">#</a></h2>
+<p>The repository is organized into directories based on the environment and window manager:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">.
+</span></span><span class="line"><span class="cl">├── wayland
+</span></span><span class="line"><span class="cl">│   ├── hyprland
+</span></span><span class="line"><span class="cl">│   └── sway
+</span></span><span class="line"><span class="cl">└── x11
+</span></span><span class="line"><span class="cl">    └── i3
+</span></span></code></pre></td></tr></table>
+</div>
+</div><dl>
+<dt>wayland/hyprland</dt>
+<dd>Scripts for Hyprland on Wayland.</dd>
+<dt>wayland/sway</dt>
+<dd>Scripts for Sway on Wayland.</dd>
+<dt>x11/i3</dt>
+<dd>Scripts for i3 on X11.</dd>
+</dl>
+<h2 id="installation">Installation<a hidden class="anchor" aria-hidden="true" href="#installation">#</a></h2>
+<p>To install the scripts, use the provided <code>install.sh</code> script. You can install scripts for a specific window manager or all at once.</p>
+<p>NOTE: The <code>install.sh</code> scripts use <code>$HOME/.local/bin</code> as the target, you can edit this variable inside the script, or copy the files manually somewhere as you have your path.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># Install scripts for a specific window manager</span>
+</span></span><span class="line"><span class="cl">./install.sh sway
+</span></span><span class="line"><span class="cl">./install.sh hyprland
+</span></span><span class="line"><span class="cl">./install.sh i3
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Install all scripts</span>
+</span></span><span class="line"><span class="cl">./install.sh all
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="usage">Usage<a hidden class="anchor" aria-hidden="true" href="#usage">#</a></h2>
+<p>Each script includes usage instructions in the comments at the top. You can run a script directly from the terminal or integrate it into your workflow.</p>
+<h2 id="contributing">Contributing<a hidden class="anchor" aria-hidden="true" href="#contributing">#</a></h2>
+<p>We welcome contributions! If you&rsquo;d like to contribute, please follow these steps:</p>
+<ol>
+<li>Fork the repository.</li>
+<li>Create a new branch for your feature or fix.</li>
+<li>Make your changes and commit them with descriptive messages.</li>
+<li>Push your changes to your fork.</li>
+<li>Submit a pull request to the main repository.</li>
+</ol>
+<h2 id="contact">Contact<a hidden class="anchor" aria-hidden="true" href="#contact">#</a></h2>
+<p>For questions or suggestions, please open an issue on GitHub or contact <a href="mailto:javier@jpacheco.xyz">Javier Pacheco</a>.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:41955/tags/linux/">Linux</a></li>
+      <li><a href="http://localhost:41955/tags/script/">Script</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:41955/posts/share-screen-hyprland/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Share Screen in Hyprland.</span>
+  </a>
+  <a class="next" href="http://localhost:41955/projects/voidstrap/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Void linux bootstrap.</span>
+  </a>
+</nav>
+
+
+<ul class="share-buttons">
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Shell-utils on x"
+            href="https://x.com/intent/tweet/?text=Shell-utils&amp;url=http%3a%2f%2flocalhost%3a41955%2fprojects%2fshell-utils%2f&amp;hashtags=linux%2cscript">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Shell-utils on linkedin"
+            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flocalhost%3a41955%2fprojects%2fshell-utils%2f&amp;title=Shell-utils&amp;summary=Shell-utils&amp;source=http%3a%2f%2flocalhost%3a41955%2fprojects%2fshell-utils%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Shell-utils on facebook"
+            href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a41955%2fprojects%2fshell-utils%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Shell-utils on telegram"
+            href="https://telegram.me/share/url?text=Shell-utils&amp;url=http%3a%2f%2flocalhost%3a41955%2fprojects%2fshell-utils%2f">
+            <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+            </svg>
+        </a>
+    </li>
+</ul>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>© Javier Pacheco</span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
