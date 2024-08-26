@@ -209,7 +209,7 @@ document.addEventListener('keydown', function(event) {
 });
 #+end_src
 ** Useful elisp functions.
-*** yasnipet insert auto tags.
+*** FIXME yasnipet insert auto tags.
 #+begin_src elisp
 (defun my/org-insert-header ()
   "Insert a level-2 header and run org-set-tags-command"
@@ -220,6 +220,7 @@ document.addEventListener('keydown', function(event) {
 #+end_src
 
 * Posts
+
 ** DONE About me.                                                    :about:
 CLOSED: [2024-01-05 Fri 18:00]
 :PROPERTIES:
@@ -437,7 +438,7 @@ Embrace a new level of Emacs mastery with =efetch.el= – a powerful and user-fr
 
 #+begin_center
 #+CAPTION: efetch.el tool in the left side of the frame.
-[[/post/images/efetch.el/efetch.png]]
+[[/posts/images/efetch.el/efetch.png]]
 #+end_center
 
 *** Overview
@@ -916,7 +917,7 @@ As websites grow, incorporating a search feature becomes increasingly crucial. H
 
 #+begin_center
 #+CAPTION: This is how my web looks.
-[[/post/images/hugo-search/jpacheco-search.png]]
+[[/posts/images/hugo-search/jpacheco-search.png]]
 #+end_center
 
 Fortunately, there are existing solutions to address this issue. Below, we demonstrate one such solution that utilizes FuseJS and MarkJS. This implementation is inspired by a gist from eddiewebb, but it's built using plain JavaScript rather than jQuery.

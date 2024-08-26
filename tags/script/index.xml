@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Script on jpacheco.xyz</title>
-    <link>https://jpacheco.xyz/tags/script/</link>
+    <link>http://localhost:1313/tags/script/</link>
     <description>Recent content in Script on jpacheco.xyz</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>Javier Pacheco</copyright>
     <lastBuildDate>Thu, 04 Jul 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://jpacheco.xyz/tags/script/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/script/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Shell-utils</title>
-      <link>https://jpacheco.xyz/posts/shell-utils/</link>
+      <link>http://localhost:1313/posts/shell-utils/</link>
       <pubDate>Thu, 04 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://jpacheco.xyz/posts/shell-utils/</guid>
+      <guid>http://localhost:1313/posts/shell-utils/</guid>
       <description>Overview Welcome to the Shell Utilities repository This project provides a collection of shell scripts tailored for different window managers and environments, including i3, Hyprland, and Sway, on X11 and Wayland.</description>
     </item>
     <item>
       <title>Void linux bootstrap.</title>
-      <link>https://jpacheco.xyz/posts/voidstrap/</link>
+      <link>http://localhost:1313/posts/voidstrap/</link>
       <pubDate>Thu, 04 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://jpacheco.xyz/posts/voidstrap/</guid>
+      <guid>http://localhost:1313/posts/voidstrap/</guid>
       <description>This is the first post of the 2024, this is a project that I am working on in the last year, is a minimialist voidlinux instalator it is based in some recomendations in a guides that some friends of my have but &amp;ldquo;semiautomated&amp;rdquo;.</description>
     </item>
     <item>
       <title>Screen Record</title>
-      <link>https://jpacheco.xyz/posts/screen-record/</link>
+      <link>http://localhost:1313/posts/screen-record/</link>
       <pubDate>Fri, 15 Mar 2024 04:14:00 -0500</pubDate>
-      <guid>https://jpacheco.xyz/posts/screen-record/</guid>
+      <guid>http://localhost:1313/posts/screen-record/</guid>
       <description>This script record the screen with the wf-recorder tool, it can be the hole screen or a specific area of it.</description>
     </item>
     <item>
       <title>Efetch.el</title>
-      <link>https://jpacheco.xyz/posts/efetch/</link>
+      <link>http://localhost:1313/posts/efetch/</link>
       <pubDate>Sat, 13 Jan 2024 04:11:00 -0600</pubDate>
-      <guid>https://jpacheco.xyz/posts/efetch/</guid>
+      <guid>http://localhost:1313/posts/efetch/</guid>
       <description>Embrace a new level of Emacs mastery with efetch.</description>
     </item>
   </channel>
