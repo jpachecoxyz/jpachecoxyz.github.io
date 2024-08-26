@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Emacs on jpacheco.xyz</title>
-    <link>http://localhost:1313/tags/emacs/</link>
+    <link>https://jpacheco.xyz/tags/emacs/</link>
     <description>Recent content in Emacs on jpacheco.xyz</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>Javier Pacheco</copyright>
     <lastBuildDate>Wed, 21 Aug 2024 13:33:00 -0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://jpacheco.xyz/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Install Telega in NixOS - Emacs.</title>
-      <link>http://localhost:1313/posts/install-telega-nixos/</link>
+      <link>https://jpacheco.xyz/posts/install-telega-nixos/</link>
       <pubDate>Wed, 21 Aug 2024 13:33:00 -0500</pubDate>
-      <guid>http://localhost:1313/posts/install-telega-nixos/</guid>
+      <guid>https://jpacheco.xyz/posts/install-telega-nixos/</guid>
       <description>What is telega?</description>
     </item>
     <item>
       <title>How I made my blog with emacs and hugo</title>
-      <link>http://localhost:1313/posts/my-blog-in-emacs/</link>
+      <link>https://jpacheco.xyz/posts/my-blog-in-emacs/</link>
       <pubDate>Wed, 14 Aug 2024 20:41:00 -0500</pubDate>
-      <guid>http://localhost:1313/posts/my-blog-in-emacs/</guid>
+      <guid>https://jpacheco.xyz/posts/my-blog-in-emacs/</guid>
       <description>I have been using emacs most of the time for writting, and of course when I started to make my blog I have been use it (emacs) since of it.</description>
     </item>
     <item>
       <title>Emacs vs Neovim</title>
-      <link>http://localhost:1313/posts/emacs-vs-nvim/</link>
+      <link>https://jpacheco.xyz/posts/emacs-vs-nvim/</link>
       <pubDate>Tue, 13 Aug 2024 05:06:00 -0500</pubDate>
-      <guid>http://localhost:1313/posts/emacs-vs-nvim/</guid>
+      <guid>https://jpacheco.xyz/posts/emacs-vs-nvim/</guid>
       <description>Neovim for Programming Efficiency and Speed: Neovim is highly efficient for programming due to its lightweight nature and focus on speed.</description>
     </item>
     <item>
       <title>Efetch.el</title>
-      <link>http://localhost:1313/posts/efetch/</link>
+      <link>https://jpacheco.xyz/posts/efetch/</link>
       <pubDate>Sat, 13 Jan 2024 04:11:00 -0600</pubDate>
-      <guid>http://localhost:1313/posts/efetch/</guid>
+      <guid>https://jpacheco.xyz/posts/efetch/</guid>
       <description>Embrace a new level of Emacs mastery with efetch.</description>
     </item>
   </channel>

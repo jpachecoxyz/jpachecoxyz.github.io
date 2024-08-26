@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -9,12 +9,12 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title> Install Telega in NixOS - Emacs. | jpacheco.xyz</title>
-  <link rel = 'canonical' href = 'http://localhost:1313/posts/install-telega-nixos/'>
+  <link rel = 'canonical' href = 'https://jpacheco.xyz/posts/install-telega-nixos/'>
   <meta name="description" content="Hello! I’m Javier Pacheco, an enthusiast in automation and programming. I love innovating and automating processes to make life easier. I am passionate about Linux because it&#39;s Open Source, highly customizable &amp; encourages freedom and knowledge sharing. If you have any questions or would like to get in touch, send me an email.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
-  <meta property="og:url" content="http://localhost:1313/posts/install-telega-nixos/">
+  <meta property="og:url" content="https://jpacheco.xyz/posts/install-telega-nixos/">
   <meta property="og:site_name" content="jpacheco.xyz">
   <meta property="og:title" content="Install Telega in NixOS - Emacs.">
   <meta property="og:description" content="How to install Telega server in NixOS.">
@@ -37,10 +37,10 @@
     
   
   
-  <link rel="stylesheet" href="http://localhost:1313/css/styles.c05d68261bf086a9d7713c4f8a6215a3601608e267a816a7ee58f139b3d1aae51222aae2081c8e0c6bd35e1334773b7a16283022f31f92afd93bb37e5e822e66.css" integrity="sha512-wF1oJhvwhqnXcTxPimIVo2AWCOJnqBan7ljxObPRquUSIqriCByODGvTXhM0dzt6FigwIvMfkq/ZO7N&#43;XoIuZg=="> 
+  <link rel="stylesheet" href="https://jpacheco.xyz/css/styles.c05d68261bf086a9d7713c4f8a6215a3601608e267a816a7ee58f139b3d1aae51222aae2081c8e0c6bd35e1334773b7a16283022f31f92afd93bb37e5e822e66.css" integrity="sha512-wF1oJhvwhqnXcTxPimIVo2AWCOJnqBan7ljxObPRquUSIqriCByODGvTXhM0dzt6FigwIvMfkq/ZO7N&#43;XoIuZg=="> 
 
   
-   <link rel="stylesheet" href="http://localhost:1313/css/style.css"> 
+   <link rel="stylesheet" href="https://jpacheco.xyz/css/style.css"> 
   
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -49,7 +49,7 @@
   
 
   
-<link rel="icon" type="image/png" href="http://localhost:1313/images/favicon.ico" />
+<link rel="icon" type="image/png" href="https://jpacheco.xyz/images/favicon.ico" />
 
   
   
@@ -82,14 +82,14 @@
       <ul>
         
         <li>
-          <a class="icon" href=" http://localhost:1313/posts/my-blog-in-emacs/" aria-label="Previous">
+          <a class="icon" href=" https://jpacheco.xyz/posts/my-blog-in-emacs/" aria-label="Previous">
             <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
           </a>
         </li>
         
         
         <li>
-          <a class="icon" href="http://localhost:1313/posts/search-tool-hugo/" aria-label="Next">
+          <a class="icon" href="https://jpacheco.xyz/posts/search-tool-hugo/" aria-label="Next">
             <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
           </a>
         </li>
@@ -120,47 +120,47 @@
   
   
   <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2finstall-telega-nixos%2f" aria-label="Facebook">
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fjpacheco.xyz%2fposts%2finstall-telega-nixos%2f" aria-label="Facebook">
       <i class="fab fa-facebook " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://twitter.com/share?url=http%3a%2f%2flocalhost%3a1313%2fposts%2finstall-telega-nixos%2f&text=Install%20Telega%20in%20NixOS%20-%20Emacs." aria-label="Twitter">
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fjpacheco.xyz%2fposts%2finstall-telega-nixos%2f&text=Install%20Telega%20in%20NixOS%20-%20Emacs." aria-label="Twitter">
       <i class="fab fa-twitter " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2finstall-telega-nixos%2f&title=Install%20Telega%20in%20NixOS%20-%20Emacs." aria-label="Linkedin">
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fjpacheco.xyz%2fposts%2finstall-telega-nixos%2f&title=Install%20Telega%20in%20NixOS%20-%20Emacs." aria-label="Linkedin">
       <i class="fab fa-linkedin " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2finstall-telega-nixos%2f&is_video=false&description=Install%20Telega%20in%20NixOS%20-%20Emacs." aria-label="Pinterest">
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fjpacheco.xyz%2fposts%2finstall-telega-nixos%2f&is_video=false&description=Install%20Telega%20in%20NixOS%20-%20Emacs." aria-label="Pinterest">
       <i class="fab fa-pinterest " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="mailto:?subject=Install%20Telega%20in%20NixOS%20-%20Emacs.&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2finstall-telega-nixos%2f" aria-label="Email">
+    <a class="icon" href="mailto:?subject=Install%20Telega%20in%20NixOS%20-%20Emacs.&body=Check out this article: https%3a%2f%2fjpacheco.xyz%2fposts%2finstall-telega-nixos%2f" aria-label="Email">
       <i class="fas fa-envelope " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2finstall-telega-nixos%2f&title=Install%20Telega%20in%20NixOS%20-%20Emacs." aria-label="Pocket">
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fjpacheco.xyz%2fposts%2finstall-telega-nixos%2f&title=Install%20Telega%20in%20NixOS%20-%20Emacs." aria-label="Pocket">
       <i class="fab fa-get-pocket " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2finstall-telega-nixos%2f&title=Install%20Telega%20in%20NixOS%20-%20Emacs." aria-label="reddit">
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fjpacheco.xyz%2fposts%2finstall-telega-nixos%2f&title=Install%20Telega%20in%20NixOS%20-%20Emacs." aria-label="reddit">
       <i class="fab fa-reddit " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2finstall-telega-nixos%2f&name=Install%20Telega%20in%20NixOS%20-%20Emacs.&description=How%20to%20install%20Telega%20server%20in%20NixOS." aria-label="Tumblr">
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fjpacheco.xyz%2fposts%2finstall-telega-nixos%2f&name=Install%20Telega%20in%20NixOS%20-%20Emacs.&description=How%20to%20install%20Telega%20server%20in%20NixOS." aria-label="Tumblr">
       <i class="fab fa-tumblr " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2finstall-telega-nixos%2f&t=Install%20Telega%20in%20NixOS%20-%20Emacs." aria-label="Hacker News">
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fjpacheco.xyz%2fposts%2finstall-telega-nixos%2f&t=Install%20Telega%20in%20NixOS%20-%20Emacs." aria-label="Hacker News">
       <i class="fab fa-hacker-news " aria-hidden="true"></i>
     </a>
   </li>
@@ -306,47 +306,47 @@
   
   
   <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2finstall-telega-nixos%2f" aria-label="Facebook">
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fjpacheco.xyz%2fposts%2finstall-telega-nixos%2f" aria-label="Facebook">
       <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://twitter.com/share?url=http%3a%2f%2flocalhost%3a1313%2fposts%2finstall-telega-nixos%2f&text=Install%20Telega%20in%20NixOS%20-%20Emacs." aria-label="Twitter">
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fjpacheco.xyz%2fposts%2finstall-telega-nixos%2f&text=Install%20Telega%20in%20NixOS%20-%20Emacs." aria-label="Twitter">
       <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2finstall-telega-nixos%2f&title=Install%20Telega%20in%20NixOS%20-%20Emacs." aria-label="Linkedin">
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fjpacheco.xyz%2fposts%2finstall-telega-nixos%2f&title=Install%20Telega%20in%20NixOS%20-%20Emacs." aria-label="Linkedin">
       <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2finstall-telega-nixos%2f&is_video=false&description=Install%20Telega%20in%20NixOS%20-%20Emacs." aria-label="Pinterest">
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fjpacheco.xyz%2fposts%2finstall-telega-nixos%2f&is_video=false&description=Install%20Telega%20in%20NixOS%20-%20Emacs." aria-label="Pinterest">
       <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="mailto:?subject=Install%20Telega%20in%20NixOS%20-%20Emacs.&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2finstall-telega-nixos%2f" aria-label="Email">
+    <a class="icon" href="mailto:?subject=Install%20Telega%20in%20NixOS%20-%20Emacs.&body=Check out this article: https%3a%2f%2fjpacheco.xyz%2fposts%2finstall-telega-nixos%2f" aria-label="Email">
       <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2finstall-telega-nixos%2f&title=Install%20Telega%20in%20NixOS%20-%20Emacs." aria-label="Pocket">
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fjpacheco.xyz%2fposts%2finstall-telega-nixos%2f&title=Install%20Telega%20in%20NixOS%20-%20Emacs." aria-label="Pocket">
       <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2finstall-telega-nixos%2f&title=Install%20Telega%20in%20NixOS%20-%20Emacs." aria-label="reddit">
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fjpacheco.xyz%2fposts%2finstall-telega-nixos%2f&title=Install%20Telega%20in%20NixOS%20-%20Emacs." aria-label="reddit">
       <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2finstall-telega-nixos%2f&name=Install%20Telega%20in%20NixOS%20-%20Emacs.&description=How%20to%20install%20Telega%20server%20in%20NixOS." aria-label="Tumblr">
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fjpacheco.xyz%2fposts%2finstall-telega-nixos%2f&name=Install%20Telega%20in%20NixOS%20-%20Emacs.&description=How%20to%20install%20Telega%20server%20in%20NixOS." aria-label="Tumblr">
       <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2finstall-telega-nixos%2f&t=Install%20Telega%20in%20NixOS%20-%20Emacs." aria-label="Hacker News">
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fjpacheco.xyz%2fposts%2finstall-telega-nixos%2f&t=Install%20Telega%20in%20NixOS%20-%20Emacs." aria-label="Hacker News">
       <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
     </a>
   </li>
