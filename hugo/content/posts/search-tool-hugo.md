@@ -8,8 +8,6 @@ draft = false
 toc = true
 +++
 
-{{< linkpreview url="{{ .Permalink }}" >}}
-
 As websites grow, incorporating a search feature becomes increasingly crucial. However, implementing search functionality can be challenging on a statically generated site since there's no server-side component to handle the search. Instead, the search must be performed on the client side within the browser using JavaScript.
 
 <style>.org-center { margin-left: auto; margin-right: auto; text-align: center; }</style>

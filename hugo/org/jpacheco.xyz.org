@@ -218,6 +218,23 @@ document.addEventListener('keydown', function(event) {
   (yas-expand-snippet "${1:}\n")
   (org-set-tags-command))
 #+end_src
+* Notes:
+** custom hugo front-mater:
+#+begin_example
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER+: :opengraph true
+#+end_example
+The above code generate in the markdown file the following:
+#+begin_src markdown
++++
+title = "Search tool in your HUGO website."
+author = ["Javier Pacheco"]
+description = "Description"
+date = 2024-08-25T13:10:00-05:00
+tags = ["blog", "tecnology"]
+draft = false
+opengraph = true
++++
+#+end_src
 
 * Posts
 
@@ -912,10 +929,6 @@ CLOSED: [2024-08-25 Sun 13:10]
 - State "DONE"       from "TODO"       [2024-08-25 Sun 13:10]
 - State "DONE"       from "TODO"       [2024-08-25 Sun 12:58]
 :END:
-
-#+BEGIN_EXPORT hugo
-{{< linkpreview url="{{ .Permalink }}" >}}
-#+END_EXPORT
 
 As websites grow, incorporating a search feature becomes increasingly crucial. However, implementing search functionality can be challenging on a statically generated site since there's no server-side component to handle the search. Instead, the search must be performed on the client side within the browser using JavaScript.
 
