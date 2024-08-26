@@ -3,12 +3,20 @@ title = "Search tool in your HUGO website."
 author = ["Javier Pacheco"]
 description = "Description"
 date = 2024-08-25T13:10:00-05:00
-tags = ["tecnology"]
+tags = ["blog", "tecnology"]
 draft = false
 toc = true
 +++
 
 As websites grow, incorporating a search feature becomes increasingly crucial. However, implementing search functionality can be challenging on a statically generated site since there's no server-side component to handle the search. Instead, the search must be performed on the client side within the browser using JavaScript.
+
+<style>.org-center { margin-left: auto; margin-right: auto; text-align: center; }</style>
+
+<div class="org-center">
+
+{{< figure src="/post/images/hugo-search/jpacheco-search.png" caption="<span class=\"figure-number\">Figure 1: </span>This is how my web looks." >}}
+
+</div>
 
 Fortunately, there are existing solutions to address this issue. Below, we demonstrate one such solution that utilizes FuseJS and MarkJS. This implementation is inspired by a gist from eddiewebb, but it's built using plain JavaScript rather than jQuery.
 

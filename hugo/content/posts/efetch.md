@@ -18,7 +18,7 @@ Embrace a new level of Emacs mastery with `efetch.el` – a powerful and user-fr
 
 <div class="org-center">
 
-{{< figure src="/images/content/efetch.png" caption="<span class=\"figure-number\">Figure 1: </span>efetch.el tool in the left side of the frame." >}}
+{{< figure src="/post/images/efetch.el/efetch.png" caption="<span class=\"figure-number\">Figure 1: </span>efetch.el tool in the left side of the frame." >}}
 
 </div>
 
