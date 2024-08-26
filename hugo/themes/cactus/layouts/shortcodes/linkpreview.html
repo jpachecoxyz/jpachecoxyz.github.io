@@ -1,0 +1,20 @@
+{{- $url := printf "%s" .Page.Permalink -}}
+{{- $apiURL := printf "https://api.microlink.io/?url=%s" $url -}}
+{{- $fetch := getJSON $apiURL -}}
+
+{{- printf "Debugging: Permalink: %s" $url | safeHTML -}}
+{{- printf "Debugging: API URL: %s" $apiURL | safeHTML -}}
+
+{{ if and $fetch (eq $fetch.status "success") }}
+  <div class="link-preview-card">
+    <a href="{{ $url }}" target="_blank">
+      <div class="link-preview-image" style="background-image: url('{{ $fetch.data.image.url }}');"></div>
+      <div class="link-preview-content">
+        <h4 class="link-preview-title">{{ $fetch.data.title }}</h4>
+        <p class="link-preview-description">{{ $fetch.data.description }}</p>
+      </div>
+    </a>
+  </div>
+{{ else }}
+  <div>Failed to fetch preview</div>
+{{ end }}

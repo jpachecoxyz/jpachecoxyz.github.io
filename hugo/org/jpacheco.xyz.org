@@ -913,6 +913,10 @@ CLOSED: [2024-08-25 Sun 13:10]
 - State "DONE"       from "TODO"       [2024-08-25 Sun 12:58]
 :END:
 
+#+BEGIN_EXPORT hugo
+{{< linkpreview url="{{ .Permalink }}" >}}
+#+END_EXPORT
+
 As websites grow, incorporating a search feature becomes increasingly crucial. However, implementing search functionality can be challenging on a statically generated site since there's no server-side component to handle the search. Instead, the search must be performed on the client side within the browser using JavaScript.
 
 #+begin_center
