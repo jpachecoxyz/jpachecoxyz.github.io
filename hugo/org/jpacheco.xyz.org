@@ -50,7 +50,6 @@ mark {
 #+end_src
 ** Javascript.
 #+begin_src javascript :tangle ~/webdev/jpachecoxyz.github.io/hugo/themes/cactus/static/js/main.js
-
 /**
  * Sets up Justified Gallery.
  */
