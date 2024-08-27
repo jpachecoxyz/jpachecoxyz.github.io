@@ -32,3 +32,11 @@ pre .code-copy-btn {
 mark {
   background: cadetblue;
 }
+
+article .content img, article .content video {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    height: auto;
+	border: 3px solid cadetblue;
+}
