@@ -1281,6 +1281,7 @@ All the work we’ve done up until now has been front-end workings, but we also 
 *** Conclusion
 You can extend this further by offering a live search preview, adding more filters, or allowing sorting options. This method provides a powerful and flexible way to implement search functionality on a static site without relying on any backend services.
 
+
 ** TODO Basics of HUGO
 :PROPERTIES:
 :EXPORT_FILE_NAME: basics of HUGO
@@ -1385,7 +1386,6 @@ This is **bold** text, and this is *emphasized* text.
 
 Visit the [Hugo](https://gohugo.io) website!
 #+end_src
-
 
 **** Using Front Matter
 *** Building the Site
