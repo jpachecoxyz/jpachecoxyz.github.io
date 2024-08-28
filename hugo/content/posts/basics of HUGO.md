@@ -135,7 +135,7 @@ The next ones I never used, but you can go to the HUGO documentation for read mo
 -   Hugo module
 
 
-### Configuring the Theme {#configuring-the-theme}
+### Configuring the Theme &amp; see it in action. {#configuring-the-theme-and-see-it-in-action-dot}
 
 Finally set theme as PaperMod in your site config, `hugo.toml` or `config.toml`
 
@@ -299,16 +299,13 @@ publishDir = "~/user/my-site.org/"
 
 With all the context before, you may be able to start your web site, blog, etc. As you read, is very simple to have a very nice and useful static web-page, the "hard" part is to select the theme.
 
+The next step is to publish your web to a custom server or on github, gitlab, codeberg pages.
+
+1.  Preparing for Deployment
+2.  Deploying to a Web Server or Hosting Service
+
 
 ### Additional Resources {#additional-resources}
 
 1.  [Hugo quick start guide.](https://gohugo.io/getting-started/quick-start/)
-2.  [Hudo documentation.](https://gohugo.io/documentation/)
-
-
-### Next Steps {#next-steps}
-
-Next step is to publish your web to a custom server, github, gitlab, codeberg pages.
-
-1.  Preparing for Deployment
-2.  Deploying to a Web Server or Hosting Service
+2.  [Hugo documentation.](https://gohugo.io/documentation/)
