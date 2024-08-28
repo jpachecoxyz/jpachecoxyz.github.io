@@ -3,6 +3,7 @@ title = "Basics of HUGO"
 author = ["Javier Pacheco"]
 description = "A basic introduction to HUGO."
 date = 2024-08-28T05:05:00-05:00
+tags = ["blog", "personal", "tecnology"]
 draft = false
 toc = true
 +++

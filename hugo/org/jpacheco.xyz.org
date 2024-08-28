@@ -1292,7 +1292,7 @@ All the work we’ve done up until now has been front-end workings, but we also 
 You can extend this further by offering a live search preview, adding more filters, or allowing sorting options. This method provides a powerful and flexible way to implement search functionality on a static site without relying on any backend services.
 
 
-** DONE Basics of HUGO
+** DONE Basics of HUGO                             :blog:personal:tecnology:
 CLOSED: [2024-08-28 Wed 05:05]
 :PROPERTIES:
 :EXPORT_FILE_NAME: basics of HUGO
