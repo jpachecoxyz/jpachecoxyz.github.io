@@ -1309,7 +1309,7 @@ CLOSED: [2024-08-28 Wed 05:05]
 "Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again."
 #+end_quote
 *** Installation
-Hugo must be multi platform, so the installation depends on what SO do you use, in this example I Show how to install in =Arch-linux= because it's easy.
+Hugo is multi platform, so the installation depends on what SO do you use, in this example I Show how to install in =Arch-linux= because it's easy.
 
 #+begin_src shell
 sudo pacman -S hugo
@@ -1346,43 +1346,6 @@ This is very useful because in case of mess, you can easily roll back.
 git init
 #+end_src
 
-*** Working with Themes
-To install a theme is basically download it from =GitHub=, you can find one of your like [[https://themes.gohugo.io/themes][here]].
-**** Downloading and Installing a Theme
-
-In this guide we are going to use =PaperMod= theme, so we need to install it througt various ways.
-- As a submodule (recommended).
-
-#+begin_src shell
-git submodule add --depth=1 https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
-git submodule update --init --recursive # needed when you reclone your repo (submodules may not get cloned automatically)
-#+end_src
-
-- Simply clone.
-
-#+begin_src shell
-git clone https://github.com/adityatelange/hugo-PaperMod themes/PaperMod --depth=1
-#+end_src
-
-*Keep in mind that if you clone the repository you must delete the =.git= folder inside the theme, because is going to have conflicts when you try to push your site.*
-
-The next ones I never used, but you can go to the HUGO documentation for read more about these.
-- Expand Method 3 - Download an unzip
-- Hugo module
-
-**** Configuring the Theme
-Finally set theme as PaperMod in your site config, =hugo.toml= or =config.toml=
-
-#+begin_src toml
-theme = PaperMod
-#+end_src
-
-Once you do this you can verify if the site applied the theme correctly by running the hugo server:
-#+begin_src shell
-hugo server
-#+end_src
-Now, in your =browser=, open =localhost:1313=, and you should see your site with the proper theme applied.
-
 *** Creating Content
 **** Creating a New Post
 This is the command to create post within HUGO:
@@ -1417,6 +1380,43 @@ This is **bold** text, and this is *emphasized* text.
 
 Visit the [Hugo](https://gohugo.io) website!
 #+end_src
+
+*** Working with Themes
+To install a theme is basically download it from =GitHub=, you can find more themes [[https://themes.gohugo.io/themes][here]].
+**** Downloading and Installing a Theme
+
+In this guide we are going to use =PaperMod= theme, so we need to install it througt various ways.
+- As a submodule (recommended).
+
+#+begin_src shell
+git submodule add --depth=1 https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
+git submodule update --init --recursive # needed when you reclone your repo (submodules may not get cloned automatically)
+#+end_src
+
+- Simply clone.
+
+#+begin_src shell
+git clone https://github.com/adityatelange/hugo-PaperMod themes/PaperMod --depth=1
+#+end_src
+
+*Keep in mind that if you clone the repository you must delete the =.git= folder inside the theme, because is going to have conflicts when you try to push your site.*
+
+The next ones I never used, but you can go to the HUGO documentation for read more about these.
+- Expand Method 3 - Download an unzip
+- Hugo module
+
+**** Configuring the Theme
+Finally set theme as PaperMod in your site config, =hugo.toml= or =config.toml=
+
+#+begin_src toml
+theme = PaperMod
+#+end_src
+
+Once you do this you can verify if the site applied the theme correctly by running the hugo server:
+#+begin_src shell
+hugo server
+#+end_src
+Now, in your =browser=, open =localhost:1313=, and you should see your site with the proper theme applied.
 
 *** Configuration example for PaperMod theme.
 This is a basic configuration template for PaperMod theme:

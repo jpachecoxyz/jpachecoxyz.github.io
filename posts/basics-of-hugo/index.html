@@ -177,15 +177,15 @@
         <li><a href="#initialize-an-empty-git-repository-dot">Initialize an empty git repository.</a></li>
       </ul>
     </li>
+    <li><a href="#creating-content">Creating Content</a>
+      <ul>
+        <li><a href="#creating-a-new-post">Creating a New Post</a></li>
+      </ul>
+    </li>
     <li><a href="#working-with-themes">Working with Themes</a>
       <ul>
         <li><a href="#downloading-and-installing-a-theme">Downloading and Installing a Theme</a></li>
         <li><a href="#configuring-the-theme">Configuring the Theme</a></li>
-      </ul>
-    </li>
-    <li><a href="#creating-content">Creating Content</a>
-      <ul>
-        <li><a href="#creating-a-new-post">Creating a New Post</a></li>
       </ul>
     </li>
     <li><a href="#configuration-example-for-papermod-theme-dot">Configuration example for PaperMod theme.</a></li>
@@ -242,7 +242,7 @@
 <p>&ldquo;Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.&rdquo;</p>
 </blockquote>
 <h2 id="installation">Installation</h2>
-<p>Hugo must be multi platform, so the installation depends on what SO do you use, in this example I Show how to install in <code>Arch-linux</code> because it&rsquo;s easy.</p>
+<p>Hugo is multi platform, so the installation depends on what SO do you use, in this example I Show how to install in <code>Arch-linux</code> because it&rsquo;s easy.</p>
 <div class="highlight"><pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1</span><span>sudo pacman -S hugo
 </span></span></code></pre></div><h2 id="creating-a-new-site">Creating a New Site</h2>
 <h3 id="initialize-a-new-hugo-site">Initialize a New Hugo Site</h3>
@@ -267,8 +267,30 @@
 </span></span></code></pre></div><h3 id="initialize-an-empty-git-repository-dot">Initialize an empty git repository.</h3>
 <p>This is very useful because in case of mess, you can easily roll back.</p>
 <div class="highlight"><pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1</span><span>git init
+</span></span></code></pre></div><h2 id="creating-content">Creating Content</h2>
+<h3 id="creating-a-new-post">Creating a New Post</h3>
+<p>This is the command to create post within HUGO:</p>
+<div class="highlight"><pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1</span><span>hugo new content content/posts/my-first-post.md
+</span></span></code></pre></div><p>Hugo creates a <code>my-first-post.md</code> in the <code>content/posts/</code> directory, open it with your editor, you must see this content in the file:</p>
+<div class="highlight"><pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1</span><span>+++
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2</span><span>title = &#39;My First Post&#39;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">3</span><span>date = 2024-01-14T07:07:07+01:00
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">4</span><span>draft = true
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">5</span><span>+++
+</span></span></code></pre></div><p>Notice the draft value in the front matter is true. By default, Hugo does not publish draft content when you build the site. Learn more about draft, future, and expired content.</p>
+<p>Add some Markdown to the body of the post, but do not change the draft value.</p>
+<div class="highlight"><pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 1</span><span>+++
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 2</span><span>title = &#39;My First Post&#39;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 3</span><span>date = 2024-01-14T07:07:07+01:00
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 4</span><span>draft = true
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 5</span><span>+++
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 6</span><span><span style="color:#a2cbff">## Introduction
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 7</span><span><span style="color:#a2cbff"></span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 8</span><span>This is <span style="font-weight:bold">**bold**</span> text, and this is <span style="font-style:italic">*emphasized*</span> text.
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 9</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">10</span><span>Visit the [<span style="color:#76a9f9">Hugo</span>](<span style="color:#cebc3a">https://gohugo.io</span>) website!
 </span></span></code></pre></div><h2 id="working-with-themes">Working with Themes</h2>
-<p>To install a theme is basically download it from <code>GitHub</code>, you can find one of your like <a href="https://themes.gohugo.io/themes">here</a>.</p>
+<p>To install a theme is basically download it from <code>GitHub</code>, you can find more themes <a href="https://themes.gohugo.io/themes">here</a>.</p>
 <h3 id="downloading-and-installing-a-theme">Downloading and Installing a Theme</h3>
 <p>In this guide we are going to use <code>PaperMod</code> theme, so we need to install it througt various ways.</p>
 <ul>
@@ -294,29 +316,7 @@
 </span></span></code></pre></div><p>Once you do this you can verify if the site applied the theme correctly by running the hugo server:</p>
 <div class="highlight"><pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1</span><span>hugo server
 </span></span></code></pre></div><p>Now, in your <code>browser</code>, open <code>localhost:1313</code>, and you should see your site with the proper theme applied.</p>
-<h2 id="creating-content">Creating Content</h2>
-<h3 id="creating-a-new-post">Creating a New Post</h3>
-<p>This is the command to create post within HUGO:</p>
-<div class="highlight"><pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1</span><span>hugo new content content/posts/my-first-post.md
-</span></span></code></pre></div><p>Hugo creates a <code>my-first-post.md</code> in the <code>content/posts/</code> directory, open it with your editor, you must see this content in the file:</p>
-<div class="highlight"><pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1</span><span>+++
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2</span><span>title = &#39;My First Post&#39;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">3</span><span>date = 2024-01-14T07:07:07+01:00
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">4</span><span>draft = true
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">5</span><span>+++
-</span></span></code></pre></div><p>Notice the draft value in the front matter is true. By default, Hugo does not publish draft content when you build the site. Learn more about draft, future, and expired content.</p>
-<p>Add some Markdown to the body of the post, but do not change the draft value.</p>
-<div class="highlight"><pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 1</span><span>+++
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 2</span><span>title = &#39;My First Post&#39;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 3</span><span>date = 2024-01-14T07:07:07+01:00
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 4</span><span>draft = true
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 5</span><span>+++
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 6</span><span><span style="color:#a2cbff">## Introduction
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 7</span><span><span style="color:#a2cbff"></span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 8</span><span>This is <span style="font-weight:bold">**bold**</span> text, and this is <span style="font-style:italic">*emphasized*</span> text.
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 9</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">10</span><span>Visit the [<span style="color:#76a9f9">Hugo</span>](<span style="color:#cebc3a">https://gohugo.io</span>) website!
-</span></span></code></pre></div><h2 id="configuration-example-for-papermod-theme-dot">Configuration example for PaperMod theme.</h2>
+<h2 id="configuration-example-for-papermod-theme-dot">Configuration example for PaperMod theme.</h2>
 <p>This is a basic configuration template for PaperMod theme:</p>
 <div class="highlight"><pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">  1</span><span><span style="color:#aa89ea">baseURL</span> <span style="color:#abb2bf">=</span> <span style="color:#98c379">&#39;https://example.org/&#39;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">  2</span><span><span style="color:#aa89ea">languageCode</span> <span style="color:#abb2bf">=</span> <span style="color:#98c379">&#39;en-us&#39;</span>
@@ -497,15 +497,15 @@ So you notice that a <code>public</code> folder is now created, if you look insi
         <li><a href="#initialize-an-empty-git-repository-dot">Initialize an empty git repository.</a></li>
       </ul>
     </li>
+    <li><a href="#creating-content">Creating Content</a>
+      <ul>
+        <li><a href="#creating-a-new-post">Creating a New Post</a></li>
+      </ul>
+    </li>
     <li><a href="#working-with-themes">Working with Themes</a>
       <ul>
         <li><a href="#downloading-and-installing-a-theme">Downloading and Installing a Theme</a></li>
         <li><a href="#configuring-the-theme">Configuring the Theme</a></li>
-      </ul>
-    </li>
-    <li><a href="#creating-content">Creating Content</a>
-      <ul>
-        <li><a href="#creating-a-new-post">Creating a New Post</a></li>
       </ul>
     </li>
     <li><a href="#configuration-example-for-papermod-theme-dot">Configuration example for PaperMod theme.</a></li>

@@ -14,7 +14,7 @@ toc = true
 
 ## Installation {#installation}
 
-Hugo must be multi platform, so the installation depends on what SO do you use, in this example I Show how to install in `Arch-linux` because it's easy.
+Hugo is multi platform, so the installation depends on what SO do you use, in this example I Show how to install in `Arch-linux` because it's easy.
 
 ```shell
 sudo pacman -S hugo
@@ -62,9 +62,48 @@ git init
 ```
 
 
+## Creating Content {#creating-content}
+
+
+### Creating a New Post {#creating-a-new-post}
+
+This is the command to create post within HUGO:
+
+```shell
+hugo new content content/posts/my-first-post.md
+```
+
+Hugo creates a `my-first-post.md` in the `content/posts/` directory, open it with your editor, you must see this content in the file:
+
+```markdown
++++
+title = 'My First Post'
+date = 2024-01-14T07:07:07+01:00
+draft = true
++++
+```
+
+Notice the draft value in the front matter is true. By default, Hugo does not publish draft content when you build the site. Learn more about draft, future, and expired content.
+
+Add some Markdown to the body of the post, but do not change the draft value.
+
+```markdown
++++
+title = 'My First Post'
+date = 2024-01-14T07:07:07+01:00
+draft = true
++++
+## Introduction
+
+This is **bold** text, and this is *emphasized* text.
+
+Visit the [Hugo](https://gohugo.io) website!
+```
+
+
 ## Working with Themes {#working-with-themes}
 
-To install a theme is basically download it from `GitHub`, you can find one of your like [here](https://themes.gohugo.io/themes).
+To install a theme is basically download it from `GitHub`, you can find more themes [here](https://themes.gohugo.io/themes).
 
 
 ### Downloading and Installing a Theme {#downloading-and-installing-a-theme}
@@ -111,45 +150,6 @@ hugo server
 ```
 
 Now, in your `browser`, open `localhost:1313`, and you should see your site with the proper theme applied.
-
-
-## Creating Content {#creating-content}
-
-
-### Creating a New Post {#creating-a-new-post}
-
-This is the command to create post within HUGO:
-
-```shell
-hugo new content content/posts/my-first-post.md
-```
-
-Hugo creates a `my-first-post.md` in the `content/posts/` directory, open it with your editor, you must see this content in the file:
-
-```markdown
-+++
-title = 'My First Post'
-date = 2024-01-14T07:07:07+01:00
-draft = true
-+++
-```
-
-Notice the draft value in the front matter is true. By default, Hugo does not publish draft content when you build the site. Learn more about draft, future, and expired content.
-
-Add some Markdown to the body of the post, but do not change the draft value.
-
-```markdown
-+++
-title = 'My First Post'
-date = 2024-01-14T07:07:07+01:00
-draft = true
-+++
-## Introduction
-
-This is **bold** text, and this is *emphasized* text.
-
-Visit the [Hugo](https://gohugo.io) website!
-```
 
 
 ## Configuration example for PaperMod theme. {#configuration-example-for-papermod-theme-dot}
