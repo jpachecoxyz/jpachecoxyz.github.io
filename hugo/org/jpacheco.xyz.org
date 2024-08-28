@@ -55,14 +55,6 @@ article .content img, article .content video {
     height: auto;
 	border: 3px solid cadetblue;
 }
-
-.content p {
-    hyphens: auto;
-    -moz-hyphens: auto;
-    -ms-hyphens: auto;
-    -webkit-hyphens: auto;
-    text-align: center;
-}
 #+end_src
 ** Javascript.
 #+begin_src javascript :tangle ~/webdev/jpachecoxyz.github.io/hugo/themes/cactus/static/js/main.js
@@ -1289,7 +1281,7 @@ All the work we’ve done up until now has been front-end workings, but we also 
 *** Conclusion
 You can extend this further by offering a live search preview, adding more filters, or allowing sorting options. This method provides a powerful and flexible way to implement search functionality on a static site without relying on any backend services.
 
-* TODO Basics of HUGO from scratch
+** TODO Basics of HUGO
 :PROPERTIES:
 :EXPORT_FILE_NAME: basics of HUGO
 :EXPORT_DESCRIPTION: A basic introduction to HUGO.
@@ -1297,3 +1289,111 @@ You can extend this further by offering a live search preview, adding more filte
 :EXPORT_HUGO_SECTION: posts
 :END:
 
+*** Introduction
+#+begin_quote
+"Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again."
+#+end_quote
+*** Installation
+Hugo must be multi platform, so the installation depends on what SO do you use, in this example I Show how to install in =Arch-linux= because it's easy.
+#+begin_src shell
+sudo pacman -S hugo
+#+end_src
+
+*** Creating a New Site
+**** Initialize a New Hugo Site
+This is the command in order to create a hugo site,
+#+begin_src shell
+hugo new site my-website.org
+#+end_src
+- my-website.org :: is the name of the directory that hugo is going to create, and where all the files are going to be.
+
+**** Directory Structure Overview
+#+begin_example
+$ tree -d my-website.org
+
+my-website.org
+├── archetypes
+├── assets
+├── content
+├── data
+├── i18n
+├── layouts
+├── static
+└── themes
+#+end_example
+**** Initialize an empty git repository.
+This is very useful because in case of mess, you can easily roll back.
+#+begin_src shell
+git init
+#+end_src
+
+*** Working with Themes
+To install a theme is basically download it from =GitHub=, you can find one of your like [[https://themes.gohugo.io/themes][here]].
+**** Downloading and Installing a Theme
+In this guide we are going to use =PaperMod= theme, so we need to install it througt various ways.
+- As a submodule (recommended).
+#+begin_src shell
+git submodule add --depth=1 https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
+git submodule update --init --recursive # needed when you reclone your repo (submodules may not get cloned automatically)
+#+end_src
+- Simply clone.
+#+begin_src shell
+git clone https://github.com/adityatelange/hugo-PaperMod themes/PaperMod --depth=1
+#+end_src
+
+The next ones I never used, but you can go to the HUGO documentation for read more about these.
+- Expand Method 3 - Download an unzip
+- Hugo module
+**** Configuring the Theme
+Finally set theme as PaperMod in your site config, =hugo.toml= or =config.toml=
+
+#+begin_src toml
+theme = PaperMod
+#+end_src
+
+*** Creating Content
+**** Creating a New Post
+This is the command to create post within HUGO:
+#+begin_src shell
+hugo new content content/posts/my-first-post.md
+#+end_src
+
+Hugo creates a =my-first-post.md= in the =content/posts/= directory, open it with your editor, you must see this content in the file:
+
+#+CAPTION: test
+#+begin_src markdown
++++
+title = 'My First Post'
+date = 2024-01-14T07:07:07+01:00
+draft = true
++++
+#+end_src
+
+Notice the draft value in the front matter is true. By default, Hugo does not publish draft content when you build the site. Learn more about draft, future, and expired content.
+
+Add some Markdown to the body of the post, but do not change the draft value.
+
+#+begin_src markdown
++++
+title = 'My First Post'
+date = 2024-01-14T07:07:07+01:00
+draft = true
++++
+## Introduction
+
+This is **bold** text, and this is *emphasized* text.
+
+Visit the [Hugo](https://gohugo.io) website!
+#+end_src
+
+
+**** Using Front Matter
+*** Building the Site
+**** Generating the Static Site
+**** Previewing the Site Locally
+*** Deploying the Site
+**** Preparing for Deployment
+**** Deploying to a Web Server or Hosting Service
+*** Conclusion
+**** Additional Resources
+**** Next Steps

@@ -40,11 +40,3 @@ article .content img, article .content video {
     height: auto;
 	border: 3px solid cadetblue;
 }
-
-.content p {
-    hyphens: auto;
-    -moz-hyphens: auto;
-    -ms-hyphens: auto;
-    -webkit-hyphens: auto;
-    text-align: center;
-}
