@@ -55,6 +55,16 @@ article .content img, article .content video {
     height: auto;
 	border: 3px solid cadetblue;
 }
+
+article .content h2:before {
+    position: absolute;
+    top: -4px;
+    left: -1rem;
+    color: #2bbc8a;
+    content: "⁖";
+    font-weight: bold;
+    font-size: 1.2rem;
+}
 #+end_src
 ** Javascript.
 #+begin_src javascript :tangle ~/webdev/jpachecoxyz.github.io/hugo/themes/cactus/static/js/main.js
@@ -328,7 +338,7 @@ document.addEventListener('keydown', function(event) {
     }
 });
 #+end_src
-** Useful elisp functions.
+** Useful elisp functions & tools
 *** FIXME yasnipet insert auto tags.
 #+begin_src elisp
 (defun my/org-insert-header ()
@@ -1282,12 +1292,16 @@ All the work we’ve done up until now has been front-end workings, but we also 
 You can extend this further by offering a live search preview, adding more filters, or allowing sorting options. This method provides a powerful and flexible way to implement search functionality on a static site without relying on any backend services.
 
 
-** TODO Basics of HUGO
+** DONE Basics of HUGO
+CLOSED: [2024-08-28 Wed 05:05]
 :PROPERTIES:
 :EXPORT_FILE_NAME: basics of HUGO
 :EXPORT_DESCRIPTION: A basic introduction to HUGO.
 :DATE:     08-27-2024
 :EXPORT_HUGO_SECTION: posts
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2024-08-28 Wed 05:05]
 :END:
 
 *** Introduction
@@ -1296,6 +1310,7 @@ You can extend this further by offering a live search preview, adding more filte
 #+end_quote
 *** Installation
 Hugo must be multi platform, so the installation depends on what SO do you use, in this example I Show how to install in =Arch-linux= because it's easy.
+
 #+begin_src shell
 sudo pacman -S hugo
 #+end_src
@@ -1303,9 +1318,11 @@ sudo pacman -S hugo
 *** Creating a New Site
 **** Initialize a New Hugo Site
 This is the command in order to create a hugo site,
+
 #+begin_src shell
 hugo new site my-website.org
 #+end_src
+
 - my-website.org :: is the name of the directory that hugo is going to create, and where all the files are going to be.
 
 **** Directory Structure Overview
@@ -1323,6 +1340,7 @@ my-website.org
 └── themes
 #+end_example
 **** Initialize an empty git repository.
+
 This is very useful because in case of mess, you can easily roll back.
 #+begin_src shell
 git init
@@ -1331,20 +1349,27 @@ git init
 *** Working with Themes
 To install a theme is basically download it from =GitHub=, you can find one of your like [[https://themes.gohugo.io/themes][here]].
 **** Downloading and Installing a Theme
+
 In this guide we are going to use =PaperMod= theme, so we need to install it througt various ways.
 - As a submodule (recommended).
+
 #+begin_src shell
 git submodule add --depth=1 https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
 git submodule update --init --recursive # needed when you reclone your repo (submodules may not get cloned automatically)
 #+end_src
+
 - Simply clone.
+
 #+begin_src shell
 git clone https://github.com/adityatelange/hugo-PaperMod themes/PaperMod --depth=1
 #+end_src
 
+*Keep in mind that if you clone the repository you must delete the =.git= folder inside the theme, because is going to have conflicts when you try to push your site.*
+
 The next ones I never used, but you can go to the HUGO documentation for read more about these.
 - Expand Method 3 - Download an unzip
 - Hugo module
+
 **** Configuring the Theme
 Finally set theme as PaperMod in your site config, =hugo.toml= or =config.toml=
 
@@ -1352,16 +1377,22 @@ Finally set theme as PaperMod in your site config, =hugo.toml= or =config.toml=
 theme = PaperMod
 #+end_src
 
+Once you do this you can verify if the site applied the theme correctly by running the hugo server:
+#+begin_src shell
+hugo server
+#+end_src
+Now, in your =browser=, open =localhost:1313=, and you should see your site with the proper theme applied.
+
 *** Creating Content
 **** Creating a New Post
 This is the command to create post within HUGO:
+
 #+begin_src shell
 hugo new content content/posts/my-first-post.md
 #+end_src
 
 Hugo creates a =my-first-post.md= in the =content/posts/= directory, open it with your editor, you must see this content in the file:
 
-#+CAPTION: test
 #+begin_src markdown
 +++
 title = 'My First Post'
@@ -1387,13 +1418,149 @@ This is **bold** text, and this is *emphasized* text.
 Visit the [Hugo](https://gohugo.io) website!
 #+end_src
 
-**** Using Front Matter
+*** Configuration example for PaperMod theme.
+This is a basic configuration template for PaperMod theme:
+
+#+begin_src toml
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+theme = "PaperMod"
+
+copyright = "[PaperMod Contributors](https://github.com/adityatelange/hugo-PaperMod/graphs/contributors)"
+paginate = 5
+enableInlineShortcodes = true
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+enableEmoji = true
+pygmentsUseClasses = true
+mainsections = [ "posts", "papermod" ]
+
+[minify]
+disableXML = true
+
+[languages.en]
+languageName = "English"
+weight = 1
+
+  [languages.en.taxonomies]
+  category = "categories"
+  tag = "tags"
+  series = "series"
+
+[[languages.en.menu.main]]
+name = "Archive"
+url = "archives"
+weight = 5
+
+[[languages.en.menu.main]]
+name = "Posts"
+url = "posts/"
+weight = 10
+
+[outputs]
+home = [ "HTML", "RSS", "JSON" ]
+
+[params]
+env = "production"
+description = "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
+author = "Theme PaperMod"
+defaultTheme = "auto"
+ShowShareButtons = true
+ShowReadingTime = true
+displayFullLangName = true
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = true
+ShowRssButtonInSectionTermList = true
+ShowAllPagesInArchive = true
+ShowPageNums = true
+ShowToc = true
+images = [ "images/papermod-cover.png" ]
+
+  [params.profileMode]
+  enabled = false
+  title = "PaperMod"
+  imageUrl = "#"
+  imageTitle = "my image"
+
+    [[params.profileMode.buttons]]
+    name = "Archives"
+    url = "archives"
+
+    [[params.profileMode.buttons]]
+    name = "Tags"
+    url = "tags"
+
+  [params.homeInfoParams]
+  Title = "PaperMod's Demo"
+  Content = """
+?? Welcome to demo page of Hugo's theme PaperMod!
+- **PaperMod**  is designed to be clean and simple but fast and responsive theme with useful feature-set that enhances UX.
+- Feel free to show your support by giving us a star ?? on GitHub and sharing with your friends and social media .
+- PaperMod is based on theme [Paper](https://github.com/nanxiaobei/hugo-paper/tree/4330c8b12aa48bfdecbcad6ad66145f679a430b3).
+"""
+
+  [[params.socialIcons]]
+  name = "github"
+  title = "View Source on Github"
+  url = "https://github.com/adityatelange/hugo-PaperMod"
+
+  [[params.socialIcons]]
+  name = "Discord"
+  title = "Join discord community"
+  url = "https://discord.gg/ahpmTvhVmp"
+
+  [[params.socialIcons]]
+  name = "X"
+  title = "Share PaperMod on X/Twitter"
+  url = "https://x.com/intent/tweet/?text=Checkout%20Hugo%20PaperMod%20%E2%9C%A8%0AA%20fast,%20clean,%20responsive%20Hugo%20theme.&url=https://github.com/adityatelange/hugo-PaperMod&hashtags=Hugo,PaperMod"
+
+  [[params.socialIcons]]
+  name = "KoFi"
+  title = "Buy me a Ko-Fi :)"
+  url = "https://ko-fi.com/adityatelange"
+
+  [params.assets]
+  disableHLJS = true
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.highlight]
+noClasses = false
+
+[services.instagram]
+disableInlineCSS = true
+
+[services.twitter]
+disableInlineCSS = true
+#+end_src
+
 *** Building the Site
 **** Generating the Static Site
-**** Previewing the Site Locally
-*** Deploying the Site
-**** Preparing for Deployment
-**** Deploying to a Web Server or Hosting Service
+At this point we need to generate the static we site, the most basic command to publish it is just run =hugo= in the terminal inside the root of the project.
+So you notice that a =public= folder is now created, if you look inside, you'll find all the html files, and everything to deploy as a web page.
+
+**** Set especific folder to export your site.
+If you don't want to have your publish site in the =public= folder, you can set another path to export it instead of the =public= folder by adding this line at top of your =hugo.toml= configuration file:
+
+#+begin_src toml
+publishDir = "/path/to/export/"
+#example
+publishDir = "~/user/my-site.org/"
+#+end_src
+
 *** Conclusion
+With all the context before, you may be able to start your web site, blog, etc. As you read, is very simple to have a very nice and useful static web-page, the "hard" part is to select the theme.
 **** Additional Resources
+1. [[https://gohugo.io/getting-started/quick-start/][Hugo quick start guide.]]
+2. [[https://gohugo.io/documentation/][Hudo documentation.]]
+
 **** Next Steps
+Next step is to publish your web to a custom server, github, gitlab, codeberg pages.
+
+1. Preparing for Deployment
+2. Deploying to a Web Server or Hosting Service
