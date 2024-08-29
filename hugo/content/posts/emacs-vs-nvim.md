@@ -5,7 +5,7 @@ description = "My opinion about emacs and neovim about writting and programming.
 date = 2024-08-13T05:06:00-05:00
 tags = ["emacs", "tecnology"]
 draft = false
-image = "images/thumbnails/emacs.png"
+hugo_image = "images/thumbnails/emacs.png"
 +++
 
 ## Neovim for Programming {#neovim-for-programming}

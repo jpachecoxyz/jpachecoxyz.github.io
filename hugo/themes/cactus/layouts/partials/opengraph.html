@@ -4,18 +4,25 @@
     <meta property="og:description" content="{{ .Params.description }}" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="{{ .Permalink }}" />
-    
+
+    <!-- Open Graph Image Handling -->
     {{ if .Params.hugo_image }}
-        <!-- Custom Image -->
         <meta property="og:image" content="{{ .Params.hugo_image | absURL }}" />
     {{ else }}
-        <!-- Default Image -->
-        <meta property="og:image" content="/images/thumbnails/logo.png" />
+        <!-- Use the fallback logo image -->
+        <meta property="og:image" content="{{ "/images/thumbnails/logo.png" | absURL }}" />
     {{ end }}
-    
+
     <!-- Twitter Cards (Optional) -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="{{ .Title }}" />
     <meta name="twitter:description" content="{{ .Params.description }}" />
-    <meta name="twitter:image" content="{{ .Params.hugo_image | absURL }}" />
+
+    <!-- Twitter Image Handling -->
+    {{ if .Params.hugo_image }}
+        <meta name="twitter:image" content="{{ .Params.hugo_image | absURL }}" />
+    {{ else }}
+        <!-- Use the fallback logo image -->
+        <meta name="twitter:image" content="{{ "/images/thumbnails/logo.png" | absURL }}" />
+    {{ end }}
 {{ end }}

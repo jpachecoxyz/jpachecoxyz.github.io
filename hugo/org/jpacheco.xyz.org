@@ -897,7 +897,7 @@ CLOSED: [2024-08-13 Tue 05:06]
 :EXPORT_DESCRIPTION: My opinion about emacs and neovim about writting and programming.
 :DATE:     08-13-2024
 :EXPORT_HUGO_SECTION: posts
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER+: :image "images/thumbnails/emacs.png"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER+: :hugo_image "images/thumbnails/emacs.png"
 :END:
 :LOGBOOK:
 - State "DONE"       from "TODO"       [2024-08-13 Tue 05:06]
