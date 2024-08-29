@@ -348,6 +348,17 @@ document.addEventListener('keydown', function(event) {
   (yas-expand-snippet "${1:}\n")
   (org-set-tags-command))
 #+end_src
+*** Refill 
+#+begin_src elisp
+(defun jp/refile-to-posts ()
+  "Refile the current subtree to the 'Posts' section."
+  (interactive)
+  (let ((org-refile-targets
+         `((,(buffer-file-name) :regexp . "^* Posts"))))  ;; Limit refile targets to 'Posts'
+    (org-refile)))
+(global-set-key (kbd "C-c r p") 'jp/refile-to-posts)
+#+end_src
+
 * Notes:
 ** custom hugo front-mater:
 #+begin_example
@@ -366,8 +377,8 @@ opengraph = true
 +++
 #+end_src
 
-* Posts
-
+* Ideas:
+* Posts:
 ** DONE About me.                                                    :about:
 CLOSED: [2024-01-05 Fri 18:00]
 :PROPERTIES:
