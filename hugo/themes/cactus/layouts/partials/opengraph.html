@@ -1,10 +1,21 @@
 {{ if .IsPage }}
+    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="{{ .Title }}" />
     <meta property="og:description" content="{{ .Params.description }}" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="{{ .Permalink }}" />
+    
+    <!-- Default Image -->
     <meta property="og:image" content="/images/{{ .File.BaseFileName }}.png" />
+    
+    <!-- Custom Image -->
     {{ if .Params.hugo_image }}
         <meta property="og:image" content="{{ .Params.hugo_image | absURL }}" />
     {{ end }}
+    
+    <!-- Twitter Cards (Optional) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ .Title }}" />
+    <meta name="twitter:description" content="{{ .Params.description }}" />
+    <meta name="twitter:image" content="{{ .Params.hugo_image | absURL }}" />
 {{ end }}

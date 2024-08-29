@@ -5,7 +5,7 @@ description = "My personal information"
 date = 2024-01-05T18:00:00-06:00
 tags = ["about"]
 draft = false
-image = "images/thumbnails/jp.png"
+hugo_image = "images/thumbnails/jp.png"
 +++
 
 {{< figure src="/images/jp.jpg" width="200px" >}}

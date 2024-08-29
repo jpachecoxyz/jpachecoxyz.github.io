@@ -65,6 +65,17 @@ article .content h2:before {
     font-weight: bold;
     font-size: 1.2rem;
 }
+
+nav > ul > li {
+    color: $color-text;
+    font-size: .8rem;
+
+    &:before {
+    color: $color-accent-1;
+    content: "⁖";
+    margin-right: 8px;
+    }
+}
 #+end_src
 ** Javascript.
 #+begin_src javascript :tangle ~/webdev/jpachecoxyz.github.io/hugo/themes/cactus/static/js/main.js
@@ -385,7 +396,7 @@ CLOSED: [2024-01-05 Fri 18:00]
 :EXPORT_FILE_NAME: content/about.md
 :EXPORT_DESCRIPTION: My personal information
 :EXPORT_HUGO_SECTION: 
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER+: :image "images/thumbnails/jp.png"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER+: :hugo_image "images/thumbnails/jp.png"
 :END:
 
 #+ATTR_HTML: :width 200px :style float:left;margin:0px 10px 10px 0px;
@@ -1420,7 +1431,7 @@ The next ones I never used, but you can go to the HUGO documentation for read mo
 Finally set theme as PaperMod in your site config, =hugo.toml= or =config.toml=
 
 #+begin_src toml
-theme = PaperMod
+theme = "PaperMod"
 #+end_src
 
 Once you do this you can verify if the site applied the theme correctly by running the hugo server:
@@ -1561,7 +1572,7 @@ If you don't want to have your publish site in the =public= folder, you can set 
 #+begin_src toml
 publishDir = "/path/to/export/"
 #example
-publishDir = "~/user/my-site.org/"
+publishDir = "~/my-site.org/"
 #+end_src
 
 *** Conclusion

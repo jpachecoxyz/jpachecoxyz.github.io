@@ -141,7 +141,7 @@ The next ones I never used, but you can go to the HUGO documentation for read mo
 Finally set theme as PaperMod in your site config, `hugo.toml` or `config.toml`
 
 ```toml
-theme = PaperMod
+theme = "PaperMod"
 ```
 
 Once you do this you can verify if the site applied the theme correctly by running the hugo server:
@@ -292,7 +292,7 @@ If you don't want to have your publish site in the `public` folder, you can set 
 ```toml
 publishDir = "/path/to/export/"
 #example
-publishDir = "~/user/my-site.org/"
+publishDir = "~/my-site.org/"
 ```
 
 

@@ -50,3 +50,14 @@ article .content h2:before {
     font-weight: bold;
     font-size: 1.2rem;
 }
+
+nav > ul > li {
+    color: $color-text;
+    font-size: .8rem;
+
+    &:before {
+    color: $color-accent-1;
+    content: "⁖";
+    margin-right: 8px;
+    }
+}
