@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "styles.css",
-	"sourceRoot": "C:/Users/francisco.pacheco/webdev/jpachecoxyz.github.io/hugo",
+	"sourceRoot": "/home/javier/webdev/jpachecoxyz.github.io/hugo",
 	"sources": [
 		"themes/cactus/assets/scss/style.scss",
 		"themes/cactus/assets/scss/_variables.scss",

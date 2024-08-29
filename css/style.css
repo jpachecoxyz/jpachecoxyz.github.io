@@ -9,6 +9,10 @@
     border-radius: var(--radius)
 }
 
+body{
+	background-color: #000000;
+}
+
 /* The icon of codeblocks properties */
 pre .code-copy-btn {
 	position: absolute;
