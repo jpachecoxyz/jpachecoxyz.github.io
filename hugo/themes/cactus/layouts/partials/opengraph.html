@@ -5,12 +5,12 @@
     <meta property="og:type" content="article" />
     <meta property="og:url" content="{{ .Permalink }}" />
     
-    <!-- Default Image -->
-    <meta property="og:image" content="/images/{{ .File.BaseFileName }}.png" />
-    
-    <!-- Custom Image -->
     {{ if .Params.hugo_image }}
+        <!-- Custom Image -->
         <meta property="og:image" content="{{ .Params.hugo_image | absURL }}" />
+    {{ else }}
+        <!-- Default Image -->
+        <meta property="og:image" content="/images/thumbnails/logo.png" />
     {{ end }}
     
     <!-- Twitter Cards (Optional) -->

@@ -1,7 +1,7 @@
 +++
 title = "About me."
 author = ["Javier Pacheco"]
-description = "My personal information"
+description = "My personal information."
 date = 2024-01-05T18:00:00-06:00
 tags = ["about"]
 draft = false
