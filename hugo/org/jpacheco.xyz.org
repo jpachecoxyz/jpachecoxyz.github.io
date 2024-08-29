@@ -24,6 +24,10 @@
     border-radius: var(--radius)
 }
 
+body{
+	background: #000000;
+}
+
 /* The icon of codeblocks properties */
 pre .code-copy-btn {
 	position: absolute;
@@ -339,7 +343,14 @@ document.addEventListener('keydown', function(event) {
 });
 #+end_src
 ** Useful elisp functions & tools
-*** FIXME yasnipet insert auto tags.
+*** Auto save and hugo export.
+#+begin_src elisp
+;;The first line declares where is the org file is stored, in my cases is in hugo root directory in the org folder.
+(("org/"
+  . ((org-mode . ((eval . (org-hugo-auto-export-mode)))))))
+#+end_src
+*** DEPRECATED yasnipet insert auto tags.
+Use =org-capture= to add new posts.
 #+begin_src elisp
 (defun my/org-insert-header ()
   "Insert a level-2 header and run org-set-tags-command"
