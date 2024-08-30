@@ -1,7 +1,7 @@
 #+title: jpacheco.xyz
 #+author: Javier Pacheco
 #+description: My website wrapped in a org file.
-#+hugo_base_dir: ../../
+#+hugo_base_dir: ../
 #+startup: content
 #+hugo_custom_front_matter: toc true
 #+hugo_auto_set_lastmod: nil
@@ -349,16 +349,6 @@ document.addEventListener('keydown', function(event) {
 (("org/"
   . ((org-mode . ((eval . (org-hugo-auto-export-mode)))))))
 #+end_src
-*** DEPRECATED yasnipet insert auto tags.
-Use =org-capture= to add new posts.
-#+begin_src elisp
-(defun my/org-insert-header ()
-  "Insert a level-2 header and run org-set-tags-command"
-  (interactive)
-  (insert "** ")
-  (yas-expand-snippet "${1:}\n")
-  (org-set-tags-command))
-#+end_src
 *** Refill 
 #+begin_src elisp
 (defun jp/refile-to-posts ()
@@ -370,6 +360,16 @@ Use =org-capture= to add new posts.
 (global-set-key (kbd "C-c r p") 'jp/refile-to-posts)
 #+end_src
 
+*** DEPRECATED yasnipet insert auto tags.
+Use =org-capture= to add new posts.
+#+begin_src elisp
+(defun my/org-insert-header ()
+  "Insert a level-2 header and run org-set-tags-command"
+  (interactive)
+  (insert "** ")
+  (yas-expand-snippet "${1:}\n")
+  (org-set-tags-command))
+#+end_src
 * Notes:
 ** custom hugo front-mater:
 #+begin_example
@@ -1583,8 +1583,8 @@ publishDir = "~/my-site.org/"
 With all the context before, you may be able to start your web site, blog, etc. As you read, is very simple to have a very nice and useful static web-page, the "hard" part is to select the theme.
 
 The next step is to publish your web to a custom server or on github, gitlab, codeberg pages.
-1. Preparing for Deployment
-2. Deploying to a Web Server or Hosting Service
+1. Preparing for Deployment.
+2. Deploying to a Web Server or Hosting Service.
    
 **** Additional Resources
 1. [[https://gohugo.io/getting-started/quick-start/][Hugo quick start guide.]]

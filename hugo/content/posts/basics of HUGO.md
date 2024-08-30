@@ -302,8 +302,8 @@ With all the context before, you may be able to start your web site, blog, etc. 
 
 The next step is to publish your web to a custom server or on github, gitlab, codeberg pages.
 
-1.  Preparing for Deployment
-2.  Deploying to a Web Server or Hosting Service
+1.  Preparing for Deployment.
+2.  Deploying to a Web Server or Hosting Service.
 
 
 ### Additional Resources {#additional-resources}
