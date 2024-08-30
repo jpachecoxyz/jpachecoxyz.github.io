@@ -10,7 +10,7 @@
         <meta property="og:image" content="{{ .Params.hugo_image | absURL }}" />
     {{ else }}
         <!-- Use the fallback logo image -->
-        <meta property="og:image" content="https://og-theta.vercel.app/api/general?siteName=jpacheco.xyz&description=Welcome%20to%20my%20blog!&theme=dark&logo=https://github.com/jpachecoxyz/jpachecoxyz.github.io/blob/main/images/logo.jpg?raw=true&logoWidth=120" />
+<meta property="og:image" content="{{ "https://og-theta.vercel.app/api/general?siteName=jpacheco.xyz&description=Welcome%20to%20my%20blog!&theme=dark&logo=https://github.com/jpachecoxyz/jpachecoxyz.github.io/blob/main/images/logo.jpg?raw=true&logoWidth=120" | absURL }}" />
     {{ end }}
 
     <!-- Twitter Cards (Optional) -->
@@ -23,6 +23,6 @@
         <meta name="twitter:image" content="{{ .Params.hugo_image | absURL }}" />
     {{ else }}
         <!-- Use the fallback logo image -->
-        <meta name="twitter:image" content="https://og-theta.vercel.app/api/general?siteName=jpacheco.xyz&description=Welcome%20to%20my%20blog!&theme=dark&logo=https://github.com/jpachecoxyz/jpachecoxyz.github.io/blob/main/images/logo.jpg?raw=true&logoWidth=120" />
+        <meta name="twitter:image" content="{{ "https://og-theta.vercel.app/api/general?siteName=jpacheco.xyz&description=Welcome%20to%20my%20blog!&theme=dark&logo=https://github.com/jpachecoxyz/jpachecoxyz.github.io/blob/main/images/logo.jpg?raw=true&logoWidth=120" | absURL }}" />
     {{ end }}
 {{ end }}
