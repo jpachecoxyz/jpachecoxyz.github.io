@@ -25,7 +25,7 @@
 }
 
 body{
-	background-color: #000000;
+	background-color: #1a1a1a;
 }
 
 /* The icon of codeblocks properties */

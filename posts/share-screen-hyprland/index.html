@@ -255,7 +255,7 @@
 <h2 id="solving-the-problem-dot">Solving the problem.</h2>
 <p>So once in my job, with the mind more clean, I go to the hyprland <a href="https://wiki.hyprland.org/Useful-Utilities/xdg-desktop-portal-hyprland/">wiki</a>, and at the bottom there were some tips to debugging if some errors appears.</p>
 <p>So I add this in my <code>Hyprland</code> configuration file:</p>
-<div class="highlight"><pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cfg" data-lang="cfg"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1</span><span><span style="color:#cebc3a">exec-once</span> <span style="color:#54b1c7">=</span> <span style="color:#98c379">dbus-update-activation-environment --systemd --all</span>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cfg" data-lang="cfg"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span><span><span style="color:#bbb">exec-once</span> = <span style="color:#ed9d13">dbus-update-activation-environment --systemd --all</span>
 </span></span></code></pre></div><p>That&rsquo;s it, that little command above solve my 1 day pain trying to share my screen. So I hope this little post be helpful for you if you encounter the same issue as me.</p>
 <p>Thanks for read me.</p>
 
