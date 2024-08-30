@@ -1,7 +1,7 @@
 #+title: jpacheco.xyz
 #+author: Javier Pacheco
 #+description: My website wrapped in a org file.
-#+hugo_base_dir: ~/webdev/jpachecoxyz.github.io/hugo/
+#+hugo_base_dir: ../../
 #+startup: content
 #+hugo_custom_front_matter: toc true
 #+hugo_auto_set_lastmod: nil
@@ -652,11 +652,15 @@ Enhance your Emacs experience with =efetch.el=! Stay informed about your environ
 
 
 ** DONE Void linux bootstrap.                       :linux:tecnology:script:
+CLOSED: [2024-08-29 Thu 19:47]
 :PROPERTIES:
 :EXPORT_FILE_NAME: voidstrap
 :EXPORT_DESCRIPTION: A void linux semi-automated installer.
 :DATE:     07-05-2024
 :EXPORT_HUGO_SECTION: posts
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2024-08-29 Thu 19:47]
 :END:
 
 #+BEGIN_PREVIEW
