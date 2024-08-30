@@ -54,3 +54,15 @@ article .content h2:before {
     font-weight: bold;
     font-size: 1.2rem;
 }
+
+figcaption {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  text-align: center; /* Center text inside the <p> */
+  height: 100%; /* Ensure the <figcaption> has a height if necessary */
+}
+
+figcaption p {
+  margin: 0; /* Remove default margins */
+}

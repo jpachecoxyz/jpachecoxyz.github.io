@@ -69,6 +69,18 @@ article .content h2:before {
     font-weight: bold;
     font-size: 1.2rem;
 }
+
+figcaption {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  text-align: center; /* Center text inside the <p> */
+  height: 100%; /* Ensure the <figcaption> has a height if necessary */
+}
+
+figcaption p {
+  margin: 0; /* Remove default margins */
+}
 #+end_src
 ** Javascript.
 #+begin_src javascript :tangle ~/webdev/jpachecoxyz.github.io/hugo/themes/cactus/static/js/main.js
@@ -343,6 +355,27 @@ document.addEventListener('keydown', function(event) {
 });
 #+end_src
 ** Useful elisp functions & tools
+*** publish.sh
+This is the script that I use to publish my web within emacs.
+#+begin_src shell :tangle ../publish.sh :shebang #!/bin/sh
+
+# Created By: Javier Pacheco - javier@jpacheco.xyz
+# Created On: 05/07/24
+# Project: Publish my blog.
+
+# cd ~/webdev/blog/ && hugo && cd ../jpachecoxyz.github.io/ && echo "Site published correctly..." && echo "Enter your commit: "
+#
+# read commit && git add . && git commit -m "$commit" && echo "hit enter to continue..." && read && git push
+
+cd ~/webdev/jpachecoxyz.github.io/hugo/ && hugo && cd ../
+echo "Site published correctly..."
+
+# Use the first argument as the commit message
+git add .
+git commit -m "$1"
+git push
+#+end_src
+
 *** Auto save and hugo export.
 #+begin_src elisp
 ;;The first line declares where is the org file is stored, in my cases is in hugo root directory in the org folder.

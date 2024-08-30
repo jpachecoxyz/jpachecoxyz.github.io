@@ -1,5 +1,4 @@
 #!/bin/sh
-
 # Created By: Javier Pacheco - javier@jpacheco.xyz
 # Created On: 05/07/24
 # Project: Publish my blog.
