@@ -2,67 +2,67 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on jpacheco.xyz</title>
-    <link>https://jpacheco.xyz/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on jpacheco.xyz</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>Javier Pacheco</copyright>
     <lastBuildDate>Wed, 28 Aug 2024 05:05:00 -0500</lastBuildDate>
-    <atom:link href="https://jpacheco.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Blog</title>
-      <link>https://jpacheco.xyz/tags/blog/</link>
+      <link>http://localhost:1313/tags/blog/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jpacheco.xyz/tags/blog/</guid>
+      <guid>http://localhost:1313/tags/blog/</guid>
       <description></description>
     </item>
     <item>
       <title>Personal</title>
-      <link>https://jpacheco.xyz/tags/personal/</link>
+      <link>http://localhost:1313/tags/personal/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jpacheco.xyz/tags/personal/</guid>
+      <guid>http://localhost:1313/tags/personal/</guid>
       <description></description>
     </item>
     <item>
       <title>Tecnology</title>
-      <link>https://jpacheco.xyz/tags/tecnology/</link>
+      <link>http://localhost:1313/tags/tecnology/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jpacheco.xyz/tags/tecnology/</guid>
+      <guid>http://localhost:1313/tags/tecnology/</guid>
       <description></description>
     </item>
     <item>
       <title>Emacs</title>
-      <link>https://jpacheco.xyz/tags/emacs/</link>
+      <link>http://localhost:1313/tags/emacs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jpacheco.xyz/tags/emacs/</guid>
+      <guid>http://localhost:1313/tags/emacs/</guid>
       <description></description>
     </item>
     <item>
       <title>Linux</title>
-      <link>https://jpacheco.xyz/tags/linux/</link>
+      <link>http://localhost:1313/tags/linux/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jpacheco.xyz/tags/linux/</guid>
+      <guid>http://localhost:1313/tags/linux/</guid>
       <description></description>
     </item>
     <item>
       <title>Wayland</title>
-      <link>https://jpacheco.xyz/tags/wayland/</link>
+      <link>http://localhost:1313/tags/wayland/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jpacheco.xyz/tags/wayland/</guid>
+      <guid>http://localhost:1313/tags/wayland/</guid>
       <description></description>
     </item>
     <item>
       <title>Script</title>
-      <link>https://jpacheco.xyz/tags/script/</link>
+      <link>http://localhost:1313/tags/script/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jpacheco.xyz/tags/script/</guid>
+      <guid>http://localhost:1313/tags/script/</guid>
       <description></description>
     </item>
     <item>
       <title>About</title>
-      <link>https://jpacheco.xyz/tags/about/</link>
+      <link>http://localhost:1313/tags/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jpacheco.xyz/tags/about/</guid>
+      <guid>http://localhost:1313/tags/about/</guid>
       <description></description>
     </item>
   </channel>
