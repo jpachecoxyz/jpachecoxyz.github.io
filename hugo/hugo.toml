@@ -23,11 +23,11 @@ name = "Writings"
 url = "/posts"
 weight = 3
 
-# [[menu.main]]
-# name = "Tags"
-# url = "/tags"
-# weight = 4
-#
+[[menu.main]]
+name = "Wiki"
+url = "https://github.com/jpachecoxyz/jpachecoxyz.github.io/wiki"
+weight = 4
+
 [[menu.main]]
 name = "Search"
 url = "/search"
