@@ -25,7 +25,7 @@ weight = 3
 
 [[menu.main]]
 name = "Wiki"
-url = "/wiki"
+url = "/wiki/wiki"
 weight = 4
 
 [[menu.main]]
