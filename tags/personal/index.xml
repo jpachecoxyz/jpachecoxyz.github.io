@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Personal on jpacheco.xyz</title>
-    <link>http://localhost:1313/tags/personal/</link>
+    <link>https://jpacheco.xyz/tags/personal/</link>
     <description>Recent content in Personal on jpacheco.xyz</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>Javier Pacheco</copyright>
     <lastBuildDate>Wed, 28 Aug 2024 05:05:00 -0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/personal/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://jpacheco.xyz/tags/personal/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Basics of HUGO</title>
-      <link>http://localhost:1313/posts/basics-of-hugo/</link>
+      <link>https://jpacheco.xyz/posts/basics-of-hugo/</link>
       <pubDate>Wed, 28 Aug 2024 05:05:00 -0500</pubDate>
-      <guid>http://localhost:1313/posts/basics-of-hugo/</guid>
+      <guid>https://jpacheco.xyz/posts/basics-of-hugo/</guid>
       <description>Introduction &amp;ldquo;Hugo is one of the most popular open-source static site generators.</description>
     </item>
     <item>
       <title>How I made my blog with emacs and hugo</title>
-      <link>http://localhost:1313/posts/my-blog-in-emacs/</link>
+      <link>https://jpacheco.xyz/posts/my-blog-in-emacs/</link>
       <pubDate>Wed, 14 Aug 2024 20:41:00 -0500</pubDate>
-      <guid>http://localhost:1313/posts/my-blog-in-emacs/</guid>
+      <guid>https://jpacheco.xyz/posts/my-blog-in-emacs/</guid>
       <description>I have been using emacs most of the time for writting, and of course when I started to make my blog I have been use it (emacs) since of it.</description>
     </item>
   </channel>

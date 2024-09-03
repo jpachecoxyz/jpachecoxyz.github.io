@@ -2,84 +2,81 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/posts/pymetrics/</loc>
+    <loc>https://jpacheco.xyz/posts/pymetrics/</loc>
     <lastmod>2024-08-11T03:00:00-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://jpacheco.xyz/</loc>
     <lastmod>2024-09-03T15:40:00-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/wiki/</loc>
+    <loc>https://jpacheco.xyz/wiki/</loc>
     <lastmod>2024-09-03T15:40:00-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/basics-of-hugo/</loc>
+    <loc>https://jpacheco.xyz/posts/basics-of-hugo/</loc>
     <lastmod>2024-08-28T05:05:00-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/blog/</loc>
+    <loc>https://jpacheco.xyz/tags/blog/</loc>
     <lastmod>2024-08-28T05:05:00-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/personal/</loc>
+    <loc>https://jpacheco.xyz/tags/personal/</loc>
     <lastmod>2024-08-28T05:05:00-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://jpacheco.xyz/posts/</loc>
     <lastmod>2024-08-28T05:05:00-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://jpacheco.xyz/tags/</loc>
     <lastmod>2024-08-28T05:05:00-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/tecnology/</loc>
+    <loc>https://jpacheco.xyz/tags/tecnology/</loc>
     <lastmod>2024-08-28T05:05:00-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/search-tool-hugo/</loc>
+    <loc>https://jpacheco.xyz/posts/search-tool-hugo/</loc>
     <lastmod>2024-08-25T13:10:00-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/emacs/</loc>
+    <loc>https://jpacheco.xyz/tags/emacs/</loc>
     <lastmod>2024-08-21T13:33:00-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/install-telega-nixos/</loc>
+    <loc>https://jpacheco.xyz/posts/install-telega-nixos/</loc>
     <lastmod>2024-08-21T13:33:00-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/linux/</loc>
+    <loc>https://jpacheco.xyz/tags/linux/</loc>
     <lastmod>2024-08-21T13:33:00-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/my-blog-in-emacs/</loc>
+    <loc>https://jpacheco.xyz/posts/my-blog-in-emacs/</loc>
     <lastmod>2024-08-14T20:41:00-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/emacs-vs-nvim/</loc>
+    <loc>https://jpacheco.xyz/posts/emacs-vs-nvim/</loc>
     <lastmod>2024-08-13T05:06:00-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/wayland/</loc>
+    <loc>https://jpacheco.xyz/tags/wayland/</loc>
     <lastmod>2024-08-11T03:00:00-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/share-screen-hyprland/</loc>
+    <loc>https://jpacheco.xyz/posts/share-screen-hyprland/</loc>
     <lastmod>2024-08-11T02:52:00-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/my-emacs-workflow/</loc>
+    <loc>https://jpacheco.xyz/tags/script/</loc>
     <lastmod>2024-07-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/script/</loc>
+    <loc>https://jpacheco.xyz/posts/shell-utils/</loc>
     <lastmod>2024-07-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/shell-utils/</loc>
-    <lastmod>2024-07-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/voidstrap/</loc>
+    <loc>https://jpacheco.xyz/posts/voidstrap/</loc>
     <lastmod>2024-05-07T19:47:00-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/screen-record/</loc>
+    <loc>https://jpacheco.xyz/posts/screen-record/</loc>
     <lastmod>2024-03-15T04:14:00-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/efetch/</loc>
+    <loc>https://jpacheco.xyz/posts/efetch/</loc>
     <lastmod>2024-01-13T04:11:00-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/about/</loc>
+    <loc>https://jpacheco.xyz/tags/about/</loc>
     <lastmod>2024-01-05T18:00:00-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://jpacheco.xyz/about/</loc>
     <lastmod>2024-01-05T18:00:00-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://jpacheco.xyz/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/search/</loc>
+    <loc>https://jpacheco.xyz/search/</loc>
     <priority>0.1</priority>
   </url>
 </urlset>
