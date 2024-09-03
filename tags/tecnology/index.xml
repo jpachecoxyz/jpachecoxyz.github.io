@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>Javier Pacheco</copyright>
-    <lastBuildDate>Thu, 29 Aug 2024 19:47:00 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 28 Aug 2024 05:05:00 -0500</lastBuildDate>
     <atom:link href="https://jpacheco.xyz/tags/tecnology/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Pymetrics</title>
@@ -15,13 +15,6 @@
       <pubDate>Sun, 11 Aug 2024 03:00:00 -0500</pubDate>
       <guid>https://jpacheco.xyz/posts/pymetrics/</guid>
       <description>Overview Managing and monitoring the performance of industrial machines is critical to ensuring minimal downtime and maximizing productivity.</description>
-    </item>
-    <item>
-      <title>Void linux bootstrap.</title>
-      <link>https://jpacheco.xyz/posts/voidstrap/</link>
-      <pubDate>Thu, 29 Aug 2024 19:47:00 -0500</pubDate>
-      <guid>https://jpacheco.xyz/posts/voidstrap/</guid>
-      <description>This is the first post of the 2024, this is a project that I am working on in the last year, is a minimialist voidlinux instalator it is based in some recomendations in a guides that some friends of my have but &amp;ldquo;semiautomated&amp;rdquo;.</description>
     </item>
     <item>
       <title>Basics of HUGO</title>
@@ -57,6 +50,13 @@
       <pubDate>Tue, 13 Aug 2024 05:06:00 -0500</pubDate>
       <guid>https://jpacheco.xyz/posts/emacs-vs-nvim/</guid>
       <description>Neovim for Programming Efficiency and Speed: Neovim is highly efficient for programming due to its lightweight nature and focus on speed.</description>
+    </item>
+    <item>
+      <title>Void linux bootstrap.</title>
+      <link>https://jpacheco.xyz/posts/voidstrap/</link>
+      <pubDate>Tue, 07 May 2024 19:47:00 -0500</pubDate>
+      <guid>https://jpacheco.xyz/posts/voidstrap/</guid>
+      <description>This is the first post of the 2024, this is a project that I am working on in the last year, is a minimialist voidlinux instalator it is based in some recomendations in a guides that some friends of my have but &amp;ldquo;semiautomated&amp;rdquo;.</description>
     </item>
   </channel>
 </rss>

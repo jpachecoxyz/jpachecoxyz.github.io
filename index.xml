@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>Javier Pacheco</copyright>
-    <lastBuildDate>Thu, 29 Aug 2024 19:47:00 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 03 Sep 2024 15:40:00 -0500</lastBuildDate>
     <atom:link href="https://jpacheco.xyz/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Pymetrics</title>
@@ -17,11 +17,11 @@
       <description>Overview Managing and monitoring the performance of industrial machines is critical to ensuring minimal downtime and maximizing productivity.</description>
     </item>
     <item>
-      <title>Void linux bootstrap.</title>
-      <link>https://jpacheco.xyz/posts/voidstrap/</link>
-      <pubDate>Thu, 29 Aug 2024 19:47:00 -0500</pubDate>
-      <guid>https://jpacheco.xyz/posts/voidstrap/</guid>
-      <description>This is the first post of the 2024, this is a project that I am working on in the last year, is a minimialist voidlinux instalator it is based in some recomendations in a guides that some friends of my have but &amp;ldquo;semiautomated&amp;rdquo;.</description>
+      <title>Wiki</title>
+      <link>https://jpacheco.xyz/wiki/</link>
+      <pubDate>Tue, 03 Sep 2024 15:40:00 -0500</pubDate>
+      <guid>https://jpacheco.xyz/wiki/</guid>
+      <description>My personal wiki.</description>
     </item>
     <item>
       <title>Basics of HUGO</title>
@@ -71,6 +71,13 @@
       <pubDate>Thu, 04 Jul 2024 00:00:00 +0000</pubDate>
       <guid>https://jpacheco.xyz/posts/shell-utils/</guid>
       <description>Overview Welcome to the Shell Utilities repository This project provides a collection of shell scripts tailored for different window managers and environments, including i3, Hyprland, and Sway, on X11 and Wayland.</description>
+    </item>
+    <item>
+      <title>Void linux bootstrap.</title>
+      <link>https://jpacheco.xyz/posts/voidstrap/</link>
+      <pubDate>Tue, 07 May 2024 19:47:00 -0500</pubDate>
+      <guid>https://jpacheco.xyz/posts/voidstrap/</guid>
+      <description>This is the first post of the 2024, this is a project that I am working on in the last year, is a minimialist voidlinux instalator it is based in some recomendations in a guides that some friends of my have but &amp;ldquo;semiautomated&amp;rdquo;.</description>
     </item>
     <item>
       <title>Screen Record</title>
