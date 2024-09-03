@@ -1627,7 +1627,7 @@ The next step is to publish your web to a custom server or on github, gitlab, co
 ** DONE Wiki
 CLOSED: [2024-09-03 Tue 15:40]
 :PROPERTIES:
-:EXPORT_FILE_NAME: content/wiki/wiki.md
+:EXPORT_FILE_NAME: content/wiki.md
 :EXPORT_DESCRIPTION: My personal wiki for some topics.
 :DATE: [2024-09-03 Tue]
 :EXPORT_HUGO_SECTION: 
