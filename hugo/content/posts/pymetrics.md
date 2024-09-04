@@ -2,7 +2,7 @@
 title = "Pymetrics"
 author = ["Javier Pacheco"]
 description = "A GUI app written in python to store maintenace logs."
-date = 2024-08-11T03:00:00-05:00
+date = 2024-09-04T02:44:00-05:00
 tags = ["linux", "tecnology", "wayland"]
 draft = false
 weight = 1

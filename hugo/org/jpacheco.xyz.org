@@ -7,9 +7,8 @@
 #+hugo_auto_set_lastmod: nil
 #+date: 2024-07-04
 #+tags: blog(b) emacs(e) linux(l) personal(p) script(s) tecnology(t) wayland(w) work(W)
-#+seq_todo: TODO(t) WAIT(w@/!) | DONE(d!)
+#+seq_todo: TODO(t) WAIT(w@/!) | PUBLISHED(d!)
 
-
 * Configuration files.
 ** CSS.
 #+begin_src css :tangle ~/webdev/jpachecoxyz.github.io/hugo/static/css/style.css
@@ -410,6 +409,7 @@ Use =org-capture= to add new posts.
   (yas-expand-snippet "${1:}\n")
   (org-set-tags-command))
 #+end_src
+
 * Notes:
 ** custom hugo front-mater:
 #+begin_example
@@ -428,10 +428,10 @@ opengraph = true
 +++
 #+end_src
 
+
 * Ideas:
-* Posts:
-** About me.                                                    :about:
-CLOSED: [2024-01-05 Fri 18:00]
+
+* About me.                                                           :about:
 :PROPERTIES:
 :EXPORT_FILE_NAME: content/about.md
 :EXPORT_DESCRIPTION: My personal information.
@@ -457,17 +457,17 @@ Beyond the technical facets, I am deeply invested in collaborative endeavors, fo
 #+ATTR_HTML: :target _blank
 See my whole information [[file:/documents/cv.pdf][here]].
 
-*** Where to Find Me
+** Where to Find Me
 - [[https://github.com/jpachecoxyz][GitHub.]]
 - [[https://www.linkedin.com/in/jpachecom4/][LinkedIn.]]
 
-*** Projects that I'm currently develop.
+** Projects that I'm currently develop.
 - [[https://github.com/engjpacheco/voidstrap][Void linux installation script.]]
 - [[https://github.com/engjpacheco/noobemacs][Noobemacs, a minimal emacs configuration with evil mode.]]
 - [[https://github.com/engjpacheco/pymetrics][pymetrics, a python gui app to manage maintenance logs.]]
   
-
-** Wiki                                                      :wiki:personal:
+
+* Wiki                                                        :wiki:personal:
 CLOSED: [2024-09-03 Tue 15:40]
 :PROPERTIES:
 :EXPORT_FILE_NAME: wiki
@@ -480,23 +480,9 @@ CLOSED: [2024-09-03 Tue 15:40]
   This wiki is marked as done but still in constant modification.
 :END:
 
-*** My personal wiki.
-Welcome to my personal wiki, a curated collection of my thoughts, experiences, and the practical functions I use daily across various platforms and technologies. This space is a reflection of my journey as a developer, engineer, and lifelong learner.
-What You'll Find Here:
-
-- Linux: Scripts, tips, and configurations that power my Linux environment, tailored to enhance productivity and streamline workflows.
-
-- Emacs: My customizations, shortcuts, and Lisp functions that transform Emacs into a powerful tool for writing, coding, and organizing my life.
-
-- Python: A collection of Python scripts, projects, and code snippets that I’ve developed for automation, data processing, and robotics applications.
-
-- Windows: Handy utilities, scripts, and settings that I use to optimize my Windows setup for development and daily tasks.
-
-- Robotics: Insights, code, and projects related to my work in robotics, from automation systems to programming industrial robots.
-
-This wiki is an evolving repository, where I document and share the tools and techniques that help me navigate and innovate in these diverse areas. Whether you're here to find a specific script, learn from my experiences, or simply explore, I hope you find something useful or inspiring.
-*** Emacs
-**** Doom Insert item.
+* My personal wiki.
+** Emacs
+*** Doom Insert item.
 This script wast taken from /doomemacs/, it basicaly insert a item such a heading, subheading, checkbox, etc. based on the item above.
 
 #+begin_src emacs-lisp
@@ -611,7 +597,8 @@ This script wast taken from /doomemacs/, it basicaly insert a item such a headin
       (forward-line))))
 #+end_src
 
-**** Highlight yanked text
+*** Highlight yanked text
+
 This function describes itself so...
 #+begin_src emacs-lisp
 (defun meain/evil-yank-advice (orig-fn beg end &rest args)
@@ -620,7 +607,7 @@ This function describes itself so...
 (advice-add 'evil-yank :around 'meain/evil-yank-advice)
 #+end_src
 
-**** Replace '-' with '•'.
+*** Replace '-' with '•'.
 #+begin_src emacs-lisp
 (defun jp/org-font-setup ()
   ;; Replace list hyphen with dot
@@ -630,7 +617,7 @@ This function describes itself so...
 
 (jp/org-font-setup)
 #+end_src
-**** Custom_id.
+*** Custom_id.
 #+BEGIN_SRC elisp
 ;;;; org-id
 (declare-function org-id-add-location "org")
@@ -675,7 +662,7 @@ CUSTOM_ID of the entry is returned."
   (jp/org--id-get (point) t))
 #+END_SRC
 
-**** Add ID's to headers - Org roam.
+*** Add ID's to headers - Org roam.
 #+BEGIN_SRC emacs-lisp
 (defun jp/org-id-store-link-for-headers ()
   "Run `org-id-store-link' for each header in the current buffer."
@@ -685,7 +672,7 @@ CUSTOM_ID of the entry is returned."
     (while (re-search-forward org-heading-regexp nil t)
       (org-id-store-link))))
 #+END_SRC
-**** Toggle org-emphasis-markers
+*** Toggle org-emphasis-markers
 #+BEGIN_SRC elisp
 (defun jp/org-toggle-emphasis-markers (&optional arg)
   "Toggle emphasis markers and display a message."
@@ -703,8 +690,8 @@ CUSTOM_ID of the entry is returned."
       (font-lock-fontify-buffer))))
 #+END_SRC
 
-**** Insert Org's files to Outlook.
-***** Export file to clipboard.
+*** Insert Org's files to Outlook.
+**** Export file to clipboard.
 #+BEGIN_SRC elisp
 (defun export-org-email ()
   "Export the current email org buffer and copy it to the
@@ -719,7 +706,7 @@ clipboard"
 (global-set-key (kbd "C-c C-x C-e") 'export-org-email)
 #+END_SRC
 
-***** Add some CSS to the file.
+**** Add some CSS to the file.
 #+BEGIN_SRC elisp
 (defun org-email-html-head ()
   "Create the header with CSS for use with email"
@@ -733,7 +720,7 @@ clipboard"
    "/*]]>*/-->\n"
    "</style>\n"))
 #+END_SRC
-**** Org TODO auto update.
+*** Org TODO auto update.
 #+BEGIN_SRC emacs-lisp
 (defun org-todo-if-needed (state)
   "Change header state to STATE unless the current item is in STATE already."
@@ -785,7 +772,7 @@ clipboard"
                 (org-todo-if-needed "DOING"))))))))
 (add-hook 'org-checkbox-statistics-hook #'ct/org-summary-checkbox-cookie)
 #+END_SRC
-**** Org-buffer-scratchpad.
+*** Org-buffer-scratchpad.
 #+begin_src emacs-lisp
 (defun new-scratch-pad ()
   "Create a new org-mode buffer for random stuff."
@@ -797,7 +784,7 @@ clipboard"
       (org-mode)
       (olivetti-mode t))))
 #+end_src
-**** Toggle buffers.
+*** Toggle buffers.
 #+BEGIN_SRC emacs-lisp
 ;; Toggle *scratch* buffer.
 (defun toggle-scratch-buffer ()
@@ -830,7 +817,7 @@ clipboard"
 	  (bury-buffer)
 	(switch-to-buffer (get-buffer-create "*eshell*"))))
 #+END_SRC
-**** Doc at point.
+*** Doc at point.
 #+BEGIN_SRC emacs-lisp
 (defun my-show-doc-or-describe-symbol ()
   "Show LSP UI doc if LSP is active, otherwise describe symbol at point."
@@ -839,7 +826,7 @@ clipboard"
       (lsp-ui-doc-glance)
     (describe-symbol-at-point)))
 #+END_SRC
-**** Duplicate & move up/down lines.
+*** Duplicate & move up/down lines.
 #+BEGIN_SRC emacs-lisp
 (defun duplicate-line ()
   (interactive)
@@ -863,7 +850,7 @@ clipboard"
     (transpose-lines 1))
   (forward-line -1))
 #+END_SRC
-**** Hide passwords in org files.
+*** Hide passwords in org files.
 #+BEGIN_SRC emacs-lisp
 ;; Define a custom face for the highlight
 (defface my-highlight-face
@@ -889,7 +876,7 @@ clipboard"
 ;; Hook the custom font-lock configuration into org-mode
 (add-hook 'org-mode-hook 'my/org-mode-custom-font-lock)
 #+END_SRC
-**** Help at point.
+*** Help at point.
 #+BEGIN_SRC emacs-lisp
 (defun describe-symbol-at-point ()
   "Display the documentation of the symbol at point, if it exists."
@@ -902,7 +889,7 @@ clipboard"
          (t (message "No documentation found for symbol at point: %s" symbol)))
       (message "No symbol at point"))))
 #+END_SRC
-**** Custom functions.
+*** Custom functions.
 #+BEGIN_SRC emacs-lisp
 ;; Open files in the lisp folder
 (require 'find-lisp)
@@ -979,11 +966,16 @@ clipboard"
   (org-timer-set-timer "55s"))
 (global-set-key (kbd "<f4>") 'jp/yt-shorts-timer)
 #+END_SRC
-*** Linux
-*** Python
-*** Robots
-*** Windows
-**** Change IP address within terminal.
+** Linux
+** Python
+*** Avoid SSL verification when installing packages through pip.
+I have some issues with the firewall in one of my jobs, so in order to be able to install python packages through pip we need to skip the =SSL= verification with the following flags.
+#+begin_src shell
+pip install --no-cache-dir --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org <program>
+#+end_src
+** Robots
+** Windows
+*** Change IP address within terminal.
 This cmd script prompt for an IP to b changed in the computer. Must run as root/administrator.
 #+begin_src bat
 @echo off
@@ -1007,18 +999,23 @@ if %errorlevel% equ 0 (
 endlocal
 #+end_src
 
-** DONE Screen Record                                         :linux:script:
-CLOSED: [2024-03-15 Fri 04:14]
+
+* Posts:
+* PUBLISHED Screen Record                                      :linux:script:
+CLOSED: [2024-09-04 Wed 02:43]
 :PROPERTIES:
 :EXPORT_FILE_NAME: screen-record
 :EXPORT_DESCRIPTION: Script to record in hyprland
 :EXPORT_HUGO_SECTION: posts
 :END:
+:LOGBOOK:
+- State "PUBLISHED"  from              [2024-09-04 Wed 02:43]
+:END:
 
 This script record the screen with the =wf-recorder= tool, it can be the hole screen or a specific area of it.
 The script is going to store the video in =/tmp/screencast.mp4=, this script only store one video, personally I think that have more than one record is a mess, more if you only wants to share a quick screencast to /telegram, irc, cinny/ or even to share it through =0x0.st=.
 
-*** Description and main variables:
+** Description and main variables:
 #+begin_src bash
 # Created By: Javier Pacheco - javier@jpacheco.xyz
 # Created On: 29/03/24
@@ -1028,10 +1025,10 @@ The script is going to store the video in =/tmp/screencast.mp4=, this script onl
 SOUND_CARD=$(pactl list sources | awk '/Name/ && /.monitor/ {print $2}')
 #+end_src
 
-*** Recording functions:
+** Recording functions:
 Those functions have enable the sound recording, so if you have some music, video, etc running it will record the sound but not the mic.
 
-**** screencast:
+*** screencast:
 This option is going to record a specific area of the screen.
 This area is going to be specified by =slurp=.
 #+begin_src bash
@@ -1040,7 +1037,7 @@ screencast() {
 }
 #+end_src
 
-**** area:
+*** area:
 This option is going to record a specific area of the screen.
 This area is going to be specified by =slurp=.
 #+begin_src bash
@@ -1049,17 +1046,17 @@ area() {
 }
 #+end_src
 
-*** Main functions:
+** Main functions:
 These functions are tools that ensures this script works correctly. For example if all ready have a existing file recorded, it will removed to record a new one, because this script only will create one video always, and also have a function to kill the process when it finished. 
 
-**** check internet connection:
+*** check internet connection:
 #+begin_src bash
 check_connection() {
     ping -c 1 google.com 1> /dev/null 2>&1
 }
 #+end_src
 
-**** share:
+*** share:
 This option is going to upload the video to =0x0.st= and copy the url to the clipboard using =wc-copy=.
 #+begin_src bash
 share() {
@@ -1068,7 +1065,7 @@ share() {
 }
 #+end_src
 
-**** Kill existing process:
+*** Kill existing process:
 #+begin_src bash
 kill_proc(){
     pkill --signal SIGINT wf-recorder
@@ -1081,14 +1078,14 @@ kill_proc(){
 }
 #+end_src
 
-**** Remove existing video:
+*** Remove existing video:
 #+begin_src bash
 remove_vid() {
     [ -f /tmp/screencast.mp4 ] && rm /tmp/screencast.mp4
 }
 #+end_src
 
-*** Sequence:
+** Sequence:
 This is were the scripts actually starts, first of all look if the script is already running, if not then ask for a recording option: 
 #+begin_src bash
 kill_proc
@@ -1111,7 +1108,7 @@ case $OPT in
 esac
 #+end_src
 
-*** The whole code.
+** The whole code.
 #+begin_src bash
 # Created By: Javier Pacheco - javier@jpacheco.xyz
 # Created On: 29/03/24
@@ -1172,13 +1169,16 @@ esac
 #+end_src
 
 
-** DONE Efetch.el                                             :emacs:script:
-CLOSED: [2024-01-13 Sat 04:11]
+* PUBLISHED Efetch.el                                          :emacs:script:
+CLOSED: [2024-09-04 Wed 02:43]
 :PROPERTIES:
 :EXPORT_FILE_NAME: efetch
 :EXPORT_DESCRIPTION: A emacs fetching tool.
 :CREATED:     2023-07-05
 :EXPORT_HUGO_SECTION: posts
+:END:
+:LOGBOOK:
+- State "PUBLISHED"  from              [2024-09-04 Wed 02:43]
 :END:
 
 #+BEGIN_PREVIEW
@@ -1190,10 +1190,10 @@ Embrace a new level of Emacs mastery with =efetch.el= – a powerful and user-fr
 [[/posts/images/efetch.el/efetch.png]]
 #+end_center
 
-*** Overview
+** Overview
 Are you an Emacs enthusiast who loves to keep track of your environment details? Look no further! We are excited to introduce =efetch.el= - the Emacs Fetching Tool. This nifty extension provides a quick and informative snapshot of your Emacs setup, helping you stay in the know about your environment configuration.
 
-*** Features
+** Features
 - **Quick Access**: Invoke =efetch= with a simple command to access a left-side buffer displaying essential information about your Emacs environment.
 
 - **Information at a Glance**: Get a concise overview, including Emacs version, host details, user information, installed packages, active theme, and default font.
@@ -1202,7 +1202,7 @@ Are you an Emacs enthusiast who loves to keep track of your environment details?
 
 - **Convenient Keyboard Shortcut**: Close the =efetch= buffer and its window effortlessly with the =q= key.
 
-*** How to Use
+** How to Use
 1. **Installation**: Add the following line to your Emacs configuration:
 
  #+BEGIN_SRC emacs-lisp
@@ -1219,20 +1219,20 @@ M-x efetch
 
 The information will be displayed in a left-side buffer named *efetch-popup*.
 
-*** Customization
+** Customization
 Feel free to customize the appearance or the information displayed in the =efetch= buffer by modifying the relevant sections in the =efetch= function.
 
-*** Contribution
+** Contribution
 We welcome contributions and feedback! =efetch.el= is hosted on [[https://github.com/engjpacheco/efetch.el][github]]. Feel free to [[https://github.com/engjpacheco/efetch.el/fork][fork the repository]] and submit pull requests. 
 The project is open to changes, improvements, and collaborations.
 
-*** Get Started
+** Get Started
 
 Enhance your Emacs experience with =efetch.el=! Stay informed about your environment effortlessly. Download and integrate it into your Emacs setup today.
 
 
-** DONE Void linux bootstrap.                       :linux:tecnology:script:
-CLOSED: [2024-05-07 Tue 19:47]
+* PUBLISHED Void linux bootstrap.                    :linux:tecnology:script:
+CLOSED: [2024-09-04 Wed 02:43]
 :PROPERTIES:
 :EXPORT_FILE_NAME: voidstrap
 :EXPORT_DESCRIPTION: A void linux semi-automated installer.
@@ -1240,6 +1240,7 @@ CLOSED: [2024-05-07 Tue 19:47]
 :EXPORT_HUGO_SECTION: posts
 :END:
 :LOGBOOK:
+- State "PUBLISHED"  from              [2024-09-04 Wed 02:43]
 - State "DONE"       from "TODO"       [2024-08-29 Thu 19:47]
 :END:
 
@@ -1249,13 +1250,13 @@ year, is a minimialist voidlinux instalator it is based in some recomendations i
 a guides that some friends of my have but "semiautomated".
 #+END_PREVIEW
 
-*** VoidStrap installer.
+** VoidStrap installer.
 A basic minimalist installer of =void-linux= with some packages to get ready to enjoy
 this amazing GNU/Linux distribution.
 
-*** Usage:
+** Usage:
 
-**** Running install.sh
+*** Running install.sh
 
 Download the iso, and once in root inside the live, git clone this repo:
 (You need to update inside the iso and install =git=)
@@ -1295,7 +1296,7 @@ change the code in =postinstall.sh= when the scripts make the =fstab= archive.
 
 When the =install.sh= script finish, you need to run the postinstall script located in =/root folder:=
 
-**** Running postinstall.sh
+*** Running postinstall.sh
 
 This script its going to create some configuration files, like: =fstab=, =rc.conf=,
 change the password of =root=, and add user(s).
@@ -1315,7 +1316,7 @@ When the =postinsall.sh= script finishes, you only need to reboot and enjoy your
 When it finish you need to run the =postinstall.sh= script, that is going to install
 the *X server* and some other "necessary" packages.
 
-*** The custom.sh script
+** The custom.sh script
 
 This is going to install my personal dotfiles, and a specific packages that I use:
 #+begin_src shell
@@ -1330,7 +1331,7 @@ sh custom.sh -p otherprogfile.csv # especify a custom package archive to install
 sh custom.sh -b dev # especify the name of a custom branch in case of needed.
 #+end_src
 
-*** References:
+** References:
 - [[https://codeberg.org/jpacheco/voidstrap][Voidstrap.]]
 - [[https://docs.voidlinux.org/][Voidlinux Documentation.]] 
 - [[https://git.disroot.org/tuxliban/tutoriales_void/src/branch/master/Gu%C3%ADas][Tuxliban guides.]]
@@ -1338,18 +1339,22 @@ sh custom.sh -b dev # especify the name of a custom branch in case of needed.
   
 
 
-** DONE Shell-utils                                           :linux:script:
+* PUBLISHED Shell-utils                                        :linux:script:
+CLOSED: [2024-09-04 Wed 02:43]
 :PROPERTIES:
 :EXPORT_FILE_NAME: shell-utils.org
 :EXPORT_DESCRIPTION: A github repo that stores shell scripts utilities for x and wayland.
 :DATE:     07-28-2024
 :EXPORT_HUGO_SECTION: posts
 :END:
+:LOGBOOK:
+- State "PUBLISHED"  from              [2024-09-04 Wed 02:43]
+:END:
 
-*** Overview
+** Overview
 Welcome to the Shell Utilities [[https://github.com/jpachecoxyz/shell-utils][repository]] This project provides a collection of shell scripts tailored for different window managers and environments, including i3, Hyprland, and Sway, on X11 and Wayland.
 
-*** Repository Structure
+** Repository Structure
 The repository is organized into directories based on the environment and window manager:
 
 #+begin_src shell
@@ -1365,7 +1370,7 @@ The repository is organized into directories based on the environment and window
 - wayland/sway :: Scripts for Sway on Wayland.
 - x11/i3 :: Scripts for i3 on X11.
 
-*** Installation
+** Installation
 To install the scripts, use the provided =install.sh= script. You can install scripts for a specific window manager or all at once. 
 
 NOTE: The =install.sh= scripts use =$HOME/.local/bin= as the target, you can edit this variable inside the script, or copy the files manually somewhere as you have your path.
@@ -1380,10 +1385,10 @@ NOTE: The =install.sh= scripts use =$HOME/.local/bin= as the target, you can edi
 ./install.sh all
 #+END_SRC
 
-*** Usage
+** Usage
 Each script includes usage instructions in the comments at the top. You can run a script directly from the terminal or integrate it into your workflow.
 
-*** Contributing
+** Contributing
 We welcome contributions! If you'd like to contribute, please follow these steps:
 
 1. Fork the repository.
@@ -1392,12 +1397,12 @@ We welcome contributions! If you'd like to contribute, please follow these steps
 4. Push your changes to your fork.
 5. Submit a pull request to the main repository.
 
-*** Contact
+** Contact
 For questions or suggestions, please open an issue on GitHub or contact [[mailto:javier@jpacheco.xyz][Javier Pacheco]].
 
 
-** DONE Share Screen in Hyprland.                            :linux:wayland:
-CLOSED: [2024-08-11 Sun 02:52]
+* PUBLISHED Share Screen in Hyprland.                         :linux:wayland:
+CLOSED: [2024-09-04 Wed 02:44]
 :PROPERTIES:
 :EXPORT_FILE_NAME: share-screen-hyprland.org
 :EXPORT_DESCRIPTION: How to share screen in hyprland in apps like: telegram-desktop.
@@ -1405,22 +1410,23 @@ CLOSED: [2024-08-11 Sun 02:52]
 :EXPORT_HUGO_SECTION: posts
 :END:
 :LOGBOOK:
+- State "PUBLISHED"  from              [2024-09-04 Wed 02:44]
 - State "DONE"       from "TODO"       [2024-08-11 Sun 02:52]
 :END:
 
-*** The issue:
+** The issue:
 We have a telegram group, in where we share emacs things and some other related to programming and linux in the most part of the time. So one day one of the members says that we can share screens and have a kind of podcast and talk about our environment configurations (sway/hyprland), so I was very curious about it so he invite me to another telegram group, this telegram group is for his YouTube channel, for test my hyprland configuration because he told me that he has troubles in his hyprland configuration using manjaro.
 
 Now that I face the error, I realize that in my =home-manager= compilation I had this error since I was using this tool in =nixOS=, but because I never use it, I never let it importance, so now I realize that this thing need to be solved because I going to use it in the future.
 
 So I installed =telegram-dektop=, and try to share my configuration and guess what; yes I was unable to share my screen. It failed and pop ups some errors.
 
-*** Things that I try before to solve the problem.
+** Things that I try before to solve the problem.
 My main distribution at the time (2024-07-28) is =nixOS=, so I think that this could be a missing declaration in some programs, like =xdg-dektop-portal-hyprland=, because of that I was researching issues in =nixOS= & =hyprland=, but nothing solve the problem.
 
 So nothing that I found fix the problem, most of the issues in github was too old, or nothing to do with =nixOS=, so the last thing that I could do was compile =xdg-desktop-portal-hyprland= by source, but in =nixOS= I would install some compilers and other things that I not currently use, but it was the last option.
 
-*** Solving the problem.
+** Solving the problem.
 So once in my job, with the mind more clean, I go to the hyprland [[https://wiki.hyprland.org/Useful-Utilities/xdg-desktop-portal-hyprland/][wiki]], and at the bottom there were some tips to debugging if some errors appears.
 
 So I add this in my =Hyprland= configuration file:
@@ -1434,8 +1440,8 @@ That's it, that little command above solve my 1 day pain trying to share my scre
 Thanks for read me.
 
 
-** DONE Pymetrics                                  :linux:tecnology:wayland:
-CLOSED: [2024-08-11 Sun 03:00]
+* PUBLISHED Pymetrics                               :linux:tecnology:wayland:
+CLOSED: [2024-09-04 Wed 02:44]
 :PROPERTIES:
 :EXPORT_FILE_NAME: pymetrics.md
 :EXPORT_DESCRIPTION: A GUI app written in python to store maintenace logs.
@@ -1444,31 +1450,32 @@ CLOSED: [2024-08-11 Sun 03:00]
 :EXPORT_HUGO_WEIGHT: 1
 :END:
 :LOGBOOK:
+- State "PUBLISHED"  from              [2024-09-04 Wed 02:44]
 - State "DONE"       from "TODO"       [2024-08-11 Sun 03:00]
 :END:
 
-*** Overview
+** Overview
 Managing and monitoring the performance of industrial machines is critical to ensuring minimal downtime and maximizing productivity. The need for an effective system to store and analyze maintenance data became apparent when the maintenance manager contacted me with a specific problem. They struggled to create KPI graphs because they lacked a proper system to store all the necessary data. To address this challenge, I developed a maintenance log app that efficiently tracks and records machine failures, repair time, shutdown time, and the technicians involved in the repairs. The data is stored in a CSV format, making it easy to create KPI (Key Performance Indicator) graphs in Excel for analysis.
 
-*** Features
+** Features
 - Machine Failure Logging :: Record each instance of machine failure with timestamps.
 - Repair Time Tracking :: Log the start and end times of repairs to calculate the total repair duration.
 - Shutdown Time Monitoring :: Track the total time a machine is down due to failures and repairs.
 - Technician Assignment :: Assign technicians to specific repair tasks and log their involvement.
 
-*** How the Project Started
+** How the Project Started
 The project began when the maintenance manager reached out to me with a significant issue: they were unable to create KPI graphs due to the lack of a system for storing maintenance data. Understanding the importance of this data for monitoring machine performance, I developed the maintenance log app in Python to solve the problem. By providing a structured way to capture and store all relevant data, the app enables easy analysis and KPI generation.
 
-*** Benefits
+** Benefits
 The maintenance log app provides several key benefits:
 - *Enhanced Data Management:* All data is stored in a standardized CSV format, which can be easily imported into Excel for further analysis.
 - *Improved KPI Tracking*: By analyzing the recorded data, maintenance teams can generate KPI graphs in Excel to monitor performance metrics such as Mean Time to Repair (MTTR) and Mean Time Between Failures (MTBF).
 - *Informed Decision-Making:* The insights gained from the KPI graphs help in making informed decisions to improve machine reliability and reduce downtime.
 
-*** Technical Details
+** Technical Details
 The app is built using Python, leveraging its robust data handling capabilities. The CSV format is chosen for its simplicity and compatibility with various data analysis tools.
 
-*** Usage
+** Usage
 The application is designed to be user-friendly, requiring minimal input from the maintenance team. The data entry process is streamlined, allowing technicians to quickly log failures and repairs without interrupting their workflow.
 
 #+begin_center
@@ -1476,17 +1483,17 @@ The application is designed to be user-friendly, requiring minimal input from th
 [[/posts/images/pymetrics/pymetrics.png]]
 #+end_center
 
-*** How to Get Started
+** How to Get Started
 You can access the source code and instructions for setting up the maintenance log app on GitHub: [[https://github.com/jpachecoxyz/pymetrics][Pymetrics Repository]].
 
-*** Conclusion
+** Conclusion
 This maintenance log app is a practical tool for any industrial maintenance team looking to improve their machine monitoring and maintenance processes. By providing a clear view of machine performance through KPI graphs, it helps teams identify trends and make data-driven decisions. The app was born out of a real-world need, and I'm excited to see how it can help others in similar situations.
 
 Feel free to explore the project and contribute to its development by visiting the [[https://github.com/jpachecoxyz/pymetrics][Pymetrics Repository]] on GitHub.
 
 
-** DONE Emacs vs Neovim                                    :emacs:tecnology:
-CLOSED: [2024-08-13 Tue 05:06]
+* PUBLISHED Emacs vs Neovim                                 :emacs:tecnology:
+CLOSED: [2024-09-04 Wed 02:44]
 :PROPERTIES:
 :EXPORT_FILE_NAME: emacs-vs-nvim
 :EXPORT_DESCRIPTION: My opinion about emacs and neovim about writting and programming.
@@ -1495,20 +1502,21 @@ CLOSED: [2024-08-13 Tue 05:06]
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER+: :hugo_image "images/thumbnails/emacs.png"
 :END:
 :LOGBOOK:
+- State "PUBLISHED"  from              [2024-09-04 Wed 02:44]
 - State "DONE"       from "TODO"       [2024-08-13 Tue 05:06]
 :END:
 
-*** Neovim for Programming
+** Neovim for Programming
 - Efficiency and Speed: Neovim is highly efficient for programming due to its lightweight nature and focus on speed. It starts up faster and can handle large files with ease.
 - Plugin Ecosystem: Neovim has a rich plugin ecosystem, especially for programming-related tasks. Plugins like nvim-treesitter for syntax highlighting, telescope.nvim for fuzzy finding, and coc.nvim or nvim-lspconfig for Language Server Protocol (LSP) support make it a powerful choice for coding.
 - Modal Editing: Neovim, like Vim, uses modal editing, which can be very powerful for code navigation and manipulation once you get used to it.
 
-*** Emacs for Writing Posts (and Beyond)
+** Emacs for Writing Posts (and Beyond)
 - Org-mode: Emacs shines when it comes to writing and organizing content, especially with Org-mode. Org-mode is exceptional for note-taking, task management, and writing posts or documentation. It allows you to export your work to various formats (HTML, PDF, LaTeX, etc.) easily.
 - Extensibility: Emacs is known for its extensibility. You can customize it to be a full-fledged IDE, text editor, or writing tool. For blog posts, especially if you're using something like ox-hugo, Emacs can be incredibly powerful.
 - Unified Environment: If you prefer an environment where you can write, code, manage tasks, and do everything in one place, Emacs offers that. It's an all-in-one tool where you can manage your entire workflow.
 
-*** Which Should You Choose?
+** Which Should You Choose?
 - For Programming: Neovim might be better if you want a focused, fast, and highly efficient tool purely for coding. It's especially suitable if you prefer modal editing and a streamlined environment.
 
 - For Writing and More: Emacs could be better if you're looking for a versatile tool that excels at writing posts, organizing content, and managing your entire workflow beyond just coding. It's particularly strong if you take advantage of Org-mode's features.
@@ -1516,8 +1524,8 @@ CLOSED: [2024-08-13 Tue 05:06]
 Since I already use Emacs for my blog with Hugo, I find it more productive to keep using it for writing and content management while possibly using Neovim for coding tasks if you prefer its efficiency and speed.
 
 
-** DONE How I made my blog with emacs and hugo    :emacs:tecnology:personal:
-CLOSED: [2024-08-14 Wed 20:41]
+* PUBLISHED How I made my blog with emacs and hugo :emacs:tecnology:personal:
+CLOSED: [2024-09-04 Wed 02:44]
 :PROPERTIES:
 :EXPORT_FILE_NAME: my-blog-in-emacs
 :EXPORT_DESCRIPTION: A overview of how I write and develop my web blog using emacs & hugo
@@ -1525,6 +1533,7 @@ CLOSED: [2024-08-14 Wed 20:41]
 :EXPORT_HUGO_SECTION: posts
 :END:
 :LOGBOOK:
+- State "PUBLISHED"  from              [2024-09-04 Wed 02:44]
 - State "DONE"       from "TODO"       [2024-08-14 Wed 20:41]
 :END:
 
@@ -1537,7 +1546,7 @@ I have been using emacs most of the time for writting, and of course when I star
 [[/posts/images/my-blog-in-emacs/overview.png]]
 #+end_center
 
-*** What software and packages do I use?.
+** What software and packages do I use?.
 Yep! I use =emacs= 🤓 and =ox-hugo=.
 
 And to build the static web I use [[https://gohugo.io/getting-started/quick-start/][HUGO]] and =git=.
@@ -1548,7 +1557,7 @@ And to build the static web I use [[https://gohugo.io/getting-started/quick-star
   :after ox)
 #+end_src
 
-*** Org and its configuration.
+** Org and its configuration.
 =HUGO= uses markdown to manage the sites, posts, etc. but because we where using emacs, (we don't like others than org syntax), so there are a lot of variables that =ox-hugo= handle in order to been exported to markdown syntax.
 
 In my case I like to develop my whole blog into a single org-file
@@ -1575,7 +1584,7 @@ This declare where you HUGO site is located, basically in the path where you run
 - /#+HUGO_CUSTOM_FRONT_MATTER/:
 This is for enable/disable the toc of the posts when ox-hugo exported to md format.
 
-*** Writing the posts.
+** Writing the posts.
 Write a post is very easy to start, you only need to add a org lvl-1 header, and add a more metadata (properties). The sub-headers of the post are going to be org-lvl-3 headers, and so on.
 
 #+CAPTION: Example of an article.
@@ -1602,8 +1611,8 @@ And that's it, you can search more options for manage the front matter in hugo i
 Thanks for reading.
 
 
-** DONE Install Telega in NixOS - Emacs.             :emacs:linux:tecnology:
-CLOSED: [2024-08-21 Wed 13:33]
+* PUBLISHED Install Telega in NixOS - Emacs.          :emacs:linux:tecnology:
+CLOSED: [2024-09-04 Wed 02:44]
 :PROPERTIES:
 :EXPORT_FILE_NAME: install-telega-nixos
 :EXPORT_DESCRIPTION: How to install Telega server in NixOS.
@@ -1611,6 +1620,7 @@ CLOSED: [2024-08-21 Wed 13:33]
 :EXPORT_HUGO_SECTION: posts
 :END:
 :LOGBOOK:
+- State "PUBLISHED"  from              [2024-09-04 Wed 02:44]
 - State "DONE"       from "TODO"       [2024-08-21 Wed 13:33]
 :END:
 
@@ -1623,12 +1633,12 @@ According to the [[https://github.com/zevlg/telega.el][Github]] repository:
 
 As you may know, my main OS, at this time (2024-08-21) is =NixOS=, so I was trying to install =Telega= in my emacs, but as you can imagine, the file system hierarchy don't works "normal" in =NixOS=, so is a little tricky set up the environment to actually make =Telega= works.
 
-*** Requisites:
+** Requisites:
 - gnumake. (To compile).
 - cmake (To compile).
 - tdlib (Version > 1.8.29).
 
-*** Process of installation.
+** Process of installation.
 1. install the dependencies using your =configuration.nix=, =home-manager=, or wathever method you use to install packages in =NixOS=.
 2. Install Telega in emacs.
     #+CAPTION: Example of telega installation unsing use-package.
@@ -1653,8 +1663,8 @@ As you may know, my main OS, at this time (2024-08-21) is =NixOS=, so I was tryi
 With that, Telega must be compiled, and ready to go.
 
 
-** DONE Search tool in your HUGO website.                   :blog:tecnology:
-CLOSED: [2024-08-25 Sun 13:10]
+* PUBLISHED Search tool in your HUGO website.                :blog:tecnology:
+CLOSED: [2024-09-04 Wed 02:44]
 :PROPERTIES:
 :EXPORT_FILE_NAME: search-tool-hugo
 :EXPORT_DESCRIPTION: Description
@@ -1662,6 +1672,7 @@ CLOSED: [2024-08-25 Sun 13:10]
 :EXPORT_HUGO_SECTION: posts
 :END:
 :LOGBOOK:
+- State "PUBLISHED"  from              [2024-09-04 Wed 02:44]
 - State "DONE"       from "TODO"       [2024-08-25 Sun 13:10]
 - State "DONE"       from "TODO"       [2024-08-25 Sun 12:58]
 :END:
@@ -1675,7 +1686,7 @@ As websites grow, incorporating a search feature becomes increasingly crucial. H
 
 Fortunately, there are existing solutions to address this issue. Below, we demonstrate one such solution that utilizes FuseJS and MarkJS. This implementation is inspired by a gist from eddiewebb, but it's built using plain JavaScript rather than jQuery.
 
-*** Page - content/search/_index.md
+** Page - content/search/_index.md
 Create a page to serve as the search form and display search results. In the markdown, set the layout to ‘search’ and proceed to create this layout (in the next step) to easily manage the HTML.
 
 #+begin_src markdown
@@ -1687,7 +1698,7 @@ layout: "search"
 ---
 #+end_src
 
-*** Layout - layout/_default/search.html
+** Layout - layout/_default/search.html
 This search page contains a <div> element for displaying search results (#search-results) and another <div> element for showing a loading message (.search-loading). The layout also defines a template that will later be used in the JavaScript to render a single search result. Finally, it loads the necessary JS libraries (from a CDN in this example, though self-hosting is an option).
 
 #+begin_src html
@@ -1721,7 +1732,7 @@ This search page contains a <div> element for displaying search results (#search
 {{ end }}
 #+end_src
 
-*** JS
+** JS
 The main part of the code is JavaScript, where everything is tied together. The URL parameters are read to obtain the query, which is then passed to FuseJS and MarkJS, and the results are written back to the page.
 
 #+begin_src javascript
@@ -1883,7 +1894,7 @@ document.addEventListener('keydown', function(event) {
 });
 #+end_src
 
-*** The Data - layouts/_default/index.json
+** The Data - layouts/_default/index.json
 All the work we’ve done up until now has been front-end workings, but we also need to build an index.json file which will act as our data source (which is fetched from the JS).
 
 #+begin_src json
@@ -1894,12 +1905,12 @@ All the work we’ve done up until now has been front-end workings, but we also 
 {{- $.Scratch.Get "index" | jsonify -}}
 #+end_src
 
-*** Conclusion
+** Conclusion
 You can extend this further by offering a live search preview, adding more filters, or allowing sorting options. This method provides a powerful and flexible way to implement search functionality on a static site without relying on any backend services.
 
 
-** DONE Basics of HUGO                             :blog:personal:tecnology:
-CLOSED: [2024-08-28 Wed 05:05]
+* PUBLISHED Basics of HUGO                          :blog:personal:tecnology:
+CLOSED: [2024-09-04 Wed 03:32]
 :PROPERTIES:
 :EXPORT_FILE_NAME: basics of HUGO
 :EXPORT_DESCRIPTION: A basic introduction to HUGO.
@@ -1907,22 +1918,24 @@ CLOSED: [2024-08-28 Wed 05:05]
 :EXPORT_HUGO_SECTION: posts
 :END:
 :LOGBOOK:
+- State "PUBLISHED"  from "TODO"       [2024-09-04 Wed 03:32]
+- State "PUBLISHED"  from              [2024-09-04 Wed 02:44]
 - State "DONE"       from "TODO"       [2024-08-28 Wed 05:05]
 :END:
 
-*** Introduction
+** Introduction
 #+begin_quote
 "Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again."
 #+end_quote
-*** Installation
+** Installation
 Hugo is multi platform, so the installation depends on what SO do you use, in this example I Show how to install in =Arch-linux= because it's easy.
 
 #+begin_src shell
 sudo pacman -S hugo
 #+end_src
 
-*** Creating a New Site
-**** Initialize a New Hugo Site
+** Creating a New Site
+*** Initialize a New Hugo Site
 This is the command in order to create a hugo site,
 
 #+begin_src shell
@@ -1931,7 +1944,7 @@ hugo new site my-website.org
 
 - my-website.org :: is the name of the directory that hugo is going to create, and where all the files are going to be.
 
-**** Directory Structure Overview
+*** Directory Structure Overview
 #+begin_example
 $ tree -d my-website.org
 
@@ -1945,15 +1958,15 @@ my-website.org
 ├── static
 └── themes
 #+end_example
-**** Initialize an empty git repository.
+*** Initialize an empty git repository.
 
 This is very useful because in case of mess, you can easily roll back.
 #+begin_src shell
 git init
 #+end_src
 
-*** Creating Content
-**** Creating a New Post
+** Creating Content
+*** Creating a New Post
 This is the command to create post within HUGO:
 
 #+begin_src shell
@@ -1987,9 +2000,9 @@ This is **bold** text, and this is *emphasized* text.
 Visit the [Hugo](https://gohugo.io) website!
 #+end_src
 
-*** Working with Themes
+** Working with Themes
 To install a theme is basically download it from =GitHub=, you can find more themes [[https://themes.gohugo.io/themes][here]].
-**** Downloading and Installing a Theme
+*** Downloading and Installing a Theme
 
 In this guide we are going to use =PaperMod= theme, so we need to install it througt various ways.
 - As a submodule (recommended).
@@ -2011,7 +2024,7 @@ The next ones I never used, but you can go to the HUGO documentation for read mo
 - Expand Method 3 - Download an unzip
 - Hugo module
 
-**** Configuring the Theme & see it in action.
+*** Configuring the Theme & see it in action.
 Finally set theme as PaperMod in your site config, =hugo.toml= or =config.toml=
 
 #+begin_src toml
@@ -2024,7 +2037,7 @@ hugo server
 #+end_src
 Now, in your =browser=, open =localhost:1313=, and you should see your site with the proper theme applied.
 
-*** Configuration example for PaperMod theme.
+** Configuration example for PaperMod theme.
 This is a basic configuration template for PaperMod theme:
 
 #+begin_src toml
@@ -2145,12 +2158,12 @@ disableInlineCSS = true
 disableInlineCSS = true
 #+end_src
 
-*** Building the Site
-**** Generating the Static Site
+** Building the Site
+*** Generating the Static Site
 At this point we need to generate the static we site, the most basic command to publish it is just run =hugo= in the terminal inside the root of the project.
 So you notice that a =public= folder is now created, if you look inside, you'll find all the html files, and everything to deploy as a web page.
 
-**** Set especific folder to export your site.
+*** Set especific folder to export your site.
 If you don't want to have your publish site in the =public= folder, you can set another path to export it instead of the =public= folder by adding this line at top of your =hugo.toml= configuration file:
 
 #+begin_src toml
@@ -2159,14 +2172,14 @@ publishDir = "/path/to/export/"
 publishDir = "~/my-site.org/"
 #+end_src
 
-*** Conclusion
+** Conclusion
 With all the context before, you may be able to start your web site, blog, etc. As you read, is very simple to have a very nice and useful static web-page, the "hard" part is to select the theme.
 
 The next step is to publish your web to a custom server or on github, gitlab, codeberg pages.
 1. Preparing for Deployment.
 2. Deploying to a Web Server or Hosting Service.
    
-**** Additional Resources
+*** Additional Resources
 1. [[https://gohugo.io/getting-started/quick-start/][Hugo quick start guide.]]
 2. [[https://gohugo.io/documentation/][Hugo documentation.]]
 

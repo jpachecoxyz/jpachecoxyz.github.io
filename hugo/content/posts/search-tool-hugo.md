@@ -2,7 +2,7 @@
 title = "Search tool in your HUGO website."
 author = ["Javier Pacheco"]
 description = "Description"
-date = 2024-08-25T13:10:00-05:00
+date = 2024-09-04T02:44:00-05:00
 tags = ["blog", "tecnology"]
 draft = false
 toc = true

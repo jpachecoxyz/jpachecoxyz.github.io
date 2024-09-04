@@ -2,7 +2,7 @@
 title = "Emacs vs Neovim"
 author = ["Javier Pacheco"]
 description = "My opinion about emacs and neovim about writting and programming."
-date = 2024-08-13T05:06:00-05:00
+date = 2024-09-04T02:44:00-05:00
 tags = ["emacs", "tecnology"]
 draft = false
 hugo_image = "images/thumbnails/emacs.png"

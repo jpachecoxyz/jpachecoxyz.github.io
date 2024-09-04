@@ -2,7 +2,7 @@
 title = "Screen Record"
 author = ["Javier Pacheco"]
 description = "Script to record in hyprland"
-date = 2024-03-15T04:14:00-05:00
+date = 2024-09-04T02:43:00-05:00
 tags = ["linux", "script"]
 draft = false
 toc = true

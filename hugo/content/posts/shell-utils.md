@@ -2,7 +2,7 @@
 title = "Shell-utils"
 author = ["Javier Pacheco"]
 description = "A github repo that stores shell scripts utilities for x and wayland."
-date = 2024-07-04
+date = 2024-09-04T02:43:00-05:00
 tags = ["linux", "script"]
 draft = false
 toc = true
