@@ -1,5 +1,5 @@
 +++
-title = "About me."
+title = "About me"
 author = ["Javier Pacheco"]
 description = "My personal information."
 date = 2024-07-04
@@ -36,5 +36,3 @@ See my whole information [here](/documents/cv.pdf).
 -   [Void linux installation script.](https://github.com/engjpacheco/voidstrap)
 -   [Noobemacs, a minimal emacs configuration with evil mode.](https://github.com/engjpacheco/noobemacs)
 -   [pymetrics, a python gui app to manage maintenance logs.](https://github.com/engjpacheco/pymetrics)
-
-
