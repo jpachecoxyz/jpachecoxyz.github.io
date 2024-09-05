@@ -55,7 +55,6 @@ weight = 5
   rss = true # generate rss feed. default value is false
   googleAnalyticsAsync = true # use asynchronous tracking. Synchronous tracking by default
   showAllPostsArchive = false # default
-  opengraph_io_api_key = "KGV7XE9-05EMV9G-JM7YAYE-ZJGANWM"
 
   # Home page settings
   description = "Hello! I’m Javier Pacheco, an enthusiast in automation and programming. I love innovating and automating processes to make life easier. I am passionate about Linux because it's Open Source, highly customizable & encourages freedom and knowledge sharing. If you have any questions or would like to get in touch, send me an email."

@@ -4,16 +4,16 @@
     const copyBtn = document.createElement('button')
     copyBtn.className = 'code-copy-btn'
     copyBtn.type = 'button'
-    copyBtn.innerText = '📋'
+    copyBtn.innerText = 'copy'
 
     let resetTimer
     copyBtn.addEventListener('click', () => {
       navigator.clipboard.writeText(codeNode.innerText).then(() => {
-        copyBtn.innerText = '✅'
+        copyBtn.innerText = 'copied!'
       }).then(() => {
         clearTimeout(resetTimer)
         resetTimer = setTimeout(() => {
-          copyBtn.innerText = '📋'
+          copyBtn.innerText = 'copy'
         }, 1000)
       })
     })
