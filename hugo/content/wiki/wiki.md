@@ -54,7 +54,7 @@ This script wast taken from _doomemacs_, it basicaly insert a item such a headin
            ;; Insert dummy content, so that `org-insert-item'
            ;; inserts content below this item
            (when empty?
-             (insert " "))
+             (insert " "))
            (org-insert-item (org-element-property :checkbox context))
            ;; Remove dummy content
            (when empty?

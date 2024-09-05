@@ -20,8 +20,8 @@ The repository is organized into directories based on the environment and window
 ```shell
 .
 ├── wayland
-│   ├── hyprland
-│   └── sway
+│   ├── hyprland
+│   └── sway
 └── x11
     └── i3
 ```
