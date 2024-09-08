@@ -460,6 +460,74 @@ clipboard"
 ```
 
 
+### fz-themes {#fz-themes}
+
+```emacs-lisp
+(defun custom-jp-themes (&optional theme-dir)
+
+  (defun custom-jp-themes (&optional theme-dir)
+    "Return a list of custom themes from a specified directory.
+Search the directory for files named FOO-theme.el, and return a list of FOO symbols,
+excluding the 'default' theme and any internal themes.
+
+If THEME-DIR is nil, it defaults to `~/.emacs.d/lisp/jp-themes/'."
+    (let ((suffix "-theme\\.el\\'")
+          (directory (or theme-dir "~/.emacs.d/lisp/jp-themes/"))
+          themes)
+      ;; Ensure the directory exists
+      (when (file-directory-p directory)
+        ;; Iterate over all theme files in the directory
+        (dolist (file (directory-files directory nil suffix))
+          (let ((theme (intern (substring file 0 (string-match-p suffix file)))))
+            ;; Add to the list if it's valid, and exclude Emacs built-in "default" theme
+            (and (not (eq theme 'default))  ;; Ensure "default" is excluded
+               (not (memq theme themes))  ;; Avoid duplicates
+               (push theme themes)))))
+      (nreverse themes)))
+
+  (defcustom fz-themes nil
+    "List of themes (symbols or regexps) to be presented for selection.
+nil shows all `custom-available-themes'."
+    :type '(repeat (choice symbol regexp)))
+
+  (defun fz-theme (theme)
+    "Disable current themes and enable THEME from `fz-themes`.
+
+The command supports previewing the currently selected theme."
+    (interactive
+     (list
+      (let* ((regexp (consult--regexp-filter
+                      (mapcar (lambda (x) (if (stringp x) x (format "\\`%s\\'" x)))
+                              fz-themes)))
+             (avail-themes (seq-filter
+                            (lambda (x) (string-match-p regexp (symbol-name x)))
+                            (custom-jp-themes)))  ;; Only use themes from custom-jp-themes
+             (saved-theme (car custom-enabled-themes)))
+        (consult--read
+         (mapcar #'symbol-name avail-themes)
+         :prompt "Theme: "
+         :require-match t
+         :category 'theme
+         :history 'consult--theme-history
+         :lookup (lambda (selected &rest _)
+                   (setq selected (and selected (intern-soft selected)))
+                   (or (and selected (car (memq selected avail-themes)))
+                      saved-theme))
+         :state (lambda (action theme)
+                  (pcase action
+                    ('return (fz-theme (or theme saved-theme)))
+                    ((and 'preview (guard theme)) (fz-theme theme))))
+         :default (symbol-name (or saved-theme 'default))))))
+    (when (eq theme 'default) (setq theme nil))
+    (unless (eq theme (car custom-enabled-themes))
+      (mapc #'disable-theme custom-enabled-themes)
+      (when theme
+        (if (custom-theme-p theme)
+            (enable-theme theme)
+          (load-theme theme :no-confirm)))))
+```
+
+
 ### Custom functions. {#custom-functions-dot}
 
 ```emacs-lisp
