@@ -88,7 +88,7 @@ figcaption p {
   font-size: 13px;
 }
 #+end_src
-** Useful elisp functions & tools
+** Useful elisp functions & scripts.
 *** publish.sh
 This is the script that I use to publish my web within emacs.
 #+begin_src shell :tangle ../publish.sh :shebang #!/bin/sh
@@ -111,33 +111,11 @@ git push
 #+end_src
 
 *** Auto save and hugo export.
-#+begin_src elisp
+#+begin_src elisp :tangle ../.dir-locals.el
 ;;The first line declares where is the org file is stored, in my cases is in hugo root directory in the org folder.
 (("org/"
   . ((org-mode . ((eval . (org-hugo-auto-export-mode)))))))
 #+end_src
-*** Refill 
-#+begin_src elisp
-(defun jp/refile-to-posts ()
-  "Refile the current subtree to the 'Posts' section."
-  (interactive)
-  (let ((org-refile-targets
-         `((,(buffer-file-name) :regexp . "^* Posts"))))  ;; Limit refile targets to 'Posts'
-    (org-refile)))
-(global-set-key (kbd "C-c r p") 'jp/refile-to-posts)
-#+end_src
-
-*** DEPRECATED yasnipet insert auto tags.
-Use =org-capture= to add new posts.
-#+begin_src elisp
-(defun my/org-insert-header ()
-  "Insert a level-2 header and run org-set-tags-command"
-  (interactive)
-  (insert "** ")
-  (yas-expand-snippet "${1:}\n")
-  (org-set-tags-command))
-#+end_src
-
 * Notes
 ** custom hugo front-mater:
 #+begin_example
@@ -952,7 +930,6 @@ case $OPT in
     *|quit) exit 0;;
 esac
 #+end_src
-
 
 ** DONE Efetch.el                                        :emacs:script:
 CLOSED: [2024-09-04 Wed 02:43]
@@ -1973,10 +1950,18 @@ The next step is to publish your web to a custom server or on github, gitlab, co
 
 ** TODO The end of a chapter.
 :PROPERTIES:
-:EXPORT_FILE_NAME: the-end-of-a-chapter-dot
+:EXPORT_FILE_NAME: the-end-of-a-chapter
 :EXPORT_DESCRIPTION: My job as an automation tech is over, this is what I think about it.
 :DATE: [2024-09-06 Fri]
 :EXPORT_HUGO_SECTION: posts
 :END:
 
-*** Begining...
+*** A brief Introduction.
+This is no t going to be a post about programming or technology, this is kind of a way to express my feelings about one important thing that I think is going to change my life, I'm talking about my job and how this ambient change my mind and my vision about this important thing that a lot of us need to do and hold to keep some security for our families.
+
+*** Flashback
+I have almost 5 years working in =Autoliv= in H.Matamoros, in the meaning of that time I was trying every single day to make my best, trying to improve things, make the process better, being the fastest troubleshooting resolver, have less machines failures, less downtime, questioning about how maintenance can be better, and more thing related to the maintenance department.
+
+As you may wonder, yes, I am a maintenance technician in the diecast area, I always though that for require something you need to share something first, so that was basically what I was doing for about 4 years, mean while in those years, I prof myself, and prof others that I was capable to have an engineering position, because I was doing some specific tasks and covering the Controls Engineer when he was out tof the job, develope projects, etc, all of that being a maintenance technician. So with that being said, I apply to various engineering vacancys, but for one reason I never have been promoted, always have other person or the manager cancel the vacant. 
+
+That's the =why= I realize that I don't need to effort my self to achieve something that is not going  to happend. So I decide to only do the job for wath I was hired (maintenance technician). 
