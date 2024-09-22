@@ -172,6 +172,8 @@
       <nav id="TableOfContents">
   <ul>
     <li><a href="#installation-of-ollama-dot">Installation of Ollama.</a></li>
+    <li><a href="#installing-a-model-dot">Installing a model.</a></li>
+    <li><a href="#installing-ellama-dot">Installing ellama.</a></li>
     <li><a href="#my-ellama-configuration-dot">My ellama configuration.</a></li>
   </ul>
 </nav>
@@ -214,9 +216,11 @@
 <div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span><span>curl -fsSL https://ollama.com/install.sh | sh
 </span></span></code></pre></div><p>Once <code>ollama</code> is installed, you should add it to your startup. In my case, I do it from the init of <code>hyprland</code>, but it will depend on whether you use <code>.xinitrc</code> or something else. It should be launched as follows:</p>
 <div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span><span>ollama serve
-</span></span></code></pre></div><p>Installing a model. To use Ollama, we need to download a model. A model is basically who you will be talking to when making a query. In the case of <code>ellama</code>, they suggest installing <code>zephyr</code> as the model, so we need to install it.</p>
+</span></span></code></pre></div><h2 id="installing-a-model-dot">Installing a model.</h2>
+<p>To use Ollama, we need to download a model. A model is basically who you will be talking to when making a query. In the case of <code>ellama</code>, they suggest installing <code>zephyr</code> as the model, so we need to install it.</p>
 <div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span><span>ollama pull zephyr
-</span></span></code></pre></div><p>Installing ellama. Once <code>ollama &amp; zephyr</code> are installed, we can proceed to install and configure <code>ellama</code> in Emacs.</p>
+</span></span></code></pre></div><h2 id="installing-ellama-dot">Installing ellama.</h2>
+<p>Once <code>ollama &amp; zephyr</code> are installed, we can proceed to install and configure <code>ellama</code> in Emacs.</p>
 <h2 id="my-ellama-configuration-dot">My ellama configuration.</h2>
 <div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span><span>(<span style="color:#24909d">use-package</span> <span style="color:#40ffff">ellama</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2</span><span>  (<span style="color:#40ffff">setopt</span> <span style="color:#40ffff">ellama-language</span> <span style="color:#ed9d13">&#34;English&#34;</span>)
@@ -264,6 +268,8 @@
       <nav id="TableOfContents">
   <ul>
     <li><a href="#installation-of-ollama-dot">Installation of Ollama.</a></li>
+    <li><a href="#installing-a-model-dot">Installing a model.</a></li>
+    <li><a href="#installing-ellama-dot">Installing ellama.</a></li>
     <li><a href="#my-ellama-configuration-dot">My ellama configuration.</a></li>
   </ul>
 </nav>

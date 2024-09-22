@@ -21,13 +21,19 @@ Once `ollama` is installed, you should add it to your startup. In my case, I do 
 ollama serve
 ```
 
-Installing a model. To use Ollama, we need to download a model. A model is basically who you will be talking to when making a query. In the case of `ellama`, they suggest installing `zephyr` as the model, so we need to install it.
+
+## Installing a model. {#installing-a-model-dot}
+
+To use Ollama, we need to download a model. A model is basically who you will be talking to when making a query. In the case of `ellama`, they suggest installing `zephyr` as the model, so we need to install it.
 
 ```shell
 ollama pull zephyr
 ```
 
-Installing ellama. Once `ollama & zephyr` are installed, we can proceed to install and configure `ellama` in Emacs.
+
+## Installing ellama. {#installing-ellama-dot}
+
+Once `ollama & zephyr` are installed, we can proceed to install and configure `ellama` in Emacs.
 
 
 ## My ellama configuration. {#my-ellama-configuration-dot}
