@@ -1,0 +1,27 @@
+content/search.md
+content/about.md
+content/posts/the-end-of-a-chapter.md
+content/posts/basics of HUGO.md
+content/posts/pymetrics.md
+content/posts/my-emacs-workflow.md
+content/posts/install-telega-nixos.md
+content/posts/efetch.md
+content/posts/shell-utils.md
+content/posts/images/hugo-search/jpacheco-search.png
+content/posts/images/efetch.el/efetch.png
+content/posts/images/sharescreen/screen-issue.png
+content/posts/images/sharescreen/screen-solve.png
+content/posts/images/sharescreen/screen-issue-2.png
+content/posts/images/sharescreen/screen-conf.png
+content/posts/images/pymetrics/pymetrics.png
+content/posts/images/my-blog-in-emacs/main-metadata.png
+content/posts/images/my-blog-in-emacs/article-metadata.png
+content/posts/images/my-blog-in-emacs/overview.png
+content/posts/screen-record.md
+content/posts/a-job-history.md
+content/posts/emacs-vs-nvim.md
+content/posts/share-screen-hyprland.md
+content/posts/voidstrap.md
+content/posts/search-tool-hugo.md
+content/posts/my-blog-in-emacs.md
+content/wiki/wiki.md

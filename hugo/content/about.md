@@ -20,7 +20,7 @@ Programming is not just a skill set; it's an intrinsic part of my identity. The 
 
 My career is a testament to my unwavering commitment to innovation and continuous learning. Each challenge fuels my passion, propelling me to explore new horizons and revolutionize conventional practices. I thrive in environments that demand ingenuity and embrace the convergence of technology and creativity.
 
-Beyond the technical facets, I am deeply invested in collaborative endeavors, fostering a culture of knowledge exchange and mentorship. I firmly believe that sharing insights and empowering others amplifies the impact of technological advancements.
+Beyond the technical facets, I am deeply invested in collaborative endeavors, fostering a culture of knowledge exchange and mentor-ship. I firmly believe that sharing insights and empowering others amplifies the impact of technological advancements.
 
 See my whole information [here](/documents/cv.pdf).
 

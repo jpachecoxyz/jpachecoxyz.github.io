@@ -11,8 +11,8 @@ toc = true
 <div class="PREVIEW">
 
 This is the first post of the 2024, this is a project that I am working on in the last
-year, is a minimialist voidlinux instalator it is based in some recomendations in
-a guides that some friends of my have but "semiautomated".
+year, is a minimalist voidlinux instalator it is based in some recommendations in
+a guides that some friends of my have but "semi-automated".
 
 </div>
 

@@ -156,7 +156,7 @@ Programming is not just a skill set; it's an intrinsic part of my identity. The 
 
 My career is a testament to my unwavering commitment to innovation and continuous learning. Each challenge fuels my passion, propelling me to explore new horizons and revolutionize conventional practices. I thrive in environments that demand ingenuity and embrace the convergence of technology and creativity.
 
-Beyond the technical facets, I am deeply invested in collaborative endeavors, fostering a culture of knowledge exchange and mentorship. I firmly believe that sharing insights and empowering others amplifies the impact of technological advancements.
+Beyond the technical facets, I am deeply invested in collaborative endeavors, fostering a culture of knowledge exchange and mentor-ship. I firmly believe that sharing insights and empowering others amplifies the impact of technological advancements.
 
 #+ATTR_HTML: :target _blank
 See my whole information [[file:/documents/cv.pdf][here]].
@@ -181,10 +181,10 @@ CLOSED: [2024-09-03 Tue 15:40]
 
 ** Emacs
 *** Doom Insert item.
-This script wast taken from /doomemacs/, it basicaly insert a item such a heading, subheading, checkbox, etc. based on the item above.
+This script wast taken from /doomemacs/, it basically insert a item such a heading, subheading, checkbox, etc. based on the item above.
 
 #+begin_src emacs-lisp
-;;; javier_pacheco utilities.el --- Some usefull utulities  -*- lexical-binding: t; -*-
+;;; javier_pacheco utilities.el --- Some useful utilities  -*- lexical-binding: t; -*-
 (defun +org--insert-item (direction)
   (let ((context (org-element-lineage
                   (org-element-context)
@@ -762,7 +762,6 @@ if %errorlevel% equ 0 (
 endlocal
 #+end_src
 
-
 * Posts:
 ** DONE Screen Record                                    :linux:script:
 CLOSED: [2024-09-04 Wed 02:43]
@@ -1008,8 +1007,8 @@ CLOSED: [2024-09-04 Wed 02:43]
 
 #+BEGIN_PREVIEW
 This is the first post of the 2024, this is a project that I am working on in the last
-year, is a minimialist voidlinux instalator it is based in some recomendations in 
-a guides that some friends of my have but "semiautomated".
+year, is a minimalist voidlinux instalator it is based in some recommendations in 
+a guides that some friends of my have but "semi-automated".
 #+END_PREVIEW
 
 *** VoidStrap installer.
@@ -1184,7 +1183,7 @@ Now that I face the error, I realize that in my =home-manager= compilation I had
 So I installed =telegram-dektop=, and try to share my configuration and guess what; yes I was unable to share my screen. It failed and pop ups some errors.
 
 *** Things that I try before to solve the problem.
-My main distribution at the time (2024-07-28) is =nixOS=, so I think that this could be a missing declaration in some programs, like =xdg-dektop-portal-hyprland=, because of that I was researching issues in =nixOS= & =hyprland=, but nothing solve the problem.
+My main distribution at the time (2024-07-28) is =nixOS=, so I think that this could be a missing declaration in some programs, like =xdg-desktop-portal-hyprland=, because of that I was researching issues in =nixOS= & =hyprland=, but nothing solve the problem.
 
 So nothing that I found fix the problem, most of the issues in github was too old, or nothing to do with =nixOS=, so the last thing that I could do was compile =xdg-desktop-portal-hyprland= by source, but in =nixOS= I would install some compilers and other things that I not currently use, but it was the last option.
 
@@ -1925,7 +1924,7 @@ disableInlineCSS = true
 At this point we need to generate the static we site, the most basic command to publish it is just run =hugo= in the terminal inside the root of the project.
 So you notice that a =public= folder is now created, if you look inside, you'll find all the html files, and everything to deploy as a web page.
 
-**** Set especific folder to export your site.
+**** Set specific folder to export your site.
 If you don't want to have your publish site in the =public= folder, you can set another path to export it instead of the =public= folder by adding this line at top of your =hugo.toml= configuration file:
 
 #+begin_src toml
@@ -1948,20 +1947,81 @@ The next step is to publish your web to a custom server or on github, gitlab, co
 
 
 
-** TODO The end of a chapter.
+** TODO A job history.
 :PROPERTIES:
-:EXPORT_FILE_NAME: the-end-of-a-chapter
+:EXPORT_FILE_NAME: a-job-history
 :EXPORT_DESCRIPTION: My job as an automation tech is over, this is what I think about it.
 :DATE: [2024-09-06 Fri]
 :EXPORT_HUGO_SECTION: posts
 :END:
 
 *** A brief Introduction.
-This is no t going to be a post about programming or technology, this is kind of a way to express my feelings about one important thing that I think is going to change my life, I'm talking about my job and how this ambient change my mind and my vision about this important thing that a lot of us need to do and hold to keep some security for our families.
+This is no t going to be a post about programming or technology, this is kind of a way to express my feelings about one important thing that I think is going to change my life, I'm talking about my job and how this ambient change my mind and my vision about this important thing that a lot of us need to do and hold the job pressure to keep some security for our families.
 
-*** Flashback
-I have almost 5 years working in =Autoliv= in H.Matamoros, in the meaning of that time I was trying every single day to make my best, trying to improve things, make the process better, being the fastest troubleshooting resolver, have less machines failures, less downtime, questioning about how maintenance can be better, and more thing related to the maintenance department.
+*** The history...
+I have almost 5 years working in =Autoliv= in H.Matamoros, in the meaning of that time I was trying every single day to make my best, trying to improve things, make the process better, being the fastest troubleshooting solver, have less machines failures, less downtime, questioning about how maintenance can be better, and more thing related to the maintenance department.
 
-As you may wonder, yes, I am a maintenance technician in the diecast area, I always though that for require something you need to share something first, so that was basically what I was doing for about 4 years, mean while in those years, I prof myself, and prof others that I was capable to have an engineering position, because I was doing some specific tasks and covering the Controls Engineer when he was out tof the job, develope projects, etc, all of that being a maintenance technician. So with that being said, I apply to various engineering vacancys, but for one reason I never have been promoted, always have other person or the manager cancel the vacant. 
+As you may wonder, yes, I am a maintenance technician in the die-cast area, I always though that for require something you need to share something first, so that was basically what I was doing for about 4 years, mean while in those years, I prof myself, and prof others that I was capable to have an engineering position, because I was doing some specific tasks and covering the Controls Engineer when he was out of the job, develop projects, etc, all of that being a maintenance technician. So with that being said, I apply to various engineering vacancy's, but for one reason I never have been promoted, always have other person or the manager cancel the vacant. 
 
-That's the =why= I realize that I don't need to effort my self to achieve something that is not going  to happend. So I decide to only do the job for wath I was hired (maintenance technician). 
+That's the =why= I realize that I don't need to effort my self to achieve something that is not going  to happens. So I decide to only do the job for what I was hired (maintenance technician). 
+
+In the past 4 and a half years, I think I was doing a good job, not because I say it, my boss say it, the engineering department say it, the production department trust in my skills as a troubleshooting resolver. So at that time I was thinking that if I was doing a “good” job, maybe it could be easy to achieve some engineering charge, the thing is that I was =wrong=. It seems that being good and give some extra skills to the job were not enough. job, maybe it could be easy to achieve some engineering charge, the thing is that I was =wrong=. It seems that be good and give some extra skills to the job were not enough.
+
+To the time, I decided to apply to a engineering position, so I do, I have a couple of interviews with the managers, but unfortunately, they choose other person, or canceled the job position. That basically drop me down, because It was kind of I don't know, It seems that I'm was good, but not enough, some times when I fill the job when the control's engineer was out of the job, I have treat with others engineers, but I don't want to say bad things about them, but in my perspective, those engineers are too young and with a lack of experience, don't let me wrong, but is I went messed up when those guys came to me and ask me for directions, while technically I am a low level in the structure:
+#+begin_quote
+Engineer > Technician
+#+end_quote
+
+So I remember that day, I returned to my home so mad and sad, Why?, a few weeks before, I was working in the first shift, everything goes fine, I have like 5 months since I was returned to the first shift;
+#+begin_quote
+Long short history: As a technician with the “strength” of programming, I must be in other shift because in the first shift was the main programming engineer.
+#+end_quote
+
+Of course for me that was pointless, because I don't have nothing  to do with the engineer, because I am a technician. So that day my boss came to my position and say that I need to move to the 2nd shift, because he need some one that cover the automation issues in the area, and I am the only technician with the knowledge (blah, blah, blah...)
+
+** DONE Ellama, a emacs AI helper.
+CLOSED: [2024-09-22 Sun 12:49]
+:PROPERTIES:
+:EXPORT_FILE_NAME: ellama
+:EXPORT_DESCRIPTION: A brief introduction to how to install ellama and ollama.
+:DATE:     09-22-2024
+:EXPORT_HUGO_SECTION: posts
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2024-09-22 Sun 12:49]
+:END:
+
+*** Installation of Ollama.
+In my case, I installed =ollama= from my package manager, although you can install it using the following code:
+
+#+BEGIN_SRC shell 
+curl -fsSL https://ollama.com/install.sh | sh 
+#+END_SRC
+
+Once =ollama= is installed, you should add it to your startup. In my case, I do it from the init of =hyprland=, but it will depend on whether you use =.xinitrc= or something else. It should be launched as follows:
+
+#+BEGIN_SRC shell 
+ollama serve 
+#+END_SRC
+Installing a model. To use Ollama, we need to download a model. A model is basically who you will be talking to when making a query. In the case of =ellama=, they suggest installing =zephyr= as the model, so we need to install it.
+
+#+BEGIN_SRC shell 
+ollama pull zephyr
+#+END_SRC
+
+Installing ellama. Once =ollama & zephyr= are installed, we can proceed to install and configure =ellama= in Emacs.
+
+*** My ellama configuration.
+#+BEGIN_SRC emacs-lisp 
+(use-package ellama
+  (setopt ellama-language "English")
+  (setopt ellama-user-nick "jpacheco.xyz")
+  (setopt ellama-keymap-prefix "C-c e")
+  (require 'llm-ollama)
+  (setopt ellama-provider
+		  (make-llm-ollama
+		   "zephyr"
+		   "zephyr")))
+ #+END_SRC
+
+As you can see, it's not very complicated. The options for the =ellama= package are quite intuitive, like the language and keybindings. If you have any questions, feel free to comment, and we can follow up.

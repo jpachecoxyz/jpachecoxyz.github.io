@@ -13,10 +13,10 @@ toc = true
 
 ### Doom Insert item. {#doom-insert-item-dot}
 
-This script wast taken from _doomemacs_, it basicaly insert a item such a heading, subheading, checkbox, etc. based on the item above.
+This script wast taken from _doomemacs_, it basically insert a item such a heading, subheading, checkbox, etc. based on the item above.
 
 ```emacs-lisp
-;;; javier_pacheco utilities.el --- Some usefull utulities  -*- lexical-binding: t; -*-
+;;; javier_pacheco utilities.el --- Some useful utilities  -*- lexical-binding: t; -*-
 (defun +org--insert-item (direction)
   (let ((context (org-element-lineage
                   (org-element-context)

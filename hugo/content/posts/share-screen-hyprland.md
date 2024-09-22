@@ -19,7 +19,7 @@ So I installed `telegram-dektop`, and try to share my configuration and guess wh
 
 ## Things that I try before to solve the problem. {#things-that-i-try-before-to-solve-the-problem-dot}
 
-My main distribution at the time (2024-07-28) is `nixOS`, so I think that this could be a missing declaration in some programs, like `xdg-dektop-portal-hyprland`, because of that I was researching issues in `nixOS` &amp; `hyprland`, but nothing solve the problem.
+My main distribution at the time (2024-07-28) is `nixOS`, so I think that this could be a missing declaration in some programs, like `xdg-desktop-portal-hyprland`, because of that I was researching issues in `nixOS` &amp; `hyprland`, but nothing solve the problem.
 
 So nothing that I found fix the problem, most of the issues in github was too old, or nothing to do with `nixOS`, so the last thing that I could do was compile `xdg-desktop-portal-hyprland` by source, but in `nixOS` I would install some compilers and other things that I not currently use, but it was the last option.
 

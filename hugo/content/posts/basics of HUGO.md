@@ -285,7 +285,7 @@ At this point we need to generate the static we site, the most basic command to 
 So you notice that a `public` folder is now created, if you look inside, you'll find all the html files, and everything to deploy as a web page.
 
 
-### Set especific folder to export your site. {#set-especific-folder-to-export-your-site-dot}
+### Set specific folder to export your site. {#set-specific-folder-to-export-your-site-dot}
 
 If you don't want to have your publish site in the `public` folder, you can set another path to export it instead of the `public` folder by adding this line at top of your `hugo.toml` configuration file:
 
