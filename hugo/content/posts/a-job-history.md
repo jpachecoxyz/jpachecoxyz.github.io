@@ -3,6 +3,7 @@ title = "A job history."
 author = ["Javier Pacheco"]
 description = "My job as an automation tech is over, this is what I think about it."
 date = 2024-07-04
+tags = ["blog", "personal"]
 draft = true
 toc = true
 +++
@@ -31,3 +32,10 @@ So I remember that day, I returned to my home so mad and sad, Why?, a few weeks 
 > Long short history: As a technician with the “strength” of programming, I must be in other shift because in the first shift was the main programming engineer.
 
 Of course for me that was pointless, because I don't have nothing  to do with the engineer, because I am a technician. So that day my boss came to my position and say that I need to move to the 2nd shift, because he need some one that cover the automation issues in the area, and I am the only technician with the knowledge (blah, blah, blah...)
+
+
+## The end. {#the-end-dot}
+
+Months later, I feel not comfortable, with my job, at that point I feel messy, I don't want to go in there, not because laziness, but because I lost the feeling, I don't know how to describe it.
+
+To my fortune, I have an job interview for the maintenance supervisor roll in another DieCasting company here in H. Matamoros. And fortunately I was selected to have the job. Finally I ended quite my job, and start a new one now in a better roll and with more opportunities and new challenges to my personal and professional career.

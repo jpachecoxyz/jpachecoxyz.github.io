@@ -930,6 +930,7 @@ case $OPT in
 esac
 #+end_src
 
+
 ** DONE Efetch.el                                        :emacs:script:
 CLOSED: [2024-09-04 Wed 02:43]
 :PROPERTIES:
@@ -1947,7 +1948,7 @@ The next step is to publish your web to a custom server or on github, gitlab, co
 
 
 
-** TODO A job history.
+** TODO A job history.                                       :blog:personal:
 :PROPERTIES:
 :EXPORT_FILE_NAME: a-job-history
 :EXPORT_DESCRIPTION: My job as an automation tech is over, this is what I think about it.
@@ -1978,6 +1979,10 @@ Long short history: As a technician with the “strength” of programming, I mu
 #+end_quote
 
 Of course for me that was pointless, because I don't have nothing  to do with the engineer, because I am a technician. So that day my boss came to my position and say that I need to move to the 2nd shift, because he need some one that cover the automation issues in the area, and I am the only technician with the knowledge (blah, blah, blah...)
+*** The end.
+Months later, I feel not comfortable, with my job, at that point I feel messy, I don't want to go in there, not because laziness, but because I lost the feeling, I don't know how to describe it.
+
+To my fortune, I have an job interview for the maintenance supervisor roll in another DieCasting company here in H. Matamoros. And fortunately I was selected to have the job. Finally I ended quite my job, and start a new one now in a better roll and with more opportunities and new challenges to my personal and professional career.
 
 ** DONE Ellama, a emacs AI helper.
 CLOSED: [2024-09-22 Sun 12:49]
