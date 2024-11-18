@@ -2,9 +2,9 @@
 title = "A job history."
 author = ["Javier Pacheco"]
 description = "My job as an automation tech is over, this is what I think about it."
-date = 2024-07-04
+date = 2024-11-18T09:06:00-06:00
 tags = ["blog", "personal"]
-draft = true
+draft = false
 toc = true
 +++
 
