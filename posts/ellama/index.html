@@ -23,6 +23,8 @@
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2024-09-22T12:49:00-05:00">
     <meta property="article:modified_time" content="2024-09-22T12:49:00-05:00">
+    <meta property="article:tag" content="Tecnology">
+    <meta property="article:tag" content="Wayland">
 
   
   <meta name="twitter:card" content="summary">
@@ -205,6 +207,17 @@
         
         
         
+        <div class="article-tag">
+            <i class="fas fa-tag"></i>
+            
+            
+            <a class="tag-link" href="/tags/tecnology" rel="tag">tecnology</a>
+            
+             ,  
+            <a class="tag-link" href="/tags/wayland" rel="tag">wayland</a>
+            
+        </div>
+        
       </div>
     </header>
 
@@ -222,6 +235,7 @@
 </span></span></code></pre></div><h2 id="installing-ellama-dot">Installing ellama.</h2>
 <p>Once <code>ollama &amp; zephyr</code> are installed, we can proceed to install and configure <code>ellama</code> in Emacs.</p>
 <h2 id="my-ellama-configuration-dot">My ellama configuration.</h2>
+<p>As you can see, it&rsquo;s not very complicated. The options for the <code>ellama</code> package are quite intuitive, like the language and keybindings. If you have any questions, feel free to comment, and we can follow up.</p>
 <div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span><span>(<span style="color:#24909d">use-package</span> <span style="color:#40ffff">ellama</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2</span><span>  (<span style="color:#40ffff">setopt</span> <span style="color:#40ffff">ellama-language</span> <span style="color:#ed9d13">&#34;English&#34;</span>)
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">3</span><span>  (<span style="color:#40ffff">setopt</span> <span style="color:#40ffff">ellama-user-nick</span> <span style="color:#ed9d13">&#34;jpacheco.xyz&#34;</span>)
@@ -231,8 +245,7 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">7</span><span>          (<span style="color:#40ffff">make-llm-ollama</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">8</span><span>           <span style="color:#ed9d13">&#34;zephyr&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">9</span><span>           <span style="color:#ed9d13">&#34;zephyr&#34;</span>)))
-</span></span></code></pre></div><p>As you can see, it&rsquo;s not very complicated. The options for the <code>ellama</code> package are quite intuitive, like the language and keybindings. If you have any questions, feel free to comment, and we can follow up.</p>
-
+</span></span></code></pre></div>
     </div>
   </article>
 

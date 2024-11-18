@@ -1989,7 +1989,8 @@ comfortable, with my job, at that point I feel messy, I don't want to go in ther
 
 To my fortune, I have an job interview for the maintenance supervisor roll in another DieCasting company here in H. Matamoros. And fortunately I was selected to have the job. Finally I ended quite my job, and start a new one now in a better roll and with more opportunities and new challenges to my personal and professional career.
 
-** DONE Ellama, a emacs AI helper.
+
+** DONE Ellama, a emacs AI helper.                       :tecnology:wayland:
 CLOSED: [2024-09-22 Sun 12:49]
 :PROPERTIES:
 :EXPORT_FILE_NAME: ellama
@@ -2024,6 +2025,8 @@ ollama pull zephyr
 Once =ollama & zephyr= are installed, we can proceed to install and configure =ellama= in Emacs.
 
 *** My ellama configuration.
+As you can see, it's not very complicated. The options for the =ellama= package are quite intuitive, like the language and keybindings. If you have any questions, feel free to comment, and we can follow up.
+
 #+BEGIN_SRC emacs-lisp 
 (use-package ellama
   (setopt ellama-language "English")
@@ -2035,5 +2038,4 @@ Once =ollama & zephyr= are installed, we can proceed to install and configure =e
 		   "zephyr"
 		   "zephyr")))
  #+END_SRC
-
-As you can see, it's not very complicated. The options for the =ellama= package are quite intuitive, like the language and keybindings. If you have any questions, feel free to comment, and we can follow up.
+ 

@@ -26,10 +26,13 @@
     <loc>https://jpacheco.xyz/posts/ellama/</loc>
     <lastmod>2024-09-22T12:49:00-05:00</lastmod>
   </url><url>
-    <loc>https://jpacheco.xyz/posts/basics-of-hugo/</loc>
-    <lastmod>2024-09-04T03:32:00-05:00</lastmod>
-  </url><url>
     <loc>https://jpacheco.xyz/tags/tecnology/</loc>
+    <lastmod>2024-09-22T12:49:00-05:00</lastmod>
+  </url><url>
+    <loc>https://jpacheco.xyz/tags/wayland/</loc>
+    <lastmod>2024-09-22T12:49:00-05:00</lastmod>
+  </url><url>
+    <loc>https://jpacheco.xyz/posts/basics-of-hugo/</loc>
     <lastmod>2024-09-04T03:32:00-05:00</lastmod>
   </url><url>
     <loc>https://jpacheco.xyz/tags/emacs/</loc>
@@ -51,9 +54,6 @@
     <lastmod>2024-09-04T02:44:00-05:00</lastmod>
   </url><url>
     <loc>https://jpacheco.xyz/posts/share-screen-hyprland/</loc>
-    <lastmod>2024-09-04T02:44:00-05:00</lastmod>
-  </url><url>
-    <loc>https://jpacheco.xyz/tags/wayland/</loc>
     <lastmod>2024-09-04T02:44:00-05:00</lastmod>
   </url><url>
     <loc>https://jpacheco.xyz/posts/efetch/</loc>
