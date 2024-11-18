@@ -36,6 +36,7 @@ Of course for me that was pointless, because I don't have nothing  to do with th
 
 ## The end. {#the-end-dot}
 
-Months later, I feel not comfortable, with my job, at that point I feel messy, I don't want to go in there, not because laziness, but because I lost the feeling, I don't know how to describe it.
+Months later, I feel not
+comfortable, with my job, at that point I feel messy, I don't want to go in there, not because laziness, but because I lost the feeling, I don't know how to describe it.
 
 To my fortune, I have an job interview for the maintenance supervisor roll in another DieCasting company here in H. Matamoros. And fortunately I was selected to have the job. Finally I ended quite my job, and start a new one now in a better roll and with more opportunities and new challenges to my personal and professional career.
