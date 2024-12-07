@@ -2038,4 +2038,26 @@ As you can see, it's not very complicated. The options for the =ellama= package 
 		   "zephyr"
 		   "zephyr")))
  #+END_SRC
- 
+
+
+** TODO Should I use GNU/guix?                           :blog:linux:tecnology:
+:PROPERTIES:
+:EXPORT_FILE_NAME: should-i-use-gnu-guix
+:EXPORT_DESCRIPTION: My thoughts about use guix (or not).
+:DATE: [2024-12-01 Sun]
+:EXPORT_HUGO_SECTION: posts
+:END:
+
+*** What is GNU/guix.
+*GNU/Guix* is a functional package manager and a complete operating system distribution, part of the GNU Project. It is designed to provide a reliable and customizable environment for managing software and configurations.
+
+It is basically =NixOS= but instead of using nix it uses =Schem Common Lisp= as interpreter.
+
+*** Why Use GNU Guix?
+Freedom and transparency in software management.
+Avoids common issues like dependency hell or broken systems due to upgrades.
+Ideal for developers, researchers, and system administrators who value reproducibility and control.
+
+*** I'm currently using NixOS, should I switch to guix?
+The most common answer for that is very universal: =It depends=, if you want to learn more about lisp
+*** Conclusions.
