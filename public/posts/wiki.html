@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Wiki</title>
+<meta name="generator" content="Org Mode" />
+<!-- <link rel="stylesheet" type="text/css" href="/ox.css"/> -->
+<link rel="stylesheet" type="text/css" href="/custom.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<!-- copy org-blocks to clipboard  -->
+<script src="/cpbtn.js"></script>
+<script>
+  window.onload = function() {
+      // Call the function to create copy buttons in each org-src-container div
+      createCopyButtonForDivs();
+  };
+</script>
+</head>
+<body>
+<div id="preamble" class="status">
+<hr style="border-top: 1px solid black;">
+<div class='topnav' style='display: flex; justify-content: space-between; align-items: center;'>
+  <h2 style='margin-top: 0; margin-bottom: 0; margin-left:0px;'>jpachecoxyz</h2> 
+  <div>
+    <a href='/index.html' style='font-weight:bold;'>Home</a> |
+    <a href='/archive.html' style='font-weight:bold;'>Blog</a> | 
+    <a href='/about.html' style='font-weight:bold;'>About Me</a> | 
+	<a href="/rss.xml">
+	  <i class="fas">&#xf09e;</i>
+	</a>
+  </div>
+</div>
+<hr style="border-top: 1px solid black;">
+</div>
+<div id="content" class="content">
+<header>
+<h1 class="title">Wiki</h1>
+</header><nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orga0b6214">Emacs</a>
+<ul>
+<li><a href="#orgdcfed86">Doom Insert item.</a></li>
+<li><a href="#orgb5279a0">Highlight yanked text</a></li>
+<li><a href="#org25d7518">Replace '-' with '•'.</a></li>
+<li><a href="#org9390aa1">Custom<sub>id</sub>.</a></li>
+<li><a href="#org0133f0d">Add ID's to headers - Org roam.</a></li>
+<li><a href="#org192e374">Toggle org-emphasis-markers</a></li>
+<li><a href="#org929128d">Insert Org's files to Outlook.</a>
+<ul>
+<li><a href="#org09e6f3c">Export file to clipboard.</a></li>
+<li><a href="#org0485afc">Add some CSS to the file.</a></li>
+</ul>
+</li>
+<li><a href="#org12d411a">Org TODO auto update.</a></li>
+<li><a href="#orge35ef32">Org-buffer-scratchpad.</a></li>
+<li><a href="#orge64097d">Toggle buffers.</a></li>
+<li><a href="#org12b75e7">Doc at point.</a></li>
+<li><a href="#org930151c">Duplicate &amp; move up/down lines.</a></li>
+<li><a href="#org109064d">Hide passwords in org files.</a></li>
+<li><a href="#org30fe619">Help at point.</a></li>
+<li><a href="#orgb1847d8">fz-themes</a></li>
+<li><a href="#orga956904">Custom functions.</a></li>
+</ul>
+</li>
+<li><a href="#org3dc727c">Linux</a></li>
+<li><a href="#org2faefba">Python</a>
+<ul>
+<li><a href="#org23b612f">Avoid SSL verification when installing packages through pip.</a></li>
+</ul>
+</li>
+<li><a href="#orgd84faeb">Robots</a></li>
+<li><a href="#orge330fc4">Windows</a>
+<ul>
+<li><a href="#org159dc3e">Change IP address within terminal.</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<p>
+
+</p>
+<div class="PREVIEW" id="org8e6eaa9">
+<p>
+This is my wiki about some tips and important notes.
+</p>
+
+</div>
+
+<div id="outline-container-orga0b6214" class="outline-2">
+<h2 id="orga0b6214">Emacs</h2>
+<div class="outline-text-2" id="text-orga0b6214">
+</div>
+<div id="outline-container-orgdcfed86" class="outline-3">
+<h3 id="orgdcfed86">Doom Insert item.</h3>
+<div class="outline-text-3" id="text-orgdcfed86">
+<p>
+This script wast taken from <i>doomemacs</i>, it basically insert a item such a heading, subheading, checkbox, etc. based on the item above.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span class="org-comment-delimiter">;;; </span><span class="org-comment">javier_pacheco utilities.el --- Some useful utilities  -*- lexical-binding: t; -*-</span>
+(<span class="org-keyword">defun</span> <span class="org-function-name">+org--insert-item</span> (direction)
+  (<span class="org-keyword">let</span> ((context (org-element-lineage
+                  (org-element-context)
+                  '(table table-row headline inlinetask item plain-list)
+                  t)))
+    (<span class="org-keyword">pcase</span> (org-element-type context)
+      <span class="org-comment-delimiter">;; </span><span class="org-comment">Add a new list item (carrying over checkboxes if necessary)</span>
+      ((<span class="org-keyword">or</span> `item `plain-list)
+       (<span class="org-keyword">let</span> ((orig-point (point)))
+         <span class="org-comment-delimiter">;; </span><span class="org-comment">Position determines where org-insert-todo-heading and `</span><span class="org-comment"><span class="org-constant">org-insert-item</span></span><span class="org-comment">'</span>
+         <span class="org-comment-delimiter">;; </span><span class="org-comment">insert the new list item.</span>
+         (<span class="org-keyword">if</span> (eq direction 'above)
+             (org-beginning-of-item)
+           (end-of-line))
+         (<span class="org-keyword">let*</span> ((ctx-item? (eq 'item (org-element-type context)))
+                (ctx-cb (org-element-property <span class="org-builtin">:contents-begin</span> context))
+                <span class="org-comment-delimiter">;; </span><span class="org-comment">Hack to handle edge case where the point is at the</span>
+                <span class="org-comment-delimiter">;; </span><span class="org-comment">beginning of the first item</span>
+                (beginning-of-list? (<span class="org-keyword">and</span> (not ctx-item?)
+                                         (= ctx-cb orig-point)))
+                (item-context (<span class="org-keyword">if</span> beginning-of-list?
+                                  (org-element-context)
+                                context))
+                <span class="org-comment-delimiter">;; </span><span class="org-comment">Horrible hack to handle edge case where the</span>
+                <span class="org-comment-delimiter">;; </span><span class="org-comment">line of the bullet is empty</span>
+                (ictx-cb (org-element-property <span class="org-builtin">:contents-begin</span> item-context))
+                (empty? (<span class="org-keyword">and</span> (eq direction 'below)
+                             <span class="org-comment-delimiter">;; </span><span class="org-comment">in case contents-begin is nil, or contents-begin</span>
+                             <span class="org-comment-delimiter">;; </span><span class="org-comment">equals the position end of the line, the item is</span>
+                             <span class="org-comment-delimiter">;; </span><span class="org-comment">empty</span>
+                             (<span class="org-keyword">or</span> (not ictx-cb)
+                                 (= ictx-cb
+                                    (1+ (point))))))
+                (pre-insert-point (point)))
+           <span class="org-comment-delimiter">;; </span><span class="org-comment">Insert dummy content, so that `</span><span class="org-comment"><span class="org-constant">org-insert-item</span></span><span class="org-comment">'</span>
+           <span class="org-comment-delimiter">;; </span><span class="org-comment">inserts content below this item</span>
+           (<span class="org-keyword">when</span> empty?
+             (insert <span class="org-string">" "</span>))
+           (org-insert-item (org-element-property <span class="org-builtin">:checkbox</span> context))
+           <span class="org-comment-delimiter">;; </span><span class="org-comment">Remove dummy content</span>
+           (<span class="org-keyword">when</span> empty?
+             (delete-region pre-insert-point (1+ pre-insert-point))))))
+      <span class="org-comment-delimiter">;; </span><span class="org-comment">Add a new table row</span>
+      ((<span class="org-keyword">or</span> `table `table-row)
+       (<span class="org-keyword">pcase</span> direction
+         ('below (<span class="org-keyword">save-excursion</span> (org-table-insert-row t))
+                 (org-table-next-row))
+         ('above (<span class="org-keyword">save-excursion</span> (org-shiftmetadown))
+                 (+org/table-previous-row))))
+
+      <span class="org-comment-delimiter">;; </span><span class="org-comment">Otherwise, add a new heading, carrying over any todo state, if</span>
+      <span class="org-comment-delimiter">;; </span><span class="org-comment">necessary.</span>
+      (_
+       (<span class="org-keyword">let</span> ((level (<span class="org-keyword">or</span> (org-current-level) 1)))
+         <span class="org-comment-delimiter">;; </span><span class="org-comment">I intentionally avoid `</span><span class="org-comment"><span class="org-constant">org-insert-heading</span></span><span class="org-comment">' and the like because they</span>
+         <span class="org-comment-delimiter">;; </span><span class="org-comment">impose unpredictable whitespace rules depending on the cursor</span>
+         <span class="org-comment-delimiter">;; </span><span class="org-comment">position. It's simpler to express this command's responsibility at a</span>
+         <span class="org-comment-delimiter">;; </span><span class="org-comment">lower level than work around all the quirks in org's API.</span>
+         (<span class="org-keyword">pcase</span> direction
+           (`below
+            (<span class="org-keyword">let</span> (org-insert-heading-respect-content)
+              (goto-char (line-end-position))
+              (org-end-of-subtree)
+              (insert <span class="org-string">"\n"</span> (make-string level ?*) <span class="org-string">" "</span>)))
+           (`above
+            (org-back-to-heading)
+            (insert (make-string level ?*) <span class="org-string">" "</span>)
+            (<span class="org-keyword">save-excursion</span> (insert <span class="org-string">"\n"</span>))))
+         (run-hooks 'org-insert-heading-hook)
+         (<span class="org-keyword">when-let*</span> ((todo-keyword (org-element-property <span class="org-builtin">:todo-keyword</span> context))
+                     (todo-type    (org-element-property <span class="org-builtin">:todo-type</span> context)))
+           (org-todo
+            (<span class="org-keyword">cond</span> ((eq todo-type 'done)
+                   <span class="org-comment-delimiter">;; </span><span class="org-comment">Doesn't make sense to create more "DONE" headings</span>
+                   (car (+org-get-todo-keywords-for todo-keyword)))
+                  (todo-keyword)
+                  ('todo)))))))
+
+    (<span class="org-keyword">when</span> (org-invisible-p)
+      (org-show-hidden-entry))
+    (<span class="org-keyword">when</span> (<span class="org-keyword">and</span> (<span class="org-keyword">bound-and-true-p</span> evil-local-mode)
+               (not (evil-emacs-state-p)))
+      (evil-insert 1))))
+
+<span class="org-comment-delimiter">;;;</span><span class="org-comment">###</span><span class="org-comment"><span class="org-warning">autoload</span></span>
+(<span class="org-keyword">defun</span> <span class="org-function-name">+org/insert-item-below</span> (count)
+  <span class="org-doc">"Inserts a new heading, table cell or item below the current one."</span>
+  (<span class="org-keyword">interactive</span> <span class="org-string">"p"</span>)
+  (<span class="org-keyword">dotimes</span> (_ count) (+org--insert-item 'below)))
+
+<span class="org-comment-delimiter">;;;</span><span class="org-comment">###</span><span class="org-comment"><span class="org-warning">autoload</span></span>
+(<span class="org-keyword">defun</span> <span class="org-function-name">+org/insert-item-above</span> (count)
+  <span class="org-doc">"Inserts a new heading, table cell or item above the current one."</span>
+  (<span class="org-keyword">interactive</span> <span class="org-string">"p"</span>)
+  (<span class="org-keyword">dotimes</span> (_ count) (+org--insert-item 'above)))
+
+
+(<span class="org-keyword">defun</span> <span class="org-function-name">org-make-olist</span> (arg)
+  (<span class="org-keyword">interactive</span> <span class="org-string">"P"</span>)
+  (<span class="org-keyword">let</span> ((n (<span class="org-keyword">or</span> arg 1)))
+    (<span class="org-keyword">when</span> (region-active-p)
+      (<span class="org-keyword">setq</span> n (count-lines (region-beginning)
+                           (region-end)))
+      (goto-char (region-beginning)))
+    (<span class="org-keyword">dotimes</span> (i n)
+      (beginning-of-line)
+      (insert (concat (number-to-string (1+ i)) <span class="org-string">". "</span>))
+      (forward-line))))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb5279a0" class="outline-3">
+<h3 id="orgb5279a0">Highlight yanked text</h3>
+<div class="outline-text-3" id="text-orgb5279a0">
+<p>
+This function describes itself so&#x2026;
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span class="org-keyword">defun</span> <span class="org-function-name">meain/evil-yank-advice</span> (orig-fn beg end <span class="org-type">&amp;rest</span> args)
+  (pulse-momentary-highlight-region beg end 'mode-line-active)
+  (apply orig-fn beg end args))
+(advice-add 'evil-yank <span class="org-builtin">:around</span> 'meain/evil-yank-advice)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org25d7518" class="outline-3">
+<h3 id="org25d7518">Replace '-' with '•'.</h3>
+<div class="outline-text-3" id="text-org25d7518">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span class="org-keyword">defun</span> <span class="org-function-name">jp/org-font-setup</span> ()
+  <span class="org-comment-delimiter">;; </span><span class="org-comment">Replace list hyphen with dot</span>
+  (font-lock-add-keywords 'org-mode
+                          '((<span class="org-string">"^ *</span><span class="org-string"><span class="org-regexp-grouping-backslash">\\</span></span><span class="org-string"><span class="org-regexp-grouping-construct">(</span></span><span class="org-string">[-]</span><span class="org-string"><span class="org-regexp-grouping-backslash">\\</span></span><span class="org-string"><span class="org-regexp-grouping-construct">)</span></span><span class="org-string"> "</span>
+                             (0 (<span class="org-keyword">prog1</span> () (compose-region (match-beginning 1) (match-end 1) <span class="org-string">"&#8226;"</span>)))))))
+
+(jp/org-font-setup)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org9390aa1" class="outline-3">
+<h3 id="org9390aa1">Custom<sub>id</sub>.</h3>
+<div class="outline-text-3" id="text-org9390aa1">
+<div class="org-src-container">
+<pre class="src src-elisp"><span class="org-comment-delimiter">;;;; </span><span class="org-comment">org-id</span>
+(<span class="org-keyword">declare-function</span> org-id-add-location <span class="org-string">"org"</span>)
+(<span class="org-keyword">declare-function</span> org-with-point-at <span class="org-string">"org"</span>)
+(<span class="org-keyword">declare-function</span> org-entry-get <span class="org-string">"org"</span>)
+(<span class="org-keyword">declare-function</span> org-id-new <span class="org-string">"org"</span>)
+(<span class="org-keyword">declare-function</span> org-entry-put <span class="org-string">"org"</span>)
+ 
+<span class="org-comment-delimiter">;; </span><span class="org-comment">Copied from this article (with minor tweaks from my side):</span>
+<span class="org-comment-delimiter">;; </span><span class="org-comment">https://writequit.org/articles/emacs-org-mode-generate-ids.html.</span>
+(<span class="org-keyword">defun</span> <span class="org-function-name">jp/org--id-get</span> (<span class="org-type">&amp;optional</span> pom create prefix)
+  <span class="org-doc">"Get the CUSTOM_ID property of the entry at point-or-marker POM.</span>
+<span class="org-doc">If POM is nil, refer to the entry at point.  If the entry does</span>
+<span class="org-doc">not have an CUSTOM_ID, the function returns nil.  However, when</span>
+<span class="org-doc">CREATE is non nil, create a CUSTOM_ID if none is present already.</span>
+<span class="org-doc">PREFIX will be passed through to `</span><span class="org-doc"><span class="org-constant">org-id-new</span></span><span class="org-doc">'.  In any case, the</span>
+<span class="org-doc">CUSTOM_ID of the entry is returned."</span>
+  (<span class="org-keyword">org-with-point-at</span> pom
+    (<span class="org-keyword">let</span> ((id (org-entry-get nil <span class="org-string">"CUSTOM_ID"</span>)))
+      (<span class="org-keyword">cond</span>
+       ((<span class="org-keyword">and</span> id (stringp id) (string-match \\S- id))
+        id)
+       (create
+        (<span class="org-keyword">setq</span> id (org-id-new (concat prefix <span class="org-string">"h"</span>)))
+        (org-entry-put pom <span class="org-string">"CUSTOM_ID"</span> id)
+        (org-id-add-location id (format <span class="org-string">"%s"</span> (buffer-file-name (buffer-base-buffer))))
+        id)))))
+ 
+(<span class="org-keyword">declare-function</span> org-map-entries <span class="org-string">"org"</span>)
+ 
+<span class="org-comment-delimiter">;;;</span><span class="org-comment">###</span><span class="org-comment"><span class="org-warning">autoload</span></span>
+(<span class="org-keyword">defun</span> <span class="org-function-name">jp/org-id-headlines</span> ()
+  <span class="org-doc">"Add missing CUSTOM_ID to all headlines in current file."</span>
+  (<span class="org-keyword">interactive</span>)
+  (org-map-entries
+   (<span class="org-keyword">lambda</span> () (jp/org--id-get (point) t))))
+
+<span class="org-comment-delimiter">;;;</span><span class="org-comment">###</span><span class="org-comment"><span class="org-warning">autoload</span></span>
+(<span class="org-keyword">defun</span> <span class="org-function-name">jp/org-id-headline</span> ()
+  <span class="org-doc">"Add missing CUSTOM_ID to headline at point."</span>
+  (<span class="org-keyword">interactive</span>)
+  (jp/org--id-get (point) t))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0133f0d" class="outline-3">
+<h3 id="org0133f0d">Add ID's to headers - Org roam.</h3>
+<div class="outline-text-3" id="text-org0133f0d">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span class="org-keyword">defun</span> <span class="org-function-name">jp/org-id-store-link-for-headers</span> ()
+  <span class="org-doc">"Run `</span><span class="org-doc"><span class="org-constant">org-id-store-link</span></span><span class="org-doc">' for each header in the current buffer."</span>
+  (<span class="org-keyword">interactive</span>)
+  (<span class="org-keyword">save-excursion</span>
+    (goto-char (point-min))
+    (<span class="org-keyword">while</span> (re-search-forward org-heading-regexp nil t)
+      (org-id-store-link))))
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org192e374" class="outline-3">
+<h3 id="org192e374">Toggle org-emphasis-markers</h3>
+<div class="outline-text-3" id="text-org192e374">
+<div class="org-src-container">
+<pre class="src src-elisp">(<span class="org-keyword">defun</span> <span class="org-function-name">jp/org-toggle-emphasis-markers</span> (<span class="org-type">&amp;optional</span> arg)
+  <span class="org-doc">"Toggle emphasis markers and display a message."</span>
+  (<span class="org-keyword">interactive</span> <span class="org-string">"p"</span>)
+  (<span class="org-keyword">let</span> ((markers org-hide-emphasis-markers)
+        (msg <span class="org-string">""</span>))
+    (<span class="org-keyword">when</span> markers
+      (<span class="org-keyword">setq-local</span> org-hide-emphasis-markers nil)
+      (<span class="org-keyword">setq</span> msg <span class="org-string">"Emphasis markers are now visible."</span>))
+    (<span class="org-keyword">unless</span> markers
+      (<span class="org-keyword">setq-local</span> org-hide-emphasis-markers t)
+      (<span class="org-keyword">setq</span> msg <span class="org-string">"Emphasis markers are now hidden."</span>))
+    (message <span class="org-string">"%s"</span> msg)
+    (<span class="org-keyword">when</span> arg
+      (font-lock-fontify-buffer))))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org929128d" class="outline-3">
+<h3 id="org929128d">Insert Org's files to Outlook.</h3>
+<div class="outline-text-3" id="text-org929128d">
+</div>
+<div id="outline-container-org09e6f3c" class="outline-4">
+<h4 id="org09e6f3c">Export file to clipboard.</h4>
+<div class="outline-text-4" id="text-org09e6f3c">
+<div class="org-src-container">
+<pre class="src src-elisp">(<span class="org-keyword">defun</span> <span class="org-function-name">export-org-email</span> ()
+  <span class="org-doc">"Export the current email org buffer and copy it to the</span>
+<span class="org-doc">clipboard"</span>
+  (<span class="org-keyword">interactive</span>)
+  (<span class="org-keyword">let</span> ((org-export-show-temporary-export-buffer nil)
+        (org-html-head (org-email-html-head)))
+    (org-html-export-as-html)
+    (<span class="org-keyword">with-current-buffer</span> <span class="org-string">"*Org HTML Export*"</span>
+      (kill-new (buffer-string)))
+    (message <span class="org-string">"HTML copied to clipboard"</span>)))
+(global-set-key (kbd <span class="org-string">"C-c C-x C-e"</span>) 'export-org-email)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0485afc" class="outline-4">
+<h4 id="org0485afc">Add some CSS to the file.</h4>
+<div class="outline-text-4" id="text-org0485afc">
+<div class="org-src-container">
+<pre class="src src-elisp">(<span class="org-keyword">defun</span> <span class="org-function-name">org-email-html-head</span> ()
+  <span class="org-doc">"Create the header with CSS for use with email"</span>
+  (concat
+   <span class="org-string">"&lt;style type=\"text/css\"&gt;\n"</span>
+   <span class="org-string">"&lt;!--/*--&gt;&lt;![CDATA[/*&gt;&lt;!--*/\n"</span>
+   (<span class="org-keyword">with-temp-buffer</span>
+     (insert-file-contents
+      <span class="org-string">"~/.emacs.d/src/css/org2outlook.css"</span>)
+     (buffer-string))
+   <span class="org-string">"/*]]&gt;*/--&gt;\n"</span>
+   <span class="org-string">"&lt;/style&gt;\n"</span>))
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org12d411a" class="outline-3">
+<h3 id="org12d411a">Org TODO auto update.</h3>
+<div class="outline-text-3" id="text-org12d411a">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span class="org-keyword">defun</span> <span class="org-function-name">org-todo-if-needed</span> (state)
+  <span class="org-doc">"Change header state to STATE unless the current item is in STATE already."</span>
+  (<span class="org-keyword">unless</span> (string-equal (org-get-todo-state) state)
+    (org-todo state)))
+
+(<span class="org-keyword">defun</span> <span class="org-function-name">ct/org-summary-todo-cookie</span> (n-done n-not-done)
+  <span class="org-doc">"Switch header state to DONE when all subentries are DONE, to TODO when none are DONE, and to DOING otherwise"</span>
+  (<span class="org-keyword">let</span> (org-log-done org-log-states)   <span class="org-comment-delimiter">; </span><span class="org-comment">turn off logging</span>
+    (org-todo-if-needed (<span class="org-keyword">cond</span> ((= n-done 0)
+                               <span class="org-string">"TODO"</span>)
+                              ((= n-not-done 0)
+                               <span class="org-string">"DONE"</span>)
+                              (t
+                               <span class="org-string">"DOING"</span>)))))
+(add-hook 'org-after-todo-statistics-hook #'ct/org-summary-todo-cookie)
+
+(<span class="org-keyword">defun</span> <span class="org-function-name">ct/org-summary-checkbox-cookie</span> ()
+  <span class="org-doc">"Switch header state to DONE when all checkboxes are ticked, to TODO when none are ticked, and to DOING otherwise"</span>
+  (<span class="org-keyword">let</span> (beg end)
+    (<span class="org-keyword">unless</span> (not (org-get-todo-state))
+      (<span class="org-keyword">save-excursion</span>
+        (org-back-to-heading t)
+        (<span class="org-keyword">setq</span> beg (point))
+        (end-of-line)
+        (<span class="org-keyword">setq</span> end (point))
+        (goto-char beg)
+        <span class="org-comment-delimiter">;; </span><span class="org-comment">Regex group 1: %-based cookie</span>
+        <span class="org-comment-delimiter">;; </span><span class="org-comment">Regex group 2 and 3: x/y cookie</span>
+        (<span class="org-keyword">if</span> (re-search-forward <span class="org-string">"\\[</span><span class="org-string"><span class="org-regexp-grouping-backslash">\\</span></span><span class="org-string"><span class="org-regexp-grouping-construct">(</span></span><span class="org-string">[0-9]*%</span><span class="org-string"><span class="org-regexp-grouping-backslash">\\</span></span><span class="org-string"><span class="org-regexp-grouping-construct">)</span></span><span class="org-string">\\]</span><span class="org-string"><span class="org-regexp-grouping-backslash">\\</span></span><span class="org-string"><span class="org-regexp-grouping-construct">|</span></span><span class="org-string">\\[</span><span class="org-string"><span class="org-regexp-grouping-backslash">\\</span></span><span class="org-string"><span class="org-regexp-grouping-construct">(</span></span><span class="org-string">[0-9]*</span><span class="org-string"><span class="org-regexp-grouping-backslash">\\</span></span><span class="org-string"><span class="org-regexp-grouping-construct">)</span></span><span class="org-string">/</span><span class="org-string"><span class="org-regexp-grouping-backslash">\\</span></span><span class="org-string"><span class="org-regexp-grouping-construct">(</span></span><span class="org-string">[0-9]*</span><span class="org-string"><span class="org-regexp-grouping-backslash">\\</span></span><span class="org-string"><span class="org-regexp-grouping-construct">)</span></span><span class="org-string">\\]"</span>
+                               end t)
+            (<span class="org-keyword">if</span> (match-end 1)
+                <span class="org-comment-delimiter">;; </span><span class="org-comment">[xx%] cookie support</span>
+                (<span class="org-keyword">cond</span> ((equal (match-string 1) <span class="org-string">"100%"</span>)
+                       (org-todo-if-needed <span class="org-string">"DONE"</span>))
+                      ((equal (match-string 1) <span class="org-string">"0%"</span>)
+                       (org-todo-if-needed <span class="org-string">"TODO"</span>))
+                      (t
+                       (org-todo-if-needed <span class="org-string">"DOING"</span>)))
+              <span class="org-comment-delimiter">;; </span><span class="org-comment">[x/y] cookie support</span>
+              (<span class="org-keyword">if</span> (&gt; (match-end 2) (match-beginning 2)) <span class="org-comment-delimiter">; </span><span class="org-comment">= if not empty</span>
+                  (<span class="org-keyword">cond</span> ((equal (match-string 2) (match-string 3))
+                         (org-todo-if-needed <span class="org-string">"DONE"</span>))
+                        ((<span class="org-keyword">or</span> (equal (string-trim (match-string 2)) <span class="org-string">""</span>)
+                             (equal (match-string 2) <span class="org-string">"0"</span>))
+                         (org-todo-if-needed <span class="org-string">"TODO"</span>))
+                        (t
+                         (org-todo-if-needed <span class="org-string">"DOING"</span>)))
+                (org-todo-if-needed <span class="org-string">"DOING"</span>))))))))
+(add-hook 'org-checkbox-statistics-hook #'ct/org-summary-checkbox-cookie)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orge35ef32" class="outline-3">
+<h3 id="orge35ef32">Org-buffer-scratchpad.</h3>
+<div class="outline-text-3" id="text-orge35ef32">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span class="org-keyword">defun</span> <span class="org-function-name">new-scratch-pad</span> ()
+  <span class="org-doc">"Create a new org-mode buffer for random stuff."</span>
+  (<span class="org-keyword">interactive</span>)
+  (<span class="org-keyword">progn</span>
+        (<span class="org-keyword">let</span> ((buffer (generate-new-buffer <span class="org-string">"Org-scratch-buffer"</span>)))
+      (switch-to-buffer buffer)
+      (<span class="org-keyword">setq</span> buffer-offer-save t)
+      (org-mode)
+      (olivetti-mode t))))
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orge64097d" class="outline-3">
+<h3 id="orge64097d">Toggle buffers.</h3>
+<div class="outline-text-3" id="text-orge64097d">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span class="org-comment-delimiter">;; </span><span class="org-comment">Toggle *scratch* buffer.</span>
+(<span class="org-keyword">defun</span> <span class="org-function-name">toggle-scratch-buffer</span> ()
+  <span class="org-doc">"Toggle the *scratch* buffer"</span>
+  (<span class="org-keyword">interactive</span>)
+  (<span class="org-keyword">if</span> (string= (buffer-name) <span class="org-string">"*scratch*"</span>)
+          (bury-buffer)
+        (switch-to-buffer (get-buffer-create <span class="org-string">"*scratch*"</span>))))
+
+(<span class="org-keyword">defun</span> <span class="org-function-name">toggle-org-buffer</span> ()
+  <span class="org-doc">"Toggle the Org-scratch-buffer buffer"</span>
+  (<span class="org-keyword">interactive</span>)
+  (<span class="org-keyword">if</span> (equal (buffer-name (current-buffer)) <span class="org-string">"Org-scratch-buffer"</span>)
+          (<span class="org-keyword">if</span> (one-window-p t)
+                  (switch-to-buffer (other-buffer))
+        (delete-window))
+    (<span class="org-keyword">if</span> (get-buffer <span class="org-string">"Org-scratch-buffer"</span>)
+        (<span class="org-keyword">if</span> (get-buffer-window <span class="org-string">"Org-scratch-buffer"</span>)
+            (<span class="org-keyword">progn</span>
+                          (bury-buffer <span class="org-string">"Org-scratch-buffer"</span>)
+                          (delete-window (get-buffer-window <span class="org-string">"Org-scratch-buffer"</span>)))
+                  (switch-to-buffer <span class="org-string">"Org-scratch-buffer"</span>))
+          (new-scratch-pad))))
+
+<span class="org-comment-delimiter">;; </span><span class="org-comment">Toggle *eshell* buffer.</span>
+(<span class="org-keyword">defun</span> <span class="org-function-name">toggle-eshell-buffer</span> ()
+  <span class="org-doc">"Toggle the *eshell* buffer"</span>
+  (<span class="org-keyword">interactive</span>)
+  (<span class="org-keyword">if</span> (string= (buffer-name) <span class="org-string">"*eshell*"</span>)
+          (bury-buffer)
+        (switch-to-buffer (get-buffer-create <span class="org-string">"*eshell*"</span>))))
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org12b75e7" class="outline-3">
+<h3 id="org12b75e7">Doc at point.</h3>
+<div class="outline-text-3" id="text-org12b75e7">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span class="org-keyword">defun</span> <span class="org-function-name">my-show-doc-or-describe-symbol</span> ()
+  <span class="org-doc">"Show LSP UI doc if LSP is active, otherwise describe symbol at point."</span>
+  (<span class="org-keyword">interactive</span>)
+  (<span class="org-keyword">if</span> (<span class="org-keyword">bound-and-true-p</span> lsp-mode)
+      (lsp-ui-doc-glance)
+    (describe-symbol-at-point)))
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org930151c" class="outline-3">
+<h3 id="org930151c">Duplicate &amp; move up/down lines.</h3>
+<div class="outline-text-3" id="text-org930151c">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span class="org-keyword">defun</span> <span class="org-function-name">duplicate-line</span> ()
+  (<span class="org-keyword">interactive</span>)
+  (<span class="org-keyword">let</span> ((line-text (thing-at-point 'line t)))
+    (<span class="org-keyword">save-excursion</span>
+      (move-end-of-line 1)
+      (newline)
+      (insert line-text)))
+  (forward-line 1))
+
+(<span class="org-keyword">defun</span> <span class="org-function-name">move-line-up</span> ()
+  (<span class="org-keyword">interactive</span>)
+  (<span class="org-keyword">when</span> (not (= (line-number-at-pos) 1))
+    (transpose-lines 1)
+    (forward-line -2)))
+
+(<span class="org-keyword">defun</span> <span class="org-function-name">move-line-down</span> ()
+  (<span class="org-keyword">interactive</span>)
+  (forward-line 1)
+  (<span class="org-keyword">when</span> (not (= (line-number-at-pos) (point-max)))
+    (transpose-lines 1))
+  (forward-line -1))
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org109064d" class="outline-3">
+<h3 id="org109064d">Hide passwords in org files.</h3>
+<div class="outline-text-3" id="text-org109064d">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span class="org-comment-delimiter">;; </span><span class="org-comment">Define a custom face for the highlight</span>
+(<span class="org-keyword">defface</span> <span class="org-variable-name">my-highlight-face</span>
+  '((t (<span class="org-builtin">:foreground</span> <span class="org-string">"gray"</span>))) <span class="org-comment-delimiter">; </span><span class="org-comment">Change "red" to your desired color</span>
+  <span class="org-doc">"Face for highlighting !!word!! patterns."</span>)
+
+<span class="org-comment-delimiter">;; </span><span class="org-comment">Function to replace matched text with asterisks</span>
+(<span class="org-keyword">defun</span> <span class="org-function-name">replace-with-asterisks</span> (limit)
+  <span class="org-doc">"Replace !!word!! with asterisks up to LIMIT."</span>
+  (<span class="org-keyword">while</span> (re-search-forward <span class="org-string">"!!</span><span class="org-string"><span class="org-regexp-grouping-backslash">\\</span></span><span class="org-string"><span class="org-regexp-grouping-construct">(</span></span><span class="org-string">.*?</span><span class="org-string"><span class="org-regexp-grouping-backslash">\\</span></span><span class="org-string"><span class="org-regexp-grouping-construct">)</span></span><span class="org-string">!!"</span> limit t)
+    (<span class="org-keyword">let*</span> ((match (match-string 1))
+           (start (match-beginning 0))
+           (end (match-end 0))
+           (asterisks (make-string (length match) ?*)))
+      (add-text-properties start end `(display ,asterisks face my-highlight-face)))))
+
+<span class="org-comment-delimiter">;; </span><span class="org-comment">Add custom keyword for font-lock in org-mode</span>
+(<span class="org-keyword">defun</span> <span class="org-function-name">my/org-mode-custom-font-lock</span> ()
+  <span class="org-doc">"Add custom font-lock keywords for org-mode."</span>
+  (font-lock-add-keywords nil
+                          '((replace-with-asterisks))))
+
+<span class="org-comment-delimiter">;; </span><span class="org-comment">Hook the custom font-lock configuration into org-mode</span>
+(add-hook 'org-mode-hook 'my/org-mode-custom-font-lock)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org30fe619" class="outline-3">
+<h3 id="org30fe619">Help at point.</h3>
+<div class="outline-text-3" id="text-org30fe619">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span class="org-keyword">defun</span> <span class="org-function-name">describe-symbol-at-point</span> ()
+  <span class="org-doc">"Display the documentation of the symbol at point, if it exists."</span>
+  (<span class="org-keyword">interactive</span>)
+  (<span class="org-keyword">let</span> ((symbol (symbol-at-point)))
+    (<span class="org-keyword">if</span> symbol
+        (<span class="org-keyword">cond</span>
+         ((fboundp symbol) (describe-function symbol))
+         ((boundp symbol) (describe-variable symbol))
+         (t (message <span class="org-string">"No documentation found for symbol at point: %s"</span> symbol)))
+      (message <span class="org-string">"No symbol at point"</span>))))
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb1847d8" class="outline-3">
+<h3 id="orgb1847d8">fz-themes</h3>
+<div class="outline-text-3" id="text-orgb1847d8">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span class="org-keyword">defun</span> <span class="org-function-name">custom-jp-themes</span> (<span class="org-type">&amp;optional</span> theme-dir)
+
+  (<span class="org-keyword">defun</span> <span class="org-function-name">custom-jp-themes</span> (<span class="org-type">&amp;optional</span> theme-dir)
+        <span class="org-doc">"Return a list of custom themes from a specified directory.</span>
+<span class="org-doc">Search the directory for files named FOO-theme.el, and return a list of FOO symbols,</span>
+<span class="org-doc">excluding the '</span><span class="org-doc"><span class="org-constant">default</span></span><span class="org-doc">' theme and any internal themes.</span>
+
+<span class="org-doc">If THEME-DIR is nil, it defaults to `</span><span class="org-doc"><span class="org-constant">~/.emacs.d/lisp/jp-themes/</span></span><span class="org-doc">'."</span>
+        (<span class="org-keyword">let</span> ((suffix <span class="org-string">"-theme\\.el\\'"</span>)
+          (directory (<span class="org-keyword">or</span> theme-dir <span class="org-string">"~/.emacs.d/lisp/jp-themes/"</span>))
+          themes)
+      <span class="org-comment-delimiter">;; </span><span class="org-comment">Ensure the directory exists</span>
+      (<span class="org-keyword">when</span> (file-directory-p directory)
+                <span class="org-comment-delimiter">;; </span><span class="org-comment">Iterate over all theme files in the directory</span>
+                (<span class="org-keyword">dolist</span> (file (directory-files directory nil suffix))
+          (<span class="org-keyword">let</span> ((theme (intern (substring file 0 (string-match-p suffix file)))))
+                        <span class="org-comment-delimiter">;; </span><span class="org-comment">Add to the list if it's valid, and exclude Emacs built-in "default" theme</span>
+                        (<span class="org-keyword">and</span> (not (eq theme 'default))  <span class="org-comment-delimiter">;; </span><span class="org-comment">Ensure "default" is excluded</span>
+               (not (memq theme themes))  <span class="org-comment-delimiter">;; </span><span class="org-comment">Avoid duplicates</span>
+               (<span class="org-keyword">push</span> theme themes)))))
+      (nreverse themes)))
+
+  (<span class="org-keyword">defcustom</span> <span class="org-variable-name">fz-themes</span> nil
+        <span class="org-doc">"List of themes (symbols or regexps) to be presented for selection.</span>
+<span class="org-doc">nil shows all `</span><span class="org-doc"><span class="org-constant">custom-available-themes</span></span><span class="org-doc">'."</span>
+        <span class="org-builtin">:type</span> '(repeat (choice symbol regexp)))
+
+  (<span class="org-keyword">defun</span> <span class="org-function-name">fz-theme</span> (theme)
+        <span class="org-doc">"Disable current themes and enable THEME from `fz-themes`.</span>
+
+<span class="org-doc">The command supports previewing the currently selected theme."</span>
+        (<span class="org-keyword">interactive</span>
+         (list
+      (<span class="org-keyword">let*</span> ((regexp (consult--regexp-filter
+                      (mapcar (<span class="org-keyword">lambda</span> (x) (<span class="org-keyword">if</span> (stringp x) x (format <span class="org-string">"\\`</span><span class="org-string"><span class="org-constant"><span class="org-constant">%s\\</span></span></span><span class="org-string">'"</span> x)))
+                              fz-themes)))
+                         (avail-themes (seq-filter
+                                                        (<span class="org-keyword">lambda</span> (x) (string-match-p regexp (symbol-name x)))
+                                                        (custom-jp-themes)))  <span class="org-comment-delimiter">;; </span><span class="org-comment">Only use themes from custom-jp-themes</span>
+                         (saved-theme (car custom-enabled-themes)))
+                (consult--read
+                 (mapcar #'symbol-name avail-themes)
+                 <span class="org-builtin">:prompt</span> <span class="org-string">"Theme: "</span>
+                 <span class="org-builtin">:require-match</span> t
+                 <span class="org-builtin">:category</span> 'theme
+                 <span class="org-builtin">:history</span> 'consult--theme-history
+                 <span class="org-builtin">:lookup</span> (<span class="org-keyword">lambda</span> (selected <span class="org-type">&amp;rest</span> _)
+                   (<span class="org-keyword">setq</span> selected (<span class="org-keyword">and</span> selected (intern-soft selected)))
+                   (<span class="org-keyword">or</span> (<span class="org-keyword">and</span> selected (car (memq selected avail-themes)))
+                      saved-theme))
+                 <span class="org-builtin">:state</span> (<span class="org-keyword">lambda</span> (action theme)
+                  (<span class="org-keyword">pcase</span> action
+                                        ('return (fz-theme (<span class="org-keyword">or</span> theme saved-theme)))
+                                        ((<span class="org-keyword">and</span> 'preview (guard theme)) (fz-theme theme))))
+                 <span class="org-builtin">:default</span> (symbol-name (<span class="org-keyword">or</span> saved-theme 'default))))))
+        (<span class="org-keyword">when</span> (eq theme 'default) (<span class="org-keyword">setq</span> theme nil))
+        (<span class="org-keyword">unless</span> (eq theme (car custom-enabled-themes))
+      (mapc #'disable-theme custom-enabled-themes)
+      (<span class="org-keyword">when</span> theme
+                (<span class="org-keyword">if</span> (custom-theme-p theme)
+                        (enable-theme theme)
+          (load-theme theme <span class="org-builtin">:no-confirm</span>)))))
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orga956904" class="outline-3">
+<h3 id="orga956904">Custom functions.</h3>
+<div class="outline-text-3" id="text-orga956904">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span class="org-comment-delimiter">;; </span><span class="org-comment">Open files in the lisp folder</span>
+(<span class="org-keyword">require</span> '<span class="org-constant">find-lisp</span>)
+(<span class="org-keyword">defun</span> <span class="org-function-name">open-lisp-and-org-files</span> ()
+  <span class="org-doc">"Open a Lisp or Org file from ~/.emacs.d/lisp directory, including subfolders."</span>
+  (<span class="org-keyword">interactive</span>)
+  (<span class="org-keyword">let*</span> ((directory <span class="org-string">"~/.emacs.d/lisp"</span>)
+         (el-files (find-lisp-find-files directory <span class="org-string">".*\\.el$"</span>))
+         (org-files (find-lisp-find-files directory <span class="org-string">".*\\.org$"</span>))
+         (all-files (append el-files org-files))
+         (file (completing-read <span class="org-string">"Select file: "</span> all-files nil t)))
+    (find-file file)))
+
+<span class="org-comment-delimiter">;; </span><span class="org-comment">Follow urls in the buffer</span>
+(<span class="org-keyword">defun</span> <span class="org-function-name">list-and-open-url-in-buffer</span> ()
+  <span class="org-doc">"List all URLs in the current buffer, display them in the minibuffer, and open a selected URL in the browser."</span>
+  (<span class="org-keyword">interactive</span>)
+  (<span class="org-keyword">let</span> (urls)
+    (<span class="org-keyword">save-excursion</span>
+      (goto-char (point-min))
+      (<span class="org-keyword">while</span> (re-search-forward <span class="org-string">"</span><span class="org-string"><span class="org-regexp-grouping-backslash">\\</span></span><span class="org-string"><span class="org-regexp-grouping-construct">(</span></span><span class="org-string">http</span><span class="org-string"><span class="org-regexp-grouping-backslash">\\</span></span><span class="org-string"><span class="org-regexp-grouping-construct">|</span></span><span class="org-string">https</span><span class="org-string"><span class="org-regexp-grouping-backslash">\\</span></span><span class="org-string"><span class="org-regexp-grouping-construct">|</span></span><span class="org-string">ftp</span><span class="org-string"><span class="org-regexp-grouping-backslash">\\</span></span><span class="org-string"><span class="org-regexp-grouping-construct">|</span></span><span class="org-string">file</span><span class="org-string"><span class="org-regexp-grouping-backslash">\\</span></span><span class="org-string"><span class="org-regexp-grouping-construct">|</span></span><span class="org-string">mailto</span><span class="org-string"><span class="org-regexp-grouping-backslash">\\</span></span><span class="org-string"><span class="org-regexp-grouping-construct">)</span></span><span class="org-string">:[</span><span class="org-string"><span class="org-negation-char">^</span></span><span class="org-string"> \t\n]+"</span> nil t)
+        (<span class="org-keyword">push</span> (match-string 0) urls)))
+    (<span class="org-keyword">if</span> urls
+        (<span class="org-keyword">let</span> ((url (completing-read <span class="org-string">"Select URL to open: "</span> (reverse urls) nil t)))
+          (browse-url url))
+      (message <span class="org-string">"No URLs found in the buffer."</span>))))
+
+<span class="org-comment-delimiter">;; </span><span class="org-comment">Export org files to pdf using tectonic</span>
+(<span class="org-keyword">defun</span> <span class="org-function-name">org-export-to-latex-and-compile-with-tectonic</span> ()
+  <span class="org-doc">"Export the current Org file to LaTeX, then compile with tectonic using shell-escape."</span>
+  (<span class="org-keyword">interactive</span>)
+  (<span class="org-keyword">let*</span> ((org-file (buffer-file-name))
+         (tex-file (concat (file-name-sans-extension org-file) <span class="org-string">".tex"</span>))
+         (tectonic-command (concat <span class="org-string">"tectonic -Z shell-escape "</span> tex-file)))
+    <span class="org-comment-delimiter">;; </span><span class="org-comment">Export Org file to LaTeX</span>
+    (org-latex-export-to-latex)
+    <span class="org-comment-delimiter">;; </span><span class="org-comment">Run tectonic command in a temporary buffer to avoid displaying the output</span>
+    (<span class="org-keyword">with-temp-buffer</span>
+      (shell-command tectonic-command (current-buffer)))
+    (message <span class="org-string">"Compiled %s to PDF with Tectonic."</span> tex-file)))
+
+(global-set-key (kbd <span class="org-string">"C-c e l"</span>) 'org-export-to-latex-and-compile-with-tectonic)
+
+<span class="org-comment-delimiter">;; </span><span class="org-comment">Update my web-page</span>
+(<span class="org-keyword">defun</span> <span class="org-function-name">publish-my-blog</span> ()
+  <span class="org-doc">"Export all subtrees with Hugo, then run the publish blog script within Emacs and display a success message in the minibuffer."</span>
+  (<span class="org-keyword">interactive</span>)
+  (<span class="org-keyword">let</span> ((commit-msg (read-string <span class="org-string">"Enter commit message: "</span>)))
+    <span class="org-comment-delimiter">;; </span><span class="org-comment">Export all subtrees with Hugo</span>
+    (org-hugo-export-wim-to-md <span class="org-builtin">:all-subtrees</span>)
+    <span class="org-comment-delimiter">;; </span><span class="org-comment">Run the publish script</span>
+    (<span class="org-keyword">let</span> ((process (start-process-shell-command
+                    <span class="org-string">"publish-blog"</span>                       <span class="org-comment-delimiter">; </span><span class="org-comment">Process name</span>
+                    <span class="org-string">"*publish-blog-output*"</span>              <span class="org-comment-delimiter">; </span><span class="org-comment">Output buffer</span>
+                    (format <span class="org-string">"~/webdev/jpachecoxyz.github.io/hugo/publish.sh \"%s\""</span> commit-msg))))  <span class="org-comment-delimiter">; </span><span class="org-comment">Run the script with the commit message</span>
+      <span class="org-comment-delimiter">;; </span><span class="org-comment">Set up the process sentinel to check the process status</span>
+      (set-process-sentinel
+       process
+       (<span class="org-keyword">lambda</span> (process event)
+         (<span class="org-keyword">when</span> (string= event <span class="org-string">"finished\n"</span>)
+           (message <span class="org-string">"jpacheco.xyz was correctly updated!"</span>)))))))
+
+(global-set-key (kbd <span class="org-string">"C-c u b"</span>) 'publish-my-blog)
+
+<span class="org-comment-delimiter">;; </span><span class="org-comment">Search roam</span>
+(<span class="org-keyword">defun</span> <span class="org-function-name">jp/search-roam</span> ()
+  <span class="org-doc">"Run consult-ripgrep on the org roam directory"</span>
+  (<span class="org-keyword">interactive</span>)
+  (consult-ripgrep org-roam-directory nil))
+(global-set-key (kbd <span class="org-string">"C-c n s"</span>) 'jp/search-roam)
+
+(<span class="org-keyword">defun</span> <span class="org-function-name">jp/yt-shorts-timer</span> ()
+  (<span class="org-keyword">interactive</span>)
+  (org-timer-set-timer <span class="org-string">"55s"</span>))
+(global-set-key (kbd <span class="org-string">"&lt;f4&gt;"</span>) 'jp/yt-shorts-timer)
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org3dc727c" class="outline-2">
+<h2 id="org3dc727c">Linux</h2>
+</div>
+<div id="outline-container-org2faefba" class="outline-2">
+<h2 id="org2faefba">Python</h2>
+<div class="outline-text-2" id="text-org2faefba">
+</div>
+<div id="outline-container-org23b612f" class="outline-3">
+<h3 id="org23b612f">Avoid SSL verification when installing packages through pip.</h3>
+<div class="outline-text-3" id="text-org23b612f">
+<p>
+I have some issues with the firewall in one of my jobs, so in order to be able to install python packages through pip we need to skip the <code>SSL</code> verification with the following flags.
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">pip install --no-cache-dir --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org &lt;program&gt;
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd84faeb" class="outline-2">
+<h2 id="orgd84faeb">Robots</h2>
+</div>
+<div id="outline-container-orge330fc4" class="outline-2">
+<h2 id="orge330fc4">Windows</h2>
+<div class="outline-text-2" id="text-orge330fc4">
+</div>
+<div id="outline-container-org159dc3e" class="outline-3">
+<h3 id="org159dc3e">Change IP address within terminal.</h3>
+<div class="outline-text-3" id="text-org159dc3e">
+<p>
+This cmd script prompt for an IP to b changed in the computer. Must run as root/administrator.
+</p>
+<div class="org-src-container">
+<pre class="src src-bat">@<span class="org-builtin">echo</span> off
+<span class="org-builtin">setlocal</span>
+
+<span class="org-comment-delimiter">rem </span><span class="org-comment">Prompt the user for new IP address</span>
+<span class="org-builtin">set</span> <span class="org-variable-name">/</span><span class="org-type"><span class="org-variable-name">p</span></span> newIP=<span class="org-string">"Enter the new IP address: "</span>
+<span class="org-builtin">set</span> <span class="org-string">"newSubnetMask=255.255.255.0"</span>
+
+<span class="org-comment-delimiter">rem </span><span class="org-comment">Set the new IP address while keeping existing subnet mask and gateway</span>
+netsh interface ipv4 <span class="org-builtin">set</span> <span class="org-variable-name">address</span> name=<span class="org-string">"Ethernet"</span> static %<span class="org-variable-name">newIP</span>% %<span class="org-variable-name">newSubnetMask</span>% 
+
+<span class="org-comment-delimiter">rem </span><span class="org-comment">Display the new IP configuration</span>
+
+<span class="org-keyword">if</span> %<span class="org-variable-name">errorlevel</span>% <span class="org-keyword">equ</span> 0 (
+    <span class="org-builtin">echo</span> IP address changed successfully.
+) <span class="org-keyword">else</span> (
+    <span class="org-builtin">echo</span> Failed to change IP address. Please make sure you have administrative privileges.
+)
+
+<span class="org-builtin">endlocal</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: 2024-09-03 Tue 15:40</p>
+<p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 29.4 (<a href="https://orgmode.org">Org</a> mode 9.6.15)</p>
+</div>
+</body>
+</html>

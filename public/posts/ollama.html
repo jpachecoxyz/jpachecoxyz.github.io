@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ellama, a emacs AI helper.</title>
+<meta name="description" content="A brief introduction to how to install ellama and ollama." />
+<meta name="generator" content="Org Mode" />
+<!-- <link rel="stylesheet" type="text/css" href="/ox.css"/> -->
+<link rel="stylesheet" type="text/css" href="/custom.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<!-- copy org-blocks to clipboard  -->
+<script src="/cpbtn.js"></script>
+<script>
+  window.onload = function() {
+      // Call the function to create copy buttons in each org-src-container div
+      createCopyButtonForDivs();
+  };
+</script>
+</head>
+<body>
+<div id="preamble" class="status">
+<hr style="border-top: 1px solid black;">
+<div class='topnav' style='display: flex; justify-content: space-between; align-items: center;'>
+  <h2 style='margin-top: 0; margin-bottom: 0; margin-left:0px;'>jpachecoxyz</h2> 
+  <div>
+    <a href='/index.html' style='font-weight:bold;'>Home</a> |
+    <a href='/archive.html' style='font-weight:bold;'>Blog</a> | 
+    <a href='/about.html' style='font-weight:bold;'>About Me</a> | 
+	<a href="/rss.xml">
+	  <i class="fas">&#xf09e;</i>
+	</a>
+  </div>
+</div>
+<hr style="border-top: 1px solid black;">
+</div>
+<div id="content" class="content">
+<header>
+<h1 class="title">Ellama, a emacs AI helper.</h1>
+</header><nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org9927196">Installation of Ollama.</a></li>
+<li><a href="#orgcfd9845">Installing a model.</a></li>
+<li><a href="#orgf3f89a1">Installing ellama.</a></li>
+<li><a href="#orgaa1857d">My ellama configuration.</a></li>
+</ul>
+</div>
+</nav>
+
+<div id="outline-container-org9927196" class="outline-2">
+<h2 id="org9927196">Installation of Ollama.</h2>
+<div class="outline-text-2" id="text-org9927196">
+<p>
+In my case, I installed <code>ollama</code> from my package manager, although you can install it using the following code:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">curl -fsSL https://ollama.com/install.sh | sh 
+</pre>
+</div>
+
+<p>
+Once <code>ollama</code> is installed, you should add it to your startup. In my case, I do it from the init of <code>hyprland</code>, but it will depend on whether you use <code>.xinitrc</code> or something else. It should be launched as follows:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">ollama serve 
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgcfd9845" class="outline-2">
+<h2 id="orgcfd9845">Installing a model.</h2>
+<div class="outline-text-2" id="text-orgcfd9845">
+<p>
+To use Ollama, we need to download a model. A model is basically who you will be talking to when making a query. In the case of <code>ellama</code>, they suggest installing <code>zephyr</code> as the model, so we need to install it.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">ollama pull zephyr
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf3f89a1" class="outline-2">
+<h2 id="orgf3f89a1">Installing ellama.</h2>
+<div class="outline-text-2" id="text-orgf3f89a1">
+<p>
+Once <code>ollama &amp; zephyr</code> are installed, we can proceed to install and configure <code>ellama</code> in Emacs.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaa1857d" class="outline-2">
+<h2 id="orgaa1857d">My ellama configuration.</h2>
+<div class="outline-text-2" id="text-orgaa1857d">
+<p>
+As you can see, it's not very complicated. The options for the <code>ellama</code> package are quite intuitive, like the language and keybindings. If you have any questions, feel free to comment, and we can follow up.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span class="org-keyword">use-package</span> ellama
+  (<span class="org-keyword">setopt</span> ellama-language <span class="org-string">"English"</span>)
+  (<span class="org-keyword">setopt</span> ellama-user-nick <span class="org-string">"jpacheco.xyz"</span>)
+  (<span class="org-keyword">setopt</span> ellama-keymap-prefix <span class="org-string">"C-c e"</span>)
+  (<span class="org-keyword">require</span> '<span class="org-constant">llm-ollama</span>)
+  (<span class="org-keyword">setopt</span> ellama-provider
+                  (make-llm-ollama
+                   <span class="org-string">"zephyr"</span>
+                   <span class="org-string">"zephyr"</span>)))
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: 2024-09-22 Sun 00:00</p>
+<p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 29.4 (<a href="https://orgmode.org">Org</a> mode 9.6.15)</p>
+</div>
+</body>
+</html>
