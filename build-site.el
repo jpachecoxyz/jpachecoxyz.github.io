@@ -74,7 +74,7 @@ https://ogbe.net/blog/blogging_with_org.html"
        (list "org-site:main"
              :recursive t
              :base-directory "./content"
-             :publishing-directory "./public"
+             :publishing-directory "./docs"
              :publishing-function 'org-html-publish-to-html
              :html-preamble (file-contents "assets/html_preamble.html")
              :with-author nil
@@ -97,7 +97,7 @@ https://ogbe.net/blog/blogging_with_org.html"
        (list "org-site:static"
              :base-directory "./content/"
              :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|svg"
-             :publishing-directory "./public"
+             :publishing-directory "./docs"
              :recursive t
              :publishing-function 'org-publish-attachment
              :exclude ".*/posts/drafts/.*"  ; Exclude drafts directory from publishing
@@ -105,7 +105,7 @@ https://ogbe.net/blog/blogging_with_org.html"
        (list "org-site:assets"
              :base-directory "./assets/"
              :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|ico"
-             :publishing-directory "./public/"
+             :publishing-directory "./docs"
              :recursive t
              :publishing-function 'org-publish-attachment)
        ))
@@ -138,10 +138,10 @@ https://ogbe.net/blog/blogging_with_org.html"
 (setq webfeeder-date-function #'dw/rss-extract-date)
 
 (webfeeder-build "rss.xml"
-                 "./public"
+                 "./docs"
                  "https://jpacheco.codeberg.page/"
                  (mapcar (lambda (file) (concat "posts/" file))
-                         (let ((default-directory (expand-file-name "./public/posts/")))
+                         (let ((default-directory (expand-file-name "./docs/posts/")))
                            (directory-files-recursively "./" ".*\\.html$")))
                  :builder 'webfeeder-make-rss
                  :title "Javier Pacheco's Blog"
