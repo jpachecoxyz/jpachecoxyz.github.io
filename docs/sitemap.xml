@@ -2,10 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/posts/2024/09/pymetrics/</loc>
+    <loc>/posts/pymetrics/</loc>
     <lastmod>2024-09-04T02:44:00-05:00</lastmod>
   </url><url>
-    <loc>/posts/2024/11/a-job-history./</loc>
+    <loc>/posts/a-job-history/</loc>
     <lastmod>2024-11-18T09:06:00-06:00</lastmod>
   </url><url>
     <loc>/tags/blog/</loc>
@@ -23,7 +23,7 @@
     <loc>/tags/</loc>
     <lastmod>2024-11-18T09:06:00-06:00</lastmod>
   </url><url>
-    <loc>/posts/2024/09/ellama-a-emacs-ai-helper./</loc>
+    <loc>/posts/ellama/</loc>
     <lastmod>2024-09-22T12:49:00-05:00</lastmod>
   </url><url>
     <loc>/tags/tecnology/</loc>
@@ -32,52 +32,52 @@
     <loc>/tags/wayland/</loc>
     <lastmod>2024-09-22T12:49:00-05:00</lastmod>
   </url><url>
-    <loc>/posts/2024/09/basics-of-hugo/</loc>
+    <loc>/posts/basics-of-hugo/</loc>
     <lastmod>2024-09-04T03:32:00-05:00</lastmod>
   </url><url>
     <loc>/tags/emacs/</loc>
     <lastmod>2024-09-04T02:44:00-05:00</lastmod>
   </url><url>
-    <loc>/posts/2024/09/emacs-vs-neovim/</loc>
+    <loc>/posts/emacs-vs-nvim/</loc>
     <lastmod>2024-09-04T02:44:00-05:00</lastmod>
   </url><url>
-    <loc>/posts/2024/09/how-i-made-my-blog-with-emacs-and-hugo/</loc>
+    <loc>/posts/my-blog-in-emacs/</loc>
     <lastmod>2024-09-04T02:44:00-05:00</lastmod>
   </url><url>
-    <loc>/posts/2024/09/install-telega-in-nixos-emacs./</loc>
+    <loc>/posts/install-telega-nixos/</loc>
     <lastmod>2024-09-04T02:44:00-05:00</lastmod>
   </url><url>
     <loc>/tags/linux/</loc>
     <lastmod>2024-09-04T02:44:00-05:00</lastmod>
   </url><url>
-    <loc>/posts/2024/09/search-tool-in-your-hugo-website./</loc>
+    <loc>/posts/search-tool-hugo/</loc>
     <lastmod>2024-09-04T02:44:00-05:00</lastmod>
   </url><url>
-    <loc>/posts/2024/09/share-screen-in-hyprland./</loc>
+    <loc>/posts/share-screen-hyprland/</loc>
     <lastmod>2024-09-04T02:44:00-05:00</lastmod>
   </url><url>
-    <loc>/posts/2024/09/efetch.el/</loc>
+    <loc>/posts/efetch/</loc>
     <lastmod>2024-09-04T02:43:00-05:00</lastmod>
   </url><url>
-    <loc>/posts/2024/09/screen-record/</loc>
+    <loc>/posts/screen-record/</loc>
     <lastmod>2024-09-04T02:43:00-05:00</lastmod>
   </url><url>
     <loc>/tags/script/</loc>
     <lastmod>2024-09-04T02:43:00-05:00</lastmod>
   </url><url>
-    <loc>/posts/2024/09/shell-utils/</loc>
+    <loc>/posts/shell-utils/</loc>
     <lastmod>2024-09-04T02:43:00-05:00</lastmod>
   </url><url>
-    <loc>/posts/2024/09/void-linux-bootstrap./</loc>
+    <loc>/posts/voidstrap/</loc>
     <lastmod>2024-09-04T02:43:00-05:00</lastmod>
+  </url><url>
+    <loc>/wiki/</loc>
+    <lastmod>2024-09-03T15:40:00-05:00</lastmod>
   </url><url>
     <loc>/tags/wiki/</loc>
     <lastmod>2024-09-03T15:40:00-05:00</lastmod>
   </url><url>
     <loc>/wiki/wiki/</loc>
-    <lastmod>2024-09-03T15:40:00-05:00</lastmod>
-  </url><url>
-    <loc>/wiki/</loc>
     <lastmod>2024-09-03T15:40:00-05:00</lastmod>
   </url><url>
     <loc>/tags/about/</loc>
@@ -86,8 +86,6 @@
     <loc>/about/</loc>
     <lastmod>2024-07-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/blog/</loc>
-  </url><url>
-    <loc>/series/</loc>
+    <loc>/categories/</loc>
   </url>
 </urlset>
