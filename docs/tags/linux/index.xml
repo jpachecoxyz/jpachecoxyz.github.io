@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on jpachecoxyz&#39;s Blog</title>
+    <link>/tags/linux/</link>
+    <description>Recent content in Linux on jpachecoxyz&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Wed, 04 Sep 2024 02:44:00 -0500</lastBuildDate>
+    <atom:link href="/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pymetrics</title>
+      <link>/posts/2024/09/pymetrics/</link>
+      <pubDate>Wed, 04 Sep 2024 02:44:00 -0500</pubDate>
+      <guid>/posts/2024/09/pymetrics/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;Managing and monitoring the performance of industrial machines is critical to ensuring minimal downtime and maximizing productivity. The need for an effective system to store and analyze maintenance data became apparent when the maintenance manager contacted me with a specific problem. They struggled to create KPI graphs because they lacked a proper system to store all the necessary data. To address this challenge, I developed a maintenance log app that efficiently tracks and records machine failures, repair time, shutdown time, and the technicians involved in the repairs. The data is stored in a CSV format, making it easy to create KPI (Key Performance Indicator) graphs in Excel for analysis.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Install Telega in NixOS - Emacs.</title>
+      <link>/posts/2024/09/install-telega-in-nixos-emacs./</link>
+      <pubDate>Wed, 04 Sep 2024 02:44:00 -0500</pubDate>
+      <guid>/posts/2024/09/install-telega-in-nixos-emacs./</guid>
+      <description>&lt;h2 id=&#34;what-is-telega&#34;&gt;What is telega?.&lt;/h2&gt;&#xA;&lt;p&gt;According to the &lt;a href=&#34;https://github.com/zevlg/telega.el&#34;&gt;Github&lt;/a&gt; repository:&lt;/p&gt;&#xA;&lt;dl&gt;&#xA;&lt;dt&gt;Telega&lt;/dt&gt;&#xA;&lt;dd&gt;telega.el is full featured unofficial client for Telegram platform for GNU Emacs.&lt;/dd&gt;&#xA;&lt;/dl&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;As you may know, my main OS, at this time (2024-08-21) is &lt;code&gt;NixOS&lt;/code&gt;, so I was trying to install &lt;code&gt;Telega&lt;/code&gt; in my emacs, but as you can imagine, the file system hierarchy don&amp;rsquo;t works &amp;ldquo;normal&amp;rdquo; in &lt;code&gt;NixOS&lt;/code&gt;, so is a little tricky set up the environment to actually make &lt;code&gt;Telega&lt;/code&gt; works.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Share Screen in Hyprland.</title>
+      <link>/posts/2024/09/share-screen-in-hyprland./</link>
+      <pubDate>Wed, 04 Sep 2024 02:44:00 -0500</pubDate>
+      <guid>/posts/2024/09/share-screen-in-hyprland./</guid>
+      <description>&lt;h2 id=&#34;the-issue&#34;&gt;The issue:&lt;/h2&gt;&#xA;&lt;p&gt;We have a telegram group, in where we share emacs things and some other related to programming and linux in the most part of the time. So one day one of the members says that we can share screens and have a kind of podcast and talk about our environment configurations (sway/hyprland), so I was very curious about it so he invite me to another telegram group, this telegram group is for his YouTube channel, for test my hyprland configuration because he told me that he has troubles in his hyprland configuration using manjaro.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Screen Record</title>
+      <link>/posts/2024/09/screen-record/</link>
+      <pubDate>Wed, 04 Sep 2024 02:43:00 -0500</pubDate>
+      <guid>/posts/2024/09/screen-record/</guid>
+      <description>&lt;p&gt;This script record the screen with the &lt;code&gt;wf-recorder&lt;/code&gt; tool, it can be the hole screen or a specific area of it.&#xA;The script is going to store the video in &lt;code&gt;/tmp/screencast.mp4&lt;/code&gt;, this script only store one video, personally I think that have more than one record is a mess, more if you only wants to share a quick screencast to &lt;em&gt;telegram, irc, cinny&lt;/em&gt; or even to share it through &lt;code&gt;0x0.st&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Shell-utils</title>
+      <link>/posts/2024/09/shell-utils/</link>
+      <pubDate>Wed, 04 Sep 2024 02:43:00 -0500</pubDate>
+      <guid>/posts/2024/09/shell-utils/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;Welcome to the Shell Utilities &lt;a href=&#34;https://github.com/jpachecoxyz/shell-utils&#34;&gt;repository&lt;/a&gt; This project provides a collection of shell scripts tailored for different window managers and environments, including i3, Hyprland, and Sway, on X11 and Wayland.&lt;/p&gt;&#xA;&lt;h2 id=&#34;repository-structure&#34;&gt;Repository Structure&lt;/h2&gt;&#xA;&lt;p&gt;The repository is organized into directories based on the environment and window manager:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── wayland&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   ├── hyprland&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   └── sway&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;└── x11&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    └── i3&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;dl&gt;&#xA;&lt;dt&gt;wayland/hyprland&lt;/dt&gt;&#xA;&lt;dd&gt;Scripts for Hyprland on Wayland.&lt;/dd&gt;&#xA;&lt;dt&gt;wayland/sway&lt;/dt&gt;&#xA;&lt;dd&gt;Scripts for Sway on Wayland.&lt;/dd&gt;&#xA;&lt;dt&gt;x11/i3&lt;/dt&gt;&#xA;&lt;dd&gt;Scripts for i3 on X11.&lt;/dd&gt;&#xA;&lt;/dl&gt;&#xA;&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;&#xA;&lt;p&gt;To install the scripts, use the provided &lt;code&gt;install.sh&lt;/code&gt; script. You can install scripts for a specific window manager or all at once.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Void linux bootstrap.</title>
+      <link>/posts/2024/09/void-linux-bootstrap./</link>
+      <pubDate>Wed, 04 Sep 2024 02:43:00 -0500</pubDate>
+      <guid>/posts/2024/09/void-linux-bootstrap./</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;This is the first post of the 2024, this is a project that I am working on in the last&#xA;year, is a minimalist voidlinux instalator it is based in some recommendations in&#xA;a guides that some friends of my have but &amp;ldquo;semi-automated&amp;rdquo;.&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h2 id=&#34;voidstrap-installer-dot&#34;&gt;VoidStrap installer.&lt;/h2&gt;&#xA;&lt;p&gt;A basic minimalist installer of &lt;code&gt;void-linux&lt;/code&gt; with some packages to get ready to enjoy&#xA;this amazing GNU/Linux distribution.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
