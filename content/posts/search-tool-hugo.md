@@ -14,7 +14,7 @@ As websites grow, incorporating a search feature becomes increasingly crucial. H
 
 <div class="org-center">
 
-{{< figure src="/posts/images/hugo-search/jpacheco-search.png" caption="<span class=\"figure-number\">Figure 1: </span>This is how my web looks." >}}
+{{< figure src="/images/posts/hugo-search/jpacheco-search.png" caption="<span class=\"figure-number\">Figure 1: </span>This is how my web looks." >}}
 
 </div>
 

@@ -871,7 +871,7 @@ Embrace a new level of Emacs mastery with =efetch.el= – a powerful and user-fr
 
 #+begin_center
 #+CAPTION: efetch.el tool in the left side of the frame.
-[[/posts/images/efetch.el/efetch.png]]
+[[/images/posts/efetch.el/efetch.png]]
 #+end_center
 
 *** Overview
@@ -1164,7 +1164,7 @@ The application is designed to be user-friendly, requiring minimal input from th
 
 #+begin_center
 #+CAPTION: Pymetrics in light-mode.
-[[/posts/images/pymetrics/pymetrics.png]]
+[[/images/posts/pymetrics/pymetrics.png]]
 #+end_center
 
 *** How to Get Started
@@ -1227,7 +1227,7 @@ I have been using emacs most of the time for writting, and of course when I star
 
 #+begin_center
 #+CAPTION: A overview of how my org file looks like.
-[[/posts/images/my-blog-in-emacs/overview.png]]
+[[/images/posts/my-blog-in-emacs/overview.png]]
 #+end_center
 
 *** What software and packages do I use?.
@@ -1365,7 +1365,7 @@ As websites grow, incorporating a search feature becomes increasingly crucial. H
 
 #+begin_center
 #+CAPTION: This is how my web looks.
-[[/posts/images/hugo-search/jpacheco-search.png]]
+[[/images/posts/hugo-search/jpacheco-search.png]]
 #+end_center
 
 Fortunately, there are existing solutions to address this issue. Below, we demonstrate one such solution that utilizes FuseJS and MarkJS. This implementation is inspired by a gist from eddiewebb, but it's built using plain JavaScript rather than jQuery.

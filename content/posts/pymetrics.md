@@ -56,7 +56,7 @@ The application is designed to be user-friendly, requiring minimal input from th
 
 <div class="org-center">
 
-{{< figure src="/posts/images/pymetrics/pymetrics.png" caption="<span class=\"figure-number\">Figure 1: </span>Pymetrics in light-mode." >}}
+{{< figure src="/images/posts/pymetrics/pymetrics.png" caption="<span class=\"figure-number\">Figure 1: </span>Pymetrics in light-mode." >}}
 
 </div>
 

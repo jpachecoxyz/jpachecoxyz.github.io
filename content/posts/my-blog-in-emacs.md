@@ -18,7 +18,7 @@ I have been using emacs most of the time for writting, and of course when I star
 
 <div class="org-center">
 
-{{< figure src="/posts/images/my-blog-in-emacs/overview.png" caption="<span class=\"figure-number\">Figure 1: </span>A overview of how my org file looks like." >}}
+{{< figure src="/images/posts/my-blog-in-emacs/overview.png" caption="<span class=\"figure-number\">Figure 1: </span>A overview of how my org file looks like." >}}
 
 </div>
 
