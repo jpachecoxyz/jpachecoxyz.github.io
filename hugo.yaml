@@ -84,7 +84,7 @@ params:
       ignoreLocation: false
       isCaseSensitive: false
       includeScore: false
-      includeMatches: false
+      includeMatches: true
       minMatchCharLength: 1
       shouldSort: true
       findAllMatches: false
@@ -100,9 +100,12 @@ menu:
     - identifier: posts
       name: Posts
       weight: 3
+    - identifier: wiki
+      name: Wiki
+      weight: 4
     - identifier: search
       name: Search
-      weight: 4
+      weight: 5
 
 taxonomies:
   category: categories
