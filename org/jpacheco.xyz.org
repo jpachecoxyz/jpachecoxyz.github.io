@@ -1023,7 +1023,7 @@ sh custom.sh -b dev # especify the name of a custom branch in case of needed.
   
 
 
-** DONE Shell-utils                                      :linux:script:
+** DONE Shell-utils                                           :linux:script:
 CLOSED: [2024-09-04 Wed 02:43]
 :PROPERTIES:
 :EXPORT_FILE_NAME: shell-utils.org
