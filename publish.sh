@@ -7,7 +7,7 @@
 #
 # read commit && git add . && git commit -m "$commit" && echo "hit enter to continue..." && read && git push
 
-cd ~/webdev/jpachecoxyz.github.io/hugo/ && hugo && cd ../
+cd ~/webdev/jpachecoxyz/ && hugo
 echo "Site published correctly..."
 
 # Use the first argument as the commit message
