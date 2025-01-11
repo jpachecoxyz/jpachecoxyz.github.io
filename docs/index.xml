@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>(λ jpachecoxyz)</title>
-    <link>//localhost:1313/</link>
+    <link>/</link>
     <description>Recent content on (λ jpachecoxyz)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© jpachecoxyz</copyright>
-    <lastBuildDate>Mon, 18 Nov 2024 09:06:00 -0600</lastBuildDate><atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Nov 2024 09:06:00 -0600</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Pymetrics</title>
-      <link>//localhost:1313/posts/pymetrics/</link>
+      <link>/posts/pymetrics/</link>
       <pubDate>Wed, 04 Sep 2024 02:44:00 -0500</pubDate>
       
-      <guid>//localhost:1313/posts/pymetrics/</guid>
+      <guid>/posts/pymetrics/</guid>
       <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
 &lt;p&gt;Managing and monitoring the performance of industrial machines is critical to ensuring minimal downtime and maximizing productivity. The need for an effective system to store and analyze maintenance data became apparent when the maintenance manager contacted me with a specific problem. They struggled to create KPI graphs because they lacked a proper system to store all the necessary data. To address this challenge, I developed a maintenance log app that efficiently tracks and records machine failures, repair time, shutdown time, and the technicians involved in the repairs. The data is stored in a CSV format, making it easy to create KPI (Key Performance Indicator) graphs in Excel for analysis.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>A job history.</title>
-      <link>//localhost:1313/posts/a-job-history/</link>
+      <link>/posts/a-job-history/</link>
       <pubDate>Mon, 18 Nov 2024 09:06:00 -0600</pubDate>
       
-      <guid>//localhost:1313/posts/a-job-history/</guid>
+      <guid>/posts/a-job-history/</guid>
       <description>&lt;h2 id=&#34;a-brief-introduction-dot&#34;&gt;A brief Introduction.&lt;/h2&gt;
 &lt;p&gt;This is no t going to be a post about programming or technology, this is kind of a way to express my feelings about one important thing that I think is going to change my life, I&amp;rsquo;m talking about my job and how this ambient change my mind and my vision about this important thing that a lot of us need to do and hold the job pressure to keep some security for our families.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Ellama, a emacs AI helper.</title>
-      <link>//localhost:1313/posts/ellama/</link>
+      <link>/posts/ellama/</link>
       <pubDate>Sun, 22 Sep 2024 12:49:00 -0500</pubDate>
       
-      <guid>//localhost:1313/posts/ellama/</guid>
+      <guid>/posts/ellama/</guid>
       <description>&lt;h2 id=&#34;installation-of-ollama-dot&#34;&gt;Installation of Ollama.&lt;/h2&gt;
 &lt;p&gt;In my case, I installed &lt;code&gt;ollama&lt;/code&gt; from my package manager, although you can install it using the following code:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -59,10 +59,10 @@
     
     <item>
       <title>Basics of HUGO</title>
-      <link>//localhost:1313/posts/basics-of-hugo/</link>
+      <link>/posts/basics-of-hugo/</link>
       <pubDate>Wed, 04 Sep 2024 03:32:00 -0500</pubDate>
       
-      <guid>//localhost:1313/posts/basics-of-hugo/</guid>
+      <guid>/posts/basics-of-hugo/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&amp;ldquo;Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.&amp;rdquo;&lt;/p&gt;
@@ -84,10 +84,10 @@
     
     <item>
       <title>Emacs vs Neovim</title>
-      <link>//localhost:1313/posts/emacs-vs-nvim/</link>
+      <link>/posts/emacs-vs-nvim/</link>
       <pubDate>Wed, 04 Sep 2024 02:44:00 -0500</pubDate>
       
-      <guid>//localhost:1313/posts/emacs-vs-nvim/</guid>
+      <guid>/posts/emacs-vs-nvim/</guid>
       <description>&lt;h2 id=&#34;neovim-for-programming&#34;&gt;Neovim for Programming&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Efficiency and Speed: Neovim is highly efficient for programming due to its lightweight nature and focus on speed. It starts up faster and can handle large files with ease.&lt;/li&gt;
@@ -108,20 +108,20 @@
     
     <item>
       <title>How I made my blog with emacs and hugo</title>
-      <link>//localhost:1313/posts/my-blog-in-emacs/</link>
+      <link>/posts/my-blog-in-emacs/</link>
       <pubDate>Wed, 04 Sep 2024 02:44:00 -0500</pubDate>
       
-      <guid>//localhost:1313/posts/my-blog-in-emacs/</guid>
+      <guid>/posts/my-blog-in-emacs/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;I have been using emacs most of the time for writting, and of course when I started to make my blog I have been use it (emacs) since of it. In the beginig when I start writing I was using some scripts and tips from &lt;a href=&#34;https://systemcrafters.net/&#34;&gt;system crafters&lt;/a&gt; he use htmlize and some &lt;em&gt;lisp&lt;/em&gt; scripting. It was ok but then I have been watching some &lt;a href=&#34;https://www.youtube.com/@LukeSmithxyz&#34;&gt;lukesmith&lt;/a&gt; videos and see this &lt;a href=&#34;https://www.youtube.com/watch?v=jAXKSKb3etk&amp;amp;pp=ygUOaHVnbyBsdWtlc21pdGg%3D&#34;&gt;video&lt;/a&gt; about him switching to &lt;code&gt;HUGO&lt;/code&gt;, so I decided to check &lt;code&gt;HUGO&lt;/code&gt; too.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Install Telega in NixOS - Emacs.</title>
-      <link>//localhost:1313/posts/install-telega-nixos/</link>
+      <link>/posts/install-telega-nixos/</link>
       <pubDate>Wed, 04 Sep 2024 02:44:00 -0500</pubDate>
       
-      <guid>//localhost:1313/posts/install-telega-nixos/</guid>
+      <guid>/posts/install-telega-nixos/</guid>
       <description>&lt;h2 id=&#34;what-is-telega&#34;&gt;What is telega?.&lt;/h2&gt;
 &lt;p&gt;According to the &lt;a href=&#34;https://github.com/zevlg/telega.el&#34;&gt;Github&lt;/a&gt; repository:&lt;/p&gt;
 &lt;dl&gt;
@@ -134,54 +134,54 @@
     
     <item>
       <title>Search tool in your HUGO website.</title>
-      <link>//localhost:1313/posts/search-tool-hugo/</link>
+      <link>/posts/search-tool-hugo/</link>
       <pubDate>Wed, 04 Sep 2024 02:44:00 -0500</pubDate>
       
-      <guid>//localhost:1313/posts/search-tool-hugo/</guid>
+      <guid>/posts/search-tool-hugo/</guid>
       <description>&lt;p&gt;As websites grow, incorporating a search feature becomes increasingly crucial. However, implementing search functionality can be challenging on a statically generated site since there&amp;rsquo;s no server-side component to handle the search. Instead, the search must be performed on the client side within the browser using JavaScript.&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;figure&gt;&lt;img src=&#34;//localhost:1313/images/posts/hugo-search/jpacheco-search.png&#34;
+&lt;figure&gt;&lt;img src=&#34;/images/posts/hugo-search/jpacheco-search.png&#34;
     alt=&#34;Figure 1: This is how my web looks.&#34;&gt;&lt;figcaption&gt;
       &lt;p&gt;&lt;!-- raw HTML omitted --&gt;Figure 1: &lt;!-- raw HTML omitted --&gt;This is how my web looks.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Share Screen in Hyprland.</title>
-      <link>//localhost:1313/posts/share-screen-hyprland/</link>
+      <link>/posts/share-screen-hyprland/</link>
       <pubDate>Wed, 04 Sep 2024 02:44:00 -0500</pubDate>
       
-      <guid>//localhost:1313/posts/share-screen-hyprland/</guid>
+      <guid>/posts/share-screen-hyprland/</guid>
       <description>&lt;h2 id=&#34;the-issue&#34;&gt;The issue:&lt;/h2&gt;
 &lt;p&gt;We have a telegram group, in where we share emacs things and some other related to programming and linux in the most part of the time. So one day one of the members says that we can share screens and have a kind of podcast and talk about our environment configurations (sway/hyprland), so I was very curious about it so he invite me to another telegram group, this telegram group is for his YouTube channel, for test my hyprland configuration because he told me that he has troubles in his hyprland configuration using manjaro.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Efetch.el</title>
-      <link>//localhost:1313/posts/efetch/</link>
+      <link>/posts/efetch/</link>
       <pubDate>Wed, 04 Sep 2024 02:43:00 -0500</pubDate>
       
-      <guid>//localhost:1313/posts/efetch/</guid>
+      <guid>/posts/efetch/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Embrace a new level of Emacs mastery with &lt;code&gt;efetch.el&lt;/code&gt; – a powerful and user-friendly Emacs Fetching Tool. Designed for enthusiasts who crave insights into their Emacs environment, &lt;code&gt;efetch.el&lt;/code&gt; provides a seamless way to peek under the hood of your setup. With just a simple command, unlock a left-side buffer showcasing key details such as Emacs version, host information, user details, installed packages, active theme, and default font. Customizable and accessible, this tool not only delivers a quick snapshot of your Emacs configuration but also opens the door for collaborative enhancements. Join the community on &lt;a href=&#34;https://github.com/jpachecoxyz/efetch.el&#34;&gt;Github&lt;/a&gt; contribute your ideas, and elevate your Emacs experience with &lt;code&gt;efetch.el&lt;/code&gt; today!&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Screen Record</title>
-      <link>//localhost:1313/posts/screen-record/</link>
+      <link>/posts/screen-record/</link>
       <pubDate>Wed, 04 Sep 2024 02:43:00 -0500</pubDate>
       
-      <guid>//localhost:1313/posts/screen-record/</guid>
+      <guid>/posts/screen-record/</guid>
       <description>&lt;p&gt;This script record the screen with the &lt;code&gt;wf-recorder&lt;/code&gt; tool, it can be the hole screen or a specific area of it.
 The script is going to store the video in &lt;code&gt;/tmp/screencast.mp4&lt;/code&gt;, this script only store one video, personally I think that have more than one record is a mess, more if you only wants to share a quick screencast to &lt;em&gt;telegram, irc, cinny&lt;/em&gt; or even to share it through &lt;code&gt;0x0.st&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Shell-utils</title>
-      <link>//localhost:1313/posts/shell-utils/</link>
+      <link>/posts/shell-utils/</link>
       <pubDate>Wed, 04 Sep 2024 02:43:00 -0500</pubDate>
       
-      <guid>//localhost:1313/posts/shell-utils/</guid>
+      <guid>/posts/shell-utils/</guid>
       <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
 &lt;p&gt;Welcome to the Shell Utilities &lt;a href=&#34;https://github.com/jpachecoxyz/shell-utils&#34;&gt;repository&lt;/a&gt; This project provides a collection of shell scripts tailored for different window managers and environments, including i3, Hyprland, and Sway, on X11 and Wayland.&lt;/p&gt;
 &lt;h2 id=&#34;repository-structure&#34;&gt;Repository Structure&lt;/h2&gt;
@@ -218,10 +218,10 @@ The script is going to store the video in &lt;code&gt;/tmp/screencast.mp4&lt;/co
     
     <item>
       <title>Void linux bootstrap.</title>
-      <link>//localhost:1313/posts/voidstrap/</link>
+      <link>/posts/voidstrap/</link>
       <pubDate>Wed, 04 Sep 2024 02:43:00 -0500</pubDate>
       
-      <guid>//localhost:1313/posts/voidstrap/</guid>
+      <guid>/posts/voidstrap/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;This is the first post of the 2024, this is a project that I am working on in the last
 year, is a minimalist voidlinux instalator it is based in some recommendations in
@@ -234,10 +234,10 @@ this amazing GNU/Linux distribution.&lt;/p&gt;</description>
     
     <item>
       <title>Wiki</title>
-      <link>//localhost:1313/wiki/</link>
+      <link>/wiki/</link>
       <pubDate>Tue, 03 Sep 2024 15:40:00 -0500</pubDate>
       
-      <guid>//localhost:1313/wiki/</guid>
+      <guid>/wiki/</guid>
       <description>&lt;h2 id=&#34;emacs&#34;&gt;Emacs&lt;/h2&gt;
 &lt;h3 id=&#34;doom-insert-item-dot&#34;&gt;Doom Insert item.&lt;/h3&gt;
 &lt;p&gt;This script wast taken from &lt;em&gt;doomemacs&lt;/em&gt;, it basically insert a item such a heading, subheading, checkbox, etc. based on the item above.&lt;/p&gt;
@@ -471,11 +471,11 @@ this amazing GNU/Linux distribution.&lt;/p&gt;</description>
     
     <item>
       <title>About me</title>
-      <link>//localhost:1313/about/</link>
+      <link>/about/</link>
       <pubDate>Thu, 04 Jul 2024 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/about/</guid>
-      <description>&lt;figure&gt;&lt;img src=&#34;//localhost:1313/images/jp.jpg&#34; width=&#34;200px&#34;&gt;
+      <guid>/about/</guid>
+      <description>&lt;figure&gt;&lt;img src=&#34;/images/jp.jpg&#34; width=&#34;200px&#34;&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Greetings! I&amp;rsquo;m Javier Pacheco, a dedicated Industrial Maintenance Engineer with a rich academic foundation from the prestigious &lt;strong&gt;UTM&lt;/strong&gt; in &lt;strong&gt;H. Matamoros Tamaulipas,Mexico&lt;/strong&gt;. Over the span of 12 fruitful years, I&amp;rsquo;ve been an integral part of the automotive industry, contributing my expertise in a multitude of critical domains.&lt;/p&gt;
@@ -484,10 +484,10 @@ this amazing GNU/Linux distribution.&lt;/p&gt;</description>
     
     <item>
       <title>Search</title>
-      <link>//localhost:1313/search/</link>
+      <link>/search/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/search/</guid>
+      <guid>/search/</guid>
       <description></description>
     </item>
     

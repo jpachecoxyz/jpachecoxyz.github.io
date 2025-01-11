@@ -2,74 +2,74 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on (λ jpachecoxyz)</title>
-    <link>//localhost:1313/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on (λ jpachecoxyz)</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>© jpachecoxyz</copyright>
     <lastBuildDate>Mon, 18 Nov 2024 09:06:00 -0600</lastBuildDate>
-    <atom:link href="//localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Blog</title>
-      <link>//localhost:1313/tags/blog/</link>
+      <link>/tags/blog/</link>
       <pubDate>Mon, 18 Nov 2024 09:06:00 -0600</pubDate>
-      <guid>//localhost:1313/tags/blog/</guid>
+      <guid>/tags/blog/</guid>
       <description></description>
     </item>
     <item>
       <title>Personal</title>
-      <link>//localhost:1313/tags/personal/</link>
+      <link>/tags/personal/</link>
       <pubDate>Mon, 18 Nov 2024 09:06:00 -0600</pubDate>
-      <guid>//localhost:1313/tags/personal/</guid>
+      <guid>/tags/personal/</guid>
       <description></description>
     </item>
     <item>
       <title>Tecnology</title>
-      <link>//localhost:1313/tags/tecnology/</link>
+      <link>/tags/tecnology/</link>
       <pubDate>Sun, 22 Sep 2024 12:49:00 -0500</pubDate>
-      <guid>//localhost:1313/tags/tecnology/</guid>
+      <guid>/tags/tecnology/</guid>
       <description></description>
     </item>
     <item>
       <title>Wayland</title>
-      <link>//localhost:1313/tags/wayland/</link>
+      <link>/tags/wayland/</link>
       <pubDate>Sun, 22 Sep 2024 12:49:00 -0500</pubDate>
-      <guid>//localhost:1313/tags/wayland/</guid>
+      <guid>/tags/wayland/</guid>
       <description></description>
     </item>
     <item>
       <title>Emacs</title>
-      <link>//localhost:1313/tags/emacs/</link>
+      <link>/tags/emacs/</link>
       <pubDate>Wed, 04 Sep 2024 02:44:00 -0500</pubDate>
-      <guid>//localhost:1313/tags/emacs/</guid>
+      <guid>/tags/emacs/</guid>
       <description></description>
     </item>
     <item>
       <title>Linux</title>
-      <link>//localhost:1313/tags/linux/</link>
+      <link>/tags/linux/</link>
       <pubDate>Wed, 04 Sep 2024 02:44:00 -0500</pubDate>
-      <guid>//localhost:1313/tags/linux/</guid>
+      <guid>/tags/linux/</guid>
       <description></description>
     </item>
     <item>
       <title>Script</title>
-      <link>//localhost:1313/tags/script/</link>
+      <link>/tags/script/</link>
       <pubDate>Wed, 04 Sep 2024 02:43:00 -0500</pubDate>
-      <guid>//localhost:1313/tags/script/</guid>
+      <guid>/tags/script/</guid>
       <description></description>
     </item>
     <item>
       <title>Wiki</title>
-      <link>//localhost:1313/tags/wiki/</link>
+      <link>/tags/wiki/</link>
       <pubDate>Tue, 03 Sep 2024 15:40:00 -0500</pubDate>
-      <guid>//localhost:1313/tags/wiki/</guid>
+      <guid>/tags/wiki/</guid>
       <description></description>
     </item>
     <item>
       <title>About</title>
-      <link>//localhost:1313/tags/about/</link>
+      <link>/tags/about/</link>
       <pubDate>Thu, 04 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/about/</guid>
+      <guid>/tags/about/</guid>
       <description></description>
     </item>
   </channel>
