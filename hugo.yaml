@@ -85,7 +85,7 @@ params:
       isCaseSensitive: false
       includeScore: false
       includeMatches: true
-      minMatchCharLength: 1
+      minMatchCharLength: 3
       shouldSort: true
       findAllMatches: false
 
