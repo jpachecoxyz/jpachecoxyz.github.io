@@ -1989,12 +1989,16 @@ I have been using =guix= for about a month, and I have to admit that is fast as 
 So, for me this is kind of the best Linux distribution because of the structure, is like =Venom linux= cobined with =NixOS= in my opinion.
 
 
-** TODO Voidstrap
+** DONE Voidstrap
+CLOSED: [2025-01-14 Tue 21:17]
 :PROPERTIES:
 :EXPORT_FILE_NAME: voidstrap
 :EXPORT_DESCRIPTION: A void linux minimal installer.
 :DATE: [2025-01-14 Tue]
 :EXPORT_HUGO_SECTION: posts
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2025-01-14 Tue 21:17]
 :END:
 
 *** VoidStrap installer.

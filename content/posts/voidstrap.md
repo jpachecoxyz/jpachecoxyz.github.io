@@ -2,8 +2,8 @@
 title = "Voidstrap"
 author = ["Javier Pacheco"]
 description = "A void linux minimal installer."
-date = 2024-07-04
-draft = true
+date = 2025-01-14T21:17:00-06:00
+draft = false
 toc = true
 +++
 
