@@ -8,8 +8,6 @@ draft = false
 hugo_image = "images/thumbnails/jp.png"
 +++
 
-{{< figure src="/images/jp.jpg" width="200px" >}}
-
 Greetings! I'm Javier Pacheco, a dedicated Industrial Maintenance Engineer with a rich academic foundation from the prestigious **UTM** in **H. Matamoros Tamaulipas,Mexico**. Over the span of 12 fruitful years, I've been an integral part of the automotive industry, contributing my expertise in a multitude of critical domains.
 
 My journey began with a profound fascination for the intricate mechanisms that power manufacturing and industrial processes. At UTM, I honed my skills, diving deep into the realms of engineering, automation, and problem-solving. This foundation paved the way for my foray into the dynamic world of industrial maintenance.
