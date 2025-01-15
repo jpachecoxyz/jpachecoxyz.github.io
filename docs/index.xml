@@ -232,22 +232,6 @@ The script is going to store the video in &lt;code&gt;/tmp/screencast.mp4&lt;/co
     </item>
     
     <item>
-      <title>Void linux bootstrap.</title>
-      <link>/posts/voidstrap/</link>
-      <pubDate>Wed, 04 Sep 2024 02:43:00 -0500</pubDate>
-      
-      <guid>/posts/voidstrap/</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;This is the first post of the 2024, this is a project that I am working on in the last
-year, is a minimalist voidlinux instalator it is based in some recommendations in
-a guides that some friends of my have but &amp;ldquo;semi-automated&amp;rdquo;.&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;h2 id=&#34;voidstrap-installer-dot&#34;&gt;VoidStrap installer.&lt;/h2&gt;
-&lt;p&gt;A basic minimalist installer of &lt;code&gt;void-linux&lt;/code&gt; with some packages to get ready to enjoy
-this amazing GNU/Linux distribution.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>Wiki</title>
       <link>/wiki/</link>
       <pubDate>Tue, 03 Sep 2024 15:40:00 -0500</pubDate>

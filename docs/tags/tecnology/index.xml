@@ -65,12 +65,5 @@
       <guid>/posts/search-tool-hugo/</guid>
       <description>&lt;p&gt;As websites grow, incorporating a search feature becomes increasingly crucial. However, implementing search functionality can be challenging on a statically generated site since there&amp;rsquo;s no server-side component to handle the search. Instead, the search must be performed on the client side within the browser using JavaScript.&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;/images/posts/hugo-search/jpacheco-search.png&#34;&#xA;    alt=&#34;Figure 1: This is how my web looks.&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;&lt;!-- raw HTML omitted --&gt;Figure 1: &lt;!-- raw HTML omitted --&gt;This is how my web looks.&lt;/p&gt;</description>
     </item>
-    <item>
-      <title>Void linux bootstrap.</title>
-      <link>/posts/voidstrap/</link>
-      <pubDate>Wed, 04 Sep 2024 02:43:00 -0500</pubDate>
-      <guid>/posts/voidstrap/</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;This is the first post of the 2024, this is a project that I am working on in the last&#xA;year, is a minimalist voidlinux instalator it is based in some recommendations in&#xA;a guides that some friends of my have but &amp;ldquo;semi-automated&amp;rdquo;.&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h2 id=&#34;voidstrap-installer-dot&#34;&gt;VoidStrap installer.&lt;/h2&gt;&#xA;&lt;p&gt;A basic minimalist installer of &lt;code&gt;void-linux&lt;/code&gt; with some packages to get ready to enjoy&#xA;this amazing GNU/Linux distribution.&lt;/p&gt;</description>
-    </item>
   </channel>
 </rss>

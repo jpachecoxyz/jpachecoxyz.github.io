@@ -1,21 +1,11 @@
 +++
-title = "Void linux bootstrap."
+title = "Voidstrap"
 author = ["Javier Pacheco"]
-description = "A void linux semi-automated installer."
-date = 2024-09-04T02:43:00-05:00
-tags = ["linux", "tecnology", "script"]
-draft = false
+description = "A void linux minimal installer."
+date = 2024-07-04
+draft = true
 toc = true
 +++
-
-<div class="PREVIEW">
-
-This is the first post of the 2024, this is a project that I am working on in the last
-year, is a minimalist voidlinux instalator it is based in some recommendations in
-a guides that some friends of my have but "semi-automated".
-
-</div>
-
 
 ## VoidStrap installer. {#voidstrap-installer-dot}
 
@@ -31,20 +21,7 @@ this amazing GNU/Linux distribution.
 Download the iso, and once in root inside the live, git clone this repo:
 (You need to update inside the iso and install `git`)
 
-NOTE: there are 3 `branches:`
-
-main
-: This will install `void-musl`.
-
-glibc
-: This will install `void-glibc`.
-
-dual
-: This will install `void-glibc` dual boot with `Windows`.
-    -   **This branch is tested only with `Windows`, I never try it with other distributions.**
-    -   If you want musl you can change the link to the mirror in the `install.sh` script:
-
-<!--listend-->
+If you want musl you can change the link to the mirror in the `install.sh` script:
 
 ```text
 - Change this in line 11:
@@ -99,25 +76,7 @@ When it finish you need to run the `postinstall.sh` script, that is going to ins
 the **X server** and some other "necessary" packages.
 
 
-## The custom.sh script {#the-custom-dot-sh-script}
-
-This is going to install my personal dotfiles, and a specific packages that I use:
-
-```shell
-sh /root/custom.sh
-```
-
-But you can specify your dotfiles repositories and others that you require whit some parameters:
-
-```nil
-sh custom.sh -r https://codeberg.org/jpacheco/dotfiles # specify a repo url.
-sh custom.sh -p otherprogfile.csv # especify a custom package archive to install.
-sh custom.sh -b dev # especify the name of a custom branch in case of needed.
-```
-
-
 ## References: {#references}
 
--   [Voidstrap.](https://codeberg.org/jpacheco/voidstrap)
 -   [Voidlinux Documentation.](https://docs.voidlinux.org/)
 -   [Tuxliban guides.](https://git.disroot.org/tuxliban/tutoriales_void/src/branch/master/Gu%C3%ADas)
