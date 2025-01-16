@@ -1,6 +1,6 @@
 #+title: jpacheco.xyz
 #+author: Javier Pacheco
-#+description: My website wrapped in a org file.
+#+description: My website wrapped in an org file.
 #+hugo_base_dir: ../
 #+startup: content
 #+hugo_custom_front_matter: toc true
@@ -2065,3 +2065,25 @@ the *X server* and some other "necessary" packages.
 - [[https://github.com/jpachecoxyz/voidstrap][Voistrap github repository.]]
 - [[https://docs.voidlinux.org/][Voidlinux Documentation.]] 
 - [[https://git.disroot.org/tuxliban/tutoriales_void/src/branch/master/Gu%C3%ADas][Tuxliban guides.]]
+
+
+** TODO Guix installer
+:PROPERTIES:
+:EXPORT_FILE_NAME: guix-installer
+:EXPORT_DESCRIPTION: A guix installer script.
+:DATE: [2025-01-15 Wed]
+:EXPORT_HUGO_SECTION: posts
+:END:
+
+*** 
+
+
+** TODO Dual boot in guix linux.
+:PROPERTIES:
+:EXPORT_FILE_NAME: dual-boot-in-guix-linux-dot
+:EXPORT_DESCRIPTION: How to dualboot withn guix linux.
+:DATE: [2025-01-15 Wed]
+:EXPORT_HUGO_SECTION: posts
+:END:
+
+*** 
