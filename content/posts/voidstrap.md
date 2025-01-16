@@ -78,5 +78,6 @@ the **X server** and some other "necessary" packages.
 
 ## References: {#references}
 
+-   [Voistrap github repository.](https://github.com/jpachecoxyz/voidstrap)
 -   [Voidlinux Documentation.](https://docs.voidlinux.org/)
 -   [Tuxliban guides.](https://git.disroot.org/tuxliban/tutoriales_void/src/branch/master/Gu%C3%ADas)

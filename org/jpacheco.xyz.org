@@ -2062,5 +2062,6 @@ When it finish you need to run the =postinstall.sh= script, that is going to ins
 the *X server* and some other "necessary" packages.
 
 *** References:
+- [[https://github.com/jpachecoxyz/voidstrap][Voistrap github repository.]]
 - [[https://docs.voidlinux.org/][Voidlinux Documentation.]] 
 - [[https://git.disroot.org/tuxliban/tutoriales_void/src/branch/master/Gu%C3%ADas][Tuxliban guides.]]
