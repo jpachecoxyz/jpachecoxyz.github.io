@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Made in emacs for (λ jpachecoxyz)</copyright>
-    <lastBuildDate>Tue, 14 Jan 2025 21:17:00 -0600</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 16 Jan 2025 19:57:00 -0600</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Pymetrics</title>
       <link>/posts/pymetrics/</link>
@@ -16,6 +16,28 @@
       <guid>/posts/pymetrics/</guid>
       <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
 &lt;p&gt;Managing and monitoring the performance of industrial machines is critical to ensuring minimal downtime and maximizing productivity. The need for an effective system to store and analyze maintenance data became apparent when the maintenance manager contacted me with a specific problem. They struggled to create KPI graphs because they lacked a proper system to store all the necessary data. To address this challenge, I developed a maintenance log app that efficiently tracks and records machine failures, repair time, shutdown time, and the technicians involved in the repairs. The data is stored in a CSV format, making it easy to create KPI (Key Performance Indicator) graphs in Excel for analysis.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Guix installer</title>
+      <link>/posts/guix-installer/</link>
+      <pubDate>Thu, 16 Jan 2025 19:57:00 -0600</pubDate>
+      
+      <guid>/posts/guix-installer/</guid>
+      <description>&lt;h2 id=&#34;about-dot&#34;&gt;About.&lt;/h2&gt;
+&lt;p&gt;The script &lt;code&gt;install.sh&lt;/code&gt; will do a couple of actions to try to make the GNU/guix installation more friendly, so, basically this &lt;code&gt;README.org&lt;/code&gt; file will tangle the script, the power of emacs of course. So, while I was working in this &amp;ldquo;note&amp;rdquo; file, then I realized that I can use emacs and make a script.&lt;/p&gt;
+&lt;h2 id=&#34;download-and-burn-the-iso-dot&#34;&gt;Download and burn the iso.&lt;/h2&gt;
+&lt;p&gt;I use the systemcrafter &lt;a href=&#34;https://github.com/SystemCrafters/guix-installer&#34;&gt;ISO.&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo dd &lt;span class=&#34;nv&#34;&gt;status&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;progress &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;guix-installer-202106150234.iso &lt;span class=&#34;nv&#34;&gt;of&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/dev/sdb &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sync
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;install-the-os-dot&#34;&gt;Install the OS.&lt;/h2&gt;
+&lt;p&gt;Now with the Guix iso. Boot your laptop in it, and follow the instructions to install the OS, just ignore the warnings about the libre software, And stop in the part that you actually going to start the installation, and open another TTY:&lt;/p&gt;</description>
     </item>
     
     <item>
