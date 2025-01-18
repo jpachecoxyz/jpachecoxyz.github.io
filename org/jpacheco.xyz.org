@@ -1989,7 +1989,7 @@ I have been using =guix= for about a month, and I have to admit that is fast as 
 So, for me this is kind of the best Linux distribution because of the structure, is like =Venom linux= combined with =NixOS= in my opinion.
 
 
-** DONE Voidstrap
+** DONE Voidstrap                                             :linux:script:
 CLOSED: [2025-01-14 Tue 21:17]
 :PROPERTIES:
 :EXPORT_FILE_NAME: voidstrap
@@ -2067,7 +2067,7 @@ the *X server* and some other "necessary" packages.
 - [[https://git.disroot.org/tuxliban/tutoriales_void/src/branch/master/Gu%C3%ADas][Tuxliban guides.]]
 
 
-** DONE Guix installer
+** DONE Guix installer                                        :linux:script:
 CLOSED: [2025-01-16 Thu 19:57]
 :PROPERTIES:
 :EXPORT_FILE_NAME: guix-installer
@@ -2138,7 +2138,7 @@ log "Script completed successfully."
 - [[https://systemcrafters.net/craft-your-system-with-guix/full-system-install/][SystemCrafters Complete guide.]]
 
 
-** DONE Dualboot in guix linux
+** DONE Dualboot in guix linux                                :linux:script:
 CLOSED: [2025-01-17 Fri 19:57]
 :PROPERTIES:
 :EXPORT_FILE_NAME: dualboot-in-guix-linux

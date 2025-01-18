@@ -11,7 +11,16 @@
     <loc>/posts/dualboot-in-guix-linux/</loc>
     <lastmod>2025-01-17T19:57:00-06:00</lastmod>
   </url><url>
+    <loc>/tags/linux/</loc>
+    <lastmod>2025-01-17T19:57:00-06:00</lastmod>
+  </url><url>
     <loc>/posts/</loc>
+    <lastmod>2025-01-17T19:57:00-06:00</lastmod>
+  </url><url>
+    <loc>/tags/script/</loc>
+    <lastmod>2025-01-17T19:57:00-06:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
     <lastmod>2025-01-17T19:57:00-06:00</lastmod>
   </url><url>
     <loc>/posts/guix-installer/</loc>
@@ -23,13 +32,7 @@
     <loc>/tags/blog/</loc>
     <lastmod>2025-01-14T20:03:00-06:00</lastmod>
   </url><url>
-    <loc>/tags/linux/</loc>
-    <lastmod>2025-01-14T20:03:00-06:00</lastmod>
-  </url><url>
     <loc>/posts/should-i-use-gnu-guix/</loc>
-    <lastmod>2025-01-14T20:03:00-06:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
     <lastmod>2025-01-14T20:03:00-06:00</lastmod>
   </url><url>
     <loc>/tags/tecnology/</loc>
@@ -72,9 +75,6 @@
     <lastmod>2024-09-04T02:43:00-05:00</lastmod>
   </url><url>
     <loc>/posts/screen-record/</loc>
-    <lastmod>2024-09-04T02:43:00-05:00</lastmod>
-  </url><url>
-    <loc>/tags/script/</loc>
     <lastmod>2024-09-04T02:43:00-05:00</lastmod>
   </url><url>
     <loc>/posts/shell-utils/</loc>

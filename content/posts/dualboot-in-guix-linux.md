@@ -3,6 +3,7 @@ title = "Dualboot in guix linux"
 author = ["Javier Pacheco"]
 description = "How to add grub entries in guix using scheme."
 date = 2025-01-17T19:57:00-06:00
+tags = ["linux", "script"]
 draft = false
 toc = true
 +++
