@@ -2219,3 +2219,38 @@ sudo guix system reconfigure /path/to/config.scm
 - Ensure the Windows EFI bootloader (=bootmgfw.efi=) exists in the specified path.
 
 This setup ensures that both Guix Linux and Windows 11 are easily accessible via the GRUB menu, providing a seamless dual-boot experience. If you have any questions or run into issues, feel free to ask!
+
+
+** DONE Recover Windows BOOT                                :blog:tecnology:
+CLOSED: [2025-01-18 Sat 17:24]
+:PROPERTIES:
+:EXPORT_FILE_NAME: recover-windows-boot
+:EXPORT_DESCRIPTION: How to  recover the boot files of Windows.
+:DATE: [2025-01-18 Sat]
+:EXPORT_HUGO_SECTION: posts
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2025-01-18 Sat 17:24]
+:END:
+
+This guide is suggested when you accidentally format the boot partition while installing a new OS, wiping out the Windows bootloader in the process. This has happened to me on more than one occasion, which is why I decided to document it.
+
+It has also happened when the Windows bootloader is deleted. The following steps are solely for copying the Windows boot files using the ISO onto the partition without having to reformat it.
+
+*** Select the disk.
+#+begin_src cmd 
+list disk sel disk # 
+#+end_src
+
+*** Select the boot partition.
+List the partitions, select the FAT32 partition, and assign a letter to it. 
+#+begin_src cmd 
+list vol sel vol # assign letter z: 
+#+end_src
+
+*** Load Windows boot files. 
+#+begin_src cmd 
+bcdboot c:\windows /s z: /f all 
+#+end_src
+
+That's it! Simply restart, boot into the main OS, run =os-prober=, and execute =update-grub= to add the boot entry to =grub=.
