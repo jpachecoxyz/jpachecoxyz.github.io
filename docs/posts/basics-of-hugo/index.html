@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#181818">
+  <title>
+    
+    (λ jpachecoxyz) - Basics of HUGO
+    
+  </title>
+  
+  
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  
+  
+  
+  <link rel="stylesheet" href="/minima.54cfcb44e10b4015b41a13771763013b79bdba6a92e49ea4a77bb44db465e761.css" integrity="sha256-VM/LROELQBW0GhN3F2MBO3m9umqS5J6kp3u0TbRl52E=">
+  
+  
+  
+  <script defer type="text/javascript" src="/minima.c1f5b8aa64e8321bb391ecac878965aed0ecd786b763e1fc0f136ef263bd2b47.js" integrity="sha256-wfW4qmToMhuzkeysh4llrtDs14a3Y&#43;H8DxNu8mO9K0c="></script>
+  
+  
+  
+</head>
+<script>
+  const theme_config = 'dark'
+  const theme_light = theme_config === 'system' ? 'light' : theme_config;
+  let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : theme_light;
+  console.debug(theme);
+
+  try {
+    localStorage.setItem('theme', theme);
+    window.minima_theme = theme;
+    document.querySelector('html').classList.add(theme);
+  } catch (e) {
+    console.error(e);
+  }
+</script>
+
+
+
+<body>
+  <header class="mt-3 mb-8">
+  <div class="container mx-auto">
+    <nav class="flex justify-between items-center">
+      <div class="flex items-center">
+        
+        <div id="theme-switch" class="text-2xl cursor-pointer"></div>
+      </div>
+      <ul class="flex items-center text-base font-semibold
+        whitespace-nowrap overflow-x-auto overflow-y-hidden">
+        
+        <li class="ml-2 mr-2">
+          
+          <a href='/'>Home</a>
+          
+        </li>
+        
+        <li class="ml-2 mr-2">
+          
+          <a href="/about">About</a>
+          
+        </li>
+        
+        <li class="ml-2 mr-2">
+          
+          <a href="/posts">Posts</a>
+          
+        </li>
+        
+        <li class="ml-2 mr-2">
+          
+          <a href="/wiki">Wiki</a>
+          
+        </li>
+        
+        <li class="ml-2 mr-2">
+          
+          <a href="/search">Search</a>
+          
+        </li>
+        
+      </ul>
+      
+    </nav>
+  </div>
+</header>
+
+
+  
+<div class="container mx-auto">
+  <h1 class="text-4xl font-extrabold mt-6 mb-6">Basics of HUGO</h1>
+  <div class="mb-3 text-sm flex justify-between ">
+    <div>
+      
+      Post at &mdash; Sep 04, 2024
+      
+      
+    </div>
+    
+    <div>
+      
+      
+      <a class="ml-1" href="/tags/blog">#blog</a>
+      
+      
+      <a class="ml-1" href="/tags/personal">#personal</a>
+      
+      
+      <a class="ml-1" href="/tags/tecnology">#tecnology</a>
+      
+    </div>
+    
+  </div>
+  <main class="mb-8">
+    <p>A basic introduction to HUGO.</p>
+    <article class="md">
+      <h2 id="introduction">Introduction</h2>
+<blockquote>
+<p>&ldquo;Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.&rdquo;</p></blockquote>
+<h2 id="installation">Installation</h2>
+<p>Hugo is multi platform, so the installation depends on what SO do you use, in this example I Show how to install in <code>Arch-linux</code> because it&rsquo;s easy.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo pacman -S hugo
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="creating-a-new-site">Creating a New Site</h2>
+<h3 id="initialize-a-new-hugo-site">Initialize a New Hugo Site</h3>
+<p>This is the command in order to create a hugo site,</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">hugo new site my-website.org
+</span></span></code></pre></td></tr></table>
+</div>
+</div><dl>
+<dt>my-website.org</dt>
+<dd>is the name of the directory that hugo is going to create, and where all the files are going to be.</dd>
+</dl>
+<h3 id="directory-structure-overview">Directory Structure Overview</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">$ tree -d my-website.org
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">my-website.org
+</span></span><span class="line"><span class="cl">├── archetypes
+</span></span><span class="line"><span class="cl">├── assets
+</span></span><span class="line"><span class="cl">├── content
+</span></span><span class="line"><span class="cl">├── data
+</span></span><span class="line"><span class="cl">├── i18n
+</span></span><span class="line"><span class="cl">├── layouts
+</span></span><span class="line"><span class="cl">├── static
+</span></span><span class="line"><span class="cl">└── themes
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="initialize-an-empty-git-repository-dot">Initialize an empty git repository.</h3>
+<p>This is very useful because in case of mess, you can easily roll back.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">git init
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="creating-content">Creating Content</h2>
+<h3 id="creating-a-new-post">Creating a New Post</h3>
+<p>This is the command to create post within HUGO:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">hugo new content content/posts/my-first-post.md
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Hugo creates a <code>my-first-post.md</code> in the <code>content/posts/</code> directory, open it with your editor, you must see this content in the file:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">+++
+</span></span><span class="line"><span class="cl">title = &#39;My First Post&#39;
+</span></span><span class="line"><span class="cl">date = 2024-01-14T07:07:07+01:00
+</span></span><span class="line"><span class="cl">draft = true
+</span></span><span class="line"><span class="cl">+++
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Notice the draft value in the front matter is true. By default, Hugo does not publish draft content when you build the site. Learn more about draft, future, and expired content.</p>
+<p>Add some Markdown to the body of the post, but do not change the draft value.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">+++
+</span></span><span class="line"><span class="cl">title = &#39;My First Post&#39;
+</span></span><span class="line"><span class="cl">date = 2024-01-14T07:07:07+01:00
+</span></span><span class="line"><span class="cl">draft = true
+</span></span><span class="line"><span class="cl">+++
+</span></span><span class="line"><span class="cl"><span class="gu">## Introduction
+</span></span></span><span class="line"><span class="cl"><span class="gu"></span>
+</span></span><span class="line"><span class="cl">This is <span class="gs">**bold**</span> text, and this is <span class="ge">*emphasized*</span> text.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Visit the [<span class="nt">Hugo</span>](<span class="na">https://gohugo.io</span>) website!
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="working-with-themes">Working with Themes</h2>
+<p>To install a theme is basically download it from <code>GitHub</code>, you can find more themes <a href="https://themes.gohugo.io/themes">here</a>.</p>
+<h3 id="downloading-and-installing-a-theme">Downloading and Installing a Theme</h3>
+<p>In this guide we are going to use <code>PaperMod</code> theme, so we need to install it througt various ways.</p>
+<ul>
+<li>As a submodule (recommended).</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">git submodule add --depth<span class="o">=</span><span class="m">1</span> https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
+</span></span><span class="line"><span class="cl">git submodule update --init --recursive <span class="c1"># needed when you reclone your repo (submodules may not get cloned automatically)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Simply clone.</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">git clone https://github.com/adityatelange/hugo-PaperMod themes/PaperMod --depth<span class="o">=</span><span class="m">1</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Keep in mind that if you clone the repository you must delete the <code>.git</code> folder inside the theme, because is going to have conflicts when you try to push your site.</strong></p>
+<p>The next ones I never used, but you can go to the HUGO documentation for read more about these.</p>
+<ul>
+<li>Expand Method 3 - Download an unzip</li>
+<li>Hugo module</li>
+</ul>
+<h3 id="configuring-the-theme-and-see-it-in-action-dot">Configuring the Theme &amp; see it in action.</h3>
+<p>Finally set theme as PaperMod in your site config, <code>hugo.toml</code> or <code>config.toml</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">theme</span> <span class="p">=</span> <span class="s2">&#34;PaperMod&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Once you do this you can verify if the site applied the theme correctly by running the hugo server:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">hugo server
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Now, in your <code>browser</code>, open <code>localhost:1313</code>, and you should see your site with the proper theme applied.</p>
+<h2 id="configuration-example-for-papermod-theme-dot">Configuration example for PaperMod theme.</h2>
+<p>This is a basic configuration template for PaperMod theme:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">baseURL</span> <span class="p">=</span> <span class="s1">&#39;https://example.org/&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">languageCode</span> <span class="p">=</span> <span class="s1">&#39;en-us&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">title</span> <span class="p">=</span> <span class="s1">&#39;My New Hugo Site&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">theme</span> <span class="p">=</span> <span class="s2">&#34;PaperMod&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">copyright</span> <span class="p">=</span> <span class="s2">&#34;[PaperMod Contributors](https://github.com/adityatelange/hugo-PaperMod/graphs/contributors)&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">paginate</span> <span class="p">=</span> <span class="mi">5</span>
+</span></span><span class="line"><span class="cl"><span class="nx">enableInlineShortcodes</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="nx">enableRobotsTXT</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="nx">buildDrafts</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl"><span class="nx">buildFuture</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl"><span class="nx">buildExpired</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl"><span class="nx">enableEmoji</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="nx">pygmentsUseClasses</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="nx">mainsections</span> <span class="p">=</span> <span class="p">[</span> <span class="s2">&#34;posts&#34;</span><span class="p">,</span> <span class="s2">&#34;papermod&#34;</span> <span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">minify</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">disableXML</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">languageName</span> <span class="p">=</span> <span class="s2">&#34;English&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">weight</span> <span class="p">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">taxonomies</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">category</span> <span class="p">=</span> <span class="s2">&#34;categories&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">tag</span> <span class="p">=</span> <span class="s2">&#34;tags&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">series</span> <span class="p">=</span> <span class="s2">&#34;series&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Archive&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;archives&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">weight</span> <span class="p">=</span> <span class="mi">5</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Posts&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;posts/&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">weight</span> <span class="p">=</span> <span class="mi">10</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">outputs</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">home</span> <span class="p">=</span> <span class="p">[</span> <span class="s2">&#34;HTML&#34;</span><span class="p">,</span> <span class="s2">&#34;RSS&#34;</span><span class="p">,</span> <span class="s2">&#34;JSON&#34;</span> <span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">env</span> <span class="p">=</span> <span class="s2">&#34;production&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">description</span> <span class="p">=</span> <span class="s2">&#34;Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">author</span> <span class="p">=</span> <span class="s2">&#34;Theme PaperMod&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">defaultTheme</span> <span class="p">=</span> <span class="s2">&#34;auto&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ShowShareButtons</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ShowReadingTime</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="nx">displayFullLangName</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ShowPostNavLinks</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ShowBreadCrumbs</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ShowCodeCopyButtons</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ShowRssButtonInSectionTermList</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ShowAllPagesInArchive</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ShowPageNums</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ShowToc</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="nx">images</span> <span class="p">=</span> <span class="p">[</span> <span class="s2">&#34;images/papermod-cover.png&#34;</span> <span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">profileMode</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">enabled</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;PaperMod&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">imageUrl</span> <span class="p">=</span> <span class="s2">&#34;#&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">imageTitle</span> <span class="p">=</span> <span class="s2">&#34;my image&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">[[</span><span class="nx">params</span><span class="p">.</span><span class="nx">profileMode</span><span class="p">.</span><span class="nx">buttons</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Archives&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;archives&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">[[</span><span class="nx">params</span><span class="p">.</span><span class="nx">profileMode</span><span class="p">.</span><span class="nx">buttons</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Tags&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;tags&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">homeInfoParams</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">Title</span> <span class="p">=</span> <span class="s2">&#34;PaperMod&#39;s Demo&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">Content</span> <span class="p">=</span> <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">?? Welcome to demo page of Hugo&#39;s theme PaperMod!
+</span></span></span><span class="line"><span class="cl"><span class="s2">- **PaperMod**  is designed to be clean and simple but fast and responsive theme with useful feature-set that enhances UX.
+</span></span></span><span class="line"><span class="cl"><span class="s2">- Feel free to show your support by giving us a star ?? on GitHub and sharing with your friends and social media .
+</span></span></span><span class="line"><span class="cl"><span class="s2">- PaperMod is based on theme [Paper](https://github.com/nanxiaobei/hugo-paper/tree/4330c8b12aa48bfdecbcad6ad66145f679a430b3).
+</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">[[</span><span class="nx">params</span><span class="p">.</span><span class="nx">socialIcons</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;github&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;View Source on Github&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;https://github.com/adityatelange/hugo-PaperMod&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">[[</span><span class="nx">params</span><span class="p">.</span><span class="nx">socialIcons</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Discord&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;Join discord community&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;https://discord.gg/ahpmTvhVmp&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">[[</span><span class="nx">params</span><span class="p">.</span><span class="nx">socialIcons</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;X&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;Share PaperMod on X/Twitter&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;https://x.com/intent/tweet/?text=Checkout%20Hugo%20PaperMod%20%E2%9C%A8%0AA%20fast,%20clean,%20responsive%20Hugo%20theme.&amp;url=https://github.com/adityatelange/hugo-PaperMod&amp;hashtags=Hugo,PaperMod&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">[[</span><span class="nx">params</span><span class="p">.</span><span class="nx">socialIcons</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;KoFi&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;Buy me a Ko-Fi :)&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;https://ko-fi.com/adityatelange&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">assets</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">disableHLJS</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">markup</span><span class="p">.</span><span class="nx">goldmark</span><span class="p">.</span><span class="nx">renderer</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">unsafe</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">markup</span><span class="p">.</span><span class="nx">highlight</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">noClasses</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">services</span><span class="p">.</span><span class="nx">instagram</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">disableInlineCSS</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">services</span><span class="p">.</span><span class="nx">twitter</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">disableInlineCSS</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="building-the-site">Building the Site</h2>
+<h3 id="generating-the-static-site">Generating the Static Site</h3>
+<p>At this point we need to generate the static we site, the most basic command to publish it is just run <code>hugo</code> in the terminal inside the root of the project.
+So you notice that a <code>public</code> folder is now created, if you look inside, you&rsquo;ll find all the html files, and everything to deploy as a web page.</p>
+<h3 id="set-specific-folder-to-export-your-site-dot">Set specific folder to export your site.</h3>
+<p>If you don&rsquo;t want to have your publish site in the <code>public</code> folder, you can set another path to export it instead of the <code>public</code> folder by adding this line at top of your <code>hugo.toml</code> configuration file:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">publishDir</span> <span class="p">=</span> <span class="s2">&#34;/path/to/export/&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c">#example</span>
+</span></span><span class="line"><span class="cl"><span class="nx">publishDir</span> <span class="p">=</span> <span class="s2">&#34;~/my-site.org/&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="conclusion">Conclusion</h2>
+<p>With all the context before, you may be able to start your web site, blog, etc. As you read, is very simple to have a very nice and useful static web-page, the &ldquo;hard&rdquo; part is to select the theme.</p>
+<p>The next step is to publish your web to a custom server or on github, gitlab, codeberg pages.</p>
+<ol>
+<li>Preparing for Deployment.</li>
+<li>Deploying to a Web Server or Hosting Service.</li>
+</ol>
+<h3 id="additional-resources">Additional Resources</h3>
+<ol>
+<li><a href="https://gohugo.io/getting-started/quick-start/">Hugo quick start guide.</a></li>
+<li><a href="https://gohugo.io/documentation/">Hugo documentation.</a></li>
+</ol>
+
+    </article>
+  </main>
+  
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css"
+    integrity="sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc" crossorigin="anonymous">
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"
+    integrity="sha384-YNHdsYkH6gMx9y3mRkmcJ2mFUjTd0qNQQvY9VYZgQd7DcN7env35GzlmFaZ23JGp"
+    crossorigin="anonymous"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js"
+    integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl"
+    crossorigin="anonymous"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+            
+            
+            delimiters: [
+                { left: '$$', right: '$$', display: true },
+                { left: '$', right: '$', display: false },
+                { left: '\\(', right: '\\)', display: false },
+                { left: '\\[', right: '\\]', display: true }
+            ],
+            
+            throwOnError: false
+        });
+    });
+</script>
+
+
+
+
+
+<script 
+  src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"
+  crossorigin="anonymous">
+</script>
+<script>
+  mermaid.init(undefined, 'code.language-mermaid')
+</script>
+
+
+
+
+</div>
+
+
+  <footer class="mt-8 mb-8">
+  <div class="container mx-auto">
+    <div class="mt-8 flex flex-col-reverse sm:flex-row sm:justify-between items-center">
+      <div class="text-center sm:text-left">
+        <p class="mt-0 text-sm">Made in emacs for (λ jpachecoxyz)</p>
+        <p class="mt-0 text-xs">
+          Built with <a href="https://gohugo.io" target="_blank" rel="noopener noreferrer">Hugo</a> v0.143.1
+          and <a href="https://github.com/mivinci/hugo-theme-minima" target="_blank" rel="noopener noreferrer">Minima</a>
+        </p>
+      </div>
+      
+      <p class="flex items-center mt-0">
+        
+          <a class="icon ml-1 mr-1" href="mailto:jpacheco@cock.li" title="email">
+          
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+          
+          </a>
+        
+          <a class="icon ml-1 mr-1" href="https://github.com/jpachecoxyz" title="github">
+          
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          
+          </a>
+        
+          <a class="icon ml-1 mr-1" href="/index.xml" title="rss">
+          
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
+          
+          </a>
+        
+      </p>
+    </div>
+  </div>
+</footer>
+</body>
+
+</html>

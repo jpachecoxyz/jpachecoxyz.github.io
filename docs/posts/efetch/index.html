@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#181818">
+  <title>
+    
+    (λ jpachecoxyz) - Efetch.el
+    
+  </title>
+  
+  
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  
+  
+  
+  <link rel="stylesheet" href="/minima.54cfcb44e10b4015b41a13771763013b79bdba6a92e49ea4a77bb44db465e761.css" integrity="sha256-VM/LROELQBW0GhN3F2MBO3m9umqS5J6kp3u0TbRl52E=">
+  
+  
+  
+  <script defer type="text/javascript" src="/minima.c1f5b8aa64e8321bb391ecac878965aed0ecd786b763e1fc0f136ef263bd2b47.js" integrity="sha256-wfW4qmToMhuzkeysh4llrtDs14a3Y&#43;H8DxNu8mO9K0c="></script>
+  
+  
+  
+</head>
+<script>
+  const theme_config = 'dark'
+  const theme_light = theme_config === 'system' ? 'light' : theme_config;
+  let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : theme_light;
+  console.debug(theme);
+
+  try {
+    localStorage.setItem('theme', theme);
+    window.minima_theme = theme;
+    document.querySelector('html').classList.add(theme);
+  } catch (e) {
+    console.error(e);
+  }
+</script>
+
+
+
+<body>
+  <header class="mt-3 mb-8">
+  <div class="container mx-auto">
+    <nav class="flex justify-between items-center">
+      <div class="flex items-center">
+        
+        <div id="theme-switch" class="text-2xl cursor-pointer"></div>
+      </div>
+      <ul class="flex items-center text-base font-semibold
+        whitespace-nowrap overflow-x-auto overflow-y-hidden">
+        
+        <li class="ml-2 mr-2">
+          
+          <a href='/'>Home</a>
+          
+        </li>
+        
+        <li class="ml-2 mr-2">
+          
+          <a href="/about">About</a>
+          
+        </li>
+        
+        <li class="ml-2 mr-2">
+          
+          <a href="/posts">Posts</a>
+          
+        </li>
+        
+        <li class="ml-2 mr-2">
+          
+          <a href="/wiki">Wiki</a>
+          
+        </li>
+        
+        <li class="ml-2 mr-2">
+          
+          <a href="/search">Search</a>
+          
+        </li>
+        
+      </ul>
+      
+    </nav>
+  </div>
+</header>
+
+
+  
+<div class="container mx-auto">
+  <h1 class="text-4xl font-extrabold mt-6 mb-6">Efetch.el</h1>
+  <div class="mb-3 text-sm flex justify-between ">
+    <div>
+      
+      Post at &mdash; Sep 04, 2024
+      
+      
+    </div>
+    
+    <div>
+      
+      
+      <a class="ml-1" href="/tags/emacs">#emacs</a>
+      
+      
+      <a class="ml-1" href="/tags/script">#script</a>
+      
+    </div>
+    
+  </div>
+  <main class="mb-8">
+    <p>A emacs fetching tool.</p>
+    <article class="md">
+      <!-- raw HTML omitted -->
+<p>Embrace a new level of Emacs mastery with <code>efetch.el</code> – a powerful and user-friendly Emacs Fetching Tool. Designed for enthusiasts who crave insights into their Emacs environment, <code>efetch.el</code> provides a seamless way to peek under the hood of your setup. With just a simple command, unlock a left-side buffer showcasing key details such as Emacs version, host information, user details, installed packages, active theme, and default font. Customizable and accessible, this tool not only delivers a quick snapshot of your Emacs configuration but also opens the door for collaborative enhancements. Join the community on <a href="https://github.com/jpachecoxyz/efetch.el">Github</a> contribute your ideas, and elevate your Emacs experience with <code>efetch.el</code> today!</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<figure><img src="/images/posts/efetch.el/efetch.png"
+    alt="Figure 1: efetch.el tool in the left side of the frame."><figcaption>
+      <p><!-- raw HTML omitted -->Figure 1: <!-- raw HTML omitted -->efetch.el tool in the left side of the frame.</p>
+    </figcaption>
+</figure>
+
+<!-- raw HTML omitted -->
+<h2 id="overview">Overview</h2>
+<p>Are you an Emacs enthusiast who loves to keep track of your environment details? Look no further! We are excited to introduce <code>efetch.el</code> - the Emacs Fetching Tool. This nifty extension provides a quick and informative snapshot of your Emacs setup, helping you stay in the know about your environment configuration.</p>
+<h2 id="features">Features</h2>
+<ul>
+<li>
+<p><strong><strong>Quick Access</strong></strong>: Invoke <code>efetch</code> with a simple command to access a left-side buffer displaying essential information about your Emacs environment.</p>
+</li>
+<li>
+<p><strong><strong>Information at a Glance</strong></strong>: Get a concise overview, including Emacs version, host details, user information, installed packages, active theme, and default font.</p>
+</li>
+<li>
+<p><strong><strong>Customization</strong></strong>: Tailor the appearance and information displayed in the <code>efetch</code> buffer to suit your preferences.</p>
+</li>
+<li>
+<p><strong><strong>Convenient Keyboard Shortcut</strong></strong>: Close the <code>efetch</code> buffer and its window effortlessly with the <code>q</code> key.</p>
+</li>
+</ul>
+<h2 id="how-to-use">How to Use</h2>
+<ol>
+<li><strong><strong>Installation</strong></strong>: Add the following line to your Emacs configuration:
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;efetch</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<p>Ensure the <code>efetch.el</code> file is in a directory included in your <code>load-path</code>.</p>
+<ol>
+<li><strong><strong>Usage</strong></strong>: Invoke <code>efetch</code> interactively using:</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">M-x efetch
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>The information will be displayed in a left-side buffer named <strong>efetch-popup</strong>.</p>
+<h2 id="customization">Customization</h2>
+<p>Feel free to customize the appearance or the information displayed in the <code>efetch</code> buffer by modifying the relevant sections in the <code>efetch</code> function.</p>
+<h2 id="contribution">Contribution</h2>
+<p>We welcome contributions and feedback! <code>efetch.el</code> is hosted on <a href="https://github.com/engjpacheco/efetch.el">github</a>. Feel free to <a href="https://github.com/engjpacheco/efetch.el/fork">fork the repository</a> and submit pull requests.
+The project is open to changes, improvements, and collaborations.</p>
+<h2 id="get-started">Get Started</h2>
+<p>Enhance your Emacs experience with <code>efetch.el</code>! Stay informed about your environment effortlessly. Download and integrate it into your Emacs setup today.</p>
+
+    </article>
+  </main>
+  
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css"
+    integrity="sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc" crossorigin="anonymous">
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"
+    integrity="sha384-YNHdsYkH6gMx9y3mRkmcJ2mFUjTd0qNQQvY9VYZgQd7DcN7env35GzlmFaZ23JGp"
+    crossorigin="anonymous"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js"
+    integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl"
+    crossorigin="anonymous"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+            
+            
+            delimiters: [
+                { left: '$$', right: '$$', display: true },
+                { left: '$', right: '$', display: false },
+                { left: '\\(', right: '\\)', display: false },
+                { left: '\\[', right: '\\]', display: true }
+            ],
+            
+            throwOnError: false
+        });
+    });
+</script>
+
+
+
+
+
+<script 
+  src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"
+  crossorigin="anonymous">
+</script>
+<script>
+  mermaid.init(undefined, 'code.language-mermaid')
+</script>
+
+
+
+
+</div>
+
+
+  <footer class="mt-8 mb-8">
+  <div class="container mx-auto">
+    <div class="mt-8 flex flex-col-reverse sm:flex-row sm:justify-between items-center">
+      <div class="text-center sm:text-left">
+        <p class="mt-0 text-sm">Made in emacs for (λ jpachecoxyz)</p>
+        <p class="mt-0 text-xs">
+          Built with <a href="https://gohugo.io" target="_blank" rel="noopener noreferrer">Hugo</a> v0.143.1
+          and <a href="https://github.com/mivinci/hugo-theme-minima" target="_blank" rel="noopener noreferrer">Minima</a>
+        </p>
+      </div>
+      
+      <p class="flex items-center mt-0">
+        
+          <a class="icon ml-1 mr-1" href="mailto:jpacheco@cock.li" title="email">
+          
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+          
+          </a>
+        
+          <a class="icon ml-1 mr-1" href="https://github.com/jpachecoxyz" title="github">
+          
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          
+          </a>
+        
+          <a class="icon ml-1 mr-1" href="/index.xml" title="rss">
+          
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
+          
+          </a>
+        
+      </p>
+    </div>
+  </div>
+</footer>
+</body>
+
+</html>

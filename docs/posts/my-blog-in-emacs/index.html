@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#181818">
+  <title>
+    
+    (λ jpachecoxyz) - How I made my blog with emacs and hugo
+    
+  </title>
+  
+  
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  
+  
+  
+  <link rel="stylesheet" href="/minima.54cfcb44e10b4015b41a13771763013b79bdba6a92e49ea4a77bb44db465e761.css" integrity="sha256-VM/LROELQBW0GhN3F2MBO3m9umqS5J6kp3u0TbRl52E=">
+  
+  
+  
+  <script defer type="text/javascript" src="/minima.c1f5b8aa64e8321bb391ecac878965aed0ecd786b763e1fc0f136ef263bd2b47.js" integrity="sha256-wfW4qmToMhuzkeysh4llrtDs14a3Y&#43;H8DxNu8mO9K0c="></script>
+  
+  
+  
+</head>
+<script>
+  const theme_config = 'dark'
+  const theme_light = theme_config === 'system' ? 'light' : theme_config;
+  let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : theme_light;
+  console.debug(theme);
+
+  try {
+    localStorage.setItem('theme', theme);
+    window.minima_theme = theme;
+    document.querySelector('html').classList.add(theme);
+  } catch (e) {
+    console.error(e);
+  }
+</script>
+
+
+
+<body>
+  <header class="mt-3 mb-8">
+  <div class="container mx-auto">
+    <nav class="flex justify-between items-center">
+      <div class="flex items-center">
+        
+        <div id="theme-switch" class="text-2xl cursor-pointer"></div>
+      </div>
+      <ul class="flex items-center text-base font-semibold
+        whitespace-nowrap overflow-x-auto overflow-y-hidden">
+        
+        <li class="ml-2 mr-2">
+          
+          <a href='/'>Home</a>
+          
+        </li>
+        
+        <li class="ml-2 mr-2">
+          
+          <a href="/about">About</a>
+          
+        </li>
+        
+        <li class="ml-2 mr-2">
+          
+          <a href="/posts">Posts</a>
+          
+        </li>
+        
+        <li class="ml-2 mr-2">
+          
+          <a href="/wiki">Wiki</a>
+          
+        </li>
+        
+        <li class="ml-2 mr-2">
+          
+          <a href="/search">Search</a>
+          
+        </li>
+        
+      </ul>
+      
+    </nav>
+  </div>
+</header>
+
+
+  
+<div class="container mx-auto">
+  <h1 class="text-4xl font-extrabold mt-6 mb-6">How I made my blog with emacs and hugo</h1>
+  <div class="mb-3 text-sm flex justify-between ">
+    <div>
+      
+      Post at &mdash; Sep 04, 2024
+      
+      
+    </div>
+    
+    <div>
+      
+      
+      <a class="ml-1" href="/tags/emacs">#emacs</a>
+      
+      
+      <a class="ml-1" href="/tags/tecnology">#tecnology</a>
+      
+      
+      <a class="ml-1" href="/tags/personal">#personal</a>
+      
+    </div>
+    
+  </div>
+  <main class="mb-8">
+    <p>A overview of how I write and develop my web blog using emacs &amp; hugo</p>
+    <article class="md">
+      <!-- raw HTML omitted -->
+<p>I have been using emacs most of the time for writting, and of course when I started to make my blog I have been use it (emacs) since of it. In the beginig when I start writing I was using some scripts and tips from <a href="https://systemcrafters.net/">system crafters</a> he use htmlize and some <em>lisp</em> scripting. It was ok but then I have been watching some <a href="https://www.youtube.com/@LukeSmithxyz">lukesmith</a> videos and see this <a href="https://www.youtube.com/watch?v=jAXKSKb3etk&amp;pp=ygUOaHVnbyBsdWtlc21pdGg%3D">video</a> about him switching to <code>HUGO</code>, so I decided to check <code>HUGO</code> too.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<figure><img src="/images/posts/my-blog-in-emacs/overview.png"
+    alt="Figure 1: A overview of how my org file looks like."><figcaption>
+      <p><!-- raw HTML omitted -->Figure 1: <!-- raw HTML omitted -->A overview of how my org file looks like.</p>
+    </figcaption>
+</figure>
+
+<!-- raw HTML omitted -->
+<h2 id="what-software-and-packages-do-i-use-dot">What software and packages do I use?.</h2>
+<p>Yep! I use <code>emacs</code> 🤓 and <code>ox-hugo</code>.</p>
+<p>And to build the static web I use <a href="https://gohugo.io/getting-started/quick-start/">HUGO</a> and <code>git</code>.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-elisp" data-lang="elisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nb">use-package</span> <span class="nv">ox-hugo</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">:ensure</span> <span class="no">t</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">:after</span> <span class="nv">ox</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><!-- raw HTML omitted -->
+<h2 id="org-and-its-configuration-dot">Org and its configuration.</h2>
+<p><code>HUGO</code> uses markdown to manage the sites, posts, etc. but because we where using emacs, (we don&rsquo;t like others than org syntax), so there are a lot of variables that <code>ox-hugo</code> handle in order to been exported to markdown syntax.</p>
+<p>In my case I like to develop my whole blog into a single org-file</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-elisp" data-lang="elisp"><span class="line"><span class="cl"><span class="err">#</span><span class="nv">+begin_src</span> <span class="nv">org</span>
+</span></span><span class="line"><span class="cl"><span class="err">#</span><span class="nv">+TITLE:</span> <span class="nv">jpacheco.xyz</span>
+</span></span><span class="line"><span class="cl"><span class="err">#</span><span class="nv">+AUTHOR:</span> <span class="nv">Javier</span> <span class="nv">Pacheco</span>
+</span></span><span class="line"><span class="cl"><span class="err">#</span><span class="nv">+DESCRIPTION:</span> <span class="nv">My</span> <span class="nv">website</span> <span class="nv">posts</span> <span class="nv">&amp;</span> <span class="nv">projects.</span>
+</span></span><span class="line"><span class="cl"><span class="err">#</span><span class="nv">+hugo_base_dir:</span> <span class="nv">~/webdev/blog/</span>
+</span></span><span class="line"><span class="cl"><span class="err">#</span><span class="nv">+startup:</span> <span class="nv">content</span>
+</span></span><span class="line"><span class="cl"><span class="err">#</span><span class="nv">+hugo_custom_front_matter:</span> <span class="nv">toc</span> <span class="nv">true</span>
+</span></span><span class="line"><span class="cl"><span class="err">#</span><span class="nv">+hugo_auto_set_lastmod:</span> <span class="no">t</span>
+</span></span><span class="line"><span class="cl"><span class="err">#</span><span class="nv">+date:</span> <span class="nv">2024-07-04</span>
+</span></span><span class="line"><span class="cl"><span class="err">#</span><span class="nv">+seq_todo:</span> <span class="nv">TODO</span><span class="p">(</span><span class="no">t</span><span class="p">)</span> <span class="nv">WAIT</span><span class="p">(</span><span class="nv">w@/!</span><span class="p">)</span> <span class="nv">|</span> <span class="nv">DONE</span><span class="p">(</span><span class="nv">d!</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><!-- raw HTML omitted -->
+<hr>
+<p>These are the most important and relevant to use within HUGO:</p>
+<ul>
+<li><em>#+HUGO_BASE_DIR:</em></li>
+</ul>
+<p>This declare where you HUGO site is located, basically in the path where you run <code>hugo new site my-site</code>.</p>
+<ul>
+<li><em>#+HUGO_CUSTOM_FRONT_MATTER</em>:</li>
+</ul>
+<p>This is for enable/disable the toc of the posts when ox-hugo exported to md format.</p>
+<h2 id="writing-the-posts-dot">Writing the posts.</h2>
+<p>Write a post is very easy to start, you only need to add a org lvl-1 header, and add a more metadata (properties). The sub-headers of the post are going to be org-lvl-3 headers, and so on.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-org" data-lang="org"><span class="line"><span class="cl"><span class="gh">*</span><span class="err"> TODO</span><span class="gs"> How I made my blog with emacs and hugo               :emacs:blog:hugo:</span>
+</span></span><span class="line"><span class="cl"><span class="c">   :PROPERTIES:
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="cs">   :EXPORT_FILE_NAME: my-blog-in-emacs
+</span></span></span><span class="line"><span class="cl"><span class="cs">   :EXPORT_DESCRIPTION: A overview of how I write and develop my web blog using emacs &amp; hugo
+</span></span></span><span class="line"><span class="cl"><span class="cs">   :DATE:     08-14-2024
+</span></span></span><span class="line"><span class="cl"><span class="cs">   :EXPORT_HUGO_SECTION: posts
+</span></span></span><span class="line"><span class="cl"><span class="cs"></span><span class="c">   :END:</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><!-- raw HTML omitted -->
+<hr>
+<ul>
+<li><em>:EXPORT_FILE_NAME</em>:</li>
+</ul>
+<p>This is how your file is going to be stored, you may or not add the <code>.md</code> extension.</p>
+<ul>
+<li><em>:EXPORT_HUGO_SECTION</em>:</li>
+</ul>
+<p>Here is the tricky part, if you have multiple sections like: post, projects, topics, etc. this is where the file is going to be stored.</p>
+<p>If the sub-header starts with a TODO, when exported the md metadata is going to have <code>draftt: true</code>, which means even the archive is going to be created when you run hugo to create your site that md archive is going to be ignored until you finish (remove the TODO or change it to DONE.).</p>
+<p>And that&rsquo;s it, you can search more options for manage the front matter in hugo in this <a href="https://ox-hugo.scripter.co/">page.</a></p>
+<p>Thanks for reading.</p>
+
+    </article>
+  </main>
+  
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css"
+    integrity="sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc" crossorigin="anonymous">
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"
+    integrity="sha384-YNHdsYkH6gMx9y3mRkmcJ2mFUjTd0qNQQvY9VYZgQd7DcN7env35GzlmFaZ23JGp"
+    crossorigin="anonymous"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js"
+    integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl"
+    crossorigin="anonymous"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+            
+            
+            delimiters: [
+                { left: '$$', right: '$$', display: true },
+                { left: '$', right: '$', display: false },
+                { left: '\\(', right: '\\)', display: false },
+                { left: '\\[', right: '\\]', display: true }
+            ],
+            
+            throwOnError: false
+        });
+    });
+</script>
+
+
+
+
+
+<script 
+  src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"
+  crossorigin="anonymous">
+</script>
+<script>
+  mermaid.init(undefined, 'code.language-mermaid')
+</script>
+
+
+
+
+</div>
+
+
+  <footer class="mt-8 mb-8">
+  <div class="container mx-auto">
+    <div class="mt-8 flex flex-col-reverse sm:flex-row sm:justify-between items-center">
+      <div class="text-center sm:text-left">
+        <p class="mt-0 text-sm">Made in emacs for (λ jpachecoxyz)</p>
+        <p class="mt-0 text-xs">
+          Built with <a href="https://gohugo.io" target="_blank" rel="noopener noreferrer">Hugo</a> v0.143.1
+          and <a href="https://github.com/mivinci/hugo-theme-minima" target="_blank" rel="noopener noreferrer">Minima</a>
+        </p>
+      </div>
+      
+      <p class="flex items-center mt-0">
+        
+          <a class="icon ml-1 mr-1" href="mailto:jpacheco@cock.li" title="email">
+          
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+          
+          </a>
+        
+          <a class="icon ml-1 mr-1" href="https://github.com/jpachecoxyz" title="github">
+          
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          
+          </a>
+        
+          <a class="icon ml-1 mr-1" href="/index.xml" title="rss">
+          
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
+          
+          </a>
+        
+      </p>
+    </div>
+  </div>
+</footer>
+</body>
+
+</html>

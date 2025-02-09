@@ -1,0 +1,115 @@
+publishDir = "./docs"
+baseurl      = "/"
+title        = "My Blog"
+languageCode = "en-us"
+theme        = "hello-friend-ng"
+# paginate     = 6
+
+[params]
+  # Subtitle for home
+  homeSubtitle = "My personal blog."
+  # Set disableReadOtherPosts to true in order to hide the links to other posts.
+  disableReadOtherPosts = false
+  # Enable sharing buttons, if you like
+  enableSharingButtons = false
+  # Show a global language switcher in the navigation bar
+  enableGlobalLanguageMenu = false
+  # Metadata mostly used in document's head
+  description = "My new homepage or blog"
+  keywords = "homepage, blog"
+  images = [""]
+  archetypeDir = "archetypes"
+  contentDir   = "content"
+  dataDir      = "data"
+  layoutDir    = "layouts"
+
+  buildDrafts  = false
+  buildFuture  = false
+  buildExpired = false
+  canonifyURLs = true
+
+  enableRobotsTXT = true
+  enableGitInfo   = false
+  enableEmoji     = true
+  enableMissingTranslationPlaceholders = false
+  disableRSS     = false
+  disableSitemap = false
+  disable404     = false
+  PygmentsStyle = "monokai"
+  disableHugoGeneratorInject = false
+  enableThemeToggle = true
+
+  [params.author]
+    name = "Javier Pacheco"
+
+  # Custom footer 
+  # If you want, you can easily override the default footer with your own content. 
+  #
+  [params.footer]
+    # trademark = 2023
+    rss = true
+    copyright = false
+    author = true
+
+    topText = []
+
+[services]
+  [services.rss]
+      # Maximum number of items in the RSS feed.
+      limit = 42
+      
+[[params.social]]
+  name = "email"
+  url  = "mailto:jpacheco@cock.li"
+
+[[params.social]]
+  name = "github"
+  url  = "https://github.com/jpachceoxyz"
+
+[[params.social]]
+  name = "linkedin"
+  url  = "https://www.linkedin.com/in/jpachecom4/"
+
+[permalinks]
+  posts = "/posts/:year/:month/:title/"
+
+[blackfriday]
+  hrefTargetBlank = true
+
+[taxonomies]
+    category = "blog"
+    tag      = "tags"
+    series   = "series"
+
+[languages]
+  [languages.en]
+    title = "jpachecoxyz's Blog"
+    keywords = ""
+    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+    readOtherPosts = "Read other posts"
+
+  [languages.en.params]
+    subtitle  = "A simple theme for Hugo"
+
+    [languages.en.params.logo]
+      logoText = "(λ jpachecoxyz)"
+      logoHomeLink = "/"
+    # or
+    #
+    # path = "/img/your-example-logo.svg"
+    # alt = "Your example logo alt text"
+
+  # And you can even create generic menu
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name       = "About"
+    url        = "about/"
+  [[menu.main]]
+    identifier = "posts"
+    name       = "Posts"
+    url        = "posts/"
+  [[menu.main]]
+    identifier = "wiki"
+    name       = "Wiki"
+    url        = "wiki/wiki"

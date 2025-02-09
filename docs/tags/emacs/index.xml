@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Emacs on (λ jpachecoxyz)</title>
+    <link>//localhost:1313/tags/emacs/</link>
+    <description>Recent content in Emacs on (λ jpachecoxyz)</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Made in emacs for (λ jpachecoxyz)</copyright>
+    <lastBuildDate>Wed, 04 Sep 2024 02:44:00 -0500</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Emacs vs Neovim</title>
+      <link>//localhost:1313/posts/emacs-vs-nvim/</link>
+      <pubDate>Wed, 04 Sep 2024 02:44:00 -0500</pubDate>
+      <guid>//localhost:1313/posts/emacs-vs-nvim/</guid>
+      <description>&lt;h2 id=&#34;neovim-for-programming&#34;&gt;Neovim for Programming&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Efficiency and Speed: Neovim is highly efficient for programming due to its lightweight nature and focus on speed. It starts up faster and can handle large files with ease.&lt;/li&gt;&#xA;&lt;li&gt;Plugin Ecosystem: Neovim has a rich plugin ecosystem, especially for programming-related tasks. Plugins like nvim-treesitter for syntax highlighting, telescope.nvim for fuzzy finding, and coc.nvim or nvim-lspconfig for Language Server Protocol (LSP) support make it a powerful choice for coding.&lt;/li&gt;&#xA;&lt;li&gt;Modal Editing: Neovim, like Vim, uses modal editing, which can be very powerful for code navigation and manipulation once you get used to it.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;emacs-for-writing-posts--and-beyond&#34;&gt;Emacs for Writing Posts (and Beyond)&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Org-mode: Emacs shines when it comes to writing and organizing content, especially with Org-mode. Org-mode is exceptional for note-taking, task management, and writing posts or documentation. It allows you to export your work to various formats (HTML, PDF, LaTeX, etc.) easily.&lt;/li&gt;&#xA;&lt;li&gt;Extensibility: Emacs is known for its extensibility. You can customize it to be a full-fledged IDE, text editor, or writing tool. For blog posts, especially if you&amp;rsquo;re using something like ox-hugo, Emacs can be incredibly powerful.&lt;/li&gt;&#xA;&lt;li&gt;Unified Environment: If you prefer an environment where you can write, code, manage tasks, and do everything in one place, Emacs offers that. It&amp;rsquo;s an all-in-one tool where you can manage your entire workflow.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;which-should-you-choose&#34;&gt;Which Should You Choose?&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;For Programming: Neovim might be better if you want a focused, fast, and highly efficient tool purely for coding. It&amp;rsquo;s especially suitable if you prefer modal editing and a streamlined environment.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How I made my blog with emacs and hugo</title>
+      <link>//localhost:1313/posts/my-blog-in-emacs/</link>
+      <pubDate>Wed, 04 Sep 2024 02:44:00 -0500</pubDate>
+      <guid>//localhost:1313/posts/my-blog-in-emacs/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;I have been using emacs most of the time for writting, and of course when I started to make my blog I have been use it (emacs) since of it. In the beginig when I start writing I was using some scripts and tips from &lt;a href=&#34;https://systemcrafters.net/&#34;&gt;system crafters&lt;/a&gt; he use htmlize and some &lt;em&gt;lisp&lt;/em&gt; scripting. It was ok but then I have been watching some &lt;a href=&#34;https://www.youtube.com/@LukeSmithxyz&#34;&gt;lukesmith&lt;/a&gt; videos and see this &lt;a href=&#34;https://www.youtube.com/watch?v=jAXKSKb3etk&amp;amp;pp=ygUOaHVnbyBsdWtlc21pdGg%3D&#34;&gt;video&lt;/a&gt; about him switching to &lt;code&gt;HUGO&lt;/code&gt;, so I decided to check &lt;code&gt;HUGO&lt;/code&gt; too.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Install Telega in NixOS - Emacs.</title>
+      <link>//localhost:1313/posts/install-telega-nixos/</link>
+      <pubDate>Wed, 04 Sep 2024 02:44:00 -0500</pubDate>
+      <guid>//localhost:1313/posts/install-telega-nixos/</guid>
+      <description>&lt;h2 id=&#34;what-is-telega&#34;&gt;What is telega?.&lt;/h2&gt;&#xA;&lt;p&gt;According to the &lt;a href=&#34;https://github.com/zevlg/telega.el&#34;&gt;Github&lt;/a&gt; repository:&lt;/p&gt;&#xA;&lt;dl&gt;&#xA;&lt;dt&gt;Telega&lt;/dt&gt;&#xA;&lt;dd&gt;telega.el is full featured unofficial client for Telegram platform for GNU Emacs.&lt;/dd&gt;&#xA;&lt;/dl&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;As you may know, my main OS, at this time (2024-08-21) is &lt;code&gt;NixOS&lt;/code&gt;, so I was trying to install &lt;code&gt;Telega&lt;/code&gt; in my emacs, but as you can imagine, the file system hierarchy don&amp;rsquo;t works &amp;ldquo;normal&amp;rdquo; in &lt;code&gt;NixOS&lt;/code&gt;, so is a little tricky set up the environment to actually make &lt;code&gt;Telega&lt;/code&gt; works.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Efetch.el</title>
+      <link>//localhost:1313/posts/efetch/</link>
+      <pubDate>Wed, 04 Sep 2024 02:43:00 -0500</pubDate>
+      <guid>//localhost:1313/posts/efetch/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;Embrace a new level of Emacs mastery with &lt;code&gt;efetch.el&lt;/code&gt; – a powerful and user-friendly Emacs Fetching Tool. Designed for enthusiasts who crave insights into their Emacs environment, &lt;code&gt;efetch.el&lt;/code&gt; provides a seamless way to peek under the hood of your setup. With just a simple command, unlock a left-side buffer showcasing key details such as Emacs version, host information, user details, installed packages, active theme, and default font. Customizable and accessible, this tool not only delivers a quick snapshot of your Emacs configuration but also opens the door for collaborative enhancements. Join the community on &lt;a href=&#34;https://github.com/jpachecoxyz/efetch.el&#34;&gt;Github&lt;/a&gt; contribute your ideas, and elevate your Emacs experience with &lt;code&gt;efetch.el&lt;/code&gt; today!&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

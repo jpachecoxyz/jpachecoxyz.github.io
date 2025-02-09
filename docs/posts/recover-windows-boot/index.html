@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#181818">
+  <title>
+    
+    (λ jpachecoxyz) - Recover Windows BOOT
+    
+  </title>
+  
+  
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  
+  
+  
+  <link rel="stylesheet" href="/minima.54cfcb44e10b4015b41a13771763013b79bdba6a92e49ea4a77bb44db465e761.css" integrity="sha256-VM/LROELQBW0GhN3F2MBO3m9umqS5J6kp3u0TbRl52E=">
+  
+  
+  
+  <script defer type="text/javascript" src="/minima.c1f5b8aa64e8321bb391ecac878965aed0ecd786b763e1fc0f136ef263bd2b47.js" integrity="sha256-wfW4qmToMhuzkeysh4llrtDs14a3Y&#43;H8DxNu8mO9K0c="></script>
+  
+  
+  
+</head>
+<script>
+  const theme_config = 'dark'
+  const theme_light = theme_config === 'system' ? 'light' : theme_config;
+  let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : theme_light;
+  console.debug(theme);
+
+  try {
+    localStorage.setItem('theme', theme);
+    window.minima_theme = theme;
+    document.querySelector('html').classList.add(theme);
+  } catch (e) {
+    console.error(e);
+  }
+</script>
+
+
+
+<body>
+  <header class="mt-3 mb-8">
+  <div class="container mx-auto">
+    <nav class="flex justify-between items-center">
+      <div class="flex items-center">
+        
+        <div id="theme-switch" class="text-2xl cursor-pointer"></div>
+      </div>
+      <ul class="flex items-center text-base font-semibold
+        whitespace-nowrap overflow-x-auto overflow-y-hidden">
+        
+        <li class="ml-2 mr-2">
+          
+          <a href='/'>Home</a>
+          
+        </li>
+        
+        <li class="ml-2 mr-2">
+          
+          <a href="/about">About</a>
+          
+        </li>
+        
+        <li class="ml-2 mr-2">
+          
+          <a href="/posts">Posts</a>
+          
+        </li>
+        
+        <li class="ml-2 mr-2">
+          
+          <a href="/wiki">Wiki</a>
+          
+        </li>
+        
+        <li class="ml-2 mr-2">
+          
+          <a href="/search">Search</a>
+          
+        </li>
+        
+      </ul>
+      
+    </nav>
+  </div>
+</header>
+
+
+  
+<div class="container mx-auto">
+  <h1 class="text-4xl font-extrabold mt-6 mb-6">Recover Windows BOOT</h1>
+  <div class="mb-3 text-sm flex justify-between ">
+    <div>
+      
+      Post at &mdash; Jan 18, 2025
+      
+      
+    </div>
+    
+    <div>
+      
+      
+      <a class="ml-1" href="/tags/blog">#blog</a>
+      
+      
+      <a class="ml-1" href="/tags/tecnology">#tecnology</a>
+      
+    </div>
+    
+  </div>
+  <main class="mb-8">
+    <p>How to  recover the boot files of Windows.</p>
+    <article class="md">
+      <p>This guide is suggested when you accidentally format the boot partition while installing a new OS, wiping out the Windows bootloader in the process. This has happened to me on more than one occasion, which is why I decided to document it.</p>
+<p>It has also happened when the Windows bootloader is deleted. The following steps are solely for copying the Windows boot files using the ISO onto the partition without having to reformat it.</p>
+<h2 id="select-the-disk-dot">Select the disk.</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">list disk sel disk #
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="select-the-boot-partition-dot">Select the boot partition.</h2>
+<p>List the partitions, select the FAT32 partition, and assign a letter to it.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">list vol sel vol # assign letter z:
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="load-windows-boot-files-dot">Load Windows boot files.</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">bcdboot c:\windows /s z: /f all
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>That&rsquo;s it! Simply restart, boot into the main OS, run <code>os-prober</code>, and execute <code>update-grub</code> to add the boot entry to <code>grub</code>.</p>
+
+    </article>
+  </main>
+  
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css"
+    integrity="sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc" crossorigin="anonymous">
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"
+    integrity="sha384-YNHdsYkH6gMx9y3mRkmcJ2mFUjTd0qNQQvY9VYZgQd7DcN7env35GzlmFaZ23JGp"
+    crossorigin="anonymous"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js"
+    integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl"
+    crossorigin="anonymous"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+            
+            
+            delimiters: [
+                { left: '$$', right: '$$', display: true },
+                { left: '$', right: '$', display: false },
+                { left: '\\(', right: '\\)', display: false },
+                { left: '\\[', right: '\\]', display: true }
+            ],
+            
+            throwOnError: false
+        });
+    });
+</script>
+
+
+
+
+
+<script 
+  src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"
+  crossorigin="anonymous">
+</script>
+<script>
+  mermaid.init(undefined, 'code.language-mermaid')
+</script>
+
+
+
+
+</div>
+
+
+  <footer class="mt-8 mb-8">
+  <div class="container mx-auto">
+    <div class="mt-8 flex flex-col-reverse sm:flex-row sm:justify-between items-center">
+      <div class="text-center sm:text-left">
+        <p class="mt-0 text-sm">Made in emacs for (λ jpachecoxyz)</p>
+        <p class="mt-0 text-xs">
+          Built with <a href="https://gohugo.io" target="_blank" rel="noopener noreferrer">Hugo</a> v0.143.1
+          and <a href="https://github.com/mivinci/hugo-theme-minima" target="_blank" rel="noopener noreferrer">Minima</a>
+        </p>
+      </div>
+      
+      <p class="flex items-center mt-0">
+        
+          <a class="icon ml-1 mr-1" href="mailto:jpacheco@cock.li" title="email">
+          
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+          
+          </a>
+        
+          <a class="icon ml-1 mr-1" href="https://github.com/jpachecoxyz" title="github">
+          
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          
+          </a>
+        
+          <a class="icon ml-1 mr-1" href="/index.xml" title="rss">
+          
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
+          
+          </a>
+        
+      </p>
+    </div>
+  </div>
+</footer>
+</body>
+
+</html>

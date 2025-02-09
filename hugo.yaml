@@ -1,0 +1,130 @@
+baseURL: /
+publishDir: ./docs
+languageCode: en-us
+
+title: (λ jpachecoxyz)
+
+copyright: "Made in emacs for (λ jpachecoxyz)"
+
+googleAnalytics:
+
+pagination:
+  pagerSize: 4
+  # Specify the number of posts listed at home page
+
+theme: minima
+# Specify a theme to use
+
+defaultContentLanguage: en
+# Specify the default language
+
+languages:
+# Override language-specific configurations
+  en:
+    languageName: EN
+    weight: 1
+
+params:
+# Define regular configurations
+
+  greet: (λ jpachecoxyz)
+  
+  subtitle:
+  
+  defaultTheme: dark
+  # Specify the default color theme, available values: light, sand, rock, system.
+
+  displayDate: true
+
+  displayDescription: true
+
+  selectable: true
+
+  author:
+    name: Javier Pacheco
+    status: Maintenance Engineer
+    avatar: https://avatars.githubusercontent.com/u/174582218?v=4
+    description: |
+      I am maintenance engineer, I'm specialized in maintenance,
+      programming PLC, Robotics, I also like to code in python,
+      C, lisp, an emacs enjoyer because of org-mode.
+      I use linux and Guix as my daliy OS.
+
+  social:
+    - name: "email"
+      url: "mailto:jpacheco@cock.li"
+    - name: "github"
+      url: "https://github.com/jpachecoxyz"
+    - name: "rss"
+      url: "index.xml"
+
+  math:
+    enable: true
+    provider: katex
+
+  diagram:
+    enable: true
+    provider: mermaid
+
+  search:
+    enable: true
+    provider: fuse
+    title: Search
+    placeholder: (search-forward "search in posts ...")
+
+    fuse:
+    # See also https://fusejs.io
+      keys:
+        - title
+        - permalink
+        - summary
+        - content
+      distance: 100
+      location: 0
+      threshold: 0.6
+      ignoreLocation: false
+      isCaseSensitive: false
+      includeScore: false
+      includeMatches: true
+      minMatchCharLength: 3
+      shouldSort: true
+      findAllMatches: false
+
+menu:
+  main:
+    - identifier: home
+      name: Home
+      weight: 1
+    - identifier: about
+      name: About
+      weight: 2
+    - identifier: posts
+      name: Posts
+      weight: 3
+    - identifier: wiki
+      name: Wiki
+      weight: 4
+    - identifier: search
+      name: Search
+      weight: 5
+
+taxonomies:
+  category: categories
+  tag: tags
+  wiki: wiki
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+markup:
+# **DO NOT EDIT** anything below. 
+# Because unlike other Hugo themes, the way Minima uses to do syntax
+# highlighting depends strongly on configurations below, so that the
+# color theme of code blocks changes with the blog color theme, instead
+# of being static like you may have seen on other Hugo themes.
+  highlight:
+    lineNos: true
+    noClasses: false

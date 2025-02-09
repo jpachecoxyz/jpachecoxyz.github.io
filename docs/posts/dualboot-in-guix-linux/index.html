@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#181818">
+  <title>
+    
+    (λ jpachecoxyz) - Dualboot in guix linux
+    
+  </title>
+  
+  
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  
+  
+  
+  <link rel="stylesheet" href="/minima.54cfcb44e10b4015b41a13771763013b79bdba6a92e49ea4a77bb44db465e761.css" integrity="sha256-VM/LROELQBW0GhN3F2MBO3m9umqS5J6kp3u0TbRl52E=">
+  
+  
+  
+  <script defer type="text/javascript" src="/minima.c1f5b8aa64e8321bb391ecac878965aed0ecd786b763e1fc0f136ef263bd2b47.js" integrity="sha256-wfW4qmToMhuzkeysh4llrtDs14a3Y&#43;H8DxNu8mO9K0c="></script>
+  
+  
+  
+</head>
+<script>
+  const theme_config = 'dark'
+  const theme_light = theme_config === 'system' ? 'light' : theme_config;
+  let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : theme_light;
+  console.debug(theme);
+
+  try {
+    localStorage.setItem('theme', theme);
+    window.minima_theme = theme;
+    document.querySelector('html').classList.add(theme);
+  } catch (e) {
+    console.error(e);
+  }
+</script>
+
+
+
+<body>
+  <header class="mt-3 mb-8">
+  <div class="container mx-auto">
+    <nav class="flex justify-between items-center">
+      <div class="flex items-center">
+        
+        <div id="theme-switch" class="text-2xl cursor-pointer"></div>
+      </div>
+      <ul class="flex items-center text-base font-semibold
+        whitespace-nowrap overflow-x-auto overflow-y-hidden">
+        
+        <li class="ml-2 mr-2">
+          
+          <a href='/'>Home</a>
+          
+        </li>
+        
+        <li class="ml-2 mr-2">
+          
+          <a href="/about">About</a>
+          
+        </li>
+        
+        <li class="ml-2 mr-2">
+          
+          <a href="/posts">Posts</a>
+          
+        </li>
+        
+        <li class="ml-2 mr-2">
+          
+          <a href="/wiki">Wiki</a>
+          
+        </li>
+        
+        <li class="ml-2 mr-2">
+          
+          <a href="/search">Search</a>
+          
+        </li>
+        
+      </ul>
+      
+    </nav>
+  </div>
+</header>
+
+
+  
+<div class="container mx-auto">
+  <h1 class="text-4xl font-extrabold mt-6 mb-6">Dualboot in guix linux</h1>
+  <div class="mb-3 text-sm flex justify-between ">
+    <div>
+      
+      Post at &mdash; Jan 17, 2025
+      
+      
+    </div>
+    
+    <div>
+      
+      
+      <a class="ml-1" href="/tags/linux">#linux</a>
+      
+      
+      <a class="ml-1" href="/tags/script">#script</a>
+      
+    </div>
+    
+  </div>
+  <main class="mb-8">
+    <p>How to add grub entries in guix using scheme.</p>
+    <article class="md">
+      <h2 id="dual-boot-configuration-in-guix-linux">Dual Boot Configuration in Guix Linux</h2>
+<p>Setting up a dual-boot system in Guix Linux involves configuring the GRUB bootloader to recognize both Guix and your secondary operating system. Here&rsquo;s how you can configure the bootloader step-by-step.</p>
+<h3 id="default-bootloader-configuration">Default Bootloader Configuration</h3>
+<p>The default bootloader configuration for Guix Linux is straightforward. Here&rsquo;s an example:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-scheme" data-lang="scheme"><span class="line"><span class="cl"><span class="p">(</span><span class="nf">bootloader</span> <span class="p">(</span><span class="nf">bootloader-configuration</span>
+</span></span><span class="line"><span class="cl">            <span class="p">(</span><span class="nf">bootloader</span> <span class="nv">grub-efi-bootloader</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">(</span><span class="nf">targets</span> <span class="p">(</span><span class="nb">list </span><span class="s">&#34;/boot/efi&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">            <span class="p">(</span><span class="nf">keyboard-layout</span> <span class="nv">keyboard-layout</span><span class="p">)))</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><strong>grub-efi-bootloader</strong>: Specifies the GRUB bootloader in EFI mode.</li>
+<li><strong>targets</strong>: Points to the EFI System Partition (ESP), usually mounted at `/boot/efi`.</li>
+<li><strong>keyboard-layout</strong>: Configures the keyboard layout used in GRUB.</li>
+</ul>
+<h3 id="adding-a-grub-entry-for-dual-boot">Adding a GRUB Entry for Dual Boot</h3>
+<p>To enable dual boot with Windows 11 (or another operating system), you need to add a custom entry to the GRUB configuration. Here’s how:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-scheme" data-lang="scheme"><span class="line"><span class="cl"><span class="p">(</span><span class="nf">bootloader</span> <span class="p">(</span><span class="nf">bootloader-configuration</span>
+</span></span><span class="line"><span class="cl">            <span class="p">(</span><span class="nf">bootloader</span> <span class="nv">grub-efi-bootloader</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">(</span><span class="nf">targets</span> <span class="p">(</span><span class="nb">list </span><span class="s">&#34;/boot/efi&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">            <span class="p">(</span><span class="nf">keyboard-layout</span> <span class="nv">keyboard-layout</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">;; Add a menu entry for Windows 11</span>
+</span></span><span class="line"><span class="cl">            <span class="p">(</span><span class="nf">menu-entries</span>
+</span></span><span class="line"><span class="cl">            <span class="p">(</span><span class="nf">list</span>
+</span></span><span class="line"><span class="cl">            <span class="p">(</span><span class="nf">menu-entry</span>
+</span></span><span class="line"><span class="cl">                <span class="p">(</span><span class="nf">label</span> <span class="s">&#34;Windows 11&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="p">(</span><span class="nf">device</span> <span class="p">(</span><span class="nf">uuid</span> <span class="s">&#34;65A0-06CA&#34;</span> <span class="ss">&#39;fat32</span><span class="p">))</span> <span class="c1">; UUID of the boot partition</span>
+</span></span><span class="line"><span class="cl">                <span class="p">(</span><span class="nf">chain-loader</span> <span class="s">&#34;/EFI/Microsoft/Boot/bootmgfw.efi&#34;</span><span class="p">))))))</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="key-components">Key Components</h4>
+<ol>
+<li>menu-entries:
+<ul>
+<li>Adds a custom menu entry for the GRUB boot menu.</li>
+</ul>
+</li>
+<li>menu-entry:
+<ul>
+<li>label: The name displayed in the GRUB menu (e.g., &ldquo;Windows 11&rdquo;).</li>
+<li>device: Specifies the UUID of the boot partition where Windows is installed. Replace <code>&quot;65A0-06CA&quot;</code> with the UUID of your Windows EFI partition.</li>
+<li>chain-loader: Points to the Windows EFI bootloader (<code>bootmgfw.efi</code>), usually located in <code>/EFI/Microsoft/Boot/</code>.</li>
+</ul>
+</li>
+</ol>
+<h3 id="finding-the-uuid-of-the-boot-partition">Finding the UUID of the Boot Partition</h3>
+<p>To find the UUID of the Windows boot partition, run the following command:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lsblk -o NAME,FSTYPE,UUID,MOUNTPOINT
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Locate the partition with the `fat32` filesystem type and note its UUID.</p>
+<h3 id="applying-the-configuration">Applying the Configuration</h3>
+<p>After modifying your <code>config.scm</code>, reconfigure your system to apply the changes:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo guix system reconfigure /path/to/config.scm
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="testing-the-dual-boot-setup">Testing the Dual Boot Setup</h3>
+<ol>
+<li>Reboot your system.</li>
+<li>In the GRUB menu, you should see an entry labeled &ldquo;Windows 11&rdquo; alongside your Guix Linux entry.</li>
+<li>Select &ldquo;Windows 11&rdquo; to boot into Windows.</li>
+</ol>
+<h3 id="tips-for-troubleshooting">Tips for Troubleshooting</h3>
+<ul>
+<li>If the Windows entry doesn’t appear, double-check the UUID of the boot partition.</li>
+<li>Make sure your BIOS/UEFI settings allow booting in EFI mode.</li>
+<li>Ensure the Windows EFI bootloader (<code>bootmgfw.efi</code>) exists in the specified path.</li>
+</ul>
+<p>This setup ensures that both Guix Linux and Windows 11 are easily accessible via the GRUB menu, providing a seamless dual-boot experience. If you have any questions or run into issues, feel free to ask!</p>
+
+    </article>
+  </main>
+  
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css"
+    integrity="sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc" crossorigin="anonymous">
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"
+    integrity="sha384-YNHdsYkH6gMx9y3mRkmcJ2mFUjTd0qNQQvY9VYZgQd7DcN7env35GzlmFaZ23JGp"
+    crossorigin="anonymous"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js"
+    integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl"
+    crossorigin="anonymous"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+            
+            
+            delimiters: [
+                { left: '$$', right: '$$', display: true },
+                { left: '$', right: '$', display: false },
+                { left: '\\(', right: '\\)', display: false },
+                { left: '\\[', right: '\\]', display: true }
+            ],
+            
+            throwOnError: false
+        });
+    });
+</script>
+
+
+
+
+
+<script 
+  src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"
+  crossorigin="anonymous">
+</script>
+<script>
+  mermaid.init(undefined, 'code.language-mermaid')
+</script>
+
+
+
+
+</div>
+
+
+  <footer class="mt-8 mb-8">
+  <div class="container mx-auto">
+    <div class="mt-8 flex flex-col-reverse sm:flex-row sm:justify-between items-center">
+      <div class="text-center sm:text-left">
+        <p class="mt-0 text-sm">Made in emacs for (λ jpachecoxyz)</p>
+        <p class="mt-0 text-xs">
+          Built with <a href="https://gohugo.io" target="_blank" rel="noopener noreferrer">Hugo</a> v0.143.1
+          and <a href="https://github.com/mivinci/hugo-theme-minima" target="_blank" rel="noopener noreferrer">Minima</a>
+        </p>
+      </div>
+      
+      <p class="flex items-center mt-0">
+        
+          <a class="icon ml-1 mr-1" href="mailto:jpacheco@cock.li" title="email">
+          
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+          
+          </a>
+        
+          <a class="icon ml-1 mr-1" href="https://github.com/jpachecoxyz" title="github">
+          
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          
+          </a>
+        
+          <a class="icon ml-1 mr-1" href="/index.xml" title="rss">
+          
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
+          
+          </a>
+        
+      </p>
+    </div>
+  </div>
+</footer>
+</body>
+
+</html>

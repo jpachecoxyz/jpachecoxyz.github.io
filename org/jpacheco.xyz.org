@@ -1,0 +1,2283 @@
+#+title: jpachecoxyz.github.io
+#+author: Javier Pacheco
+#+description: My website wrapped in an org file.
+#+hugo_base_dir: ../
+#+startup: content
+#+hugo_custom_front_matter: toc true
+#+hugo_auto_set_lastmod: nil
+#+date: 2024-07-04
+#+tags: blog(b) emacs(e) linux(l) personal(p) script(s) tecnology(t) wayland(w) work(W)
+#+seq_todo: TODO(t) WAIT(w@/!) | DONE(d!)
+
+* Configuration files
+** Useful elisp functions & scripts.
+*** publish.sh
+This is the script that I use to publish my web within emacs.
+#+begin_src shell :tangle ../publish.sh :shebang #!/bin/sh
+
+# Created By: Javier Pacheco - javier@jpacheco.xyz
+# Created On: 05/07/24
+# Project: Publish my blog.
+
+# cd ~/webdev/blog/ && hugo && cd ../jpachecoxyz.github.io/ && echo "Site published correctly..." && echo "Enter your commit: "
+#
+# read commit && git add . && git commit -m "$commit" && echo "hit enter to continue..." && read && git push
+
+cd ~/webdev/jpachecoxyz/ && hugo
+echo "Site published correctly..."
+
+# Use the first argument as the commit message
+git add .
+git commit -m "$1"
+git push
+#+end_src
+
+*** Auto save and hugo export.
+#+begin_src elisp :tangle ../.dir-locals.el
+;;The first line declares where is the org file is stored, in my cases is in hugo root directory in the org folder.
+(("org/"
+  . ((org-mode . ((eval . (org-hugo-auto-export-mode)))))))
+#+end_src
+* Notes
+** custom hugo front-mater:
+#+begin_example
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER+: :opengraph true
+#+end_example
+The above code generate in the markdown file the following:
+#+begin_src markdown
++++
+title = "Search tool in your HUGO website."
+author = ["Javier Pacheco"]
+description = "Description"
+date = 2024-08-25T13:10:00-05:00
+tags = ["blog", "tecnology"]
+draft = false
+opengraph = true
++++
+#+end_src
+
+* Ideas
+* About me                                                           :about:
+:PROPERTIES:
+:EXPORT_FILE_NAME: content/about.md
+:EXPORT_DESCRIPTION: My personal information.
+:EXPORT_HUGO_SECTION: 
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER+: :hugo_image "images/thumbnails/jp.png"
+:END:
+
+Greetings! I'm Javier Pacheco, a dedicated Industrial Maintenance Engineer with a rich academic foundation from the prestigious *UTM* in *H. Matamoros Tamaulipas,Mexico*. Over the span of 12 fruitful years, I've been an integral part of the automotive industry, contributing my expertise in a multitude of critical domains.
+
+My journey began with a profound fascination for the intricate mechanisms that power manufacturing and industrial processes. At UTM, I honed my skills, diving deep into the realms of engineering, automation, and problem-solving. This foundation paved the way for my foray into the dynamic world of industrial maintenance.
+
+Within the automotive landscape, I've carved my niche in handling Programmable Logic Controllers (PLCs), robotics, and programming, orchestrating seamless operations and bolstering efficiency. My prowess extends beyond conventional boundaries—I harness the power of CAD software to craft intricate designs that harmonize innovation with practicality.
+
+Programming is not just a skill set; it's an intrinsic part of my identity. The allure of languages such as Python, C, and Lisp captivates me, compelling me to unravel their complexities and harness their capabilities to engineer groundbreaking solutions.
+
+My career is a testament to my unwavering commitment to innovation and continuous learning. Each challenge fuels my passion, propelling me to explore new horizons and revolutionize conventional practices. I thrive in environments that demand ingenuity and embrace the convergence of technology and creativity.
+
+Beyond the technical facets, I am deeply invested in collaborative endeavors, fostering a culture of knowledge exchange and mentor-ship. I firmly believe that sharing insights and empowering others amplifies the impact of technological advancements.
+
+#+ATTR_HTML: :target _blank
+See my whole information [[file:/documents/cv.pdf][here]].
+
+** Where to Find Me
+- [[https://github.com/jpachecoxyz][GitHub.]]
+- [[https://www.linkedin.com/in/jpachecom4/][LinkedIn.]]
+
+** Projects that I'm currently develop.
+- [[https://github.com/engjpacheco/voidstrap][Void linux installation script.]]
+- [[https://github.com/engjpacheco/noobemacs][Noobemacs, a minimal emacs configuration with evil mode.]]
+- [[https://github.com/engjpacheco/pymetrics][pymetrics, a python gui app to manage maintenance logs.]]
+ 
+* Wiki                                                        :wiki:personal:
+CLOSED: [2024-09-03 Tue 15:40]
+:PROPERTIES:
+:EXPORT_FILE_NAME: content/wiki.md
+:EXPORT_DESCRIPTION: My personal wiki for some topics.
+:DATE: [2024-09-03 Tue]
+:EXPORT_HUGO_SECTION:
+:END:
+
+** Emacs
+*** Doom Insert item.
+This script wast taken from /doomemacs/, it basically insert a item such a heading, subheading, checkbox, etc. based on the item above.
+
+#+begin_src emacs-lisp
+;;; javier_pacheco utilities.el --- Some useful utilities  -*- lexical-binding: t; -*-
+(defun +org--insert-item (direction)
+  (let ((context (org-element-lineage
+                  (org-element-context)
+                  '(table table-row headline inlinetask item plain-list)
+                  t)))
+    (pcase (org-element-type context)
+      ;; Add a new list item (carrying over checkboxes if necessary)
+      ((or `item `plain-list)
+       (let ((orig-point (point)))
+         ;; Position determines where org-insert-todo-heading and `org-insert-item'
+         ;; insert the new list item.
+         (if (eq direction 'above)
+             (org-beginning-of-item)
+           (end-of-line))
+         (let* ((ctx-item? (eq 'item (org-element-type context)))
+                (ctx-cb (org-element-property :contents-begin context))
+                ;; Hack to handle edge case where the point is at the
+                ;; beginning of the first item
+                (beginning-of-list? (and (not ctx-item?)
+                                         (= ctx-cb orig-point)))
+                (item-context (if beginning-of-list?
+                                  (org-element-context)
+                                context))
+                ;; Horrible hack to handle edge case where the
+                ;; line of the bullet is empty
+                (ictx-cb (org-element-property :contents-begin item-context))
+                (empty? (and (eq direction 'below)
+                             ;; in case contents-begin is nil, or contents-begin
+                             ;; equals the position end of the line, the item is
+                             ;; empty
+                             (or (not ictx-cb)
+                                 (= ictx-cb
+                                    (1+ (point))))))
+                (pre-insert-point (point)))
+           ;; Insert dummy content, so that `org-insert-item'
+           ;; inserts content below this item
+           (when empty?
+             (insert " "))
+           (org-insert-item (org-element-property :checkbox context))
+           ;; Remove dummy content
+           (when empty?
+             (delete-region pre-insert-point (1+ pre-insert-point))))))
+      ;; Add a new table row
+      ((or `table `table-row)
+       (pcase direction
+         ('below (save-excursion (org-table-insert-row t))
+                 (org-table-next-row))
+         ('above (save-excursion (org-shiftmetadown))
+                 (+org/table-previous-row))))
+
+      ;; Otherwise, add a new heading, carrying over any todo state, if
+      ;; necessary.
+      (_
+       (let ((level (or (org-current-level) 1)))
+         ;; I intentionally avoid `org-insert-heading' and the like because they
+         ;; impose unpredictable whitespace rules depending on the cursor
+         ;; position. It's simpler to express this command's responsibility at a
+         ;; lower level than work around all the quirks in org's API.
+         (pcase direction
+           (`below
+            (let (org-insert-heading-respect-content)
+              (goto-char (line-end-position))
+              (org-end-of-subtree)
+              (insert "\n" (make-string level ?*) " ")))
+           (`above
+            (org-back-to-heading)
+            (insert (make-string level ?*) " ")
+            (save-excursion (insert "\n"))))
+         (run-hooks 'org-insert-heading-hook)
+         (when-let* ((todo-keyword (org-element-property :todo-keyword context))
+                     (todo-type    (org-element-property :todo-type context)))
+           (org-todo
+            (cond ((eq todo-type 'done)
+                   ;; Doesn't make sense to create more "DONE" headings
+                   (car (+org-get-todo-keywords-for todo-keyword)))
+                  (todo-keyword)
+                  ('todo)))))))
+
+    (when (org-invisible-p)
+      (org-show-hidden-entry))
+    (when (and (bound-and-true-p evil-local-mode)
+               (not (evil-emacs-state-p)))
+      (evil-insert 1))))
+
+;;;###autoload
+(defun +org/insert-item-below (count)
+  "Inserts a new heading, table cell or item below the current one."
+  (interactive "p")
+  (dotimes (_ count) (+org--insert-item 'below)))
+
+;;;###autoload
+(defun +org/insert-item-above (count)
+  "Inserts a new heading, table cell or item above the current one."
+  (interactive "p")
+  (dotimes (_ count) (+org--insert-item 'above)))
+
+
+(defun org-make-olist (arg)
+  (interactive "P")
+  (let ((n (or arg 1)))
+    (when (region-active-p)
+      (setq n (count-lines (region-beginning)
+                           (region-end)))
+      (goto-char (region-beginning)))
+    (dotimes (i n)
+      (beginning-of-line)
+      (insert (concat (number-to-string (1+ i)) ". "))
+      (forward-line))))
+#+end_src
+
+*** Highlight yanked text
+
+This function describes itself so...
+#+begin_src emacs-lisp
+(defun meain/evil-yank-advice (orig-fn beg end &rest args)
+  (pulse-momentary-highlight-region beg end 'mode-line-active)
+  (apply orig-fn beg end args))
+(advice-add 'evil-yank :around 'meain/evil-yank-advice)
+#+end_src
+
+*** Replace '-' with '•'.
+#+begin_src emacs-lisp
+(defun jp/org-font-setup ()
+  ;; Replace list hyphen with dot
+  (font-lock-add-keywords 'org-mode
+                          '(("^ *\\([-]\\) "
+                             (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•")))))))
+
+(jp/org-font-setup)
+#+end_src
+*** Custom_id.
+#+BEGIN_SRC elisp
+;;;; org-id
+(declare-function org-id-add-location "org")
+(declare-function org-with-point-at "org")
+(declare-function org-entry-get "org")
+(declare-function org-id-new "org")
+(declare-function org-entry-put "org")
+ 
+;; Copied from this article (with minor tweaks from my side):
+;; https://writequit.org/articles/emacs-org-mode-generate-ids.html.
+(defun jp/org--id-get (&optional pom create prefix)
+  "Get the CUSTOM_ID property of the entry at point-or-marker POM.
+If POM is nil, refer to the entry at point.  If the entry does
+not have an CUSTOM_ID, the function returns nil.  However, when
+CREATE is non nil, create a CUSTOM_ID if none is present already.
+PREFIX will be passed through to `org-id-new'.  In any case, the
+CUSTOM_ID of the entry is returned."
+  (org-with-point-at pom
+    (let ((id (org-entry-get nil "CUSTOM_ID")))
+      (cond
+       ((and id (stringp id) (string-match \\S- id))
+        id)
+       (create
+        (setq id (org-id-new (concat prefix "h")))
+        (org-entry-put pom "CUSTOM_ID" id)
+        (org-id-add-location id (format "%s" (buffer-file-name (buffer-base-buffer))))
+        id)))))
+ 
+(declare-function org-map-entries "org")
+ 
+;;;###autoload
+(defun jp/org-id-headlines ()
+  "Add missing CUSTOM_ID to all headlines in current file."
+  (interactive)
+  (org-map-entries
+   (lambda () (jp/org--id-get (point) t))))
+
+;;;###autoload
+(defun jp/org-id-headline ()
+  "Add missing CUSTOM_ID to headline at point."
+  (interactive)
+  (jp/org--id-get (point) t))
+#+END_SRC
+
+*** Add ID's to headers - Org roam.
+#+BEGIN_SRC emacs-lisp
+(defun jp/org-id-store-link-for-headers ()
+  "Run `org-id-store-link' for each header in the current buffer."
+  (interactive)
+  (save-excursion
+    (goto-char (point-min))
+    (while (re-search-forward org-heading-regexp nil t)
+      (org-id-store-link))))
+#+END_SRC
+*** Toggle org-emphasis-markers
+#+BEGIN_SRC elisp
+(defun jp/org-toggle-emphasis-markers (&optional arg)
+  "Toggle emphasis markers and display a message."
+  (interactive "p")
+  (let ((markers org-hide-emphasis-markers)
+        (msg ""))
+    (when markers
+      (setq-local org-hide-emphasis-markers nil)
+      (setq msg "Emphasis markers are now visible."))
+    (unless markers
+      (setq-local org-hide-emphasis-markers t)
+      (setq msg "Emphasis markers are now hidden."))
+    (message "%s" msg)
+    (when arg
+      (font-lock-fontify-buffer))))
+#+END_SRC
+
+*** Insert Org's files to Outlook.
+**** Export file to clipboard.
+#+BEGIN_SRC elisp
+(defun export-org-email ()
+  "Export the current email org buffer and copy it to the
+clipboard"
+  (interactive)
+  (let ((org-export-show-temporary-export-buffer nil)
+        (org-html-head (org-email-html-head)))
+    (org-html-export-as-html)
+    (with-current-buffer "*Org HTML Export*"
+      (kill-new (buffer-string)))
+    (message "HTML copied to clipboard")))
+(global-set-key (kbd "C-c C-x C-e") 'export-org-email)
+#+END_SRC
+
+**** Add some CSS to the file.
+#+BEGIN_SRC elisp
+(defun org-email-html-head ()
+  "Create the header with CSS for use with email"
+  (concat
+   "<style type=\"text/css\">\n"
+   "<!--/*--><![CDATA[/*><!--*/\n"
+   (with-temp-buffer
+     (insert-file-contents
+      "~/.emacs.d/src/css/org2outlook.css")
+     (buffer-string))
+   "/*]]>*/-->\n"
+   "</style>\n"))
+#+END_SRC
+*** Org TODO auto update.
+#+BEGIN_SRC emacs-lisp
+(defun org-todo-if-needed (state)
+  "Change header state to STATE unless the current item is in STATE already."
+  (unless (string-equal (org-get-todo-state) state)
+    (org-todo state)))
+
+(defun ct/org-summary-todo-cookie (n-done n-not-done)
+  "Switch header state to DONE when all subentries are DONE, to TODO when none are DONE, and to DOING otherwise"
+  (let (org-log-done org-log-states)   ; turn off logging
+    (org-todo-if-needed (cond ((= n-done 0)
+                               "TODO")
+                              ((= n-not-done 0)
+                               "DONE")
+                              (t
+                               "DOING")))))
+(add-hook 'org-after-todo-statistics-hook #'ct/org-summary-todo-cookie)
+
+(defun ct/org-summary-checkbox-cookie ()
+  "Switch header state to DONE when all checkboxes are ticked, to TODO when none are ticked, and to DOING otherwise"
+  (let (beg end)
+    (unless (not (org-get-todo-state))
+      (save-excursion
+        (org-back-to-heading t)
+        (setq beg (point))
+        (end-of-line)
+        (setq end (point))
+        (goto-char beg)
+        ;; Regex group 1: %-based cookie
+        ;; Regex group 2 and 3: x/y cookie
+        (if (re-search-forward "\\[\\([0-9]*%\\)\\]\\|\\[\\([0-9]*\\)/\\([0-9]*\\)\\]"
+                               end t)
+            (if (match-end 1)
+                ;; [xx%] cookie support
+                (cond ((equal (match-string 1) "100%")
+                       (org-todo-if-needed "DONE"))
+                      ((equal (match-string 1) "0%")
+                       (org-todo-if-needed "TODO"))
+                      (t
+                       (org-todo-if-needed "DOING")))
+              ;; [x/y] cookie support
+              (if (> (match-end 2) (match-beginning 2)) ; = if not empty
+                  (cond ((equal (match-string 2) (match-string 3))
+                         (org-todo-if-needed "DONE"))
+                        ((or (equal (string-trim (match-string 2)) "")
+                             (equal (match-string 2) "0"))
+                         (org-todo-if-needed "TODO"))
+                        (t
+                         (org-todo-if-needed "DOING")))
+                (org-todo-if-needed "DOING"))))))))
+(add-hook 'org-checkbox-statistics-hook #'ct/org-summary-checkbox-cookie)
+#+END_SRC
+*** Org-buffer-scratchpad.
+#+begin_src emacs-lisp
+(defun new-scratch-pad ()
+  "Create a new org-mode buffer for random stuff."
+  (interactive)
+  (progn
+	(let ((buffer (generate-new-buffer "Org-scratch-buffer")))
+      (switch-to-buffer buffer)
+      (setq buffer-offer-save t)
+      (org-mode)
+      (olivetti-mode t))))
+#+end_src
+*** Toggle buffers.
+#+BEGIN_SRC emacs-lisp
+;; Toggle *scratch* buffer.
+(defun toggle-scratch-buffer ()
+  "Toggle the *scratch* buffer"
+  (interactive)
+  (if (string= (buffer-name) "*scratch*")
+	  (bury-buffer)
+	(switch-to-buffer (get-buffer-create "*scratch*"))))
+
+(defun toggle-org-buffer ()
+  "Toggle the Org-scratch-buffer buffer"
+  (interactive)
+  (if (equal (buffer-name (current-buffer)) "Org-scratch-buffer")
+	  (if (one-window-p t)
+		  (switch-to-buffer (other-buffer))
+        (delete-window))
+    (if (get-buffer "Org-scratch-buffer")
+        (if (get-buffer-window "Org-scratch-buffer")
+            (progn
+			  (bury-buffer "Org-scratch-buffer")
+			  (delete-window (get-buffer-window "Org-scratch-buffer")))
+		  (switch-to-buffer "Org-scratch-buffer"))
+	  (new-scratch-pad))))
+
+;; Toggle *eshell* buffer.
+(defun toggle-eshell-buffer ()
+  "Toggle the *eshell* buffer"
+  (interactive)
+  (if (string= (buffer-name) "*eshell*")
+	  (bury-buffer)
+	(switch-to-buffer (get-buffer-create "*eshell*"))))
+#+END_SRC
+*** Doc at point.
+#+BEGIN_SRC emacs-lisp
+(defun my-show-doc-or-describe-symbol ()
+  "Show LSP UI doc if LSP is active, otherwise describe symbol at point."
+  (interactive)
+  (if (bound-and-true-p lsp-mode)
+      (lsp-ui-doc-glance)
+    (describe-symbol-at-point)))
+#+END_SRC
+*** Duplicate & move up/down lines.
+#+BEGIN_SRC emacs-lisp
+(defun duplicate-line ()
+  (interactive)
+  (let ((line-text (thing-at-point 'line t)))
+    (save-excursion
+      (move-end-of-line 1)
+      (newline)
+      (insert line-text)))
+  (forward-line 1))
+
+(defun move-line-up ()
+  (interactive)
+  (when (not (= (line-number-at-pos) 1))
+    (transpose-lines 1)
+    (forward-line -2)))
+
+(defun move-line-down ()
+  (interactive)
+  (forward-line 1)
+  (when (not (= (line-number-at-pos) (point-max)))
+    (transpose-lines 1))
+  (forward-line -1))
+#+END_SRC
+*** Hide passwords in org files.
+#+BEGIN_SRC emacs-lisp
+;; Define a custom face for the highlight
+(defface my-highlight-face
+  '((t (:foreground "gray"))) ; Change "red" to your desired color
+  "Face for highlighting !!word!! patterns.")
+
+;; Function to replace matched text with asterisks
+(defun replace-with-asterisks (limit)
+  "Replace !!word!! with asterisks up to LIMIT."
+  (while (re-search-forward "!!\\(.*?\\)!!" limit t)
+    (let* ((match (match-string 1))
+           (start (match-beginning 0))
+           (end (match-end 0))
+           (asterisks (make-string (length match) ?*)))
+      (add-text-properties start end `(display ,asterisks face my-highlight-face)))))
+
+;; Add custom keyword for font-lock in org-mode
+(defun my/org-mode-custom-font-lock ()
+  "Add custom font-lock keywords for org-mode."
+  (font-lock-add-keywords nil
+                          '((replace-with-asterisks))))
+
+;; Hook the custom font-lock configuration into org-mode
+(add-hook 'org-mode-hook 'my/org-mode-custom-font-lock)
+#+END_SRC
+*** Help at point.
+#+BEGIN_SRC emacs-lisp
+(defun describe-symbol-at-point ()
+  "Display the documentation of the symbol at point, if it exists."
+  (interactive)
+  (let ((symbol (symbol-at-point)))
+    (if symbol
+        (cond
+         ((fboundp symbol) (describe-function symbol))
+         ((boundp symbol) (describe-variable symbol))
+         (t (message "No documentation found for symbol at point: %s" symbol)))
+      (message "No symbol at point"))))
+#+END_SRC
+*** fz-themes
+#+begin_src emacs-lisp
+(defun custom-jp-themes (&optional theme-dir)
+
+  (defun custom-jp-themes (&optional theme-dir)
+	"Return a list of custom themes from a specified directory.
+Search the directory for files named FOO-theme.el, and return a list of FOO symbols,
+excluding the 'default' theme and any internal themes.
+
+If THEME-DIR is nil, it defaults to `~/.emacs.d/lisp/jp-themes/'."
+	(let ((suffix "-theme\\.el\\'")
+          (directory (or theme-dir "~/.emacs.d/lisp/jp-themes/"))
+          themes)
+      ;; Ensure the directory exists
+      (when (file-directory-p directory)
+		;; Iterate over all theme files in the directory
+		(dolist (file (directory-files directory nil suffix))
+          (let ((theme (intern (substring file 0 (string-match-p suffix file)))))
+			;; Add to the list if it's valid, and exclude Emacs built-in "default" theme
+			(and (not (eq theme 'default))  ;; Ensure "default" is excluded
+               (not (memq theme themes))  ;; Avoid duplicates
+               (push theme themes)))))
+      (nreverse themes)))
+
+  (defcustom fz-themes nil
+	"List of themes (symbols or regexps) to be presented for selection.
+nil shows all `custom-available-themes'."
+	:type '(repeat (choice symbol regexp)))
+
+  (defun fz-theme (theme)
+	"Disable current themes and enable THEME from `fz-themes`.
+
+The command supports previewing the currently selected theme."
+	(interactive
+	 (list
+      (let* ((regexp (consult--regexp-filter
+                      (mapcar (lambda (x) (if (stringp x) x (format "\\`%s\\'" x)))
+                              fz-themes)))
+			 (avail-themes (seq-filter
+							(lambda (x) (string-match-p regexp (symbol-name x)))
+							(custom-jp-themes)))  ;; Only use themes from custom-jp-themes
+			 (saved-theme (car custom-enabled-themes)))
+		(consult--read
+		 (mapcar #'symbol-name avail-themes)
+		 :prompt "Theme: "
+		 :require-match t
+		 :category 'theme
+		 :history 'consult--theme-history
+		 :lookup (lambda (selected &rest _)
+                   (setq selected (and selected (intern-soft selected)))
+                   (or (and selected (car (memq selected avail-themes)))
+                      saved-theme))
+		 :state (lambda (action theme)
+                  (pcase action
+					('return (fz-theme (or theme saved-theme)))
+					((and 'preview (guard theme)) (fz-theme theme))))
+		 :default (symbol-name (or saved-theme 'default))))))
+	(when (eq theme 'default) (setq theme nil))
+	(unless (eq theme (car custom-enabled-themes))
+      (mapc #'disable-theme custom-enabled-themes)
+      (when theme
+		(if (custom-theme-p theme)
+			(enable-theme theme)
+          (load-theme theme :no-confirm)))))
+#+end_src
+*** Custom functions.
+#+BEGIN_SRC emacs-lisp
+;; Open files in the lisp folder
+(require 'find-lisp)
+(defun open-lisp-and-org-files ()
+  "Open a Lisp or Org file from ~/.emacs.d/lisp directory, including subfolders."
+  (interactive)
+  (let* ((directory "~/.emacs.d/lisp")
+         (el-files (find-lisp-find-files directory ".*\\.el$"))
+         (org-files (find-lisp-find-files directory ".*\\.org$"))
+         (all-files (append el-files org-files))
+         (file (completing-read "Select file: " all-files nil t)))
+    (find-file file)))
+
+;; Follow urls in the buffer
+(defun list-and-open-url-in-buffer ()
+  "List all URLs in the current buffer, display them in the minibuffer, and open a selected URL in the browser."
+  (interactive)
+  (let (urls)
+    (save-excursion
+      (goto-char (point-min))
+      (while (re-search-forward "\\(http\\|https\\|ftp\\|file\\|mailto\\):[^ \t\n]+" nil t)
+        (push (match-string 0) urls)))
+    (if urls
+        (let ((url (completing-read "Select URL to open: " (reverse urls) nil t)))
+          (browse-url url))
+      (message "No URLs found in the buffer."))))
+
+;; Export org files to pdf using tectonic
+(defun org-export-to-latex-and-compile-with-tectonic ()
+  "Export the current Org file to LaTeX, then compile with tectonic using shell-escape."
+  (interactive)
+  (let* ((org-file (buffer-file-name))
+         (tex-file (concat (file-name-sans-extension org-file) ".tex"))
+         (tectonic-command (concat "tectonic -Z shell-escape " tex-file)))
+    ;; Export Org file to LaTeX
+    (org-latex-export-to-latex)
+    ;; Run tectonic command in a temporary buffer to avoid displaying the output
+    (with-temp-buffer
+      (shell-command tectonic-command (current-buffer)))
+    (message "Compiled %s to PDF with Tectonic." tex-file)))
+
+(global-set-key (kbd "C-c e l") 'org-export-to-latex-and-compile-with-tectonic)
+
+;; Update my web-page
+(defun publish-my-blog ()
+  "Export all subtrees with Hugo, then run the publish blog script within Emacs and display a success message in the minibuffer."
+  (interactive)
+  (let ((commit-msg (read-string "Enter commit message: ")))
+    ;; Export all subtrees with Hugo
+    (org-hugo-export-wim-to-md :all-subtrees)
+    ;; Run the publish script
+    (let ((process (start-process-shell-command
+                    "publish-blog"                       ; Process name
+                    "*publish-blog-output*"              ; Output buffer
+                    (format "~/webdev/jpachecoxyz.github.io/hugo/publish.sh \"%s\"" commit-msg))))  ; Run the script with the commit message
+      ;; Set up the process sentinel to check the process status
+      (set-process-sentinel
+       process
+       (lambda (process event)
+         (when (string= event "finished\n")
+           (message "jpacheco.xyz was correctly updated!")))))))
+
+(global-set-key (kbd "C-c u b") 'publish-my-blog)
+
+;; Search roam
+(defun jp/search-roam ()
+  "Run consult-ripgrep on the org roam directory"
+  (interactive)
+  (consult-ripgrep org-roam-directory nil))
+(global-set-key (kbd "C-c n s") 'jp/search-roam)
+
+(defun jp/yt-shorts-timer ()
+  (interactive)
+  (org-timer-set-timer "55s"))
+(global-set-key (kbd "<f4>") 'jp/yt-shorts-timer)
+#+END_SRC
+** Linux
+** Python
+*** Avoid SSL verification when installing packages through pip.
+I have some issues with the firewall in one of my jobs, so in order to be able to install python packages through pip we need to skip the =SSL= verification with the following flags.
+#+begin_src shell
+pip install --no-cache-dir --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org <program>
+#+end_src
+** Robots
+** Windows
+*** Change IP address within terminal.
+This cmd script prompt for an IP to b changed in the computer. Must run as root/administrator.
+#+begin_src bat
+@echo off
+setlocal
+
+rem Prompt the user for new IP address
+set /p newIP="Enter the new IP address: "
+set "newSubnetMask=255.255.255.0"
+
+rem Set the new IP address while keeping existing subnet mask and gateway
+netsh interface ipv4 set address name="Ethernet" static %newIP% %newSubnetMask% 
+
+rem Display the new IP configuration
+
+if %errorlevel% equ 0 (
+    echo IP address changed successfully.
+) else (
+    echo Failed to change IP address. Please make sure you have administrative privileges.
+)
+
+endlocal
+#+end_src
+
+* Posts:
+** DONE Screen Record                                    :linux:script:
+CLOSED: [2024-09-04 Wed 02:43]
+:PROPERTIES:
+:EXPORT_FILE_NAME: screen-record
+:EXPORT_DESCRIPTION: Script to record in hyprland
+:EXPORT_HUGO_SECTION: posts
+:END:
+:LOGBOOK:
+- State "DONE"  from              [2024-09-04 Wed 02:43]
+:END:
+
+This script record the screen with the =wf-recorder= tool, it can be the hole screen or a specific area of it.
+The script is going to store the video in =/tmp/screencast.mp4=, this script only store one video, personally I think that have more than one record is a mess, more if you only wants to share a quick screencast to /telegram, irc, cinny/ or even to share it through =0x0.st=.
+
+*** Description and main variables:
+#+begin_src bash
+# Created By: Javier Pacheco - javier@jpacheco.xyz
+# Created On: 29/03/24
+# Project: Screen recorder in wayland
+# Dependencies: wf-recorder wl-copy and a launcher like dmenu, fuzzel, etc.
+
+SOUND_CARD=$(pactl list sources | awk '/Name/ && /.monitor/ {print $2}')
+#+end_src
+
+*** Recording functions:
+Those functions have enable the sound recording, so if you have some music, video, etc running it will record the sound but not the mic.
+
+**** screencast:
+This option is going to record a specific area of the screen.
+This area is going to be specified by =slurp=.
+#+begin_src bash
+screencast() {
+   wf-recorder --audio=$SOUND_CARD -f /tmp/screencast.mp4
+}
+#+end_src
+
+**** area:
+This option is going to record a specific area of the screen.
+This area is going to be specified by =slurp=.
+#+begin_src bash
+area() {
+   wf-recorder --audio=$SOUND_CARD -g "$(slurp)" -f /tmp/screencast.mp4
+}
+#+end_src
+
+*** Main functions:
+These functions are tools that ensures this script works correctly. For example if all ready have a existing file recorded, it will removed to record a new one, because this script only will create one video always, and also have a function to kill the process when it finished. 
+
+**** check internet connection:
+#+begin_src bash
+check_connection() {
+    ping -c 1 google.com 1> /dev/null 2>&1
+}
+#+end_src
+
+**** share:
+This option is going to upload the video to =0x0.st= and copy the url to the clipboard using =wc-copy=.
+#+begin_src bash
+share() {
+   notify-send "uploading.." "video is upoading to 0x0.st"
+   curl -F "file=@/tmp/screencast.mp4" https://0x0.st | wl-copy && notify-send "Video stored in 0x0.st"
+}
+#+end_src
+
+**** Kill existing process:
+#+begin_src bash
+kill_proc(){
+    pkill --signal SIGINT wf-recorder
+    if [ $? -eq 0 ];
+    then
+        notify-send "Video stored" "Video was stored in /tmp/screencast.mp4"
+        pkill --signal SIGINT wf-recorder
+        exit 0
+    fi
+}
+#+end_src
+
+**** Remove existing video:
+#+begin_src bash
+remove_vid() {
+    [ -f /tmp/screencast.mp4 ] && rm /tmp/screencast.mp4
+}
+#+end_src
+
+*** Sequence:
+This is were the scripts actually starts, first of all look if the script is already running, if not then ask for a recording option: 
+#+begin_src bash
+kill_proc
+
+OPT=$(printf "screencast\narea\nshare\nquit" | fuzzel --dmenu -p 'Select an option: ' )
+case $OPT in
+    'screencast')
+        sleep 1
+        remove_vid
+        sleep 1
+        screencast;;
+    'area')
+        sleep 1
+        remove_vid
+        sleep 1
+        area;;
+    'share') 
+        check_connection && share || notify-send "Error" "check your internet connection" ;;
+    *|quit) exit 0;;
+esac
+#+end_src
+
+*** The whole code.
+#+begin_src bash
+# Created By: Javier Pacheco - javier@jpacheco.xyz
+# Created On: 29/03/24
+# Project: Screen recorder in wayland
+# Dependencies: wf-recorder wl-copy and a launcher like dmenu, fuzzel, etc.
+
+SOUND_CARD=$(pactl list sources | awk '/Name/ && /.monitor/ {print $2}')
+
+screencast() {
+   wf-recorder --audio=$SOUND_CARD -f /tmp/screencast.mp4
+}
+
+area() {
+   wf-recorder --audio=$SOUND_CARD -g "$(slurp)" -f /tmp/screencast.mp4
+}
+
+check_connection() {
+    ping -c 1 google.com 1> /dev/null 2>&1
+}
+
+share() {
+   notify-send "uploading.." "video is upoading to 0x0.st"
+   curl -F "file=@/tmp/screencast.mp4" https://0x0.st | wl-copy && notify-send "Video stored in 0x0.st"
+}
+
+kill_proc(){
+    pkill --signal SIGINT wf-recorder
+    if [ $? -eq 0 ];
+    then
+        notify-send "Video stored" "Video was stored in /tmp/screencast.mp4"
+        pkill --signal SIGINT wf-recorder
+        exit 0
+    fi
+}
+
+remove_vid() {
+    [ -f /tmp/screencast.mp4 ] && rm /tmp/screencast.mp4
+}
+
+kill_proc
+
+OPT=$(printf "screencast\narea\nshare\nquit" | fuzzel --dmenu -p 'Select an option: ' )
+case $OPT in
+    'screencast')
+        sleep 1
+        remove_vid
+        sleep 1
+        screencast;;
+    'area')
+        sleep 1
+        remove_vid
+        sleep 1
+        area;;
+    'share') 
+        check_connection && share || notify-send "Error" "check your internet connection" ;;
+    *|quit) exit 0;;
+esac
+#+end_src
+
+
+** DONE Efetch.el                                        :emacs:script:
+CLOSED: [2024-09-04 Wed 02:43]
+:PROPERTIES:
+:EXPORT_FILE_NAME: efetch
+:EXPORT_DESCRIPTION: A emacs fetching tool.
+:CREATED:     2023-07-05
+:EXPORT_HUGO_SECTION: posts
+:END:
+:LOGBOOK:
+- State "DONE"  from              [2024-09-04 Wed 02:43]
+:END:
+
+#+BEGIN_PREVIEW
+Embrace a new level of Emacs mastery with =efetch.el= – a powerful and user-friendly Emacs Fetching Tool. Designed for enthusiasts who crave insights into their Emacs environment, =efetch.el= provides a seamless way to peek under the hood of your setup. With just a simple command, unlock a left-side buffer showcasing key details such as Emacs version, host information, user details, installed packages, active theme, and default font. Customizable and accessible, this tool not only delivers a quick snapshot of your Emacs configuration but also opens the door for collaborative enhancements. Join the community on [[https://github.com/jpachecoxyz/efetch.el][Github]] contribute your ideas, and elevate your Emacs experience with =efetch.el= today!
+#+END_PREVIEW
+
+#+begin_center
+#+CAPTION: efetch.el tool in the left side of the frame.
+[[/images/posts/efetch.el/efetch.png]]
+#+end_center
+
+*** Overview
+Are you an Emacs enthusiast who loves to keep track of your environment details? Look no further! We are excited to introduce =efetch.el= - the Emacs Fetching Tool. This nifty extension provides a quick and informative snapshot of your Emacs setup, helping you stay in the know about your environment configuration.
+
+*** Features
+- **Quick Access**: Invoke =efetch= with a simple command to access a left-side buffer displaying essential information about your Emacs environment.
+
+- **Information at a Glance**: Get a concise overview, including Emacs version, host details, user information, installed packages, active theme, and default font.
+
+- **Customization**: Tailor the appearance and information displayed in the =efetch= buffer to suit your preferences.
+
+- **Convenient Keyboard Shortcut**: Close the =efetch= buffer and its window effortlessly with the =q= key.
+
+*** How to Use
+1. **Installation**: Add the following line to your Emacs configuration:
+
+ #+BEGIN_SRC emacs-lisp
+(require 'efetch)
+ #+END_SRC
+
+Ensure the =efetch.el= file is in a directory included in your =load-path=.
+
+2. **Usage**: Invoke =efetch= interactively using:
+
+#+begin_example
+M-x efetch
+#+end_example
+
+The information will be displayed in a left-side buffer named *efetch-popup*.
+
+*** Customization
+Feel free to customize the appearance or the information displayed in the =efetch= buffer by modifying the relevant sections in the =efetch= function.
+
+*** Contribution
+We welcome contributions and feedback! =efetch.el= is hosted on [[https://github.com/engjpacheco/efetch.el][github]]. Feel free to [[https://github.com/engjpacheco/efetch.el/fork][fork the repository]] and submit pull requests. 
+The project is open to changes, improvements, and collaborations.
+
+*** Get Started
+
+Enhance your Emacs experience with =efetch.el=! Stay informed about your environment effortlessly. Download and integrate it into your Emacs setup today.
+
+
+** DONE Void linux bootstrap.                  :linux:tecnology:script:
+CLOSED: [2024-09-04 Wed 02:43]
+:PROPERTIES:
+:EXPORT_FILE_NAME: voidstrap
+:EXPORT_DESCRIPTION: A void linux semi-automated installer.
+:DATE:     07-05-2024
+:EXPORT_HUGO_SECTION: posts
+:END:
+:LOGBOOK:
+- State "DONE"  from              [2024-09-04 Wed 02:43]
+- State "DONE"       from "TODO"       [2024-08-29 Thu 19:47]
+:END:
+
+#+BEGIN_PREVIEW
+This is the first post of the 2024, this is a project that I am working on in the last
+year, is a minimalist voidlinux instalator it is based in some recommendations in 
+a guides that some friends of my have but "semi-automated".
+#+END_PREVIEW
+
+*** VoidStrap installer.
+A basic minimalist installer of =void-linux= with some packages to get ready to enjoy
+this amazing GNU/Linux distribution.
+
+*** Usage:
+
+**** Running install.sh
+
+Download the iso, and once in root inside the live, git clone this repo:
+(You need to update inside the iso and install =git=)
+
+NOTE: there are 3 =branches:=
+- main :: This will install =void-musl=.
+- glibc :: This will install =void-glibc=.
+- dual :: This will install =void-glibc= dual boot with =Windows=.
+  - *This branch is tested only with =Windows=, I never try it with other distributions.*
+  - If you want musl you can change the link to the mirror in the =install.sh= script:
+#+begin_example
+- Change this in line 11:
+export XBPS_ARCH=x86_64 && xbps-install -Suy -R http://mirrors.servercentral.com/voidlinux/current -r /mnt \
+- For this:
+export XBPS_ARCH=x86_64-musl && xbps-install -Suy -R http://mirrors.servercentral.com/voidlinux/current/musl -r /mnt \
+#+end_example
+    
+#+begin_src shell
+git clone https://git.disroot.org/jpacheco/voidstrap
+cd voidstrap
+sh install.sh
+#+end_src
+
+Once there the script will open =cfdisk=, and you need to format the HDD in this 
+specific format:
+#+begin_example
+- /dev/sdX1 -> as the boot partition.
+- /dev/sdY2 -> as the swap partition.
+- /dev/sdZ3 -> as the root partition.
+#+end_example
+
+NOTE: Replace X,Y & Z for your partition name.
+I consider to have this structure of partition, but you can change it, but you must
+change the code in =postinstall.sh= when the scripts make the =fstab= archive.
+
+*Make sure you do a backup of your files before doing crazy things and trust anyone script*
+
+When the =install.sh= script finish, you need to run the postinstall script located in =/root folder:=
+
+**** Running postinstall.sh
+
+This script its going to create some configuration files, like: =fstab=, =rc.conf=,
+change the password of =root=, and add user(s).
+
+#+begin_src shell
+xchroot /mnt
+#+end_src
+
+Then run the =chroot.sh= script.
+#+begin_src shell
+sh /root/postinstall.sh
+#+end_src
+
+When the =postinsall.sh= script finishes, you only need to reboot and enjoy your
+*Void-Linux* distribution.
+
+When it finish you need to run the =postinstall.sh= script, that is going to install
+the *X server* and some other "necessary" packages.
+
+*** The custom.sh script
+
+This is going to install my personal dotfiles, and a specific packages that I use:
+#+begin_src shell
+sh /root/custom.sh
+#+end_src
+
+But you can specify your dotfiles repositories and others that you require whit some parameters:
+
+#+begin_src 
+sh custom.sh -r https://codeberg.org/jpacheco/dotfiles # specify a repo url.
+sh custom.sh -p otherprogfile.csv # especify a custom package archive to install.
+sh custom.sh -b dev # especify the name of a custom branch in case of needed.
+#+end_src
+
+*** References:
+- [[https://codeberg.org/jpacheco/voidstrap][Voidstrap.]]
+- [[https://docs.voidlinux.org/][Voidlinux Documentation.]] 
+- [[https://git.disroot.org/tuxliban/tutoriales_void/src/branch/master/Gu%C3%ADas][Tuxliban guides.]]
+
+  
+
+
+** DONE Shell-utils                                           :linux:script:
+CLOSED: [2024-09-04 Wed 02:43]
+:PROPERTIES:
+:EXPORT_FILE_NAME: shell-utils.org
+:EXPORT_DESCRIPTION: A github repo that stores shell scripts utilities for x and wayland.
+:DATE:     07-28-2024
+:EXPORT_HUGO_SECTION: posts
+:END:
+:LOGBOOK:
+- State "DONE"  from              [2024-09-04 Wed 02:43]
+:END:
+
+*** Overview
+Welcome to the Shell Utilities [[https://github.com/jpachecoxyz/shell-utils][repository]] This project provides a collection of shell scripts tailored for different window managers and environments, including i3, Hyprland, and Sway, on X11 and Wayland.
+
+*** Repository Structure
+The repository is organized into directories based on the environment and window manager:
+
+#+begin_src shell
+.
+├── wayland
+│   ├── hyprland
+│   └── sway
+└── x11
+    └── i3
+#+end_src
+
+- wayland/hyprland :: Scripts for Hyprland on Wayland.
+- wayland/sway :: Scripts for Sway on Wayland.
+- x11/i3 :: Scripts for i3 on X11.
+
+*** Installation
+To install the scripts, use the provided =install.sh= script. You can install scripts for a specific window manager or all at once. 
+
+NOTE: The =install.sh= scripts use =$HOME/.local/bin= as the target, you can edit this variable inside the script, or copy the files manually somewhere as you have your path.
+
+#+BEGIN_SRC shell
+# Install scripts for a specific window manager
+./install.sh sway
+./install.sh hyprland
+./install.sh i3
+
+# Install all scripts
+./install.sh all
+#+END_SRC
+
+*** Usage
+Each script includes usage instructions in the comments at the top. You can run a script directly from the terminal or integrate it into your workflow.
+
+*** Contributing
+We welcome contributions! If you'd like to contribute, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or fix.
+3. Make your changes and commit them with descriptive messages.
+4. Push your changes to your fork.
+5. Submit a pull request to the main repository.
+
+*** Contact
+For questions or suggestions, please open an issue on GitHub or contact [[mailto:javier@jpacheco.xyz][Javier Pacheco]].
+
+
+** DONE Share Screen in Hyprland.                       :linux:wayland:
+CLOSED: [2024-09-04 Wed 02:44]
+:PROPERTIES:
+:EXPORT_FILE_NAME: share-screen-hyprland.org
+:EXPORT_DESCRIPTION: How to share screen in hyprland in apps like: telegram-desktop.
+:DATE:     07-28-2024
+:EXPORT_HUGO_SECTION: posts
+:END:
+:LOGBOOK:
+- State "DONE"  from              [2024-09-04 Wed 02:44]
+- State "DONE"       from "TODO"       [2024-08-11 Sun 02:52]
+:END:
+
+*** The issue:
+We have a telegram group, in where we share emacs things and some other related to programming and linux in the most part of the time. So one day one of the members says that we can share screens and have a kind of podcast and talk about our environment configurations (sway/hyprland), so I was very curious about it so he invite me to another telegram group, this telegram group is for his YouTube channel, for test my hyprland configuration because he told me that he has troubles in his hyprland configuration using manjaro.
+
+Now that I face the error, I realize that in my =home-manager= compilation I had this error since I was using this tool in =nixOS=, but because I never use it, I never let it importance, so now I realize that this thing need to be solved because I going to use it in the future.
+
+So I installed =telegram-dektop=, and try to share my configuration and guess what; yes I was unable to share my screen. It failed and pop ups some errors.
+
+*** Things that I try before to solve the problem.
+My main distribution at the time (2024-07-28) is =nixOS=, so I think that this could be a missing declaration in some programs, like =xdg-desktop-portal-hyprland=, because of that I was researching issues in =nixOS= & =hyprland=, but nothing solve the problem.
+
+So nothing that I found fix the problem, most of the issues in github was too old, or nothing to do with =nixOS=, so the last thing that I could do was compile =xdg-desktop-portal-hyprland= by source, but in =nixOS= I would install some compilers and other things that I not currently use, but it was the last option.
+
+*** Solving the problem.
+So once in my job, with the mind more clean, I go to the hyprland [[https://wiki.hyprland.org/Useful-Utilities/xdg-desktop-portal-hyprland/][wiki]], and at the bottom there were some tips to debugging if some errors appears.
+
+So I add this in my =Hyprland= configuration file:
+
+#+begin_src conf
+exec-once = dbus-update-activation-environment --systemd --all
+#+end_src
+
+That's it, that little command above solve my 1 day pain trying to share my screen. So I hope this little post be helpful for you if you encounter the same issue as me.
+
+Thanks for read me.
+
+
+** DONE Pymetrics                             :linux:tecnology:wayland:
+CLOSED: [2024-09-04 Wed 02:44]
+:PROPERTIES:
+:EXPORT_FILE_NAME: pymetrics.md
+:EXPORT_DESCRIPTION: A GUI app written in python to store maintenace logs.
+:DATE:     08-11-2024
+:EXPORT_HUGO_SECTION: posts
+:EXPORT_HUGO_WEIGHT: 1
+:END:
+:LOGBOOK:
+- State "DONE"  from              [2024-09-04 Wed 02:44]
+- State "DONE"       from "TODO"       [2024-08-11 Sun 03:00]
+:END:
+
+*** Overview
+Managing and monitoring the performance of industrial machines is critical to ensuring minimal downtime and maximizing productivity. The need for an effective system to store and analyze maintenance data became apparent when the maintenance manager contacted me with a specific problem. They struggled to create KPI graphs because they lacked a proper system to store all the necessary data. To address this challenge, I developed a maintenance log app that efficiently tracks and records machine failures, repair time, shutdown time, and the technicians involved in the repairs. The data is stored in a CSV format, making it easy to create KPI (Key Performance Indicator) graphs in Excel for analysis.
+
+*** Features
+- Machine Failure Logging :: Record each instance of machine failure with timestamps.
+- Repair Time Tracking :: Log the start and end times of repairs to calculate the total repair duration.
+- Shutdown Time Monitoring :: Track the total time a machine is down due to failures and repairs.
+- Technician Assignment :: Assign technicians to specific repair tasks and log their involvement.
+
+*** How the Project Started
+The project began when the maintenance manager reached out to me with a significant issue: they were unable to create KPI graphs due to the lack of a system for storing maintenance data. Understanding the importance of this data for monitoring machine performance, I developed the maintenance log app in Python to solve the problem. By providing a structured way to capture and store all relevant data, the app enables easy analysis and KPI generation.
+
+*** Benefits
+The maintenance log app provides several key benefits:
+- *Enhanced Data Management:* All data is stored in a standardized CSV format, which can be easily imported into Excel for further analysis.
+- *Improved KPI Tracking*: By analyzing the recorded data, maintenance teams can generate KPI graphs in Excel to monitor performance metrics such as Mean Time to Repair (MTTR) and Mean Time Between Failures (MTBF).
+- *Informed Decision-Making:* The insights gained from the KPI graphs help in making informed decisions to improve machine reliability and reduce downtime.
+
+*** Technical Details
+The app is built using Python, leveraging its robust data handling capabilities. The CSV format is chosen for its simplicity and compatibility with various data analysis tools.
+
+*** Usage
+The application is designed to be user-friendly, requiring minimal input from the maintenance team. The data entry process is streamlined, allowing technicians to quickly log failures and repairs without interrupting their workflow.
+
+#+begin_center
+#+CAPTION: Pymetrics in light-mode.
+[[/images/posts/pymetrics/pymetrics.png]]
+#+end_center
+
+*** How to Get Started
+You can access the source code and instructions for setting up the maintenance log app on GitHub: [[https://github.com/jpachecoxyz/pymetrics][Pymetrics Repository]].
+
+*** Conclusion
+This maintenance log app is a practical tool for any industrial maintenance team looking to improve their machine monitoring and maintenance processes. By providing a clear view of machine performance through KPI graphs, it helps teams identify trends and make data-driven decisions. The app was born out of a real-world need, and I'm excited to see how it can help others in similar situations.
+
+Feel free to explore the project and contribute to its development by visiting the [[https://github.com/jpachecoxyz/pymetrics][Pymetrics Repository]] on GitHub.
+
+
+** DONE Emacs vs Neovim                               :emacs:tecnology:
+CLOSED: [2024-09-04 Wed 02:44]
+:PROPERTIES:
+:EXPORT_FILE_NAME: emacs-vs-nvim
+:EXPORT_DESCRIPTION: My opinion about emacs and neovim about writting and programming.
+:DATE:     08-13-2024
+:EXPORT_HUGO_SECTION: posts
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER+: :hugo_image "images/thumbnails/emacs.png"
+:END:
+:LOGBOOK:
+- State "DONE"  from              [2024-09-04 Wed 02:44]
+- State "DONE"       from "TODO"       [2024-08-13 Tue 05:06]
+:END:
+
+*** Neovim for Programming
+- Efficiency and Speed: Neovim is highly efficient for programming due to its lightweight nature and focus on speed. It starts up faster and can handle large files with ease.
+- Plugin Ecosystem: Neovim has a rich plugin ecosystem, especially for programming-related tasks. Plugins like nvim-treesitter for syntax highlighting, telescope.nvim for fuzzy finding, and coc.nvim or nvim-lspconfig for Language Server Protocol (LSP) support make it a powerful choice for coding.
+- Modal Editing: Neovim, like Vim, uses modal editing, which can be very powerful for code navigation and manipulation once you get used to it.
+
+*** Emacs for Writing Posts (and Beyond)
+- Org-mode: Emacs shines when it comes to writing and organizing content, especially with Org-mode. Org-mode is exceptional for note-taking, task management, and writing posts or documentation. It allows you to export your work to various formats (HTML, PDF, LaTeX, etc.) easily.
+- Extensibility: Emacs is known for its extensibility. You can customize it to be a full-fledged IDE, text editor, or writing tool. For blog posts, especially if you're using something like ox-hugo, Emacs can be incredibly powerful.
+- Unified Environment: If you prefer an environment where you can write, code, manage tasks, and do everything in one place, Emacs offers that. It's an all-in-one tool where you can manage your entire workflow.
+
+*** Which Should You Choose?
+- For Programming: Neovim might be better if you want a focused, fast, and highly efficient tool purely for coding. It's especially suitable if you prefer modal editing and a streamlined environment.
+
+- For Writing and More: Emacs could be better if you're looking for a versatile tool that excels at writing posts, organizing content, and managing your entire workflow beyond just coding. It's particularly strong if you take advantage of Org-mode's features.
+
+Since I already use Emacs for my blog with Hugo, I find it more productive to keep using it for writing and content management while possibly using Neovim for coding tasks if you prefer its efficiency and speed.
+
+
+** DONE How I made my blog with emacs and hugo :emacs:tecnology:personal:
+CLOSED: [2024-09-04 Wed 02:44]
+:PROPERTIES:
+:EXPORT_FILE_NAME: my-blog-in-emacs
+:EXPORT_DESCRIPTION: A overview of how I write and develop my web blog using emacs & hugo
+:DATE:     08-14-2024
+:EXPORT_HUGO_SECTION: posts
+:END:
+:LOGBOOK:
+- State "DONE"  from              [2024-09-04 Wed 02:44]
+- State "DONE"       from "TODO"       [2024-08-14 Wed 20:41]
+:END:
+
+#+BEGIN_PREVIEW
+I have been using emacs most of the time for writting, and of course when I started to make my blog I have been use it (emacs) since of it. In the beginig when I start writing I was using some scripts and tips from [[https://systemcrafters.net/][system crafters]] he use htmlize and some /lisp/ scripting. It was ok but then I have been watching some [[https://www.youtube.com/@LukeSmithxyz][lukesmith]] videos and see this [[https://www.youtube.com/watch?v=jAXKSKb3etk&pp=ygUOaHVnbyBsdWtlc21pdGg%3D][video]] about him switching to =HUGO=, so I decided to check =HUGO= too.
+#+END_PREVIEW
+
+#+begin_center
+#+CAPTION: A overview of how my org file looks like.
+[[/images/posts/my-blog-in-emacs/overview.png]]
+#+end_center
+
+*** What software and packages do I use?.
+Yep! I use =emacs= 🤓 and =ox-hugo=.
+
+And to build the static web I use [[https://gohugo.io/getting-started/quick-start/][HUGO]] and =git=.
+#+CAPTION: This is what I have in my emacs configuration.
+#+begin_src elisp
+(use-package ox-hugo
+  :ensure t
+  :after ox)
+#+end_src
+
+*** Org and its configuration.
+=HUGO= uses markdown to manage the sites, posts, etc. but because we where using emacs, (we don't like others than org syntax), so there are a lot of variables that =ox-hugo= handle in order to been exported to markdown syntax.
+
+In my case I like to develop my whole blog into a single org-file
+
+#+CAPTION: My metadata in my org-file.
+#+begin_src elisp
+#+begin_src org
+#+TITLE: jpacheco.xyz
+#+AUTHOR: Javier Pacheco
+#+DESCRIPTION: My website posts & projects.
+#+hugo_base_dir: ~/webdev/blog/
+#+startup: content
+#+hugo_custom_front_matter: toc true
+#+hugo_auto_set_lastmod: t
+#+date: 2024-07-04
+#+seq_todo: TODO(t) WAIT(w@/!) | DONE(d!)
+#+end_src
+---
+
+These are the most important and relevant to use within HUGO:
+
+- /#+HUGO_BASE_DIR:/
+This declare where you HUGO site is located, basically in the path where you run =hugo new site my-site=.
+- /#+HUGO_CUSTOM_FRONT_MATTER/:
+This is for enable/disable the toc of the posts when ox-hugo exported to md format.
+
+*** Writing the posts.
+Write a post is very easy to start, you only need to add a org lvl-1 header, and add a more metadata (properties). The sub-headers of the post are going to be org-lvl-3 headers, and so on.
+
+#+CAPTION: Example of an article.
+#+begin_src org
+ * TODO How I made my blog with emacs and hugo               :emacs:blog:hugo:
+    :PROPERTIES:
+    :EXPORT_FILE_NAME: my-blog-in-emacs
+    :EXPORT_DESCRIPTION: A overview of how I write and develop my web blog using emacs & hugo
+    :DATE:     08-14-2024
+    :EXPORT_HUGO_SECTION: posts
+    :END:
+#+end_src
+---
+
+- /:EXPORT_FILE_NAME/:
+This is how your file is going to be stored, you may or not add the =.md= extension.
+- /:EXPORT_HUGO_SECTION/:
+Here is the tricky part, if you have multiple sections like: post, projects, topics, etc. this is where the file is going to be stored.
+
+If the sub-header starts with a TODO, when exported the md metadata is going to have =draftt: true=, which means even the archive is going to be created when you run hugo to create your site that md archive is going to be ignored until you finish (remove the TODO or change it to DONE.).
+
+And that's it, you can search more options for manage the front matter in hugo in this [[https://ox-hugo.scripter.co/][page.]]
+
+Thanks for reading.
+
+
+** DONE Install Telega in NixOS - Emacs.        :emacs:linux:tecnology:
+CLOSED: [2024-09-04 Wed 02:44]
+:PROPERTIES:
+:EXPORT_FILE_NAME: install-telega-nixos
+:EXPORT_DESCRIPTION: How to install Telega server in NixOS.
+:DATE:     08-21-2024
+:EXPORT_HUGO_SECTION: posts
+:END:
+:LOGBOOK:
+- State "DONE"  from              [2024-09-04 Wed 02:44]
+- State "DONE"       from "TODO"       [2024-08-21 Wed 13:33]
+:END:
+
+What is telega?.
+---
+According to the [[https://github.com/zevlg/telega.el][Github]] repository:
+- Telega :: telega.el is full featured unofficial client for Telegram platform for GNU Emacs.
+
+---
+
+As you may know, my main OS, at this time (2024-08-21) is =NixOS=, so I was trying to install =Telega= in my emacs, but as you can imagine, the file system hierarchy don't works "normal" in =NixOS=, so is a little tricky set up the environment to actually make =Telega= works.
+
+*** Requisites:
+- gnumake. (To compile).
+- cmake (To compile).
+- tdlib (Version > 1.8.29).
+
+*** Process of installation.
+1. install the dependencies using your =configuration.nix=, =home-manager=, or wathever method you use to install packages in =NixOS=.
+2. Install Telega in emacs.
+    #+CAPTION: Example of telega installation unsing use-package.
+    #+begin_src elisp
+    (use-package telega
+    :ensure t)
+    #+end_src
+3. Now, because I use =NixOS= (by the way), you must know that the file system hierarchy don't works same as in linux or macOS, so I need to declare where telega is going to see the =tdlib= libraries, so:
+    #+begin_src elisp
+    (setq telega-server-lib-prefix "/home/user/.nix-profile/")
+    #+end_src
+4. Compile Telega-server inside emacs.
+    #+begin_example
+    M-x telega-server-build
+    #+end_example
+
+    Or simply run telega:
+    #+begin_example
+    M-x telega
+    #+end_example
+
+With that, Telega must be compiled, and ready to go.
+
+
+** DONE Search tool in your HUGO website.              :blog:tecnology:
+CLOSED: [2024-09-04 Wed 02:44]
+:PROPERTIES:
+:EXPORT_FILE_NAME: search-tool-hugo
+:EXPORT_DESCRIPTION: Description
+:DATE:     08-25-2024
+:EXPORT_HUGO_SECTION: posts
+:END:
+:LOGBOOK:
+- State "DONE"  from              [2024-09-04 Wed 02:44]
+- State "DONE"       from "TODO"       [2024-08-25 Sun 13:10]
+- State "DONE"       from "TODO"       [2024-08-25 Sun 12:58]
+:END:
+
+As websites grow, incorporating a search feature becomes increasingly crucial. However, implementing search functionality can be challenging on a statically generated site since there's no server-side component to handle the search. Instead, the search must be performed on the client side within the browser using JavaScript.
+
+#+begin_center
+#+CAPTION: This is how my web looks.
+[[/images/posts/hugo-search/jpacheco-search.png]]
+#+end_center
+
+Fortunately, there are existing solutions to address this issue. Below, we demonstrate one such solution that utilizes FuseJS and MarkJS. This implementation is inspired by a gist from eddiewebb, but it's built using plain JavaScript rather than jQuery.
+
+*** Page - content/search/_index.md
+Create a page to serve as the search form and display search results. In the markdown, set the layout to ‘search’ and proceed to create this layout (in the next step) to easily manage the HTML.
+
+#+begin_src markdown
+---
+title: "Search"
+sitemap:
+  priority : 0.1
+layout: "search"
+---
+#+end_src
+
+*** Layout - layout/_default/search.html
+This search page contains a <div> element for displaying search results (#search-results) and another <div> element for showing a loading message (.search-loading). The layout also defines a template that will later be used in the JavaScript to render a single search result. Finally, it loads the necessary JS libraries (from a CDN in this example, though self-hosting is an option).
+
+#+begin_src html
+{{ define "main" }}
+
+<main>
+    <form action="/search" method="GET">
+        <input type="search" name="q" id="search-query" placeholder="Search...." autofocus>
+        <!-- <button type="submit">Search</button> -->
+    </form>
+    <div id="search-results"></div>
+    <div class="search-loading">Loading...</div>
+
+    <script id="search-result-template" type="text/x-js-template">
+    <div id="summary-${key}">
+        <h3><a href="${link}">${title}</a></h3>
+        <p>${snippet}</p>
+        <p>
+            <small>
+                ${ isset tags }Tags: ${tags}<br>${ end }
+            </small>
+        </p>
+    </div>
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.6.2/fuse.min.js" integrity="sha512-Nqw1tH3mpavka9cQCc5zWWEZNfIPdOYyQFjlV1NvflEtQ0/XI6ZQ+H/D3YgJdqSUJlMLAPRj/oXlaHCFbFCjoQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</main>
+
+{{ end }}
+#+end_src
+
+*** JS
+The main part of the code is JavaScript, where everything is tied together. The URL parameters are read to obtain the query, which is then passed to FuseJS and MarkJS, and the results are written back to the page.
+
+#+begin_src javascript
+var summaryInclude = 180;
+var fuseOptions = {
+    shouldSort: true,
+    includeMatches: true,
+    includeScore: true,
+    tokenize: true,
+    location: 0,
+    distance: 100,
+    minMatchCharLength: 1,
+    keys: [
+        {name: "title", weight: 0.45},
+        {name: "contents", weight: 0.4},
+        {name: "tags", weight: 0.1},
+        {name: "categories", weight: 0.05}
+    ]
+};
+
+// =============================
+// Search
+// =============================
+
+var inputBox = document.getElementById('search-query');
+if (inputBox !== null) {
+    var searchQuery = param("q");
+    if (searchQuery) {
+        inputBox.value = searchQuery || "";
+        executeSearch(searchQuery, false);
+    } else {
+        document.getElementById('search-results').innerHTML = '<p class="search-results-empty">Please enter a word or phrase above, or see <a href="/tags/">all tags</a>.</p>';
+    }
+}
+
+function executeSearch(searchQuery) {
+
+    show(document.querySelector('.search-loading'));
+
+    fetch('/index.json').then(function (response) {
+        if (response.status !== 200) {
+            console.log('Looks like there was a problem. Status Code: ' + response.status);
+            return;
+        }
+        // Examine the text in the response
+        response.json().then(function (pages) {
+            var fuse = new Fuse(pages, fuseOptions);
+            var result = fuse.search(searchQuery);
+            if (result.length > 0) {
+                populateResults(result);
+            } else {
+                document.getElementById('search-results').innerHTML = '<p class=\"search-results-empty\">No matches found</p>';
+            }
+            hide(document.querySelector('.search-loading'));
+        })
+        .catch(function (err) {
+            console.log('Fetch Error :-S', err);
+        });
+    });
+}
+
+function populateResults(results) {
+
+    var searchQuery = document.getElementById("search-query").value;
+    var searchResults = document.getElementById("search-results");
+
+    // pull template from hugo template definition
+    var templateDefinition = document.getElementById("search-result-template").innerHTML;
+
+    results.forEach(function (value, key) {
+
+        var contents = value.item.contents;
+        var snippet = "";
+        var snippetHighlights = [];
+
+        snippetHighlights.push(searchQuery);
+        snippet = contents.substring(0, summaryInclude * 2) + '&hellip;';
+
+        //replace values
+        var tags = ""
+        if (value.item.tags) {
+            value.item.tags.forEach(function (element) {
+                tags = tags + "<a href='/tags/" + element + "'>" + "#" + element + "</a> "
+            });
+        }
+
+        var output = render(templateDefinition, {
+            key: key,
+            title: value.item.title,
+            link: value.item.permalink,
+            tags: tags,
+            categories: value.item.categories,
+            snippet: snippet
+        });
+        searchResults.innerHTML += output;
+
+        snippetHighlights.forEach(function (snipvalue, snipkey) {
+            var instance = new Mark(document.getElementById('summary-' + key));
+            instance.mark(snipvalue);
+        });
+
+    });
+}
+
+function render(templateString, data) {
+    var conditionalMatches, conditionalPattern, copy;
+    conditionalPattern = /\$\{\s*isset ([a-zA-Z]*) \s*\}(.*)\$\{\s*end\s*}/g;
+    //since loop below depends on re.lastInxdex, we use a copy to capture any manipulations whilst inside the loop
+    copy = templateString;
+    while ((conditionalMatches = conditionalPattern.exec(templateString)) !== null) {
+        if (data[conditionalMatches[1]]) {
+            //valid key, remove conditionals, leave contents.
+            copy = copy.replace(conditionalMatches[0], conditionalMatches[2]);
+        } else {
+            //not valid, remove entire section
+            copy = copy.replace(conditionalMatches[0], '');
+        }
+    }
+    templateString = copy;
+    //now any conditionals removed we can do simple substitution
+    var key, find, re;
+    for (key in data) {
+        find = '\\$\\{\\s*' + key + '\\s*\\}';
+        re = new RegExp(find, 'g');
+        templateString = templateString.replace(re, data[key]);
+    }
+    return templateString;
+}
+
+// Helper Functions
+function show(elem) {
+    elem.style.display = 'block';
+}
+function hide(elem) {
+    elem.style.display = 'none';
+}
+function param(name) {
+    return decodeURIComponent((location.search.split(name + '=')[1] || '').split('&')[0]).replace(/\+/g, ' ');
+}
+
+// Keybinds functions
+document.addEventListener('keydown', function(event) {
+    // Check if the Windows key (or Command key on macOS) and forward slash are pressed
+    if (event.metaKey && event.key === '/') {
+        // Prevent the default action if necessary
+        event.preventDefault();
+
+        // Navigate to the search page
+        window.location.href = '/search';
+
+        // Wait for the page to load and then focus on the search input
+        window.addEventListener('load', function() {
+            const searchInput = document.getElementById('search-query');
+            if (searchInput) {
+                searchInput.focus();
+            }
+        });
+    }
+});
+#+end_src
+
+*** The Data - layouts/_default/index.json
+All the work we’ve done up until now has been front-end workings, but we also need to build an index.json file which will act as our data source (which is fetched from the JS).
+
+#+begin_src json
+{{- $.Scratch.Add "index" slice -}}
+{{- range .Site.RegularPages -}}
+    {{- $.Scratch.Add "index" (dict "title" .Title "tags" .Params.tags "categories" .Params.categories "contents" .Plain "permalink" .Permalink) -}}
+{{- end -}}
+{{- $.Scratch.Get "index" | jsonify -}}
+#+end_src
+
+*** Conclusion
+You can extend this further by offering a live search preview, adding more filters, or allowing sorting options. This method provides a powerful and flexible way to implement search functionality on a static site without relying on any backend services.
+
+
+** DONE Basics of HUGO                        :blog:personal:tecnology:
+CLOSED: [2024-09-04 Wed 03:32]
+:PROPERTIES:
+:EXPORT_FILE_NAME: basics-of-hugo
+:EXPORT_DESCRIPTION: A basic introduction to HUGO.
+:DATE:     08-27-2024
+:EXPORT_HUGO_SECTION: posts
+:END:
+:LOGBOOK:
+- State "DONE"  from "TODO"       [2024-09-04 Wed 03:32]
+- State "DONE"  from              [2024-09-04 Wed 02:44]
+- State "DONE"       from "TODO"       [2024-08-28 Wed 05:05]
+:END:
+
+*** Introduction
+#+begin_quote
+"Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again."
+#+end_quote
+*** Installation
+Hugo is multi platform, so the installation depends on what SO do you use, in this example I Show how to install in =Arch-linux= because it's easy.
+
+#+begin_src shell
+sudo pacman -S hugo
+#+end_src
+
+*** Creating a New Site
+**** Initialize a New Hugo Site
+This is the command in order to create a hugo site,
+
+#+begin_src shell
+hugo new site my-website.org
+#+end_src
+
+- my-website.org :: is the name of the directory that hugo is going to create, and where all the files are going to be.
+
+**** Directory Structure Overview
+#+begin_example
+$ tree -d my-website.org
+
+my-website.org
+├── archetypes
+├── assets
+├── content
+├── data
+├── i18n
+├── layouts
+├── static
+└── themes
+#+end_example
+**** Initialize an empty git repository.
+
+This is very useful because in case of mess, you can easily roll back.
+#+begin_src shell
+git init
+#+end_src
+
+*** Creating Content
+**** Creating a New Post
+This is the command to create post within HUGO:
+
+#+begin_src shell
+hugo new content content/posts/my-first-post.md
+#+end_src
+
+Hugo creates a =my-first-post.md= in the =content/posts/= directory, open it with your editor, you must see this content in the file:
+
+#+begin_src markdown
++++
+title = 'My First Post'
+date = 2024-01-14T07:07:07+01:00
+draft = true
++++
+#+end_src
+
+Notice the draft value in the front matter is true. By default, Hugo does not publish draft content when you build the site. Learn more about draft, future, and expired content.
+
+Add some Markdown to the body of the post, but do not change the draft value.
+
+#+begin_src markdown
++++
+title = 'My First Post'
+date = 2024-01-14T07:07:07+01:00
+draft = true
++++
+## Introduction
+
+This is **bold** text, and this is *emphasized* text.
+
+Visit the [Hugo](https://gohugo.io) website!
+#+end_src
+
+*** Working with Themes
+To install a theme is basically download it from =GitHub=, you can find more themes [[https://themes.gohugo.io/themes][here]].
+**** Downloading and Installing a Theme
+
+In this guide we are going to use =PaperMod= theme, so we need to install it througt various ways.
+- As a submodule (recommended).
+
+#+begin_src shell
+git submodule add --depth=1 https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
+git submodule update --init --recursive # needed when you reclone your repo (submodules may not get cloned automatically)
+#+end_src
+
+- Simply clone.
+
+#+begin_src shell
+git clone https://github.com/adityatelange/hugo-PaperMod themes/PaperMod --depth=1
+#+end_src
+
+*Keep in mind that if you clone the repository you must delete the =.git= folder inside the theme, because is going to have conflicts when you try to push your site.*
+
+The next ones I never used, but you can go to the HUGO documentation for read more about these.
+- Expand Method 3 - Download an unzip
+- Hugo module
+
+**** Configuring the Theme & see it in action.
+Finally set theme as PaperMod in your site config, =hugo.toml= or =config.toml=
+
+#+begin_src toml
+theme = "PaperMod"
+#+end_src
+
+Once you do this you can verify if the site applied the theme correctly by running the hugo server:
+#+begin_src shell
+hugo server
+#+end_src
+Now, in your =browser=, open =localhost:1313=, and you should see your site with the proper theme applied.
+
+*** Configuration example for PaperMod theme.
+This is a basic configuration template for PaperMod theme:
+
+#+begin_src toml
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+theme = "PaperMod"
+
+copyright = "[PaperMod Contributors](https://github.com/adityatelange/hugo-PaperMod/graphs/contributors)"
+paginate = 5
+enableInlineShortcodes = true
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+enableEmoji = true
+pygmentsUseClasses = true
+mainsections = [ "posts", "papermod" ]
+
+[minify]
+disableXML = true
+
+[languages.en]
+languageName = "English"
+weight = 1
+
+  [languages.en.taxonomies]
+  category = "categories"
+  tag = "tags"
+  series = "series"
+
+[[languages.en.menu.main]]
+name = "Archive"
+url = "archives"
+weight = 5
+
+[[languages.en.menu.main]]
+name = "Posts"
+url = "posts/"
+weight = 10
+
+[outputs]
+home = [ "HTML", "RSS", "JSON" ]
+
+[params]
+env = "production"
+description = "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
+author = "Theme PaperMod"
+defaultTheme = "auto"
+ShowShareButtons = true
+ShowReadingTime = true
+displayFullLangName = true
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = true
+ShowRssButtonInSectionTermList = true
+ShowAllPagesInArchive = true
+ShowPageNums = true
+ShowToc = true
+images = [ "images/papermod-cover.png" ]
+
+  [params.profileMode]
+  enabled = false
+  title = "PaperMod"
+  imageUrl = "#"
+  imageTitle = "my image"
+
+    [[params.profileMode.buttons]]
+    name = "Archives"
+    url = "archives"
+
+    [[params.profileMode.buttons]]
+    name = "Tags"
+    url = "tags"
+
+  [params.homeInfoParams]
+  Title = "PaperMod's Demo"
+  Content = """
+?? Welcome to demo page of Hugo's theme PaperMod!
+- **PaperMod**  is designed to be clean and simple but fast and responsive theme with useful feature-set that enhances UX.
+- Feel free to show your support by giving us a star ?? on GitHub and sharing with your friends and social media .
+- PaperMod is based on theme [Paper](https://github.com/nanxiaobei/hugo-paper/tree/4330c8b12aa48bfdecbcad6ad66145f679a430b3).
+"""
+
+  [[params.socialIcons]]
+  name = "github"
+  title = "View Source on Github"
+  url = "https://github.com/adityatelange/hugo-PaperMod"
+
+  [[params.socialIcons]]
+  name = "Discord"
+  title = "Join discord community"
+  url = "https://discord.gg/ahpmTvhVmp"
+
+  [[params.socialIcons]]
+  name = "X"
+  title = "Share PaperMod on X/Twitter"
+  url = "https://x.com/intent/tweet/?text=Checkout%20Hugo%20PaperMod%20%E2%9C%A8%0AA%20fast,%20clean,%20responsive%20Hugo%20theme.&url=https://github.com/adityatelange/hugo-PaperMod&hashtags=Hugo,PaperMod"
+
+  [[params.socialIcons]]
+  name = "KoFi"
+  title = "Buy me a Ko-Fi :)"
+  url = "https://ko-fi.com/adityatelange"
+
+  [params.assets]
+  disableHLJS = true
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.highlight]
+noClasses = false
+
+[services.instagram]
+disableInlineCSS = true
+
+[services.twitter]
+disableInlineCSS = true
+#+end_src
+
+*** Building the Site
+**** Generating the Static Site
+At this point we need to generate the static we site, the most basic command to publish it is just run =hugo= in the terminal inside the root of the project.
+So you notice that a =public= folder is now created, if you look inside, you'll find all the html files, and everything to deploy as a web page.
+
+**** Set specific folder to export your site.
+If you don't want to have your publish site in the =public= folder, you can set another path to export it instead of the =public= folder by adding this line at top of your =hugo.toml= configuration file:
+
+#+begin_src toml
+publishDir = "/path/to/export/"
+#example
+publishDir = "~/my-site.org/"
+#+end_src
+
+*** Conclusion
+With all the context before, you may be able to start your web site, blog, etc. As you read, is very simple to have a very nice and useful static web-page, the "hard" part is to select the theme.
+
+The next step is to publish your web to a custom server or on github, gitlab, codeberg pages.
+1. Preparing for Deployment.
+2. Deploying to a Web Server or Hosting Service.
+   
+**** Additional Resources
+1. [[https://gohugo.io/getting-started/quick-start/][Hugo quick start guide.]]
+2. [[https://gohugo.io/documentation/][Hugo documentation.]]
+
+
+
+
+** DONE A job history.                                       :blog:personal:
+CLOSED: [2024-11-18 Mon 09:06]
+:PROPERTIES:
+:EXPORT_FILE_NAME: a-job-history
+:EXPORT_DESCRIPTION: My job as an automation tech is over, this is what I think about it.
+:DATE: [2024-09-06 Fri]
+:EXPORT_HUGO_SECTION: posts
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2024-11-18 Mon 09:06]
+:END:
+
+*** A brief Introduction.
+This is no t going to be a post about programming or technology, this is kind of a way to express my feelings about one important thing that I think is going to change my life, I'm talking about my job and how this ambient change my mind and my vision about this important thing that a lot of us need to do and hold the job pressure to keep some security for our families.
+
+*** The history...
+I have almost 5 years working in =Autoliv= in H.Matamoros, in the meaning of that time I was trying every single day to make my best, trying to improve things, make the process better, being the fastest troubleshooting solver, have less machines failures, less downtime, questioning about how maintenance can be better, and more thing related to the maintenance department.
+
+As you may wonder, yes, I am a maintenance technician in the die-cast area, I always though that for require something you need to share something first, so that was basically what I was doing for about 4 years, mean while in those years, I prof myself, and prof others that I was capable to have an engineering position, because I was doing some specific tasks and covering the Controls Engineer when he was out of the job, develop projects, etc, all of that being a maintenance technician. So with that being said, I apply to various engineering vacancy's, but for one reason I never have been promoted, always have other person or the manager cancel the vacant. 
+
+That's the =why= I realize that I don't need to effort my self to achieve something that is not going  to happens. So I decide to only do the job for what I was hired (maintenance technician). 
+
+In the past 4 and a half years, I think I was doing a good job, not because I say it, my boss say it, the engineering department say it, the production department trust in my skills as a troubleshooting resolver. So at that time I was thinking that if I was doing a “good” job, maybe it could be easy to achieve some engineering charge, the thing is that I was =wrong=. It seems that being good and give some extra skills to the job were not enough. job, maybe it could be easy to achieve some engineering charge, the thing is that I was =wrong=. It seems that be good and give some extra skills to the job were not enough.
+
+To the time, I decided to apply to a engineering position, so I do, I have a couple of interviews with the managers, but unfortunately, they choose other person, or canceled the job position. That basically drop me down, because It was kind of I don't know, It seems that I'm was good, but not enough, some times when I fill the job when the control's engineer was out of the job, I have treat with others engineers, but I don't want to say bad things about them, but in my perspective, those engineers are too young and with a lack of experience, don't let me wrong, but is I went messed up when those guys came to me and ask me for directions, while technically I am a low level in the structure:
+#+begin_quote
+Engineer > Technician
+#+end_quote
+
+So I remember that day, I returned to my home so mad and sad, Why?, a few weeks before, I was working in the first shift, everything goes fine, I have like 5 months since I was returned to the first shift;
+#+begin_quote
+Long short history: As a technician with the “strength” of programming, I must be in other shift because in the first shift was the main programming engineer.
+#+end_quote
+
+Of course for me that was pointless, because I don't have nothing  to do with the engineer, because I am a technician. So that day my boss came to my position and say that I need to move to the 2nd shift, because he need some one that cover the automation issues in the area, and I am the only technician with the knowledge (blah, blah, blah...)
+*** The end.
+Months later, I feel not 
+comfortable, with my job, at that point I feel messy, I don't want to go in there, not because laziness, but because I lost the feeling, I don't know how to describe it.
+
+To my fortune, I have an job interview for the maintenance supervisor roll in another DieCasting company here in H. Matamoros. And fortunately I was selected to have the job. Finally I ended quite my job, and start a new one now in a better roll and with more opportunities and new challenges to my personal and professional career.
+
+
+** DONE Ellama, a emacs AI helper.                       :tecnology:wayland:
+CLOSED: [2024-09-22 Sun 12:49]
+:PROPERTIES:
+:EXPORT_FILE_NAME: ellama
+:EXPORT_DESCRIPTION: A brief introduction to how to install ellama and ollama.
+:DATE:     09-22-2024
+:EXPORT_HUGO_SECTION: posts
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2024-09-22 Sun 12:49]
+:END:
+
+*** Installation of Ollama.
+In my case, I installed =ollama= from my package manager, although you can install it using the following code:
+
+#+BEGIN_SRC shell 
+curl -fsSL https://ollama.com/install.sh | sh 
+#+END_SRC
+
+Once =ollama= is installed, you should add it to your startup. In my case, I do it from the init of =hyprland=, but it will depend on whether you use =.xinitrc= or something else. It should be launched as follows:
+
+#+BEGIN_SRC shell 
+ollama serve 
+#+END_SRC
+*** Installing a model. 
+To use Ollama, we need to download a model. A model is basically who you will be talking to when making a query. In the case of =ellama=, they suggest installing =zephyr= as the model, so we need to install it.
+
+#+BEGIN_SRC shell 
+ollama pull zephyr
+#+END_SRC
+
+*** Installing ellama. 
+Once =ollama & zephyr= are installed, we can proceed to install and configure =ellama= in Emacs.
+
+*** My ellama configuration.
+As you can see, it's not very complicated. The options for the =ellama= package are quite intuitive, like the language and keybindings. If you have any questions, feel free to comment, and we can follow up.
+
+#+BEGIN_SRC emacs-lisp 
+(use-package ellama
+  (setopt ellama-language "English")
+  (setopt ellama-user-nick "jpacheco.xyz")
+  (setopt ellama-keymap-prefix "C-c e")
+  (require 'llm-ollama)
+  (setopt ellama-provider
+		  (make-llm-ollama
+		   "zephyr"
+		   "zephyr")))
+ #+END_SRC
+
+
+** DONE Should I use GNU/guix?                        :blog:linux:tecnology:
+CLOSED: [2025-01-14 Tue 20:03]
+:PROPERTIES:
+:EXPORT_FILE_NAME: should-i-use-gnu-guix
+:EXPORT_DESCRIPTION: My thoughts about use guix (or not).
+:DATE: [2024-12-01 Sun]
+:EXPORT_HUGO_SECTION: posts
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2025-01-14 Tue 20:03]
+:END:
+
+*** What is GNU/guix.
+*GNU/Guix* is a functional package manager and a complete operating system distribution, part of the GNU Project. It is designed to provide a reliable and customizable environment for managing software and configurations.
+
+It is basically =NixOS= but instead of using nix it uses =Schem Common Lisp= as interpreter.
+
+*** Why Use GNU Guix?
+Freedom and transparency in software management.
+Avoids common issues like dependency hell or broken systems due to upgrades.
+Ideal for developers, researchers, and system administrators who value reproducibility and control.
+
+*** I'm currently using NixOS, should I switch to guix?
+The most common answer for that is very universal: =It depends=, if you want to learn more about lisp definetly this is your distribution, for me this is the fastest init that I ever had, and the best of everything is that I can install =nix= the package manager and use it whitin guix, is fantastic.
+*** Conclusions.
+I have been using =guix= for about a month, and I have to admit that is fast as hell, but in the other part this distribution have a lack of packages, of course you can make the =templates= in scheme and your are going to have any package, but for me and my workflow I need some packages that not are available in guix, but of course in now days we have more options and my solution for the lack of packages was install =nix= inside my guix environment, so I can install packages in its latest version.
+
+So, for me this is kind of the best Linux distribution because of the structure, is like =Venom linux= combined with =NixOS= in my opinion.
+
+
+** DONE Voidstrap                                             :linux:script:
+CLOSED: [2025-01-14 Tue 21:17]
+:PROPERTIES:
+:EXPORT_FILE_NAME: voidstrap
+:EXPORT_DESCRIPTION: A void linux minimal installer.
+:DATE: [2025-01-14 Tue]
+:EXPORT_HUGO_SECTION: posts
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2025-01-14 Tue 21:17]
+:END:
+
+*** VoidStrap installer.
+A basic minimalist installer of =void-linux= with some packages to get ready to enjoy
+this amazing GNU/Linux distribution.
+
+*** Usage:
+
+**** Running install.sh
+Download the iso, and once in root inside the live, git clone this repo:
+(You need to update inside the iso and install =git=)
+
+If you want musl you can change the link to the mirror in the =install.sh= script:
+#+begin_example
+- Change this in line 11:
+export XBPS_ARCH=x86_64 && xbps-install -Suy -R http://mirrors.servercentral.com/voidlinux/current -r /mnt \
+- For this:
+export XBPS_ARCH=x86_64-musl && xbps-install -Suy -R http://mirrors.servercentral.com/voidlinux/current/musl -r /mnt \
+#+end_example
+    
+#+begin_src shell
+git clone https://git.disroot.org/jpacheco/voidstrap
+cd voidstrap
+sh install.sh
+#+end_src
+
+Once there the script will open =cfdisk=, and you need to format the HDD in this 
+specific format:
+#+begin_example
+- /dev/sdX1 -> as the boot partition.
+- /dev/sdY2 -> as the swap partition.
+- /dev/sdZ3 -> as the root partition.
+#+end_example
+
+NOTE: Replace X,Y & Z for your partition name.
+I consider to have this structure of partition, but you can change it, but you must
+change the code in =postinstall.sh= when the scripts make the =fstab= archive.
+
+*Make sure you do a backup of your files before doing crazy things and trust anyone script*
+
+When the =install.sh= script finish, you need to run the postinstall script located in =/root folder:=
+
+**** Running postinstall.sh
+
+This script its going to create some configuration files, like: =fstab=, =rc.conf=,
+change the password of =root=, and add user(s).
+
+#+begin_src shell
+xchroot /mnt
+#+end_src
+
+Then run the =chroot.sh= script.
+#+begin_src shell
+sh /root/postinstall.sh
+#+end_src
+
+When the =postinsall.sh= script finishes, you only need to reboot and enjoy your
+*Void-Linux* distribution.
+
+When it finish you need to run the =postinstall.sh= script, that is going to install
+the *X server* and some other "necessary" packages.
+
+*** References:
+- [[https://github.com/jpachecoxyz/voidstrap][Voistrap github repository.]]
+- [[https://docs.voidlinux.org/][Voidlinux Documentation.]] 
+- [[https://git.disroot.org/tuxliban/tutoriales_void/src/branch/master/Gu%C3%ADas][Tuxliban guides.]]
+
+
+** DONE Guix installer                                        :linux:script:
+CLOSED: [2025-01-16 Thu 19:57]
+:PROPERTIES:
+:EXPORT_FILE_NAME: guix-installer
+:EXPORT_DESCRIPTION: A guix installer script.
+:DATE: [2025-01-15 Wed]
+:EXPORT_HUGO_SECTION: posts
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2025-01-16 Thu 19:57]
+:END:
+
+*** About.
+The script =install.sh= will do a couple of actions to try to make the GNU/guix installation more friendly, so, basically this =README.org= file will tangle the script, the power of emacs of course. So, while I was working in this "note" file, then I realized that I can use emacs and make a script.
+
+*** Download and burn the iso.
+I use the systemcrafter [[https://github.com/SystemCrafters/guix-installer][ISO.]]
+
+#+begin_src shell
+sudo dd status=progress if=guix-installer-202106150234.iso of=/dev/sdb && sync
+#+end_src
+
+*** Install the OS.
+Now with the Guix iso. Boot your laptop in it, and follow the instructions to install the OS, just ignore the warnings about the libre software, And stop in the part that you actually going to start the installation, and open another TTY:
+
+#+begin_src shell
+Ctrl + Alt + f2  
+#+end_src
+
+*** The script itself "Automated":
+
+#+begin_src shell
+set -e
+set -o pipefail
+
+log_error() {
+	echo "$(date '+%Y-%m-%d %H:%M:%S') - ERROR: $1" >&2
+	exit 1
+}
+
+log() {
+	echo "$(date '+%Y-%m-%d %H:%M:%S') - $1"
+}
+
+log "Starting cow-store service..." && herd start cow-store /mnt || log_error "Failed to start cow-store."
+log "Copying channels.scm..." && cp /etc/channels.scm /mnt/etc && chmod +w /mnt/etc/channels.scm || log_error "Failed to copy or modify channels.scm."
+log "Copying config.scm..." && cp /mnt/etc/config.scm ./config.scm || log_error "Failed to copy config.scm."
+log "Adding nongnu modules and linux kernel to config.scm ..."
+if ! grep -q '(use-modules (gnu) (nongnu packages linux))' ./config.scm; then
+	sed -i 's/(use-modules (gnu))/(use-modules (gnu) (nongnu packages linux))/' ./config.scm || log_error "Failed to add (nongnu packages linux) to use-modules."
+else
+	log "Line '(use-modules (gnu) (nongnu packages linux))' already exists. Skipping."
+fi
+
+if ! grep -q '(kernel linux)' ./config.scm; then
+	sed -i '/(operating-system/a\
+  (kernel linux)\
+  (firmware (list linux-firmware))' ./config.scm || log_error "Failed to add kernel and firmware configurations."
+else
+	log "Kernel and firmware configurations already exist. Skipping."
+fi
+log "Copying updated config.scm back to /mnt/etc..." && cp ./config.scm /mnt/etc/config.scm || log_error "Failed to copy updated config.scm back to /mnt/etc."
+log "Initializing system with guix time-machine..." && guix time-machine -C /mnt/etc/channels.scm -- system init /mnt/etc/config.scm /mnt || log_error "System initialization failed."
+log "Clean this folder..." && rm ./config.scm 
+
+log "Script completed successfully."
+#+end_src
+*** References:
+- [[https://systemcrafters.net/craft-your-system-with-guix/full-system-install/][SystemCrafters Complete guide.]]
+
+
+** DONE Dualboot in guix linux                                :linux:script:
+CLOSED: [2025-01-17 Fri 19:57]
+:PROPERTIES:
+:EXPORT_FILE_NAME: dualboot-in-guix-linux
+:EXPORT_DESCRIPTION: How to add grub entries in guix using scheme.
+:DATE: [2025-01-17 Fri]
+:EXPORT_HUGO_SECTION: posts
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2025-01-17 Fri 19:57]
+:END:
+
+*** Dual Boot Configuration in Guix Linux
+Setting up a dual-boot system in Guix Linux involves configuring the GRUB bootloader to recognize both Guix and your secondary operating system. Here's how you can configure the bootloader step-by-step.
+
+**** Default Bootloader Configuration
+The default bootloader configuration for Guix Linux is straightforward. Here's an example:
+
+#+begin_src scheme
+(bootloader (bootloader-configuration
+            (bootloader grub-efi-bootloader)
+            (targets (list "/boot/efi"))
+            (keyboard-layout keyboard-layout)))
+#+end_src
+
+- *grub-efi-bootloader*: Specifies the GRUB bootloader in EFI mode.
+- *targets*: Points to the EFI System Partition (ESP), usually mounted at `/boot/efi`.
+- *keyboard-layout*: Configures the keyboard layout used in GRUB.
+
+**** Adding a GRUB Entry for Dual Boot
+To enable dual boot with Windows 11 (or another operating system), you need to add a custom entry to the GRUB configuration. Here’s how:
+
+#+begin_src scheme
+(bootloader (bootloader-configuration
+            (bootloader grub-efi-bootloader)
+            (targets (list "/boot/efi"))
+            (keyboard-layout keyboard-layout)
+            ;; Add a menu entry for Windows 11
+            (menu-entries
+            (list
+            (menu-entry
+                (label "Windows 11")
+                (device (uuid "65A0-06CA" 'fat32)) ; UUID of the boot partition
+                (chain-loader "/EFI/Microsoft/Boot/bootmgfw.efi"))))))
+#+end_src
+
+***** Key Components
+1. menu-entries:
+   - Adds a custom menu entry for the GRUB boot menu.
+2. menu-entry:
+   - label: The name displayed in the GRUB menu (e.g., "Windows 11").
+   - device: Specifies the UUID of the boot partition where Windows is installed. Replace ="65A0-06CA"= with the UUID of your Windows EFI partition.
+   - chain-loader: Points to the Windows EFI bootloader (=bootmgfw.efi=), usually located in =/EFI/Microsoft/Boot/=.
+
+**** Finding the UUID of the Boot Partition
+To find the UUID of the Windows boot partition, run the following command:
+
+#+begin_src bash
+lsblk -o NAME,FSTYPE,UUID,MOUNTPOINT
+#+end_src
+
+Locate the partition with the `fat32` filesystem type and note its UUID.
+
+**** Applying the Configuration
+After modifying your =config.scm=, reconfigure your system to apply the changes:
+
+#+begin_src bash
+sudo guix system reconfigure /path/to/config.scm
+#+end_src
+
+**** Testing the Dual Boot Setup
+1. Reboot your system.
+2. In the GRUB menu, you should see an entry labeled "Windows 11" alongside your Guix Linux entry.
+3. Select "Windows 11" to boot into Windows.
+
+**** Tips for Troubleshooting
+- If the Windows entry doesn’t appear, double-check the UUID of the boot partition.
+- Make sure your BIOS/UEFI settings allow booting in EFI mode.
+- Ensure the Windows EFI bootloader (=bootmgfw.efi=) exists in the specified path.
+
+This setup ensures that both Guix Linux and Windows 11 are easily accessible via the GRUB menu, providing a seamless dual-boot experience. If you have any questions or run into issues, feel free to ask!
+
+
+** DONE Recover Windows BOOT                                :blog:tecnology:
+CLOSED: [2025-01-18 Sat 17:24]
+:PROPERTIES:
+:EXPORT_FILE_NAME: recover-windows-boot
+:EXPORT_DESCRIPTION: How to  recover the boot files of Windows.
+:DATE: [2025-01-18 Sat]
+:EXPORT_HUGO_SECTION: posts
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2025-01-18 Sat 17:24]
+:END:
+
+This guide is suggested when you accidentally format the boot partition while installing a new OS, wiping out the Windows bootloader in the process. This has happened to me on more than one occasion, which is why I decided to document it.
+
+It has also happened when the Windows bootloader is deleted. The following steps are solely for copying the Windows boot files using the ISO onto the partition without having to reformat it.
+
+*** Select the disk.
+#+begin_src cmd 
+list disk sel disk # 
+#+end_src
+
+*** Select the boot partition.
+List the partitions, select the FAT32 partition, and assign a letter to it. 
+#+begin_src cmd 
+list vol sel vol # assign letter z: 
+#+end_src
+
+*** Load Windows boot files. 
+#+begin_src cmd 
+bcdboot c:\windows /s z: /f all 
+#+end_src
+
+That's it! Simply restart, boot into the main OS, run =os-prober=, and execute =update-grub= to add the boot entry to =grub=.
+
+
+** DONE Back to Void Linux                                  :blog:tecnology:
+CLOSED: [2025-02-08 Sat 18:57]
+:PROPERTIES:
+:EXPORT_FILE_NAME: back-to-void-linux
+:EXPORT_DESCRIPTION: After a while I decided to return to the begining
+:DATE: [2025-01-26 Sun]
+:EXPORT_HUGO_SECTION: posts
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2025-02-08 Sat 18:57]
+:END:
+
+*** Always return to the place that you where happy.
+
+A long time ago (actually no more than 2 years) I was using =void linux=, it was a very good time, but for some reasons I change it for =venom linux=, =nixOS=, =guix linux= and others, to testing and learning within those linux distributions, but I always have a lack of something...
+
+As much I like and enjoy =nixOS=, I always have problems, specially with the libraries and includes directories. I know that was only a small thing, but you know...
+
+Guix was very interesting too, but same history as in nix. 
+
+Venom linux was a such great too, amazing distro, excellent administrators. But I don't have the time to being compiling things, or fixing some issues within an update.
+
+*** Conclusions.
+So for that I will try =void-linux= again. I installed it again, the installation was smoothly, I use my [[https://github.com/jpachecoxyz/voidstrap][script]], so I install it very fast, and now I'm now in this amazing distro, I think that I'm going to be here at least a few years, because this distro its minimal, the community is amazing, and of course the stability is great. I encourage you to at least try void or some variants, it's just amazing.
+

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on (λ jpachecoxyz)</title>
+    <link>//localhost:1313/tags/blog/</link>
+    <description>Recent content in Blog on (λ jpachecoxyz)</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Made in emacs for (λ jpachecoxyz)</copyright>
+    <lastBuildDate>Sat, 08 Feb 2025 18:57:00 -0600</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Back to Void Linux</title>
+      <link>//localhost:1313/posts/back-to-void-linux/</link>
+      <pubDate>Sat, 08 Feb 2025 18:57:00 -0600</pubDate>
+      <guid>//localhost:1313/posts/back-to-void-linux/</guid>
+      <description>&lt;h2 id=&#34;always-return-to-the-place-that-you-where-happy-dot&#34;&gt;Always return to the place that you where happy.&lt;/h2&gt;&#xA;&lt;p&gt;A long time ago (actually no more than 2 years) I was using &lt;code&gt;void linux&lt;/code&gt;, it was a very good time, but for some reasons I change it for &lt;code&gt;venom linux&lt;/code&gt;, &lt;code&gt;nixOS&lt;/code&gt;, &lt;code&gt;guix linux&lt;/code&gt; and others, to testing and learning within those linux distributions, but I always have a lack of something&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;As much I like and enjoy &lt;code&gt;nixOS&lt;/code&gt;, I always have problems, specially with the libraries and includes directories. I know that was only a small thing, but you know&amp;hellip;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Recover Windows BOOT</title>
+      <link>//localhost:1313/posts/recover-windows-boot/</link>
+      <pubDate>Sat, 18 Jan 2025 17:24:00 -0600</pubDate>
+      <guid>//localhost:1313/posts/recover-windows-boot/</guid>
+      <description>&lt;p&gt;This guide is suggested when you accidentally format the boot partition while installing a new OS, wiping out the Windows bootloader in the process. This has happened to me on more than one occasion, which is why I decided to document it.&lt;/p&gt;&#xA;&lt;p&gt;It has also happened when the Windows bootloader is deleted. The following steps are solely for copying the Windows boot files using the ISO onto the partition without having to reformat it.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Should I use GNU/guix?</title>
+      <link>//localhost:1313/posts/should-i-use-gnu-guix/</link>
+      <pubDate>Tue, 14 Jan 2025 20:03:00 -0600</pubDate>
+      <guid>//localhost:1313/posts/should-i-use-gnu-guix/</guid>
+      <description>&lt;h2 id=&#34;what-is-gnu-guix-dot&#34;&gt;What is GNU/guix.&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;GNU/Guix&lt;/strong&gt; is a functional package manager and a complete operating system distribution, part of the GNU Project. It is designed to provide a reliable and customizable environment for managing software and configurations.&lt;/p&gt;&#xA;&lt;p&gt;It is basically &lt;code&gt;NixOS&lt;/code&gt; but instead of using nix it uses &lt;code&gt;Schem Common Lisp&lt;/code&gt; as interpreter.&lt;/p&gt;&#xA;&lt;h2 id=&#34;why-use-gnu-guix&#34;&gt;Why Use GNU Guix?&lt;/h2&gt;&#xA;&lt;p&gt;Freedom and transparency in software management.&#xA;Avoids common issues like dependency hell or broken systems due to upgrades.&#xA;Ideal for developers, researchers, and system administrators who value reproducibility and control.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A job history.</title>
+      <link>//localhost:1313/posts/a-job-history/</link>
+      <pubDate>Mon, 18 Nov 2024 09:06:00 -0600</pubDate>
+      <guid>//localhost:1313/posts/a-job-history/</guid>
+      <description>&lt;h2 id=&#34;a-brief-introduction-dot&#34;&gt;A brief Introduction.&lt;/h2&gt;&#xA;&lt;p&gt;This is no t going to be a post about programming or technology, this is kind of a way to express my feelings about one important thing that I think is going to change my life, I&amp;rsquo;m talking about my job and how this ambient change my mind and my vision about this important thing that a lot of us need to do and hold the job pressure to keep some security for our families.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Basics of HUGO</title>
+      <link>//localhost:1313/posts/basics-of-hugo/</link>
+      <pubDate>Wed, 04 Sep 2024 03:32:00 -0500</pubDate>
+      <guid>//localhost:1313/posts/basics-of-hugo/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&amp;ldquo;Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;&#xA;&lt;p&gt;Hugo is multi platform, so the installation depends on what SO do you use, in this example I Show how to install in &lt;code&gt;Arch-linux&lt;/code&gt; because it&amp;rsquo;s easy.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo pacman -S hugo&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;h2 id=&#34;creating-a-new-site&#34;&gt;Creating a New Site&lt;/h2&gt;&#xA;&lt;h3 id=&#34;initialize-a-new-hugo-site&#34;&gt;Initialize a New Hugo Site&lt;/h3&gt;&#xA;&lt;p&gt;This is the command in order to create a hugo site,&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Search tool in your HUGO website.</title>
+      <link>//localhost:1313/posts/search-tool-hugo/</link>
+      <pubDate>Wed, 04 Sep 2024 02:44:00 -0500</pubDate>
+      <guid>//localhost:1313/posts/search-tool-hugo/</guid>
+      <description>&lt;p&gt;As websites grow, incorporating a search feature becomes increasingly crucial. However, implementing search functionality can be challenging on a statically generated site since there&amp;rsquo;s no server-side component to handle the search. Instead, the search must be performed on the client side within the browser using JavaScript.&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;//localhost:1313/images/posts/hugo-search/jpacheco-search.png&#34;&#xA;    alt=&#34;Figure 1: This is how my web looks.&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;&lt;!-- raw HTML omitted --&gt;Figure 1: &lt;!-- raw HTML omitted --&gt;This is how my web looks.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
