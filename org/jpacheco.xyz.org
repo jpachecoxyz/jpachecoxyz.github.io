@@ -2281,3 +2281,14 @@ Venom linux was a such great too, amazing distro, excellent administrators. But 
 *** Conclusions.
 So for that I will try =void-linux= again. I installed it again, the installation was smoothly, I use my [[https://github.com/jpachecoxyz/voidstrap][script]], so I install it very fast, and now I'm now in this amazing distro, I think that I'm going to be here at least a few years, because this distro its minimal, the community is amazing, and of course the stability is great. I encourage you to at least try void or some variants, it's just amazing.
 
+
+** TODO The dead horse theory
+:PROPERTIES:
+:EXPORT_FILE_NAME: the-dead-horse-theory
+:EXPORT_DESCRIPTION: How I deal with this cliche in my work.
+:DATE: [2025-03-15 Sat]
+:EXPORT_HUGO_SECTION: posts
+:END:
+
+*** What is the dead horse theory.
+begining ...
