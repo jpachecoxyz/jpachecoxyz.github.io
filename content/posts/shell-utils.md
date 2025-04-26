@@ -1,12 +1,14 @@
 +++
 title = "Shell-utils"
-author = ["Javier Pacheco"]
-description = "A github repo that stores shell scripts utilities for x and wayland."
-date = 2024-09-04T02:43:00-05:00
-tags = ["linux", "script"]
+description = "A useful shell scripts for X11 and Wayland"
+date = 2024-07-28
+tags = ["linux", "scripts"]
 draft = false
 toc = true
 +++
+
+
+
 
 ## Overview {#overview}
 

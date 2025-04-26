@@ -1,9 +1,8 @@
 +++
-title = "Back to Void Linux"
-author = ["Javier Pacheco"]
-description = "After a while I decided to return to the begining"
-date = 2025-02-08T18:57:00-06:00
-tags = ["blog", "tecnology"]
+title = "Back to voidlinux"
+description = "Always back where do you were happy."
+date = 2025-01-26
+tags = ["blog", "linux"]
 draft = false
 toc = true
 +++

@@ -48,7 +48,7 @@ params:
       I am maintenance engineer, I'm specialized in maintenance,
       programming PLC, Robotics, I also like to code in python,
       C, lisp, an emacs enjoyer because of org-mode.
-      I use linux and Guix as my daliy OS.
+      I use linux (void musl) as my daliy OS.
 
   social:
     - name: "email"
@@ -101,12 +101,9 @@ menu:
     - identifier: posts
       name: Posts
       weight: 3
-    - identifier: wiki
-      name: Wiki
-      weight: 4
     - identifier: search
       name: Search
-      weight: 5
+      weight: 4
 
 taxonomies:
   category: categories

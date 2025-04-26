@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows on (λ jpachecoxyz)</title>
+    <link>/tags/windows/</link>
+    <description>Recent content in Windows on (λ jpachecoxyz)</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Made in emacs for (λ jpachecoxyz)</copyright>
+    <lastBuildDate>Sat, 18 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Recover windows boot</title>
+      <link>/posts/recover-windows-boot/</link>
+      <pubDate>Sat, 18 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>/posts/recover-windows-boot/</guid>
+      <description>&lt;p&gt;This guide is suggested when you accidentally format the boot partition while installing a new OS, wiping out the Windows bootloader in the process. This has happened to me on more than one occasion, which is why I decided to document it.&lt;/p&gt;&#xA;&lt;p&gt;It has also happened when the Windows bootloader is deleted. The following steps are solely for copying the Windows boot files using the ISO onto the partition without having to reformat it.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

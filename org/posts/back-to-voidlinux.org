@@ -1,0 +1,24 @@
+#+title: Back to voidlinux
+#+description: Always back where do you were happy.
+#+date: 2025-01-26
+#+export_file_name: back-to-voidlinux
+#+hugo_base_dir: ~/webdev/jpachecoxyz/
+#+hugo_section: posts
+#+hugo_tags: blog linux
+#+hugo_custom_front_matter: toc true
+#+hugo_auto_set_lastmod: nil
+#+hugo_draft: false
+
+* Always return to the place that you where happy.
+
+A long time ago (actually no more than 2 years) I was using =void linux=, it was a very good time, but for some reasons I change it for =venom linux=, =nixOS=, =guix linux= and others, to testing and learning within those linux distributions, but I always have a lack of something...
+
+As much I like and enjoy =nixOS=, I always have problems, specially with the libraries and includes directories. I know that was only a small thing, but you know...
+
+Guix was very interesting too, but same history as in nix. 
+
+Venom linux was a such great too, amazing distro, excellent administrators. But I don't have the time to being compiling things, or fixing some issues within an update.
+
+* Conclusions.
+So for that I will try =void-linux= again. I installed it again, the installation was smoothly, I use my [[https://github.com/jpachecoxyz/voidstrap][script]], so I install it very fast, and now I'm now in this amazing distro, I think that I'm going to be here at least a few years, because this distro its minimal, the community is amazing, and of course the stability is great. I encourage you to at least try void or some variants, it's just amazing.
+

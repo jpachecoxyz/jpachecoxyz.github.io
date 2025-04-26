@@ -1,9 +1,8 @@
 +++
-title = "Ellama, a emacs AI helper."
-author = ["Javier Pacheco"]
-description = "A brief introduction to how to install ellama and ollama."
-date = 2024-09-22T12:49:00-05:00
-tags = ["tecnology", "wayland"]
+title = "Ellama"
+description = "A emacs Artificial Intelligence helper."
+date = 2024-09-22
+tags = ["emacs", "blog"]
 draft = false
 toc = true
 +++

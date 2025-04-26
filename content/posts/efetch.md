@@ -1,9 +1,7 @@
 +++
-title = "Efetch.el"
-author = ["Javier Pacheco"]
-description = "A emacs fetching tool."
-date = 2024-09-04T02:43:00-05:00
-tags = ["emacs", "script"]
+title = "Efetch"
+description = "An emacs fetching tool, written in elisp."
+date = 2023-05-20
 draft = false
 toc = true
 +++

@@ -1,8 +1,7 @@
 +++
 title = "Voidstrap"
-author = ["Javier Pacheco"]
-description = "A void linux minimal installer."
-date = 2025-01-14T21:17:00-06:00
+description = "A void linux inistaller."
+date = 2025-01-14
 tags = ["linux", "script"]
 draft = false
 toc = true

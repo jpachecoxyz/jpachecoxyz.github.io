@@ -1,9 +1,7 @@
 +++
 title = "Screen Record"
-author = ["Javier Pacheco"]
-description = "Script to record in hyprland"
+description = "A shell script to record screen, region or window in linux"
 date = 2024-09-04T02:43:00-05:00
-tags = ["linux", "script"]
 draft = false
 toc = true
 +++

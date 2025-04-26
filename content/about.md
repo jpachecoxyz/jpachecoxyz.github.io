@@ -1,12 +1,13 @@
 +++
 title = "About me"
-author = ["Javier Pacheco"]
-description = "My personal information."
-date = 2024-07-04
+description = "My personal information"
+date = 2024-04-26
 tags = ["about"]
 draft = false
-hugo_image = "images/thumbnails/jp.png"
+toc = true
 +++
+
+## About me {#about-me}
 
 Greetings! I'm Javier Pacheco, a dedicated Industrial Maintenance Engineer with a rich academic foundation from the prestigious **UTM** in **H. Matamoros Tamaulipas,Mexico**. Over the span of 12 fruitful years, I've been an integral part of the automotive industry, contributing my expertise in a multitude of critical domains.
 
@@ -23,13 +24,13 @@ Beyond the technical facets, I am deeply invested in collaborative endeavors, fo
 See my whole information [here](/documents/cv.pdf).
 
 
-## Where to Find Me {#where-to-find-me}
+### Where to Find Me {#where-to-find-me}
 
 -   [GitHub.](https://github.com/jpachecoxyz)
 -   [LinkedIn.](https://www.linkedin.com/in/jpachecom4/)
 
 
-## Projects that I'm currently develop. {#projects-that-i-m-currently-develop-dot}
+### Projects that I'm currently develop. {#projects-that-i-m-currently-develop-dot}
 
 -   [Void linux installation script.](https://github.com/engjpacheco/voidstrap)
 -   [Noobemacs, a minimal emacs configuration with evil mode.](https://github.com/engjpacheco/noobemacs)

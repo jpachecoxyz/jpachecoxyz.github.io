@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nixos on (λ jpachecoxyz)</title>
+    <link>/tags/nixos/</link>
+    <description>Recent content in Nixos on (λ jpachecoxyz)</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Made in emacs for (λ jpachecoxyz)</copyright>
+    <lastBuildDate>Wed, 21 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/nixos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install telega in nixos</title>
+      <link>/posts/install-telega-in-nixos/</link>
+      <pubDate>Wed, 21 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>/posts/install-telega-in-nixos/</guid>
+      <description>&lt;h2 id=&#34;what-is-telega&#34;&gt;What is telega?.&lt;/h2&gt;&#xA;&lt;p&gt;According to the &lt;a href=&#34;https://github.com/zevlg/telega.el&#34;&gt;Github&lt;/a&gt; repository:&lt;/p&gt;&#xA;&lt;dl&gt;&#xA;&lt;dt&gt;Telega&lt;/dt&gt;&#xA;&lt;dd&gt;telega.el is full featured unofficial client for Telegram platform for GNU Emacs.&lt;/dd&gt;&#xA;&lt;/dl&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;As you may know, my main OS, at this time (2024-08-21) is &lt;code&gt;NixOS&lt;/code&gt;, so I was trying to install &lt;code&gt;Telega&lt;/code&gt; in my emacs, but as you can imagine, the file system hierarchy don&amp;rsquo;t works &amp;ldquo;normal&amp;rdquo; in &lt;code&gt;NixOS&lt;/code&gt;, so is a little tricky set up the environment to actually make &lt;code&gt;Telega&lt;/code&gt; works.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

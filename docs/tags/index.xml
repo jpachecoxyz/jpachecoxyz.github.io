@@ -2,74 +2,102 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on (λ jpachecoxyz)</title>
-    <link>//localhost:1313/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on (λ jpachecoxyz)</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Made in emacs for (λ jpachecoxyz)</copyright>
-    <lastBuildDate>Sat, 08 Feb 2025 18:57:00 -0600</lastBuildDate>
-    <atom:link href="//localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Blog</title>
-      <link>//localhost:1313/tags/blog/</link>
-      <pubDate>Sat, 08 Feb 2025 18:57:00 -0600</pubDate>
-      <guid>//localhost:1313/tags/blog/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Tecnology</title>
-      <link>//localhost:1313/tags/tecnology/</link>
-      <pubDate>Sat, 08 Feb 2025 18:57:00 -0600</pubDate>
-      <guid>//localhost:1313/tags/tecnology/</guid>
+      <link>/tags/blog/</link>
+      <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>/tags/blog/</guid>
       <description></description>
     </item>
     <item>
       <title>Linux</title>
-      <link>//localhost:1313/tags/linux/</link>
-      <pubDate>Fri, 17 Jan 2025 19:57:00 -0600</pubDate>
-      <guid>//localhost:1313/tags/linux/</guid>
+      <link>/tags/linux/</link>
+      <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>/tags/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Windows</title>
+      <link>/tags/windows/</link>
+      <pubDate>Sat, 18 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>/tags/windows/</guid>
       <description></description>
     </item>
     <item>
       <title>Script</title>
-      <link>//localhost:1313/tags/script/</link>
-      <pubDate>Fri, 17 Jan 2025 19:57:00 -0600</pubDate>
-      <guid>//localhost:1313/tags/script/</guid>
+      <link>/tags/script/</link>
+      <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>/tags/script/</guid>
       <description></description>
     </item>
     <item>
       <title>Personal</title>
-      <link>//localhost:1313/tags/personal/</link>
-      <pubDate>Mon, 18 Nov 2024 09:06:00 -0600</pubDate>
-      <guid>//localhost:1313/tags/personal/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Wayland</title>
-      <link>//localhost:1313/tags/wayland/</link>
-      <pubDate>Sun, 22 Sep 2024 12:49:00 -0500</pubDate>
-      <guid>//localhost:1313/tags/wayland/</guid>
+      <link>/tags/personal/</link>
+      <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>/tags/personal/</guid>
       <description></description>
     </item>
     <item>
       <title>Emacs</title>
-      <link>//localhost:1313/tags/emacs/</link>
-      <pubDate>Wed, 04 Sep 2024 02:44:00 -0500</pubDate>
-      <guid>//localhost:1313/tags/emacs/</guid>
+      <link>/tags/emacs/</link>
+      <pubDate>Sun, 22 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>/tags/emacs/</guid>
       <description></description>
     </item>
     <item>
-      <title>Wiki</title>
-      <link>//localhost:1313/tags/wiki/</link>
-      <pubDate>Tue, 03 Sep 2024 15:40:00 -0500</pubDate>
-      <guid>//localhost:1313/tags/wiki/</guid>
+      <title>Hugo</title>
+      <link>/tags/hugo/</link>
+      <pubDate>Tue, 27 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>/tags/hugo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nixos</title>
+      <link>/tags/nixos/</link>
+      <pubDate>Wed, 21 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>/tags/nixos/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Telega</title>
+      <link>/tags/telega/</link>
+      <pubDate>Wed, 21 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>/tags/telega/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Maintenance</title>
+      <link>/tags/maintenance/</link>
+      <pubDate>Sun, 11 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>/tags/maintenance/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>/tags/python/</link>
+      <pubDate>Sun, 11 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Scripts</title>
+      <link>/tags/scripts/</link>
+      <pubDate>Sun, 28 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>/tags/scripts/</guid>
       <description></description>
     </item>
     <item>
       <title>About</title>
-      <link>//localhost:1313/tags/about/</link>
-      <pubDate>Thu, 04 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/about/</guid>
+      <link>/tags/about/</link>
+      <pubDate>Fri, 26 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>/tags/about/</guid>
       <description></description>
     </item>
   </channel>

@@ -1,9 +1,8 @@
 +++
 title = "How I made my blog with emacs and hugo"
-author = ["Javier Pacheco"]
-description = "A overview of how I write and develop my web blog using emacs & hugo"
-date = 2024-09-04T02:44:00-05:00
-tags = ["emacs", "tecnology", "personal"]
+description = "A short review of my workflow for my webpage development."
+date = 2024-08-14
+tags = ["personal", "emacs", "blog", "hugo"]
 draft = false
 toc = true
 +++

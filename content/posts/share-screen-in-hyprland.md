@@ -1,10 +1,9 @@
 +++
-title = "Share Screen in Hyprland."
-author = ["Javier Pacheco"]
-description = "How to share screen in hyprland in apps like: telegram-desktop."
-date = 2024-09-04T02:44:00-05:00
-tags = ["linux", "wayland"]
-draft = false
+title = "Share Screen in Hyprland"
+description = "How to share sceen within hyprland."
+date = 2024-07-28
+tags = ["linux", "hyprland"]
+draft = true
 toc = true
 +++
 

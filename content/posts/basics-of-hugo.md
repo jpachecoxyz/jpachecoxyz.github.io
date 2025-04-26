@@ -1,9 +1,8 @@
 +++
 title = "Basics of HUGO"
-author = ["Javier Pacheco"]
-description = "A basic introduction to HUGO."
-date = 2024-09-04T03:32:00-05:00
-tags = ["blog", "personal", "tecnology"]
+description = "An introduction of hugo, create your own web site."
+date = 2024-08-27
+tags = ["hugo", "blog"]
 draft = false
 toc = true
 +++
@@ -306,7 +305,7 @@ The next step is to publish your web to a custom server or on github, gitlab, co
 2.  Deploying to a Web Server or Hosting Service.
 
 
-### Additional Resources {#additional-resources}
+## Additional Resources {#additional-resources}
 
 1.  [Hugo quick start guide.](https://gohugo.io/getting-started/quick-start/)
 2.  [Hugo documentation.](https://gohugo.io/documentation/)

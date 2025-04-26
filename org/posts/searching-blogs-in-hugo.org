@@ -1,45 +1,40 @@
-+++
-title = "Search tool in your HUGO website."
-author = ["Javier Pacheco"]
-description = "Description"
-date = 2024-09-04T02:44:00-05:00
-tags = ["blog", "tecnology"]
-draft = false
-toc = true
-+++
+#+title: searching blogs in hugo
+#+description: How to add a search utility for your blogs in hugo
+#+date: 2024-08-25
+#+export_file_name: searching-blogs-in-hugo
+#+hugo_base_dir: ~/webdev/jpachecoxyz/
+#+hugo_section: posts
+#+hugo_tags: hugo blog
+#+hugo_custom_front_matter: toc true
+#+hugo_auto_set_lastmod: nil
+#+hugo_draft: false
+
 
 As websites grow, incorporating a search feature becomes increasingly crucial. However, implementing search functionality can be challenging on a statically generated site since there's no server-side component to handle the search. Instead, the search must be performed on the client side within the browser using JavaScript.
 
-<style>.org-center { margin-left: auto; margin-right: auto; text-align: center; }</style>
-
-<div class="org-center">
-
-{{< figure src="/images/posts/hugo-search/jpacheco-search.png" caption="<span class=\"figure-number\">Figure 1: </span>This is how my web looks." >}}
-
-</div>
+#+begin_center
+#+CAPTION: This is how my web looks.
+[[/images/posts/hugo-search/jpacheco-search.png]]
+#+end_center
 
 Fortunately, there are existing solutions to address this issue. Below, we demonstrate one such solution that utilizes FuseJS and MarkJS. This implementation is inspired by a gist from eddiewebb, but it's built using plain JavaScript rather than jQuery.
 
-
-## Page - content/search/_index.md {#page-content-search-index-dot-md}
-
+* Page - content/search/_index.md
 Create a page to serve as the search form and display search results. In the markdown, set the layout to ‘search’ and proceed to create this layout (in the next step) to easily manage the HTML.
 
-```markdown
+#+begin_src markdown
 ---
 title: "Search"
 sitemap:
   priority : 0.1
 layout: "search"
 ---
-```
+#+end_src
 
+* Layout - layout/_default/search.html
+This search page contains a <div> element for displaying search results (#search-results) and another <div> element for showing a loading message (.search-loading). The layout also defines a template that will later be used in the JavaScript to render a single search result. Finally, it loads the necessary JS libraries (from a CDN in this example, though self-hosting is an option).
 
-## Layout - layout/_default/search.html {#layout-layout-default-search-dot-html}
-
-This search page contains a &lt;div&gt; element for displaying search results (#search-results) and another &lt;div&gt; element for showing a loading message (.search-loading). The layout also defines a template that will later be used in the JavaScript to render a single search result. Finally, it loads the necessary JS libraries (from a CDN in this example, though self-hosting is an option).
-
-```html
+#+begin_src html
 {{ define "main" }}
 
 <main>
@@ -63,19 +58,17 @@ This search page contains a &lt;div&gt; element for displaying search results (#
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.6.2/fuse.min.js" integrity="sha512-Nqw1tH3mpavka9cQCc5zWWEZNfIPdOYyQFjlV1NvflEtQ0/XI6ZQ+H/D3YgJdqSUJlMLAPRj/oXlaHCFbFCjoQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </main>
 
 {{ end }}
-```
+#+end_src
 
-
-## JS {#js}
-
+* JS
 The main part of the code is JavaScript, where everything is tied together. The URL parameters are read to obtain the query, which is then passed to FuseJS and MarkJS, and the results are written back to the page.
 
-```javascript
+#+begin_src javascript
 var summaryInclude = 180;
 var fuseOptions = {
     shouldSort: true,
@@ -232,22 +225,19 @@ document.addEventListener('keydown', function(event) {
         });
     }
 });
-```
+#+end_src
 
-
-## The Data - layouts/_default/index.json {#the-data-layouts-default-index-dot-json}
-
+* The Data - layouts/_default/index.json
 All the work we’ve done up until now has been front-end workings, but we also need to build an index.json file which will act as our data source (which is fetched from the JS).
 
-```json
+#+begin_src json
 {{- $.Scratch.Add "index" slice -}}
 {{- range .Site.RegularPages -}}
     {{- $.Scratch.Add "index" (dict "title" .Title "tags" .Params.tags "categories" .Params.categories "contents" .Plain "permalink" .Permalink) -}}
 {{- end -}}
 {{- $.Scratch.Get "index" | jsonify -}}
-```
+#+end_src
 
-
-## Conclusion {#conclusion}
-
+* Conclusion
 You can extend this further by offering a live search preview, adding more filters, or allowing sorting options. This method provides a powerful and flexible way to implement search functionality on a static site without relying on any backend services.
+

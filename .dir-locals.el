@@ -1,3 +1,7 @@
-;;The first line declares where is the org file is stored, in my cases is in hugo root directory in the org folder.
-(("org/"
-  . ((org-mode . ((eval . (org-hugo-auto-export-mode)))))))
+;; .dir-locals.el
+((nil . ((org-hugo-base-dir . "~/webdev/jpachecoxyz/")))
+ ("org/"
+  . ((org-mode
+      . ((eval . (progn
+                   (setq-local org-hugo-base-dir "~/webdev/jpachecoxyz/")
+                   (org-hugo-auto-export-mode 1))))))))

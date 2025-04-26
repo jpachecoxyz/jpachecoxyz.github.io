@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scripts on (λ jpachecoxyz)</title>
+    <link>/tags/scripts/</link>
+    <description>Recent content in Scripts on (λ jpachecoxyz)</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Made in emacs for (λ jpachecoxyz)</copyright>
+    <lastBuildDate>Sun, 28 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/scripts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Shell-utils</title>
+      <link>/posts/shell-utils/</link>
+      <pubDate>Sun, 28 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>/posts/shell-utils/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;Welcome to the Shell Utilities &lt;a href=&#34;https://github.com/jpachecoxyz/shell-utils&#34;&gt;repository&lt;/a&gt; This project provides a collection of shell scripts tailored for different window managers and environments, including i3, Hyprland, and Sway, on X11 and Wayland.&lt;/p&gt;&#xA;&lt;h2 id=&#34;repository-structure&#34;&gt;Repository Structure&lt;/h2&gt;&#xA;&lt;p&gt;The repository is organized into directories based on the environment and window manager:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;.&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── wayland&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│   ├── hyprland&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│   └── sway&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;└── x11&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    └── i3&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;dl&gt;&#xA;&lt;dt&gt;wayland/hyprland&lt;/dt&gt;&#xA;&lt;dd&gt;Scripts for Hyprland on Wayland.&lt;/dd&gt;&#xA;&lt;dt&gt;wayland/sway&lt;/dt&gt;&#xA;&lt;dd&gt;Scripts for Sway on Wayland.&lt;/dd&gt;&#xA;&lt;dt&gt;x11/i3&lt;/dt&gt;&#xA;&lt;dd&gt;Scripts for i3 on X11.&lt;/dd&gt;&#xA;&lt;/dl&gt;&#xA;&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;&#xA;&lt;p&gt;To install the scripts, use the provided &lt;code&gt;install.sh&lt;/code&gt; script. You can install scripts for a specific window manager or all at once.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Void Linux Bootstrap</title>
+      <link>/posts/void-linux-bootstrap/</link>
+      <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
+      <guid>/posts/void-linux-bootstrap/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;This is the first post of the 2024, this is a project that I am working on in the last&#xA;year, is a minimalist voidlinux instalator it is based in some recommendations in&#xA;a guides that some friends of my have but &amp;ldquo;semi-automated&amp;rdquo;.&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h2 id=&#34;voidstrap-installer-dot&#34;&gt;VoidStrap installer.&lt;/h2&gt;&#xA;&lt;p&gt;A basic minimalist installer of &lt;code&gt;void-linux&lt;/code&gt; with some packages to get ready to enjoy&#xA;this amazing GNU/Linux distribution.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,8 +1,7 @@
 +++
 title = "Guix installer"
-author = ["Javier Pacheco"]
-description = "A guix installer script."
-date = 2025-01-16T19:57:00-06:00
+description = "A guix linux installer."
+date = 2025-01-15
 tags = ["linux", "script"]
 draft = false
 toc = true

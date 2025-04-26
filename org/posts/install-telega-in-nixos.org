@@ -1,0 +1,49 @@
+#+title: Install telega in nixos
+#+description: How to install telega and use it in NixOS
+#+date: 2024-08-21
+#+export_file_name: install-telega-in-nixos
+#+hugo_base_dir: ~/webdev/jpachecoxyz/
+#+hugo_section: posts
+#+hugo_tags: telega linux nixos
+#+hugo_custom_front_matter: toc true
+#+hugo_auto_set_lastmod: nil
+#+hugo_draft: false
+
+
+What is telega?.
+---
+According to the [[https://github.com/zevlg/telega.el][Github]] repository:
+- Telega :: telega.el is full featured unofficial client for Telegram platform for GNU Emacs.
+---
+
+As you may know, my main OS, at this time (2024-08-21) is =NixOS=, so I was trying to install =Telega= in my emacs, but as you can imagine, the file system hierarchy don't works "normal" in =NixOS=, so is a little tricky set up the environment to actually make =Telega= works.
+
+* Requisites:
+- gnumake. (To compile).
+- cmake (To compile).
+- tdlib (Version > 1.8.29).
+
+* Process of installation.
+1. install the dependencies using your =configuration.nix=, =home-manager=, or wathever method you use to install packages in =NixOS=.
+2. Install Telega in emacs.
+    #+CAPTION: Example of telega installation unsing use-package.
+    #+begin_src elisp
+    (use-package telega
+    :ensure t)
+    #+end_src
+3. Now, because I use =NixOS= (by the way), you must know that the file system hierarchy don't works same as in linux or macOS, so I need to declare where telega is going to see the =tdlib= libraries, so:
+    #+begin_src elisp
+    (setq telega-server-lib-prefix "/home/user/.nix-profile/")
+    #+end_src
+4. Compile Telega-server inside emacs.
+    #+begin_example
+    M-x telega-server-build
+    #+end_example
+
+    Or simply run telega:
+    #+begin_example
+    M-x telega
+    #+end_example
+
+With that, Telega must be compiled, and ready to go.
+

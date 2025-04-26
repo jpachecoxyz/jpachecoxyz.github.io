@@ -1,0 +1,69 @@
+#+title: Guix installer
+#+description: A guix linux installer.
+#+date: 2025-01-15
+#+export_file_name: guix-installer
+#+hugo_base_dir: ~/webdev/jpachecoxyz/
+#+hugo_section: posts
+#+hugo_tags: linux script
+#+hugo_custom_front_matter: toc true
+#+hugo_auto_set_lastmod: nil
+#+hugo_draft: false
+
+* About.
+The script =install.sh= will do a couple of actions to try to make the GNU/guix installation more friendly, so, basically this =README.org= file will tangle the script, the power of emacs of course. So, while I was working in this "note" file, then I realized that I can use emacs and make a script.
+
+* Download and burn the iso.
+I use the systemcrafter [[https://github.com/SystemCrafters/guix-installer][ISO.]]
+
+#+begin_src shell
+sudo dd status=progress if=guix-installer-202106150234.iso of=/dev/sdb && sync
+#+end_src
+
+* Install the OS.
+Now with the Guix iso. Boot your laptop in it, and follow the instructions to install the OS, just ignore the warnings about the libre software, And stop in the part that you actually going to start the installation, and open another TTY:
+
+#+begin_src shell
+Ctrl + Alt + f2  
+#+end_src
+
+* The script itself "Automated":
+
+#+begin_src shell
+set -e
+set -o pipefail
+
+log_error() {
+	echo "$(date '+%Y-%m-%d %H:%M:%S') - ERROR: $1" >&2
+	exit 1
+}
+
+log() {
+	echo "$(date '+%Y-%m-%d %H:%M:%S') - $1"
+}
+
+log "Starting cow-store service..." && herd start cow-store /mnt || log_error "Failed to start cow-store."
+log "Copying channels.scm..." && cp /etc/channels.scm /mnt/etc && chmod +w /mnt/etc/channels.scm || log_error "Failed to copy or modify channels.scm."
+log "Copying config.scm..." && cp /mnt/etc/config.scm ./config.scm || log_error "Failed to copy config.scm."
+log "Adding nongnu modules and linux kernel to config.scm ..."
+if ! grep -q '(use-modules (gnu) (nongnu packages linux))' ./config.scm; then
+	sed -i 's/(use-modules (gnu))/(use-modules (gnu) (nongnu packages linux))/' ./config.scm || log_error "Failed to add (nongnu packages linux) to use-modules."
+else
+	log "Line '(use-modules (gnu) (nongnu packages linux))' already exists. Skipping."
+fi
+
+if ! grep -q '(kernel linux)' ./config.scm; then
+	sed -i '/(operating-system/a\
+  (kernel linux)\
+  (firmware (list linux-firmware))' ./config.scm || log_error "Failed to add kernel and firmware configurations."
+else
+	log "Kernel and firmware configurations already exist. Skipping."
+fi
+log "Copying updated config.scm back to /mnt/etc..." && cp ./config.scm /mnt/etc/config.scm || log_error "Failed to copy updated config.scm back to /mnt/etc."
+log "Initializing system with guix time-machine..." && guix time-machine -C /mnt/etc/channels.scm -- system init /mnt/etc/config.scm /mnt || log_error "System initialization failed."
+log "Clean this folder..." && rm ./config.scm 
+
+log "Script completed successfully."
+#+end_src
+* References:
+- [[https://systemcrafters.net/craft-your-system-with-guix/full-system-install/][SystemCrafters Complete guide.]]
+

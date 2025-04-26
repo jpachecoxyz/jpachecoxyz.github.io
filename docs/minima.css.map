@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "minima.css",
-	"sourceRoot": "/home/javier/webdev/theme",
+	"sourceRoot": "/home/javier/webdev/jpachecoxyz",
 	"sources": [
 		"themes/minima/assets/css/main.scss",
 		"themes/minima/assets/css/pre.scss",

@@ -2,104 +2,114 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/posts/pymetrics/</loc>
-    <lastmod>2024-09-04T02:44:00-05:00</lastmod>
+    <loc>/</loc>
+    <lastmod>2025-01-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/</loc>
-    <lastmod>2025-02-08T18:57:00-06:00</lastmod>
+    <loc>/posts/back-to-voidlinux/</loc>
+    <lastmod>2025-01-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/back-to-void-linux/</loc>
-    <lastmod>2025-02-08T18:57:00-06:00</lastmod>
+    <loc>/tags/blog/</loc>
+    <lastmod>2025-01-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/blog/</loc>
-    <lastmod>2025-02-08T18:57:00-06:00</lastmod>
+    <loc>/tags/linux/</loc>
+    <lastmod>2025-01-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/</loc>
-    <lastmod>2025-02-08T18:57:00-06:00</lastmod>
+    <loc>/posts/</loc>
+    <lastmod>2025-01-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/</loc>
-    <lastmod>2025-02-08T18:57:00-06:00</lastmod>
+    <loc>/tags/</loc>
+    <lastmod>2025-01-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/tecnology/</loc>
-    <lastmod>2025-02-08T18:57:00-06:00</lastmod>
+    <loc>/posts/recover-windows-boot/</loc>
+    <lastmod>2025-01-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/recover-windows-boot/</loc>
-    <lastmod>2025-01-18T17:24:00-06:00</lastmod>
+    <loc>/tags/windows/</loc>
+    <lastmod>2025-01-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/dualboot-in-guix-linux/</loc>
-    <lastmod>2025-01-17T19:57:00-06:00</lastmod>
+    <loc>/posts/dualboot-in-guix-linux/</loc>
+    <lastmod>2025-01-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/linux/</loc>
-    <lastmod>2025-01-17T19:57:00-06:00</lastmod>
+    <loc>/posts/guix-installer/</loc>
+    <lastmod>2025-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/script/</loc>
-    <lastmod>2025-01-17T19:57:00-06:00</lastmod>
+    <loc>/tags/script/</loc>
+    <lastmod>2025-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/guix-installer/</loc>
-    <lastmod>2025-01-16T19:57:00-06:00</lastmod>
+    <loc>/posts/voidstrap/</loc>
+    <lastmod>2025-01-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/voidstrap/</loc>
-    <lastmod>2025-01-14T21:17:00-06:00</lastmod>
+    <loc>/tags/personal/</loc>
+    <lastmod>2024-12-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/should-i-use-gnu-guix/</loc>
-    <lastmod>2025-01-14T20:03:00-06:00</lastmod>
+    <loc>/posts/should-i-use-guix/</loc>
+    <lastmod>2024-12-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/a-job-history/</loc>
-    <lastmod>2024-11-18T09:06:00-06:00</lastmod>
+    <loc>/posts/ellama/</loc>
+    <lastmod>2024-09-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/personal/</loc>
-    <lastmod>2024-11-18T09:06:00-06:00</lastmod>
+    <loc>/tags/emacs/</loc>
+    <lastmod>2024-09-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/ellama/</loc>
-    <lastmod>2024-09-22T12:49:00-05:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/tags/wayland/</loc>
-    <lastmod>2024-09-22T12:49:00-05:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/posts/basics-of-hugo/</loc>
-    <lastmod>2024-09-04T03:32:00-05:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/tags/emacs/</loc>
-    <lastmod>2024-09-04T02:44:00-05:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/posts/emacs-vs-nvim/</loc>
-    <lastmod>2024-09-04T02:44:00-05:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/posts/my-blog-in-emacs/</loc>
-    <lastmod>2024-09-04T02:44:00-05:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/posts/install-telega-nixos/</loc>
-    <lastmod>2024-09-04T02:44:00-05:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/posts/search-tool-hugo/</loc>
-    <lastmod>2024-09-04T02:44:00-05:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/posts/share-screen-hyprland/</loc>
-    <lastmod>2024-09-04T02:44:00-05:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/posts/efetch/</loc>
+    <loc>/posts/screen-record/</loc>
     <lastmod>2024-09-04T02:43:00-05:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/screen-record/</loc>
-    <lastmod>2024-09-04T02:43:00-05:00</lastmod>
+    <loc>/posts/basics-of-hugo/</loc>
+    <lastmod>2024-08-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/shell-utils/</loc>
-    <lastmod>2024-09-04T02:43:00-05:00</lastmod>
+    <loc>/tags/hugo/</loc>
+    <lastmod>2024-08-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/wiki/</loc>
-    <lastmod>2024-09-03T15:40:00-05:00</lastmod>
+    <loc>/posts/searching-blogs-in-hugo/</loc>
+    <lastmod>2024-08-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/wiki/</loc>
-    <lastmod>2024-09-03T15:40:00-05:00</lastmod>
+    <loc>/posts/install-telega-in-nixos/</loc>
+    <lastmod>2024-08-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/about/</loc>
-    <lastmod>2024-07-04T00:00:00+00:00</lastmod>
+    <loc>/tags/nixos/</loc>
+    <lastmod>2024-08-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/about/</loc>
-    <lastmod>2024-07-04T00:00:00+00:00</lastmod>
+    <loc>/tags/telega/</loc>
+    <lastmod>2024-08-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/</loc>
+    <loc>/posts/how-i-made-my-blog-with-emacs-and-hugo/</loc>
+    <lastmod>2024-08-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/search/</loc>
+    <loc>/posts/emacs-vs-neovim/</loc>
+    <lastmod>2024-08-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/maintenance/</loc>
+    <lastmod>2024-08-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/posts/pymetrics/</loc>
+    <lastmod>2024-08-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/python/</loc>
+    <lastmod>2024-08-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/scripts/</loc>
+    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/posts/shell-utils/</loc>
+    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/about/</loc>
+    <lastmod>2024-04-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/about/</loc>
+    <lastmod>2024-04-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/posts/efetch/</loc>
+    <lastmod>2023-05-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/posts/void-linux-bootstrap/</loc>
+    <lastmod>2023-05-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/</loc>
+  </url><url>
+    <loc>/posts/config/</loc>
+  </url><url>
+    <loc>/search/</loc>
+  </url><url>
+    <loc>/wiki/</loc>
   </url>
 </urlset>

@@ -1,9 +1,8 @@
 +++
-title = "Should I use GNU/guix?"
-author = ["Javier Pacheco"]
-description = "My thoughts about use guix (or not)."
-date = 2025-01-14T20:03:00-06:00
-tags = ["blog", "linux", "tecnology"]
+title = "Should I use guix"
+description = "My thoughts about gnu/guix."
+date = 2024-12-01
+tags = ["blog", "personal"]
 draft = false
 toc = true
 +++

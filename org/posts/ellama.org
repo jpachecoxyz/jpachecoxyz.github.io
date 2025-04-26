@@ -1,0 +1,48 @@
+#+title: Ellama
+#+description: A emacs Artificial Intelligence helper.
+#+date: 2024-09-22
+#+export_file_name: ellama
+#+hugo_base_dir: ~/webdev/jpachecoxyz/
+#+hugo_section: posts
+#+hugo_tags: emacs blog
+#+hugo_custom_front_matter: toc true
+#+hugo_auto_set_lastmod: nil
+#+hugo_draft: false
+
+* Installation of Ollama.
+In my case, I installed =ollama= from my package manager, although you can install it using the following code:
+
+#+BEGIN_SRC shell 
+curl -fsSL https://ollama.com/install.sh | sh 
+#+END_SRC
+
+Once =ollama= is installed, you should add it to your startup. In my case, I do it from the init of =hyprland=, but it will depend on whether you use =.xinitrc= or something else. It should be launched as follows:
+
+#+BEGIN_SRC shell 
+ollama serve 
+#+END_SRC
+* Installing a model. 
+To use Ollama, we need to download a model. A model is basically who you will be talking to when making a query. In the case of =ellama=, they suggest installing =zephyr= as the model, so we need to install it.
+
+#+BEGIN_SRC shell 
+ollama pull zephyr
+#+END_SRC
+
+* Installing ellama. 
+Once =ollama & zephyr= are installed, we can proceed to install and configure =ellama= in Emacs.
+
+* My ellama configuration.
+As you can see, it's not very complicated. The options for the =ellama= package are quite intuitive, like the language and keybindings. If you have any questions, feel free to comment, and we can follow up.
+
+#+BEGIN_SRC emacs-lisp 
+(use-package ellama
+  (setopt ellama-language "English")
+  (setopt ellama-user-nick "jpacheco.xyz")
+  (setopt ellama-keymap-prefix "C-c e")
+  (require 'llm-ollama)
+  (setopt ellama-provider
+		  (make-llm-ollama
+		   "zephyr"
+		   "zephyr")))
+ #+END_SRC
+

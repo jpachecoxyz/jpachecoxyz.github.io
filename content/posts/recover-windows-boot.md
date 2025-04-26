@@ -1,9 +1,8 @@
 +++
-title = "Recover Windows BOOT"
-author = ["Javier Pacheco"]
-description = "How to  recover the boot files of Windows."
-date = 2025-01-18T17:24:00-06:00
-tags = ["blog", "tecnology"]
+title = "Recover windows boot"
+description = "How to recover the windows boot partition files."
+date = 2025-01-18
+tags = ["blog", "windows"]
 draft = false
 toc = true
 +++
