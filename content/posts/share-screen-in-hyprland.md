@@ -1,9 +1,10 @@
 +++
 title = "Share Screen in Hyprland"
+author = ["Javier Pacheco"]
 description = "How to share sceen within hyprland."
 date = 2024-07-28
 tags = ["linux", "hyprland"]
-draft = true
+draft = false
 toc = true
 +++
 

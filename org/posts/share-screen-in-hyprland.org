@@ -7,7 +7,7 @@
 #+hugo_tags: linux hyprland
 #+hugo_custom_front_matter: toc true
 #+hugo_auto_set_lastmod: nil
-#+hugo_draft: true
+#+hugo_draft: false
 
 * The issue:
 We have a telegram group, in where we share emacs things and some other related to programming and linux in the most part of the time. So one day one of the members says that we can share screens and have a kind of podcast and talk about our environment configurations (sway/hyprland), so I was very curious about it so he invite me to another telegram group, this telegram group is for his YouTube channel, for test my hyprland configuration because he told me that he has troubles in his hyprland configuration using manjaro.

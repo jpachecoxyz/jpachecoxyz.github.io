@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Made in emacs for (λ jpachecoxyz)</copyright>
-    <lastBuildDate>Sun, 26 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 09 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Back to voidlinux</title>
       <link>/posts/back-to-voidlinux/</link>
@@ -136,7 +136,7 @@ specific format:&lt;/p&gt;</description>
       <guid>/posts/should-i-use-guix/</guid>
       <description>&lt;h2 id=&#34;what-is-gnu-guix-dot&#34;&gt;What is GNU/guix.&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;GNU/Guix&lt;/strong&gt; is a functional package manager and a complete operating system distribution, part of the GNU Project. It is designed to provide a reliable and customizable environment for managing software and configurations.&lt;/p&gt;
-&lt;p&gt;It is basically &lt;code&gt;NixOS&lt;/code&gt; but instead of using nix it uses &lt;code&gt;Schem Common Lisp&lt;/code&gt; as interpreter.&lt;/p&gt;
+&lt;p&gt;It is basically &lt;code&gt;NixOS&lt;/code&gt; but instead of using nix it uses &lt;code&gt;Scheme Common Lisp&lt;/code&gt; as interpreter.&lt;/p&gt;
 &lt;h2 id=&#34;why-use-gnu-guix&#34;&gt;Why Use GNU Guix?&lt;/h2&gt;
 &lt;p&gt;Freedom and transparency in software management.
 Avoids common issues like dependency hell or broken systems due to upgrades.
@@ -190,7 +190,8 @@ The script is going to store the video in &lt;code&gt;/tmp/screencast.mp4&lt;/co
       <guid>/posts/basics-of-hugo/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&amp;ldquo;Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&amp;ldquo;Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
 &lt;p&gt;Hugo is multi platform, so the installation depends on what SO do you use, in this example I Show how to install in &lt;code&gt;Arch-linux&lt;/code&gt; because it&amp;rsquo;s easy.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -278,6 +279,16 @@ The script is going to store the video in &lt;code&gt;/tmp/screencast.mp4&lt;/co
       <guid>/posts/pymetrics/</guid>
       <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
 &lt;p&gt;Managing and monitoring the performance of industrial machines is critical to ensuring minimal downtime and maximizing productivity. The need for an effective system to store and analyze maintenance data became apparent when the maintenance manager contacted me with a specific problem. They struggled to create KPI graphs because they lacked a proper system to store all the necessary data. To address this challenge, I developed a maintenance log app that efficiently tracks and records machine failures, repair time, shutdown time, and the technicians involved in the repairs. The data is stored in a CSV format, making it easy to create KPI (Key Performance Indicator) graphs in Excel for analysis.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Share Screen in Hyprland</title>
+      <link>/posts/share-screen-in-hyprland/</link>
+      <pubDate>Sun, 28 Jul 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/share-screen-in-hyprland/</guid>
+      <description>&lt;h2 id=&#34;the-issue&#34;&gt;The issue:&lt;/h2&gt;
+&lt;p&gt;We have a telegram group, in where we share emacs things and some other related to programming and linux in the most part of the time. So one day one of the members says that we can share screens and have a kind of podcast and talk about our environment configurations (sway/hyprland), so I was very curious about it so he invite me to another telegram group, this telegram group is for his YouTube channel, for test my hyprland configuration because he told me that he has troubles in his hyprland configuration using manjaro.&lt;/p&gt;</description>
     </item>
     
     <item>

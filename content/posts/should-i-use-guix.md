@@ -1,5 +1,6 @@
 +++
 title = "Should I use guix"
+author = ["Javier Pacheco"]
 description = "My thoughts about gnu/guix."
 date = 2024-12-01
 tags = ["blog", "personal"]
@@ -11,7 +12,7 @@ toc = true
 
 **GNU/Guix** is a functional package manager and a complete operating system distribution, part of the GNU Project. It is designed to provide a reliable and customizable environment for managing software and configurations.
 
-It is basically `NixOS` but instead of using nix it uses `Schem Common Lisp` as interpreter.
+It is basically `NixOS` but instead of using nix it uses `Scheme Common Lisp` as interpreter.
 
 
 ## Why Use GNU Guix? {#why-use-gnu-guix}

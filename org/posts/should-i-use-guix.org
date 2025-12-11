@@ -12,7 +12,7 @@
 * What is GNU/guix.
 *GNU/Guix* is a functional package manager and a complete operating system distribution, part of the GNU Project. It is designed to provide a reliable and customizable environment for managing software and configurations.
 
-It is basically =NixOS= but instead of using nix it uses =Schem Common Lisp= as interpreter.
+It is basically =NixOS= but instead of using nix it uses =Scheme Common Lisp= as interpreter.
 
 * Why Use GNU Guix?
 Freedom and transparency in software management.

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hyprland on (λ jpachecoxyz)</title>
+    <link>/tags/hyprland/</link>
+    <description>Recent content in Hyprland on (λ jpachecoxyz)</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Made in emacs for (λ jpachecoxyz)</copyright>
+    <lastBuildDate>Sun, 28 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/hyprland/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Share Screen in Hyprland</title>
+      <link>/posts/share-screen-in-hyprland/</link>
+      <pubDate>Sun, 28 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>/posts/share-screen-in-hyprland/</guid>
+      <description>&lt;h2 id=&#34;the-issue&#34;&gt;The issue:&lt;/h2&gt;&#xA;&lt;p&gt;We have a telegram group, in where we share emacs things and some other related to programming and linux in the most part of the time. So one day one of the members says that we can share screens and have a kind of podcast and talk about our environment configurations (sway/hyprland), so I was very curious about it so he invite me to another telegram group, this telegram group is for his YouTube channel, for test my hyprland configuration because he told me that he has troubles in his hyprland configuration using manjaro.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

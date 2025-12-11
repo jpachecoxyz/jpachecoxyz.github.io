@@ -45,6 +45,13 @@
       <description>&lt;h2 id=&#34;what-is-telega&#34;&gt;What is telega?.&lt;/h2&gt;&#xA;&lt;p&gt;According to the &lt;a href=&#34;https://github.com/zevlg/telega.el&#34;&gt;Github&lt;/a&gt; repository:&lt;/p&gt;&#xA;&lt;dl&gt;&#xA;&lt;dt&gt;Telega&lt;/dt&gt;&#xA;&lt;dd&gt;telega.el is full featured unofficial client for Telegram platform for GNU Emacs.&lt;/dd&gt;&#xA;&lt;/dl&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;As you may know, my main OS, at this time (2024-08-21) is &lt;code&gt;NixOS&lt;/code&gt;, so I was trying to install &lt;code&gt;Telega&lt;/code&gt; in my emacs, but as you can imagine, the file system hierarchy don&amp;rsquo;t works &amp;ldquo;normal&amp;rdquo; in &lt;code&gt;NixOS&lt;/code&gt;, so is a little tricky set up the environment to actually make &lt;code&gt;Telega&lt;/code&gt; works.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Share Screen in Hyprland</title>
+      <link>/posts/share-screen-in-hyprland/</link>
+      <pubDate>Sun, 28 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>/posts/share-screen-in-hyprland/</guid>
+      <description>&lt;h2 id=&#34;the-issue&#34;&gt;The issue:&lt;/h2&gt;&#xA;&lt;p&gt;We have a telegram group, in where we share emacs things and some other related to programming and linux in the most part of the time. So one day one of the members says that we can share screens and have a kind of podcast and talk about our environment configurations (sway/hyprland), so I was very curious about it so he invite me to another telegram group, this telegram group is for his YouTube channel, for test my hyprland configuration because he told me that he has troubles in his hyprland configuration using manjaro.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Shell-utils</title>
       <link>/posts/shell-utils/</link>
       <pubDate>Sun, 28 Jul 2024 00:00:00 +0000</pubDate>
