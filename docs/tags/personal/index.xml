@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Made in emacs for (λ jpachecoxyz)</copyright>
-    <lastBuildDate>Sun, 01 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 11 Dec 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/personal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Technical Journey</title>
+      <link>/posts/my-technical-journey/</link>
+      <pubDate>Thu, 11 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>/posts/my-technical-journey/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;The year 2025 has been one of constant learning, experimentation, and building.&#xA;Throughout the months, I explored a wide spectrum of topics—from industrial&#xA;hydraulics to Linux customization, Nix packaging, Emacs automation, Docker,&#xA;robotics, and more. This post summarizes my questions, discoveries, and&#xA;projects across this entire year.&lt;/p&gt;&#xA;&lt;h2 id=&#34;industrial-automation-hydraulics-and-plant-troubleshooting&#34;&gt;Industrial Automation, Hydraulics &amp;amp; Plant Troubleshooting&lt;/h2&gt;&#xA;&lt;h3 id=&#34;diagnosing-hydraulic-systems&#34;&gt;Diagnosing Hydraulic Systems&lt;/h3&gt;&#xA;&lt;p&gt;Early in the year, I worked through multiple hydraulic diagrams from injection&#xA;molding and die-casting machines. My questions focused on:&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Should I use guix</title>
       <link>/posts/should-i-use-guix/</link>

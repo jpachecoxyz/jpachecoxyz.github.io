@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta property="og:url" content="/posts/my-technical-journey/">
+  <meta property="og:site_name" content="(λ jpachecoxyz)">
+  <meta property="og:title" content="My Technical Journey">
+  <meta property="og:description" content="Some of my thoughts about technology this 2025 year">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-12-11T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-12-11T00:00:00+00:00">
+    <meta property="article:tag" content="Personal">
+    <meta property="article:tag" content="Thoughs">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="My Technical Journey">
+  <meta name="twitter:description" content="Some of my thoughts about technology this 2025 year">
+
+  
+  
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#181818">
+  <title>
+    
+    (λ jpachecoxyz) - My Technical Journey
+    
+  </title>
+  
+  
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  
+  
+  
+  <link rel="stylesheet" href="/minima.54cfcb44e10b4015b41a13771763013b79bdba6a92e49ea4a77bb44db465e761.css" integrity="sha256-VM/LROELQBW0GhN3F2MBO3m9umqS5J6kp3u0TbRl52E=">
+  
+  
+  
+  <script defer type="text/javascript" src="/minima.404dad41a94069cecd66bfb7c395f5567abc8c301d9bccb085f2fce8d45bfe05.js" integrity="sha256-QE2tQalAac7NZr&#43;3w5X1Vnq8jDAdm8ywhfL86NRb/gU="></script>
+  
+  
+  
+</head>
+<script>
+  const theme_config = 'dark'
+  const theme_light = theme_config === 'system' ? 'light' : theme_config;
+  let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : theme_light;
+  console.debug(theme);
+
+  try {
+    localStorage.setItem('theme', theme);
+    window.minima_theme = theme;
+    document.querySelector('html').classList.add(theme);
+  } catch (e) {
+    console.error(e);
+  }
+</script>
+
+
+
+<body>
+  <header class="mt-3 mb-8">
+  <div class="container mx-auto">
+    <nav class="flex justify-between items-center">
+      <div class="flex items-center">
+        
+        <div id="theme-switch" class="text-2xl cursor-pointer"></div>
+      </div>
+      <ul class="flex items-center text-base font-semibold
+        whitespace-nowrap overflow-x-auto overflow-y-hidden">
+        
+        <li class="ml-2 mr-2">
+          
+          <a href='/'>Home</a>
+          
+        </li>
+        
+        <li class="ml-2 mr-2">
+          
+          <a href="/about">About</a>
+          
+        </li>
+        
+        <li class="ml-2 mr-2">
+          
+          <a href="/posts">Posts</a>
+          
+        </li>
+        
+        <li class="ml-2 mr-2">
+          
+          <a href="/search">Search</a>
+          
+        </li>
+        
+      </ul>
+      
+    </nav>
+  </div>
+</header>
+
+
+  
+<div class="container mx-auto">
+  <h1 class="text-4xl font-extrabold mt-6 mb-6">My Technical Journey</h1>
+  <div class="mb-3 text-sm flex justify-between ">
+    <div>
+      
+      Post at &mdash; Dec 11, 2025
+      
+      
+    </div>
+    
+    <div>
+      
+      
+      <a class="ml-1" href="/tags/personal">#personal</a>
+      
+      
+      <a class="ml-1" href="/tags/thoughs">#thoughs</a>
+      
+    </div>
+    
+  </div>
+  <main class="mb-8">
+    <p>Some of my thoughts about technology this 2025 year</p>
+    <article class="md">
+      <h2 id="introduction">Introduction</h2>
+<p>The year 2025 has been one of constant learning, experimentation, and building.
+Throughout the months, I explored a wide spectrum of topics—from industrial
+hydraulics to Linux customization, Nix packaging, Emacs automation, Docker,
+robotics, and more. This post summarizes my questions, discoveries, and
+projects across this entire year.</p>
+<h2 id="industrial-automation-hydraulics-and-plant-troubleshooting">Industrial Automation, Hydraulics &amp; Plant Troubleshooting</h2>
+<h3 id="diagnosing-hydraulic-systems">Diagnosing Hydraulic Systems</h3>
+<p>Early in the year, I worked through multiple hydraulic diagrams from injection
+molding and die-casting machines. My questions focused on:</p>
+<ul>
+<li>Why pistons advance by themselves.</li>
+<li>Counterpressure issues during the return stroke.</li>
+<li>How to interpret complex hydraulic schematics easily.</li>
+<li>Which valves or cartridge assemblies should be inspected first.</li>
+<li>Understanding accumulator sizing and nitrogen requirements for 1600T machines.</li>
+</ul>
+<p>These investigations helped me diagnose real plant failures with more clarity.</p>
+<h3 id="opc-ua-connectivity">OPC UA Connectivity</h3>
+<p>I explored how machines with built-in OPC Servers could share data with:</p>
+<ul>
+<li>third-party HMIs</li>
+<li>PLCs from other brands</li>
+<li>OPC UA clients</li>
+</ul>
+<p>I also worked with Python OPC UA clients, GUI tools, and Docker-based setups to
+run dashboards in the browser (localhost/IP).</p>
+<h2 id="devops-linux-systems-and-tooling">DevOps, Linux Systems, and Tooling</h2>
+<h3 id="nixos-and-linux-workflow-automation">NixOS and Linux Workflow Automation</h3>
+<p>Throughout 2025, I built a large ecosystem of scripts and tools:</p>
+<ul>
+<li>An all-in-one NixOS + Home Manager updater:
+<ul>
+<li>`nixos-rebuild switch`</li>
+<li>`home-manager switch`</li>
+<li>`nix flake update`</li>
+<li>generation cleanup</li>
+<li>interactive `fzf` menus</li>
+</ul>
+</li>
+<li>A fuzzy package searcher using `allpackages.txt` + `fzf`.</li>
+<li>Scripts for encrypted storage:
+<ul>
+<li>Tomb on Linux</li>
+<li>GPG-based vaults on Windows</li>
+</ul>
+</li>
+<li>Integrating encrypted vaults with Fossil version control.</li>
+<li>Automatically launching Yazi tabs inside Zellij layouts.</li>
+<li>Detecting OS and adjusting behaviors dynamically.</li>
+</ul>
+<p>These tools made my day-to-day Linux work more productive and standardized.</p>
+<h3 id="software-packaging-and-compilation">Software Packaging &amp; Compilation</h3>
+<p>I learned packaging and building custom software:</p>
+<ul>
+<li>Creating a Nix package for <strong>The Dark Mod</strong> game installer.</li>
+<li>Adding custom-built software to `configuration.nix`.</li>
+<li>Building and installing Emacs 31 from Git with:
+<ul>
+<li>tree-sitter</li>
+<li>native-comp</li>
+<li>mailutils</li>
+</ul>
+</li>
+<li>Compiling utilities like `whdd` on NixOS.</li>
+<li>Writing xbps-src templates for Void Linux utilities.</li>
+<li>Handling Go installs and removals (`go install`, cleanup, etc.).</li>
+</ul>
+<h3 id="docker-and-virtualization">Docker &amp; Virtualization</h3>
+<p>I explored:</p>
+<ul>
+<li>Creating Dockerfiles to run Python-based OPC UA GUI clients.</li>
+<li>Running GUI apps inside containers accessible via browser.</li>
+<li>Debugging QEMU issues inside desktop entries.</li>
+<li>Handling special characters and line breaks in `.desktop` files.</li>
+</ul>
+<h2 id="emacs-org-mode-hugo-and-writing-automation">Emacs, Org-mode, Hugo, and Writing Automation</h2>
+<h3 id="org-hugo-website-workflow">Org-Hugo Website Workflow</h3>
+<p>2025 was a year of heavy Emacs + Org + Hugo experimentation:</p>
+<ul>
+<li>Managing my entire Hugo site from one Org file.</li>
+<li>Using `H1` headings as folder metadata for Hugo.</li>
+<li>Fixing image rendering issues and metadata in PaperMod/PaperModX.</li>
+<li>Customizing CSS to use JetBrains Mono on my site.</li>
+<li>Exporting pages correctly with empty `:HUGO_SECTION:` values.</li>
+<li>Solving agenda requirements:
+<ul>
+<li>weekly TODO view (only current week)</li>
+<li>birthday calendar showing only the current month</li>
+</ul>
+</li>
+<li>Improving my blog publisher to hide shell noise in Emacs.</li>
+</ul>
+<h3 id="package-experiments">Package Experiments</h3>
+<p>I tried tools such as `org-social`, discovering:</p>
+<ul>
+<li>missing sync functions</li>
+<li>read-only relay buffers</li>
+<li>no usable backend for my workflow (yet)</li>
+</ul>
+<h2 id="robotics-and-programming">Robotics and Programming</h2>
+<h3 id="robotics-and-rapid">Robotics &amp; Rapid</h3>
+<p>I asked for example code in RAPID for ABB robots and explored how Python ties
+into robotic automation workflows.</p>
+<h3 id="python-gui-development">Python GUI Development</h3>
+<p>I worked with:</p>
+<ul>
+<li>Textual TUI apps (Hanoi project)</li>
+<li>pyqtgraph and PySide/Qt issues</li>
+<li>Importing missing widgets like `Slider` in new Textual releases</li>
+<li>Debugging graphical problems in GTK apps like Walker</li>
+</ul>
+<h3 id="general-programming-and-troubleshooting">General Programming &amp; Troubleshooting</h3>
+<p>Other topics included:</p>
+<ul>
+<li>Why `opcua-client` launches a terminal alongside the main UI.</li>
+<li>Name resolution for OPC UA endpoints.</li>
+<li>Cleaning and uninstalling Go-based binaries.</li>
+<li>Improving CLI and GUI ergonomics across Linux desktops.</li>
+</ul>
+<h2 id="linux-desktop-wayland-hyprland-and-ux-issues">Linux Desktop, Wayland, Hyprland &amp; UX Issues</h2>
+<p>I debugged and refined my desktop environments:</p>
+<ul>
+<li>Conflicts between mako and xfce-notifyd across sessions.</li>
+<li>Setting fonts correctly in browsers and mobile devices (Iosevka issues on iPhone).</li>
+<li>Wayland quirks with Hyprland and application compatibility.</li>
+<li>Zellij workspace design with automatic tab layouts.</li>
+<li>Launching Emacs with `emacsclient &ndash;nw -c -a &lsquo;&rsquo;`.</li>
+</ul>
+<h2 id="creativity-logos-ui-and-branding">Creativity, Logos, UI &amp; Branding</h2>
+<p>I explored design work too:</p>
+<ul>
+<li>Creating formal industrial logos for a DieCasting maintenance group.</li>
+<li>Iterating to make them more complex, technical, and professional.</li>
+<li>Making my Textual TUI interface look more visually appealing.</li>
+<li>Exploring color schemes (Gruvbox Dark Material as baseline).</li>
+</ul>
+<h2 id="communication-writing-and-professional-emails">Communication, Writing &amp; Professional Emails</h2>
+<p>Throughout 2025, I also drafted multiple professional emails, including:</p>
+<ul>
+<li>Requests for hydraulic upgrades for a 1992 machine.</li>
+<li>Notes about obsolete components and modernization needs.</li>
+<li>Technical communication in both English and Spanish.</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>2025 has been a year full of experimentation and growth:</p>
+<ul>
+<li><strong><strong>Hydraulics + Industrial Automation</strong></strong></li>
+<li><strong><strong>Robotics + Programming</strong></strong></li>
+<li><strong><strong>Linux, NixOS, and DevOps</strong></strong></li>
+<li><strong><strong>Emacs, Org-mode, Hugo, and writing workflows</strong></strong></li>
+<li><strong><strong>Docker, OPC UA, networking</strong></strong></li>
+<li><strong><strong>Void Linux, Go, packaging, and compilation</strong></strong></li>
+<li><strong><strong>UI/UX, logos, and visual design</strong></strong></li>
+</ul>
+<p>Each question and challenge pushed me further as an engineer, developer, and
+tinkerer. This year-long journey reflects exactly what I enjoy: learning,
+building, and continuously improving the systems around me.</p>
+
+    </article>
+  </main>
+  
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css"
+    integrity="sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc" crossorigin="anonymous">
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"
+    integrity="sha384-YNHdsYkH6gMx9y3mRkmcJ2mFUjTd0qNQQvY9VYZgQd7DcN7env35GzlmFaZ23JGp"
+    crossorigin="anonymous"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js"
+    integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl"
+    crossorigin="anonymous"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+            
+            
+            delimiters: [
+                { left: '$$', right: '$$', display: true },
+                { left: '$', right: '$', display: false },
+                { left: '\\(', right: '\\)', display: false },
+                { left: '\\[', right: '\\]', display: true }
+            ],
+            
+            throwOnError: false
+        });
+    });
+</script>
+
+
+
+
+
+<script 
+  src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"
+  crossorigin="anonymous">
+</script>
+<script>
+  mermaid.init(undefined, 'code.language-mermaid')
+</script>
+
+
+
+
+</div>
+
+
+  <footer class="mt-8 mb-8">
+  <div class="container mx-auto">
+    <div class="mt-8 flex flex-col-reverse sm:flex-row sm:justify-between items-center">
+      <div class="text-center sm:text-left">
+        <p class="mt-0 text-sm">Made in emacs for (λ jpachecoxyz)</p>
+        <p class="mt-0 text-xs">
+          Built with <a href="https://gohugo.io" target="_blank" rel="noopener noreferrer">Hugo</a> v0.152.2
+          and <a href="https://github.com/mivinci/hugo-theme-minima" target="_blank" rel="noopener noreferrer">Minima</a>
+        </p>
+      </div>
+      
+      <p class="flex items-center mt-0">
+        
+          <a class="icon ml-1 mr-1" href="mailto:jpacheco@cock.li" title="email">
+          
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+          
+          </a>
+        
+          <a class="icon ml-1 mr-1" href="https://github.com/jpachecoxyz" title="github">
+          
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          
+          </a>
+        
+          <a class="icon ml-1 mr-1" href="/index.xml" title="rss">
+          
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
+          
+          </a>
+        
+      </p>
+    </div>
+  </div>
+</footer>
+</body>
+
+</html>
