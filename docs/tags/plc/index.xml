@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PLC on (λ jpachecoxyz)</title>
+    <link>//localhost:1313/tags/plc/</link>
+    <description>Recent content in PLC on (λ jpachecoxyz)</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Made in emacs for (λ jpachecoxyz)</copyright>
+    <lastBuildDate>Sun, 14 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/plc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to use OPC EXPERT</title>
+      <link>//localhost:1313/posts/how-to-use-opc-expert/</link>
+      <pubDate>Sun, 14 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/how-to-use-opc-expert/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;h3 id=&#34;some-random-header-dot&#34;&gt;Some Random Header.&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;List 1:&lt;/li&gt;&#xA;&lt;li&gt;List 2&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;another-header&#34;&gt;Another header&lt;/h2&gt;&#xA;&lt;p&gt;Some arbitrary text here&amp;hellip;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
