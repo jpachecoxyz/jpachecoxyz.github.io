@@ -3,6 +3,7 @@ title = "RAPID"
 author = ["Javier Pacheco"]
 description = "Breve Introduccion a RAPID, el lenguage de programacion de robots ABB."
 date = 2025-12-23
+publishDate = 2025-12-24
 tags = ["robots", "programacion"]
 draft = false
 toc = true
