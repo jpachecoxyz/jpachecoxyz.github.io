@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Made in emacs for (λ jpachecoxyz)</copyright>
-    <lastBuildDate>Tue, 09 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 23 Dec 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="//localhost:1313/tags/test/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Video Test</title>
+      <link>//localhost:1313/posts/video-test/</link>
+      <pubDate>Tue, 23 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/video-test/</guid>
+      <description>&lt;h2 id=&#34;the-title&#34;&gt;The title&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;//localhost:1313/ox-hugo/screenrecording-2025-12-23_21-02-41.mp4&#34;&gt;Video&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Lorem ip sum</title>
       <link>//localhost:1313/posts/lorem-ip-sum/</link>

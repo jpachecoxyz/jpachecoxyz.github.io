@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Made in emacs for (λ jpachecoxyz)</copyright>
-    <lastBuildDate>Thu, 11 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 23 Dec 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RAPID</title>
+      <link>/posts/rapid/</link>
+      <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>/posts/rapid/</guid>
+      <description>&lt;h2 id=&#34;qué-es-rapid&#34;&gt;¿Qué es RAPID?&lt;/h2&gt;&#xA;&lt;p&gt;RAPID es el lenguaje de programación utilizado por los robots industriales de &lt;strong&gt;ABB&lt;/strong&gt;.&#xA;Está diseñado para el control de movimientos, manejo de entradas y salidas, y la integración con sistemas industriales como PLCs, HMIs y redes industriales.&lt;/p&gt;&#xA;&lt;h2 id=&#34;características-principales&#34;&gt;Características principales&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Lenguaje estructurado y tipado&lt;/li&gt;&#xA;&lt;li&gt;Orientado a control de movimiento&lt;/li&gt;&#xA;&lt;li&gt;Soporta programación modular&lt;/li&gt;&#xA;&lt;li&gt;Manejo de interrupciones y tareas paralelas&lt;/li&gt;&#xA;&lt;li&gt;Integración con E/S digitales y analógicas&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;estructura-básica-de-un-programa&#34;&gt;Estructura básica de un programa&lt;/h2&gt;&#xA;&lt;p&gt;Un programa en RAPID se organiza en &lt;strong&gt;módulos&lt;/strong&gt;, los cuales contienen &lt;strong&gt;procedimientos&lt;/strong&gt; y &lt;strong&gt;funciones&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>My Technical Journey</title>
       <link>/posts/my-technical-journey/</link>

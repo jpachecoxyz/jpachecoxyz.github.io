@@ -47,16 +47,15 @@ params:
     description: |
       I am maintenance engineer, I'm specialized in maintenance,
       programming PLC, Robotics, I also like to code in python,
-      C, lisp, an emacs enjoyer because of org-mode.
-      I use linux (void musl) as my daliy OS.
+      C, lisp, an emacs enjoyer, I use linux as my daily OS.
 
   social:
     - name: "email"
       url: "mailto:jpacheco@cock.li"
     - name: "github"
       url: "https://github.com/jpachecoxyz"
-    - name: "rss"
-      url: "index.xml"
+    # - name: "rss"
+    #   url: "index.xml"
 
   math:
     enable: true
