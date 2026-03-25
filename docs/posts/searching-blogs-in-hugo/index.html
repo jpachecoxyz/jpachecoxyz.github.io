@@ -8,7 +8,7 @@
   <meta property="og:site_name" content="(λ jpachecoxyz)">
   <meta property="og:title" content="searching blogs in hugo">
   <meta property="og:description" content="How to add a search utility for your blogs in hugo">
-  <meta property="og:locale" content="en">
+  <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2024-08-25T00:00:00+00:00">
@@ -40,7 +40,7 @@
   
   
   
-  <script defer type="text/javascript" src="/minima.88147ff52fec24bcfe3bf67695390e217f749dd410c38ec7d0f12f1b43c68a70.js" integrity="sha256-iBR/9S/sJLz&#43;O/Z2lTkOIX90ndQQw47H0PEvG0PGinA="></script>
+  <script defer type="text/javascript" src="/minima.0e7c2bd5fd336e9979f9d20a1bbc4090473e876af557ce11af583c224fc06212.js" integrity="sha256-Dnwr1f0zbpl5&#43;dIKG7xAkEc&#43;h2r1V84Rr1g8Ik/AYhI="></script>
   
   
   
@@ -406,7 +406,7 @@
 </span></span><span class="line"><span class="cl"><span class="c1">// =============================
 </span></span></span><span class="line"><span class="cl"><span class="c1">// Search
 </span></span></span><span class="line"><span class="cl"><span class="c1">// =============================
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">inputBox</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;search-query&#39;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nx">inputBox</span> <span class="o">!==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">searchQuery</span> <span class="o">=</span> <span class="nx">param</span><span class="p">(</span><span class="s2">&#34;q&#34;</span><span class="p">);</span>
@@ -428,7 +428,7 @@
 </span></span><span class="line"><span class="cl">            <span class="k">return</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">        <span class="c1">// Examine the text in the response
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">pages</span><span class="p">)</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">        <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">pages</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="kd">var</span> <span class="nx">fuse</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Fuse</span><span class="p">(</span><span class="nx">pages</span><span class="p">,</span> <span class="nx">fuseOptions</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">            <span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">fuse</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="nx">searchQuery</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
@@ -450,7 +450,7 @@
 </span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">searchResults</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;search-results&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="c1">// pull template from hugo template definition
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">var</span> <span class="nx">templateDefinition</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;search-result-template&#34;</span><span class="p">).</span><span class="nx">innerHTML</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">templateDefinition</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;search-result-template&#34;</span><span class="p">).</span><span class="nx">innerHTML</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="nx">results</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">value</span><span class="p">,</span> <span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">
@@ -462,7 +462,7 @@
 </span></span><span class="line"><span class="cl">        <span class="nx">snippet</span> <span class="o">=</span> <span class="nx">contents</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nx">summaryInclude</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&amp;hellip;&#39;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">        <span class="c1">//replace values
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kd">var</span> <span class="nx">tags</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span>
+</span></span></span><span class="line"><span class="cl">        <span class="kd">var</span> <span class="nx">tags</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span>
 </span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nx">value</span><span class="p">.</span><span class="nx">item</span><span class="p">.</span><span class="nx">tags</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="nx">value</span><span class="p">.</span><span class="nx">item</span><span class="p">.</span><span class="nx">tags</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">element</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">                <span class="nx">tags</span> <span class="o">=</span> <span class="nx">tags</span> <span class="o">+</span> <span class="s2">&#34;&lt;a href=&#39;/tags/&#34;</span> <span class="o">+</span> <span class="nx">element</span> <span class="o">+</span> <span class="s2">&#34;&#39;&gt;&#34;</span> <span class="o">+</span> <span class="s2">&#34;#&#34;</span> <span class="o">+</span> <span class="nx">element</span> <span class="o">+</span> <span class="s2">&#34;&lt;/a&gt; &#34;</span>
@@ -491,19 +491,19 @@
 </span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">conditionalMatches</span><span class="p">,</span> <span class="nx">conditionalPattern</span><span class="p">,</span> <span class="nx">copy</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">conditionalPattern</span> <span class="o">=</span> <span class="sr">/\$\{\s*isset ([a-zA-Z]*) \s*\}(.*)\$\{\s*end\s*}/g</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">//since loop below depends on re.lastInxdex, we use a copy to capture any manipulations whilst inside the loop
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">copy</span> <span class="o">=</span> <span class="nx">templateString</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl">    <span class="nx">copy</span> <span class="o">=</span> <span class="nx">templateString</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">((</span><span class="nx">conditionalMatches</span> <span class="o">=</span> <span class="nx">conditionalPattern</span><span class="p">.</span><span class="nx">exec</span><span class="p">(</span><span class="nx">templateString</span><span class="p">))</span> <span class="o">!==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nx">data</span><span class="p">[</span><span class="nx">conditionalMatches</span><span class="p">[</span><span class="mi">1</span><span class="p">]])</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="c1">//valid key, remove conditionals, leave contents.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">copy</span> <span class="o">=</span> <span class="nx">copy</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="nx">conditionalMatches</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nx">conditionalMatches</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+</span></span></span><span class="line"><span class="cl">            <span class="nx">copy</span> <span class="o">=</span> <span class="nx">copy</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="nx">conditionalMatches</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nx">conditionalMatches</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="c1">//not valid, remove entire section
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">copy</span> <span class="o">=</span> <span class="nx">copy</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="nx">conditionalMatches</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">            <span class="nx">copy</span> <span class="o">=</span> <span class="nx">copy</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="nx">conditionalMatches</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">templateString</span> <span class="o">=</span> <span class="nx">copy</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">//now any conditionals removed we can do simple substitution
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">var</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">find</span><span class="p">,</span> <span class="nx">re</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">find</span><span class="p">,</span> <span class="nx">re</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="nx">key</span> <span class="k">in</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="nx">find</span> <span class="o">=</span> <span class="s1">&#39;\\$\\{\\s*&#39;</span> <span class="o">+</span> <span class="nx">key</span> <span class="o">+</span> <span class="s1">&#39;\\s*\\}&#39;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="nx">re</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="nx">find</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">);</span>
@@ -513,7 +513,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// Helper Functions
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">function</span> <span class="nx">show</span><span class="p">(</span><span class="nx">elem</span><span class="p">)</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">show</span><span class="p">(</span><span class="nx">elem</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">elem</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="s1">&#39;block&#39;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">hide</span><span class="p">(</span><span class="nx">elem</span><span class="p">)</span> <span class="p">{</span>
@@ -524,17 +524,17 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// Keybinds functions
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;keydown&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl"><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;keydown&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">// Check if the Windows key (or Command key on macOS) and forward slash are pressed
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">metaKey</span> <span class="o">&amp;&amp;</span> <span class="nx">event</span><span class="p">.</span><span class="nx">key</span> <span class="o">===</span> <span class="s1">&#39;/&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">metaKey</span> <span class="o">&amp;&amp;</span> <span class="nx">event</span><span class="p">.</span><span class="nx">key</span> <span class="o">===</span> <span class="s1">&#39;/&#39;</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="c1">// Prevent the default action if necessary
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+</span></span></span><span class="line"><span class="cl">        <span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">        <span class="c1">// Navigate to the search page
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="s1">&#39;/search&#39;</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl">        <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="s1">&#39;/search&#39;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">        <span class="c1">// Wait for the page to load and then focus on the search input
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;load&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">        <span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;load&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="kr">const</span> <span class="nx">searchInput</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;search-query&#39;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="nx">searchInput</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">                <span class="nx">searchInput</span><span class="p">.</span><span class="nx">focus</span><span class="p">();</span>
@@ -621,14 +621,14 @@
       <div class="text-center sm:text-left">
         <p class="mt-0 text-sm">Made in emacs for (λ jpachecoxyz)</p>
         <p class="mt-0 text-xs">
-          Built with <a href="https://gohugo.io" target="_blank" rel="noopener noreferrer">Hugo</a> v0.152.2
+          Built with <a href="https://gohugo.io" target="_blank" rel="noopener noreferrer">Hugo</a> v0.157.0
           and <a href="https://github.com/mivinci/hugo-theme-minima" target="_blank" rel="noopener noreferrer">Minima</a>
         </p>
       </div>
       
       <p class="flex items-center mt-0">
         
-          <a class="icon ml-1 mr-1" href="mailto:jpacheco@cock.li" title="email">
+          <a class="icon ml-1 mr-1" href="mailto:jpacheco@disroot.org" title="email">
           
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
           

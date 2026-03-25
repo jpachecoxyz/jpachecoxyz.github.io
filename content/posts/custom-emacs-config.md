@@ -1,0 +1,261 @@
++++
+title = "Custom Emacs Configuration"
+author = ["Javier Pacheco"]
+description = "Why to use a custom emacs configuration instead of a framework."
+date = 2026-03-21
+tags = ["emacs", "kwnowledge"]
+draft = true
+toc = true
++++
+
+## Introduction {#introduction}
+
+For a long time, I used popular Emacs distributions like Doom Emacs (and Spacemacs). They are impressive projects, very polished, and extremely powerful out of the box. If someone wants a quick start with modern defaults, curated packages, and sensible keybindings, they are a solid option.
+
+However, after spending years refining my workflow, I eventually moved to a fully personal configuration. Not a fork. Not a heavily patched Doom setup. A clean, modular, self-designed Emacs configuration.
+
+This post explains why that decision changed the way I use Emacs, and why I believe building your own configuration is not just a preference — it is an investment.
+
+
+## The Illusion of Convenience {#the-illusion-of-convenience}
+
+Distributions like [Doom Emacs](https://github.com/doomemacs/doomemacs) and [Spacemacs](https://www.spacemacs.org/) promise convenience:
+
+-   Fast startup
+-   Batteries included
+-   Modern defaults
+-   Preconfigured modules
+-   Keybinding systems
+
+And they deliver.
+
+But convenience has a hidden cost: abstraction.
+
+When something breaks, you are no longer debugging Emacs.
+You are debugging someone else's architecture layered on top of Emacs.
+
+That difference matters.
+
+
+## My Turning Point {#my-turning-point}
+
+The turning point for me was organizational clarity.
+
+As my workflow matured — blogging with Org and Hugo, Denote for notes, Mu4e for email, custom automation scripts, custom key systems — I realized something:
+
+I was fighting the distribution more than I was using it.
+
+I wanted:
+
+-   Clear module boundaries
+-   My own naming conventions
+-   Explicit package installation
+-   Zero magic
+-   Predictable load order
+
+Distributions optimize for general users.
+
+I needed optimization for **me**.
+
+
+## Understanding Instead of Depending {#understanding-instead-of-depending}
+
+When you build your own configuration, something fundamental changes:
+
+You stop memorizing commands. Instead You start understanding systems.
+
+You learn:
+
+-   How hooks really work
+-   How display-buffer rules affect windows
+-   How advice modifies behavior
+-   How keymaps override each other
+-   How packages initialize
+
+Instead of thinking: "Why does Doom do this?"
+
+You think: "Why does Emacs do this?"
+
+_That mental shift is powerful._
+
+
+## Modular Architecture: The Real Upgrade {#modular-architecture-the-real-upgrade}
+
+One of the biggest benefits of writing my own config was modularity.
+
+Instead of a monolithic init file, I created:
+
+-   jp-emacs-general.el
+-   jp-emacs-icons.el
+-   jp-emacs-post-custom.el
+-   jp-emacs-mu4e.el
+-   and so on...
+
+Each file has:
+
+-   A clear purpose
+-   A provide statement
+-   No hidden side effects
+-   Predictable behavior
+
+When something breaks, I know exactly where to look.
+
+That level of clarity is difficult to achieve inside large distributions.
+
+
+## Performance and Minimalism {#performance-and-minimalism}
+
+Distributions include many features you might never use.
+
+Even if disabled, they:
+
+-   Influence load order
+-   Affect keymaps
+-   Add advice
+-   Add layers of abstraction
+
+When I moved to my own configuration:
+
+-   Startup became simpler
+-   Debugging became faster
+-   Profiling became meaningful
+-   I knew exactly what was loaded
+
+Minimalism is not about fewer features.
+
+It is about fewer unknowns.
+
+
+## Keybindings: Intentional Design {#keybindings-intentional-design}
+
+Distributions impose philosophy:
+
+-   Evil-first
+-   Leader-key systems
+-   Modal navigation
+-   Layer-based loading
+
+Those are powerful.
+
+But they are opinions.
+
+When I wrote my own config, I designed my keybindings intentionally:
+
+-   No accidental overrides
+-   No hidden leader conflicts
+-   No unexplained remaps
+-   No keymap shadowing surprises
+
+Every key exists because I decided it should exist.
+
+That is control.
+
+
+## Long-Term Stability {#long-term-stability}
+
+A distribution evolves independently of you.
+
+Modules change.
+Defaults change.
+APIs change.
+Deprecations happen.
+
+When you own your configuration:
+
+You control evolution speed.
+
+If something works, it keeps working.
+
+There is no sudden upstream philosophy shift.
+
+Your editor becomes stable infrastructure.
+
+
+## Cognitive Ownership {#cognitive-ownership}
+
+This is the most important part.
+
+When you build your own configuration, Emacs stops being a tool.
+
+It becomes an extension of your thinking.
+
+Every:
+
+-   function
+-   hook
+-   naming convention
+-   keybinding
+-   module
+
+reflects your mental model.
+
+That alignment reduces friction.
+
+And friction is the real productivity killer.
+
+
+## But Are Distributions Bad? {#but-are-distributions-bad}
+
+No.
+
+They are excellent for:
+
+-   Beginners
+-   Fast onboarding
+-   Exploration
+-   Learning what is possible
+
+In fact, using Doom helped me discover many packages I still use today.
+
+But eventually, you reach a point where:
+
+Preconfiguration becomes limitation.
+
+And at that moment, the next step is autonomy.
+
+
+## The Hidden Benefit: Confidence {#the-hidden-benefit-confidence}
+
+After migrating to my own configuration, I noticed something unexpected.
+
+Confidence.
+
+If something breaks:
+I can fix it.
+
+If I want new behavior:
+I can implement it.
+
+If I want to change architecture:
+I can redesign it.
+
+There is no fear of “breaking the system.”
+
+Because I am the system.
+
+
+## Final Thoughts {#final-thoughts}
+
+Using a distribution is convenient.
+
+Building your own configuration is transformative.
+
+It teaches you how Emacs actually works.
+It removes abstraction layers.
+It improves debugging.
+It strengthens architectural thinking.
+It gives you control.
+
+And most importantly:
+
+It makes Emacs truly yours.
+
+If you are comfortable in `Doom` or `Spacemacs`, that is perfectly fine.
+
+But if you ever feel friction,
+if you ever want clarity,
+if you ever want full control —
+
+Build your own configuration.
+
+You will not go back.

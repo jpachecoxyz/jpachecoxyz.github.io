@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#181818">
+  <title>
+    
+    (λ jpachecoxyz) - Custom Emacs Config
+    
+  </title>
+  
+  
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  
+  
+  
+  <link rel="stylesheet" href="/minima.54cfcb44e10b4015b41a13771763013b79bdba6a92e49ea4a77bb44db465e761.css" integrity="sha256-VM/LROELQBW0GhN3F2MBO3m9umqS5J6kp3u0TbRl52E=">
+  
+  
+  
+  <script defer type="text/javascript" src="/minima.0e7c2bd5fd336e9979f9d20a1bbc4090473e876af557ce11af583c224fc06212.js" integrity="sha256-Dnwr1f0zbpl5&#43;dIKG7xAkEc&#43;h2r1V84Rr1g8Ik/AYhI="></script>
+  
+  
+  
+</head>
+<script>
+  const theme_config = 'dark'
+  const theme_light = theme_config === 'system' ? 'light' : theme_config;
+  let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : theme_light;
+  console.debug(theme);
+
+  try {
+    localStorage.setItem('theme', theme);
+    window.minima_theme = theme;
+    document.querySelector('html').classList.add(theme);
+  } catch (e) {
+    console.error(e);
+  }
+</script>
+
+
+
+<body>
+  <header class="mt-3 mb-8">
+  <div class="container mx-auto">
+    <nav class="flex justify-between items-center">
+      <div class="flex items-center">
+        
+        <div id="theme-switch" class="text-2xl cursor-pointer"></div>
+      </div>
+      <ul class="flex items-center text-base font-semibold
+        whitespace-nowrap overflow-x-auto overflow-y-hidden">
+        
+        <li class="ml-2 mr-2">
+          
+          <a href='/'>Home</a>
+          
+        </li>
+        
+        <li class="ml-2 mr-2">
+          
+          <a href="/about">About</a>
+          
+        </li>
+        
+        <li class="ml-2 mr-2">
+          
+          <a href="/posts">Posts</a>
+          
+        </li>
+        
+        <li class="ml-2 mr-2">
+          
+          <a href="/search">Search</a>
+          
+        </li>
+        
+      </ul>
+      
+    </nav>
+  </div>
+</header>
+
+
+  
+<div class="container mx-auto">
+  <h1 class="text-4xl font-extrabold mt-6 mb-6">Custom Emacs Config</h1>
+  <div class="mb-3 text-sm flex justify-between ">
+    <div>
+      
+      Post at &mdash; Mar 21, 2026
+      
+      
+      <span class="ml-3 tag">
+        DRAFT
+      </span>
+      
+    </div>
+    
+    <div>
+      
+      
+      <a class="ml-1" href="/tags/emacs">#emacs</a>
+      
+      
+      <a class="ml-1" href="/tags/kwnowledge">#kwnowledge</a>
+      
+    </div>
+    
+  </div>
+  <main class="mb-8">
+    <p>Why to use a custom emacs configuration instead of a framework.</p>
+    <article class="md">
+      <h2 id="introduction">Introduction</h2>
+<p>For a long time, I used popular Emacs distributions like Doom Emacs (and Spacemacs). They are impressive projects, very polished, and extremely powerful out of the box. If someone wants a quick start with modern defaults, curated packages, and sensible keybindings, they are a solid option.</p>
+<p>However, after spending years refining my workflow, I eventually moved to a fully personal configuration. Not a fork. Not a heavily patched Doom setup. A clean, modular, self-designed Emacs configuration.</p>
+<p>This post explains why that decision changed the way I use Emacs, and why I believe building your own configuration is not just a preference — it is an investment.</p>
+<h2 id="the-illusion-of-convenience">The Illusion of Convenience</h2>
+<p>Distributions like <a href="https://github.com/doomemacs/doomemacs">Doom Emacs</a> and <a href="https://www.spacemacs.org/">Spacemacs</a> promise convenience:</p>
+<ul>
+<li>Fast startup</li>
+<li>Batteries included</li>
+<li>Modern defaults</li>
+<li>Preconfigured modules</li>
+<li>Keybinding systems</li>
+</ul>
+<p>And they deliver.</p>
+<p>But convenience has a hidden cost: abstraction.</p>
+<p>When something breaks, you are no longer debugging Emacs.
+You are debugging someone else&rsquo;s architecture layered on top of Emacs.</p>
+<p>That difference matters.</p>
+<h2 id="my-turning-point">My Turning Point</h2>
+<p>The turning point for me was organizational clarity.</p>
+<p>As my workflow matured — blogging with Org and Hugo, Denote for notes, Mu4e for email, custom automation scripts, custom key systems — I realized something:</p>
+<p>I was fighting the distribution more than I was using it.</p>
+<p>I wanted:</p>
+<ul>
+<li>Clear module boundaries</li>
+<li>My own naming conventions</li>
+<li>Explicit package installation</li>
+<li>Zero magic</li>
+<li>Predictable load order</li>
+</ul>
+<p>Distributions optimize for general users.</p>
+<p>I needed optimization for <strong>me</strong>.</p>
+<h2 id="understanding-instead-of-depending">Understanding Instead of Depending</h2>
+<p>When you build your own configuration, something fundamental changes:</p>
+<p>You stop memorizing commands.
+You start understanding systems.</p>
+<p>You learn:</p>
+<ul>
+<li>How hooks really work</li>
+<li>How display-buffer rules affect windows</li>
+<li>How advice modifies behavior</li>
+<li>How keymaps override each other</li>
+<li>How packages initialize</li>
+</ul>
+<p>Instead of thinking:</p>
+<p>&ldquo;Why does Doom do this?&rdquo;</p>
+<p>You think:</p>
+<p>&ldquo;Why does Emacs do this?&rdquo;</p>
+<p>That mental shift is powerful.</p>
+<h2 id="modular-architecture-the-real-upgrade">Modular Architecture: The Real Upgrade</h2>
+<p>One of the biggest benefits of writing my own config was modularity.</p>
+<p>Instead of a monolithic init file, I created:</p>
+<ul>
+<li>jp-emacs-general.el</li>
+<li>jp-emacs-icons.el</li>
+<li>jp-emacs-post-custom.el</li>
+<li>jp-emacs-mu4e.el</li>
+<li>and so on&hellip;</li>
+</ul>
+<p>Each file has:</p>
+<ul>
+<li>A clear purpose</li>
+<li>A provide statement</li>
+<li>No hidden side effects</li>
+<li>Predictable behavior</li>
+</ul>
+<p>When something breaks, I know exactly where to look.</p>
+<p>That level of clarity is difficult to achieve inside large distributions.</p>
+<h2 id="performance-and-minimalism">Performance and Minimalism</h2>
+<p>Distributions include many features you might never use.</p>
+<p>Even if disabled, they:</p>
+<ul>
+<li>Influence load order</li>
+<li>Affect keymaps</li>
+<li>Add advice</li>
+<li>Add layers of abstraction</li>
+</ul>
+<p>When I moved to my own configuration:</p>
+<ul>
+<li>Startup became simpler</li>
+<li>Debugging became faster</li>
+<li>Profiling became meaningful</li>
+<li>I knew exactly what was loaded</li>
+</ul>
+<p>Minimalism is not about fewer features.</p>
+<p>It is about fewer unknowns.</p>
+<h2 id="keybindings-intentional-design">Keybindings: Intentional Design</h2>
+<p>Distributions impose philosophy:</p>
+<ul>
+<li>Evil-first</li>
+<li>Leader-key systems</li>
+<li>Modal navigation</li>
+<li>Layer-based loading</li>
+</ul>
+<p>Those are powerful.</p>
+<p>But they are opinions.</p>
+<p>When I wrote my own config, I designed my keybindings intentionally:</p>
+<ul>
+<li>No accidental overrides</li>
+<li>No hidden leader conflicts</li>
+<li>No unexplained remaps</li>
+<li>No keymap shadowing surprises</li>
+</ul>
+<p>Every key exists because I decided it should exist.</p>
+<p>That is control.</p>
+<h2 id="long-term-stability">Long-Term Stability</h2>
+<p>A distribution evolves independently of you.</p>
+<p>Modules change.
+Defaults change.
+APIs change.
+Deprecations happen.</p>
+<p>When you own your configuration:</p>
+<p>You control evolution speed.</p>
+<p>If something works, it keeps working.</p>
+<p>There is no sudden upstream philosophy shift.</p>
+<p>Your editor becomes stable infrastructure.</p>
+<h2 id="cognitive-ownership">Cognitive Ownership</h2>
+<p>This is the most important part.</p>
+<p>When you build your own configuration, Emacs stops being a tool.</p>
+<p>It becomes an extension of your thinking.</p>
+<p>Every:</p>
+<ul>
+<li>function</li>
+<li>hook</li>
+<li>naming convention</li>
+<li>keybinding</li>
+<li>module</li>
+</ul>
+<p>reflects your mental model.</p>
+<p>That alignment reduces friction.</p>
+<p>And friction is the real productivity killer.</p>
+<h2 id="but-are-distributions-bad">But Are Distributions Bad?</h2>
+<p>No.</p>
+<p>They are excellent for:</p>
+<ul>
+<li>Beginners</li>
+<li>Fast onboarding</li>
+<li>Exploration</li>
+<li>Learning what is possible</li>
+</ul>
+<p>In fact, using Doom helped me discover many packages I still use today.</p>
+<p>But eventually, you reach a point where:</p>
+<p>Preconfiguration becomes limitation.</p>
+<p>And at that moment, the next step is autonomy.</p>
+<h2 id="the-hidden-benefit-confidence">The Hidden Benefit: Confidence</h2>
+<p>After migrating to my own configuration, I noticed something unexpected.</p>
+<p>Confidence.</p>
+<p>If something breaks:
+I can fix it.</p>
+<p>If I want new behavior:
+I can implement it.</p>
+<p>If I want to change architecture:
+I can redesign it.</p>
+<p>There is no fear of “breaking the system.”</p>
+<p>Because I am the system.</p>
+<h2 id="final-thoughts">Final Thoughts</h2>
+<p>Using a distribution is convenient.</p>
+<p>Building your own configuration is transformative.</p>
+<p>It teaches you how Emacs actually works.
+It removes abstraction layers.
+It improves debugging.
+It strengthens architectural thinking.
+It gives you control.</p>
+<p>And most importantly:</p>
+<p>It makes Emacs truly yours.</p>
+<p>If you are comfortable in Doom or Spacemacs, that is perfectly fine.</p>
+<p>But if you ever feel friction,
+if you ever want clarity,
+if you ever want full control —</p>
+<p>Build your own configuration.</p>
+<p>You will not go back.</p>
+
+    </article>
+  </main>
+  
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css"
+    integrity="sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc" crossorigin="anonymous">
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"
+    integrity="sha384-YNHdsYkH6gMx9y3mRkmcJ2mFUjTd0qNQQvY9VYZgQd7DcN7env35GzlmFaZ23JGp"
+    crossorigin="anonymous"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js"
+    integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl"
+    crossorigin="anonymous"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+            
+            
+            delimiters: [
+                { left: '$$', right: '$$', display: true },
+                { left: '$', right: '$', display: false },
+                { left: '\\(', right: '\\)', display: false },
+                { left: '\\[', right: '\\]', display: true }
+            ],
+            
+            throwOnError: false
+        });
+    });
+</script>
+
+
+
+
+
+<script 
+  src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"
+  crossorigin="anonymous">
+</script>
+<script>
+  mermaid.init(undefined, 'code.language-mermaid')
+</script>
+
+
+
+
+</div>
+
+
+  <footer class="mt-8 mb-8">
+  <div class="container mx-auto">
+    <div class="mt-8 flex flex-col-reverse sm:flex-row sm:justify-between items-center">
+      <div class="text-center sm:text-left">
+        <p class="mt-0 text-sm">Made in emacs for (λ jpachecoxyz)</p>
+        <p class="mt-0 text-xs">
+          Built with <a href="https://gohugo.io" target="_blank" rel="noopener noreferrer">Hugo</a> v0.157.0
+          and <a href="https://github.com/mivinci/hugo-theme-minima" target="_blank" rel="noopener noreferrer">Minima</a>
+        </p>
+      </div>
+      
+      <p class="flex items-center mt-0">
+        
+          <a class="icon ml-1 mr-1" href="mailto:jpacheco@disroot.org" title="email">
+          
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+          
+          </a>
+        
+          <a class="icon ml-1 mr-1" href="https://github.com/jpachecoxyz" title="github">
+          
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          
+          </a>
+        
+      </p>
+    </div>
+  </div>
+</footer>
+</body>
+
+</html>

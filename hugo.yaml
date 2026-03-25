@@ -51,7 +51,7 @@ params:
 
   social:
     - name: "email"
-      url: "mailto:jpacheco@cock.li"
+      url: "mailto:jpacheco@disroot.org"
     - name: "github"
       url: "https://github.com/jpachecoxyz"
     # - name: "rss"
