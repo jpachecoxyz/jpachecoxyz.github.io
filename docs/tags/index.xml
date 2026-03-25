@@ -7,8 +7,22 @@
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>Made in emacs for (λ jpachecoxyz)</copyright>
-    <lastBuildDate>Tue, 23 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 21 Mar 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Emacs</title>
+      <link>/tags/emacs/</link>
+      <pubDate>Sat, 21 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/emacs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kwnowledge</title>
+      <link>/tags/kwnowledge/</link>
+      <pubDate>Sat, 21 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/kwnowledge/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Programacion</title>
       <link>/tags/programacion/</link>
@@ -63,13 +77,6 @@
       <link>/tags/script/</link>
       <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
       <guid>/tags/script/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Emacs</title>
-      <link>/tags/emacs/</link>
-      <pubDate>Sun, 22 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/emacs/</guid>
       <description></description>
     </item>
     <item>

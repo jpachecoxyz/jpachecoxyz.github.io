@@ -4,7 +4,7 @@ author = ["Javier Pacheco"]
 description = "Why to use a custom emacs configuration instead of a framework."
 date = 2026-03-21
 tags = ["emacs", "kwnowledge"]
-draft = true
+draft = false
 toc = true
 +++
 

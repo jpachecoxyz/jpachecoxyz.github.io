@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>Made in emacs for (λ jpachecoxyz)</copyright>
-    <lastBuildDate>Tue, 23 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 21 Mar 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Custom Emacs Configuration</title>
+      <link>/posts/custom-emacs-config/</link>
+      <pubDate>Sat, 21 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>/posts/custom-emacs-config/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;For a long time, I used popular Emacs distributions like Doom Emacs (and Spacemacs). They are impressive projects, very polished, and extremely powerful out of the box. If someone wants a quick start with modern defaults, curated packages, and sensible keybindings, they are a solid option.&lt;/p&gt;&#xA;&lt;p&gt;However, after spending years refining my workflow, I eventually moved to a fully personal configuration. Not a fork. Not a heavily patched Doom setup. A clean, modular, self-designed Emacs configuration.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>RAPID</title>
       <link>/posts/rapid/</link>
