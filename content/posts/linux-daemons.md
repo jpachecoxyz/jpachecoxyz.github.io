@@ -4,7 +4,7 @@ author = ["Javier Pacheco"]
 description = "What is a daemon and how to make one in C"
 date = 2026-04-15
 tags = ["linux", "daemons", "C"]
-draft = true
+draft = false
 toc = true
 +++
 

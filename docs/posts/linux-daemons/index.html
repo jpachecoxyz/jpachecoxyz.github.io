@@ -1,8 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta property="og:url" content="/posts/linux-daemons/">
+  <meta property="og:site_name" content="(λ jpachecoxyz)">
+  <meta property="og:title" content="Linux Daemons">
+  <meta property="og:description" content="What is a daemon and how to make one in C">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-04-15T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-04-15T00:00:00+00:00">
+    <meta property="article:tag" content="Linux">
+    <meta property="article:tag" content="Daemons">
+    <meta property="article:tag" content="C">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Linux Daemons">
+  <meta name="twitter:description" content="What is a daemon and how to make one in C">
+
+  
   
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#181818">
@@ -94,10 +114,6 @@
       Post at &mdash; Apr 15, 2026
       
       
-      <span class="ml-3 tag">
-        DRAFT
-      </span>
-      
     </div>
     
     <div>
@@ -153,7 +169,7 @@
 <h3 id="maintain-a-continuous-execution-loop">Maintain a continuous execution loop</h3>
 <p>Usually a loop that performs periodic tasks.</p>
 <h2 id="example-of-a-daemon-in-c-dot">Example of a Daemon in <code>C</code>.</h2>
-<p>This example was taken from the video of the <a href="/posts/linux-daemons/#references">reference</a> with authorship by <code>Last Dragon</code>.</p>
+<p>This example was taken from the video of the <a href="">reference</a> with authorship by <code>Last Dragon</code>.</p>
 <h3 id="purpose-of-the-daemon-dot">Purpose of the daemon.</h3>
 <p>The purpose of this daemon is to mount an <code>HDD</code> and prevent it from being unmounted. When the system restarts or shuts down the daemon will unmount the device so the shutdown process can complete without problems.</p>
 <h3 id="code-dot">Code.</h3>

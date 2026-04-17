@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>Made in emacs for (λ jpachecoxyz)</copyright>
-    <lastBuildDate>Sun, 26 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 Apr 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux Daemons</title>
+      <link>/posts/linux-daemons/</link>
+      <pubDate>Wed, 15 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>/posts/linux-daemons/</guid>
+      <description>&lt;h2 id=&#34;what-is-a-daemon-dot&#34;&gt;What is a daemon.&lt;/h2&gt;&#xA;&lt;p&gt;A daemon is a program or script that runs in an &amp;ldquo;astral plane&amp;rdquo;. It is not attached to a terminal nor to a regular job session. Its existence goes beyond a normal process job.&lt;/p&gt;&#xA;&lt;h2 id=&#34;runs-in-the-background&#34;&gt;Runs in the background&lt;/h2&gt;&#xA;&lt;h2 id=&#34;has-no-controlling-terminal&#34;&gt;Has no controlling terminal&lt;/h2&gt;&#xA;&lt;h2 id=&#34;usually-starts-with-the-system&#34;&gt;Usually starts with the system&lt;/h2&gt;&#xA;&lt;h2 id=&#34;provides-a-continuous-service&#34;&gt;Provides a continuous service&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Rules.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;For a script to be considered a &lt;code&gt;Daemon&lt;/code&gt; it should follow these conditions or characteristics:&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Back to voidlinux</title>
       <link>/posts/back-to-voidlinux/</link>
