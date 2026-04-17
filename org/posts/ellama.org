@@ -37,7 +37,7 @@ As you can see, it's not very complicated. The options for the =ellama= package 
 #+BEGIN_SRC emacs-lisp 
 (use-package ellama
   (setopt ellama-language "English")
-  (setopt ellama-user-nick "jpacheco.xyz")
+  (setopt ellama-user-nick "jpachecoxyz")
   (setopt ellama-keymap-prefix "C-c e")
   (require 'llm-ollama)
   (setopt ellama-provider

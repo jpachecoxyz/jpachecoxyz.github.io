@@ -1,0 +1,192 @@
+#+title: Linux Daemons
+#+description: What is a daemon and how to make one in C
+#+date: 2026-04-15
+#+export_file_name: linux-daemons
+#+hugo_base_dir: ~/webdev/jpachecoxyz/
+#+hugo_section: posts
+#+hugo_tags: linux daemons C
+#+hugo_custom_front_matter: toc true
+#+hugo_auto_set_lastmod: nil
+#+hugo_draft: false
+
+* What is a daemon.
+
+A daemon is a program or script that runs in an "astral plane". It is not attached to a terminal nor to a regular job session. Its existence goes beyond a normal process job.
+
+* Runs in the background
+* Has no controlling terminal
+* Usually starts with the system
+* Provides a continuous service
+
+- Rules.
+
+For a script to be considered a =Daemon= it should follow these conditions or characteristics:
+
+** Run in the background
+
+The process must not depend on an interactive terminal.
+
+** Perform a fork() and terminate the parent process
+
+This allows the daemon to continue running independently of the process that started it.
+
+** Create a new session with setsid()
+
+This ensures that the process:
+
+1. Has no controlling terminal
+2. Becomes the leader of a new session.
+
+** Change the working directory (normally to /)
+
+This prevents the daemon from locking directories that might later need to be unmounted.
+
+** Reset the file creation mask with umask(0)
+
+This prevents inheriting unexpected permission restrictions from the parent process.
+
+** Close the standard file descriptors
+
+Close:
+
+1. stdin
+2. stdout
+3. stderr
+
+** Use a logging system instead of printing to the terminal
+
+Normally using syslog.
+
+** Maintain a continuous execution loop
+
+Usually a loop that performs periodic tasks.
+
+* Example of a Daemon in =C=.
+
+This example was taken from the video of the [[id:0860cf92-94bf-4490-9f6d-e8cf8154f6e1][reference]] with authorship by =Last Dragon=.
+
+** Purpose of the daemon.
+
+The purpose of this daemon is to mount an =HDD= and prevent it from being unmounted. When the system restarts or shuts down the daemon will unmount the device so the shutdown process can complete without problems.
+
+** Code.
+
+#+BEGIN_SRC c
+/*
+daemon.c
+
+Example of a simple daemon that tries to mount a device periodically
+and unmounts it when it receives SIGTERM.
+
+This code demonstrates several classic daemon programming concepts
+in Unix/Linux systems:
+
+- fork()
+- setsid()
+- closing terminal file descriptors
+- using syslog
+- signal handling
+- checking mounted filesystems
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <signal.h>
+#include <sys/mount.h>
+#include <unistd.h>
+#include <string.h>
+#include <syslog.h>
+
+#define DEVICE "/dev/sdaX"
+#define MOUNTPOINT "/demonio"
+#define FSTYPE "ext4"
+
+int is_mounted() {
+
+FILE *f = fopen("/proc/mounts", "r");
+
+if (!f)
+return 0;
+
+char line[512];
+
+while (fgets(line, sizeof(line), f)) {
+
+if (strstr(line, MOUNTPOINT)) {
+  fclose(f);
+  return 1;
+}
+
+}
+
+fclose(f);
+return 0;
+}
+
+void terminate(int signal) {
+
+if (is_mounted()) {
+
+if (umount(MOUNTPOINT) == 0) {
+  syslog(LOG_INFO, "Unmount successful");
+} else {
+  syslog(LOG_ERR, "Unmount failed");
+}
+
+
+}
+
+syslog(LOG_INFO, "Daemon terminated");
+
+closelog();
+
+exit(0);
+}
+
+int main()
+{
+
+pid_t process = fork();
+
+if (process < 0) {
+exit(EXIT_FAILURE);
+}
+
+if (process > 0) {
+printf("Daemon started\n");
+return 0;
+}
+
+signal(SIGTERM, terminate);
+
+chdir("/");
+
+close(STDIN_FILENO);
+close(STDOUT_FILENO);
+close(STDERR_FILENO);
+
+setsid();
+
+openlog("mount_daemon", LOG_PID, LOG_DAEMON);
+
+while (1) {
+
+if (!is_mounted()) {
+
+  if (mount(DEVICE, MOUNTPOINT, FSTYPE, 0, NULL) == 0) {
+    syslog(LOG_INFO, "Mount successful");
+  } else {
+    syslog(LOG_ERR, "Mount failed");
+  }
+}
+
+sleep(10);
+
+}
+
+return 0;
+}
+#+END_SRC
+
+* References:
+[[https://www.youtube.com/watch?v=6uir0CCmckw][Create a daemon in Linux with Bash and C]]

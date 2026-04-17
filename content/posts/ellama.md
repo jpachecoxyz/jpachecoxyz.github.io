@@ -1,5 +1,6 @@
 +++
 title = "Ellama"
+author = ["Javier Pacheco"]
 description = "A emacs Artificial Intelligence helper."
 date = 2024-09-22
 tags = ["emacs", "blog"]
@@ -43,11 +44,11 @@ As you can see, it's not very complicated. The options for the `ellama` package 
 ```emacs-lisp
 (use-package ellama
   (setopt ellama-language "English")
-  (setopt ellama-user-nick "jpacheco.xyz")
+  (setopt ellama-user-nick "jpachecoxyz")
   (setopt ellama-keymap-prefix "C-c e")
   (require 'llm-ollama)
   (setopt ellama-provider
-          (make-llm-ollama
-           "zephyr"
-           "zephyr")))
+		  (make-llm-ollama
+		   "zephyr"
+		   "zephyr")))
 ```
