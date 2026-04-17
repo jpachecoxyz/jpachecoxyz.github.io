@@ -13,22 +13,6 @@ toc = true
 A daemon is a program or script that runs in an "astral plane". It is not attached to a terminal nor to a regular job session. Its existence goes beyond a normal process job.
 
 
-## Runs in the background {#runs-in-the-background}
-
-
-## Has no controlling terminal {#has-no-controlling-terminal}
-
-
-## Usually starts with the system {#usually-starts-with-the-system}
-
-
-## Provides a continuous service {#provides-a-continuous-service}
-
--   Rules.
-
-For a script to be considered a `Daemon` it should follow these conditions or characteristics:
-
-
 ### Run in the background {#run-in-the-background}
 
 The process must not depend on an interactive terminal.
