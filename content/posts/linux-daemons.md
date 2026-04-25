@@ -62,7 +62,7 @@ Usually a loop that performs periodic tasks.
 
 ## Example of a Daemon in `C`. {#example-of-a-daemon-in-c-dot}
 
-This example was taken from the video of the [reference]({{< relref "../../../../Documents/Emacs/notes/20260410T230456--demonios-en-linux__estudio_linux.md#referencias" >}}) with authorship by `Last Dragon`.
+This example was taken from the video of the reference with authorship by `Last Dragon`.
 
 
 ### Purpose of the daemon. {#purpose-of-the-daemon-dot}

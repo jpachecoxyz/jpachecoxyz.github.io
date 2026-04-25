@@ -54,7 +54,7 @@ Usually a loop that performs periodic tasks.
 
 * Example of a Daemon in =C=.
 
-This example was taken from the video of the [[id:0860cf92-94bf-4490-9f6d-e8cf8154f6e1][reference]] with authorship by =Last Dragon=.
+This example was taken from the video of the reference with authorship by =Last Dragon=.
 
 ** Purpose of the daemon.
 
