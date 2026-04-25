@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Wiki on (λ jpachecoxyz)</title>
-    <link>//localhost:1313/wiki/</link>
+    <link>/wiki/</link>
     <description>Recent content in Wiki on (λ jpachecoxyz)</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <copyright>Made in emacs for (λ jpachecoxyz)</copyright>
-    <atom:link href="//localhost:1313/wiki/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Made in emacs by (λ jpachecoxyz)</copyright>
+    <atom:link href="/wiki/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Emacs on (λ jpachecoxyz)</title>
-    <link>//localhost:1313/tags/emacs/</link>
+    <link>/tags/emacs/</link>
     <description>Recent content in Emacs on (λ jpachecoxyz)</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <copyright>Made in emacs for (λ jpachecoxyz)</copyright>
+    <copyright>Made in emacs by (λ jpachecoxyz)</copyright>
     <lastBuildDate>Sat, 21 Mar 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1313/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Custom Emacs Configuration</title>
-      <link>//localhost:1313/posts/custom-emacs-config/</link>
+      <link>/posts/custom-emacs-config/</link>
       <pubDate>Sat, 21 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/custom-emacs-config/</guid>
+      <guid>/posts/custom-emacs-config/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;For a long time, I used popular Emacs distributions like Doom Emacs (and Spacemacs). They are impressive projects, very polished, and extremely powerful out of the box. If someone wants a quick start with modern defaults, curated packages, and sensible keybindings, they are a solid option.&lt;/p&gt;&#xA;&lt;p&gt;However, after spending years refining my workflow, I eventually moved to a fully personal configuration. Not a fork. Not a heavily patched Doom setup. A clean, modular, self-designed Emacs configuration.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ellama</title>
-      <link>//localhost:1313/posts/ellama/</link>
+      <link>/posts/ellama/</link>
       <pubDate>Sun, 22 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/ellama/</guid>
+      <guid>/posts/ellama/</guid>
       <description>&lt;h2 id=&#34;installation-of-ollama-dot&#34;&gt;Installation of Ollama.&lt;/h2&gt;&#xA;&lt;p&gt;In my case, I installed &lt;code&gt;ollama&lt;/code&gt; from my package manager, although you can install it using the following code:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -fsSL https://ollama.com/install.sh &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sh&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;p&gt;Once &lt;code&gt;ollama&lt;/code&gt; is installed, you should add it to your startup. In my case, I do it from the init of &lt;code&gt;hyprland&lt;/code&gt;, but it will depend on whether you use &lt;code&gt;.xinitrc&lt;/code&gt; or something else. It should be launched as follows:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ollama serve&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;h2 id=&#34;installing-a-model-dot&#34;&gt;Installing a model.&lt;/h2&gt;&#xA;&lt;p&gt;To use Ollama, we need to download a model. A model is basically who you will be talking to when making a query. In the case of &lt;code&gt;ellama&lt;/code&gt;, they suggest installing &lt;code&gt;zephyr&lt;/code&gt; as the model, so we need to install it.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How I made my blog with emacs and hugo</title>
-      <link>//localhost:1313/posts/how-i-made-my-blog-with-emacs-and-hugo/</link>
+      <link>/posts/how-i-made-my-blog-with-emacs-and-hugo/</link>
       <pubDate>Wed, 14 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/how-i-made-my-blog-with-emacs-and-hugo/</guid>
+      <guid>/posts/how-i-made-my-blog-with-emacs-and-hugo/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;I have been using emacs most of the time for writting, and of course when I started to make my blog I have been use it (emacs) since of it. In the beginig when I start writing I was using some scripts and tips from &lt;a href=&#34;https://systemcrafters.net/&#34;&gt;system crafters&lt;/a&gt; he use htmlize and some &lt;em&gt;lisp&lt;/em&gt; scripting. It was ok but then I have been watching some &lt;a href=&#34;https://www.youtube.com/@LukeSmithxyz&#34;&gt;lukesmith&lt;/a&gt; videos and see this &lt;a href=&#34;https://www.youtube.com/watch?v=jAXKSKb3etk&amp;amp;pp=ygUOaHVnbyBsdWtlc21pdGg%3D&#34;&gt;video&lt;/a&gt; about him switching to &lt;code&gt;HUGO&lt;/code&gt;, so I decided to check &lt;code&gt;HUGO&lt;/code&gt; too.&lt;/p&gt;</description>
     </item>
   </channel>

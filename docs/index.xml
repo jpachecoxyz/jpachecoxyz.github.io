@@ -2,28 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>(λ jpachecoxyz)</title>
-    <link>//localhost:1313/</link>
+    <link>/</link>
     <description>Recent content on (λ jpachecoxyz)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Made in emacs for (λ jpachecoxyz)</copyright>
-    <lastBuildDate>Sat, 25 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Made in emacs by (λ jpachecoxyz)</copyright>
+    <lastBuildDate>Sat, 25 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Metodo CRISPE</title>
-      <link>//localhost:1313/posts/metodo-crispe/</link>
+      <link>/posts/metodo-crispe/</link>
       <pubDate>Sat, 25 Apr 2026 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/posts/metodo-crispe/</guid>
+      <guid>/posts/metodo-crispe/</guid>
       <description>&lt;h2 id=&#34;introducción&#34;&gt;Introducción:&lt;/h2&gt;
 &lt;p&gt;Que son los &lt;code&gt;Prompts&lt;/code&gt;?, un &lt;code&gt;prompt&lt;/code&gt; es lo que le pides a la &lt;code&gt;Inteligencia artificial&lt;/code&gt; de tal manera que empiezas a generar una conversación, el truco esta en que dependiendo el &lt;code&gt;prompt&lt;/code&gt; que hagas o como formules la pregunta o la solicitud, es la manera en la que la &lt;code&gt;inteligencia artificial&lt;/code&gt; te contestara, porque ella no te conoce, no puede asumir lo que estas requiriendo, aunque eso si lo piensas es lo mismo si empiezas a hablar con una persona desconocida, eventualmente conocerá tus gustos, las respuestas que esperas, de echo es así como funcionan las inteligencias artificiales, mientras mas información tengan de &lt;code&gt;entrada&lt;/code&gt; mejor sera la &lt;code&gt;salida&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Linux Daemons</title>
-      <link>//localhost:1313/posts/linux-daemons/</link>
+      <link>/posts/linux-daemons/</link>
       <pubDate>Wed, 15 Apr 2026 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/posts/linux-daemons/</guid>
+      <guid>/posts/linux-daemons/</guid>
       <description>&lt;h2 id=&#34;what-is-a-daemon-dot&#34;&gt;What is a daemon.&lt;/h2&gt;
 &lt;p&gt;A daemon is a program or script that runs in an &amp;ldquo;astral plane&amp;rdquo;. It is not attached to a terminal nor to a regular job session. Its existence goes beyond a normal process job.&lt;/p&gt;
 &lt;h3 id=&#34;run-in-the-background&#34;&gt;Run in the background&lt;/h3&gt;
@@ -34,10 +34,10 @@
     
     <item>
       <title>Custom Emacs Configuration</title>
-      <link>//localhost:1313/posts/custom-emacs-config/</link>
+      <link>/posts/custom-emacs-config/</link>
       <pubDate>Sat, 21 Mar 2026 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/posts/custom-emacs-config/</guid>
+      <guid>/posts/custom-emacs-config/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;For a long time, I used popular Emacs distributions like Doom Emacs (and Spacemacs). They are impressive projects, very polished, and extremely powerful out of the box. If someone wants a quick start with modern defaults, curated packages, and sensible keybindings, they are a solid option.&lt;/p&gt;
 &lt;p&gt;However, after spending years refining my workflow, I eventually moved to a fully personal configuration. Not a fork. Not a heavily patched Doom setup. A clean, modular, self-designed Emacs configuration.&lt;/p&gt;</description>
@@ -45,10 +45,10 @@
     
     <item>
       <title>RAPID</title>
-      <link>//localhost:1313/posts/rapid/</link>
+      <link>/posts/rapid/</link>
       <pubDate>Tue, 23 Dec 2025 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/posts/rapid/</guid>
+      <guid>/posts/rapid/</guid>
       <description>&lt;h2 id=&#34;qué-es-rapid&#34;&gt;¿Qué es RAPID?&lt;/h2&gt;
 &lt;p&gt;RAPID es el lenguaje de programación utilizado por los robots industriales de &lt;strong&gt;ABB&lt;/strong&gt;.
 Está diseñado para el control de movimientos, manejo de entradas y salidas, y la integración con sistemas industriales como PLCs, HMIs y redes industriales.&lt;/p&gt;
@@ -66,10 +66,10 @@ Está diseñado para el control de movimientos, manejo de entradas y salidas, y 
     
     <item>
       <title>My Technical Journey</title>
-      <link>//localhost:1313/posts/my-technical-journey/</link>
+      <link>/posts/my-technical-journey/</link>
       <pubDate>Thu, 11 Dec 2025 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/posts/my-technical-journey/</guid>
+      <guid>/posts/my-technical-journey/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;The year 2025 has been one of constant learning, experimentation, and building.
 Throughout the months, I explored a wide spectrum of topics—from industrial
@@ -84,10 +84,10 @@ molding and die-casting machines. My questions focused on:&lt;/p&gt;</descriptio
     
     <item>
       <title>Back to voidlinux</title>
-      <link>//localhost:1313/posts/back-to-voidlinux/</link>
+      <link>/posts/back-to-voidlinux/</link>
       <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/posts/back-to-voidlinux/</guid>
+      <guid>/posts/back-to-voidlinux/</guid>
       <description>&lt;h2 id=&#34;always-return-to-the-place-that-you-where-happy-dot&#34;&gt;Always return to the place that you where happy.&lt;/h2&gt;
 &lt;p&gt;A long time ago (actually no more than 2 years) I was using &lt;code&gt;void linux&lt;/code&gt;, it was a very good time, but for some reasons I change it for &lt;code&gt;venom linux&lt;/code&gt;, &lt;code&gt;nixOS&lt;/code&gt;, &lt;code&gt;guix linux&lt;/code&gt; and others, to testing and learning within those linux distributions, but I always have a lack of something&amp;hellip;&lt;/p&gt;
 &lt;p&gt;As much I like and enjoy &lt;code&gt;nixOS&lt;/code&gt;, I always have problems, specially with the libraries and includes directories. I know that was only a small thing, but you know&amp;hellip;&lt;/p&gt;</description>
@@ -95,20 +95,20 @@ molding and die-casting machines. My questions focused on:&lt;/p&gt;</descriptio
     
     <item>
       <title>Recover windows boot</title>
-      <link>//localhost:1313/posts/recover-windows-boot/</link>
+      <link>/posts/recover-windows-boot/</link>
       <pubDate>Sat, 18 Jan 2025 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/posts/recover-windows-boot/</guid>
+      <guid>/posts/recover-windows-boot/</guid>
       <description>&lt;p&gt;This guide is suggested when you accidentally format the boot partition while installing a new OS, wiping out the Windows bootloader in the process. This has happened to me on more than one occasion, which is why I decided to document it.&lt;/p&gt;
 &lt;p&gt;It has also happened when the Windows bootloader is deleted. The following steps are solely for copying the Windows boot files using the ISO onto the partition without having to reformat it.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Dualboot in guix linux</title>
-      <link>//localhost:1313/posts/dualboot-in-guix-linux/</link>
+      <link>/posts/dualboot-in-guix-linux/</link>
       <pubDate>Fri, 17 Jan 2025 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/posts/dualboot-in-guix-linux/</guid>
+      <guid>/posts/dualboot-in-guix-linux/</guid>
       <description>&lt;h2 id=&#34;dual-boot-configuration-in-guix-linux&#34;&gt;Dual Boot Configuration in Guix Linux&lt;/h2&gt;
 &lt;p&gt;Setting up a dual-boot system in Guix Linux involves configuring the GRUB bootloader to recognize both Guix and your secondary operating system. Here&amp;rsquo;s how you can configure the bootloader step-by-step.&lt;/p&gt;
 &lt;h3 id=&#34;default-bootloader-configuration&#34;&gt;Default Bootloader Configuration&lt;/h3&gt;
@@ -138,10 +138,10 @@ molding and die-casting machines. My questions focused on:&lt;/p&gt;</descriptio
     
     <item>
       <title>Guix installer</title>
-      <link>//localhost:1313/posts/guix-installer/</link>
+      <link>/posts/guix-installer/</link>
       <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/posts/guix-installer/</guid>
+      <guid>/posts/guix-installer/</guid>
       <description>&lt;h2 id=&#34;about-dot&#34;&gt;About.&lt;/h2&gt;
 &lt;p&gt;The script &lt;code&gt;install.sh&lt;/code&gt; will do a couple of actions to try to make the GNU/guix installation more friendly, so, basically this &lt;code&gt;README.org&lt;/code&gt; file will tangle the script, the power of emacs of course. So, while I was working in this &amp;ldquo;note&amp;rdquo; file, then I realized that I can use emacs and make a script.&lt;/p&gt;
 &lt;h2 id=&#34;download-and-burn-the-iso-dot&#34;&gt;Download and burn the iso.&lt;/h2&gt;
@@ -160,10 +160,10 @@ molding and die-casting machines. My questions focused on:&lt;/p&gt;</descriptio
     
     <item>
       <title>Voidstrap</title>
-      <link>//localhost:1313/posts/voidstrap/</link>
+      <link>/posts/voidstrap/</link>
       <pubDate>Tue, 14 Jan 2025 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/posts/voidstrap/</guid>
+      <guid>/posts/voidstrap/</guid>
       <description>&lt;h2 id=&#34;voidstrap-installer-dot&#34;&gt;VoidStrap installer.&lt;/h2&gt;
 &lt;p&gt;A basic minimalist installer of &lt;code&gt;void-linux&lt;/code&gt; with some packages to get ready to enjoy
 this amazing GNU/Linux distribution.&lt;/p&gt;
@@ -204,10 +204,10 @@ specific format:&lt;/p&gt;</description>
     
     <item>
       <title>Should I use guix</title>
-      <link>//localhost:1313/posts/should-i-use-guix/</link>
+      <link>/posts/should-i-use-guix/</link>
       <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/posts/should-i-use-guix/</guid>
+      <guid>/posts/should-i-use-guix/</guid>
       <description>&lt;h2 id=&#34;what-is-gnu-guix-dot&#34;&gt;What is GNU/guix.&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;GNU/Guix&lt;/strong&gt; is a functional package manager and a complete operating system distribution, part of the GNU Project. It is designed to provide a reliable and customizable environment for managing software and configurations.&lt;/p&gt;
 &lt;p&gt;It is basically &lt;code&gt;NixOS&lt;/code&gt; but instead of using nix it uses &lt;code&gt;Scheme Common Lisp&lt;/code&gt; as interpreter.&lt;/p&gt;
@@ -219,10 +219,10 @@ Ideal for developers, researchers, and system administrators who value reproduci
     
     <item>
       <title>Ellama</title>
-      <link>//localhost:1313/posts/ellama/</link>
+      <link>/posts/ellama/</link>
       <pubDate>Sun, 22 Sep 2024 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/posts/ellama/</guid>
+      <guid>/posts/ellama/</guid>
       <description>&lt;h2 id=&#34;installation-of-ollama-dot&#34;&gt;Installation of Ollama.&lt;/h2&gt;
 &lt;p&gt;In my case, I installed &lt;code&gt;ollama&lt;/code&gt; from my package manager, although you can install it using the following code:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -248,20 +248,20 @@ Ideal for developers, researchers, and system administrators who value reproduci
     
     <item>
       <title>Screen Record</title>
-      <link>//localhost:1313/posts/screen-record/</link>
+      <link>/posts/screen-record/</link>
       <pubDate>Wed, 04 Sep 2024 02:43:00 -0500</pubDate>
       
-      <guid>//localhost:1313/posts/screen-record/</guid>
+      <guid>/posts/screen-record/</guid>
       <description>&lt;p&gt;This script record the screen with the &lt;code&gt;wf-recorder&lt;/code&gt; tool, it can be the hole screen or a specific area of it.
 The script is going to store the video in &lt;code&gt;/tmp/screencast.mp4&lt;/code&gt;, this script only store one video, personally I think that have more than one record is a mess, more if you only wants to share a quick screencast to &lt;em&gt;telegram, irc, cinny&lt;/em&gt; or even to share it through &lt;code&gt;0x0.st&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Basics of HUGO</title>
-      <link>//localhost:1313/posts/basics-of-hugo/</link>
+      <link>/posts/basics-of-hugo/</link>
       <pubDate>Tue, 27 Aug 2024 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/posts/basics-of-hugo/</guid>
+      <guid>/posts/basics-of-hugo/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&amp;ldquo;Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.&amp;rdquo;&lt;/p&gt;
@@ -283,24 +283,24 @@ The script is going to store the video in &lt;code&gt;/tmp/screencast.mp4&lt;/co
     
     <item>
       <title>searching blogs in hugo</title>
-      <link>//localhost:1313/posts/searching-blogs-in-hugo/</link>
+      <link>/posts/searching-blogs-in-hugo/</link>
       <pubDate>Sun, 25 Aug 2024 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/posts/searching-blogs-in-hugo/</guid>
+      <guid>/posts/searching-blogs-in-hugo/</guid>
       <description>&lt;p&gt;As websites grow, incorporating a search feature becomes increasingly crucial. However, implementing search functionality can be challenging on a statically generated site since there&amp;rsquo;s no server-side component to handle the search. Instead, the search must be performed on the client side within the browser using JavaScript.&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;figure&gt;&lt;img src=&#34;//localhost:1313/images/posts/hugo-search/jpacheco-search.png&#34;
+&lt;figure&gt;&lt;img src=&#34;/images/posts/hugo-search/jpacheco-search.png&#34;
     alt=&#34;Figure 1: This is how my web looks.&#34;&gt;&lt;figcaption&gt;
       &lt;p&gt;&lt;!-- raw HTML omitted --&gt;Figure 1: &lt;!-- raw HTML omitted --&gt;This is how my web looks.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Install telega in nixos</title>
-      <link>//localhost:1313/posts/install-telega-in-nixos/</link>
+      <link>/posts/install-telega-in-nixos/</link>
       <pubDate>Wed, 21 Aug 2024 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/posts/install-telega-in-nixos/</guid>
+      <guid>/posts/install-telega-in-nixos/</guid>
       <description>&lt;h2 id=&#34;what-is-telega&#34;&gt;What is telega?.&lt;/h2&gt;
 &lt;p&gt;According to the &lt;a href=&#34;https://github.com/zevlg/telega.el&#34;&gt;Github&lt;/a&gt; repository:&lt;/p&gt;
 &lt;dl&gt;
@@ -313,20 +313,20 @@ The script is going to store the video in &lt;code&gt;/tmp/screencast.mp4&lt;/co
     
     <item>
       <title>How I made my blog with emacs and hugo</title>
-      <link>//localhost:1313/posts/how-i-made-my-blog-with-emacs-and-hugo/</link>
+      <link>/posts/how-i-made-my-blog-with-emacs-and-hugo/</link>
       <pubDate>Wed, 14 Aug 2024 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/posts/how-i-made-my-blog-with-emacs-and-hugo/</guid>
+      <guid>/posts/how-i-made-my-blog-with-emacs-and-hugo/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;I have been using emacs most of the time for writting, and of course when I started to make my blog I have been use it (emacs) since of it. In the beginig when I start writing I was using some scripts and tips from &lt;a href=&#34;https://systemcrafters.net/&#34;&gt;system crafters&lt;/a&gt; he use htmlize and some &lt;em&gt;lisp&lt;/em&gt; scripting. It was ok but then I have been watching some &lt;a href=&#34;https://www.youtube.com/@LukeSmithxyz&#34;&gt;lukesmith&lt;/a&gt; videos and see this &lt;a href=&#34;https://www.youtube.com/watch?v=jAXKSKb3etk&amp;amp;pp=ygUOaHVnbyBsdWtlc21pdGg%3D&#34;&gt;video&lt;/a&gt; about him switching to &lt;code&gt;HUGO&lt;/code&gt;, so I decided to check &lt;code&gt;HUGO&lt;/code&gt; too.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Emacs vs Neovim</title>
-      <link>//localhost:1313/posts/emacs-vs-neovim/</link>
+      <link>/posts/emacs-vs-neovim/</link>
       <pubDate>Tue, 13 Aug 2024 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/posts/emacs-vs-neovim/</guid>
+      <guid>/posts/emacs-vs-neovim/</guid>
       <description>&lt;h2 id=&#34;neovim-for-programming&#34;&gt;Neovim for Programming&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Efficiency and Speed: Neovim is highly efficient for programming due to its lightweight nature and focus on speed. It starts up faster and can handle large files with ease.&lt;/li&gt;
@@ -347,30 +347,30 @@ The script is going to store the video in &lt;code&gt;/tmp/screencast.mp4&lt;/co
     
     <item>
       <title>Pymetrics</title>
-      <link>//localhost:1313/posts/pymetrics/</link>
+      <link>/posts/pymetrics/</link>
       <pubDate>Sun, 11 Aug 2024 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/posts/pymetrics/</guid>
+      <guid>/posts/pymetrics/</guid>
       <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
 &lt;p&gt;Managing and monitoring the performance of industrial machines is critical to ensuring minimal downtime and maximizing productivity. The need for an effective system to store and analyze maintenance data became apparent when the maintenance manager contacted me with a specific problem. They struggled to create KPI graphs because they lacked a proper system to store all the necessary data. To address this challenge, I developed a maintenance log app that efficiently tracks and records machine failures, repair time, shutdown time, and the technicians involved in the repairs. The data is stored in a CSV format, making it easy to create KPI (Key Performance Indicator) graphs in Excel for analysis.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Share Screen in Hyprland</title>
-      <link>//localhost:1313/posts/share-screen-in-hyprland/</link>
+      <link>/posts/share-screen-in-hyprland/</link>
       <pubDate>Sun, 28 Jul 2024 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/posts/share-screen-in-hyprland/</guid>
+      <guid>/posts/share-screen-in-hyprland/</guid>
       <description>&lt;h2 id=&#34;the-issue&#34;&gt;The issue:&lt;/h2&gt;
 &lt;p&gt;We have a telegram group, in where we share emacs things and some other related to programming and linux in the most part of the time. So one day one of the members says that we can share screens and have a kind of podcast and talk about our environment configurations (sway/hyprland), so I was very curious about it so he invite me to another telegram group, this telegram group is for his YouTube channel, for test my hyprland configuration because he told me that he has troubles in his hyprland configuration using manjaro.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Shell-utils</title>
-      <link>//localhost:1313/posts/shell-utils/</link>
+      <link>/posts/shell-utils/</link>
       <pubDate>Sun, 28 Jul 2024 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/posts/shell-utils/</guid>
+      <guid>/posts/shell-utils/</guid>
       <description>&lt;p&gt;&lt;/p&gt;
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
 &lt;p&gt;Welcome to the Shell Utilities &lt;a href=&#34;https://github.com/jpachecoxyz/shell-utils&#34;&gt;repository&lt;/a&gt; This project provides a collection of shell scripts tailored for different window managers and environments, including i3, Hyprland, and Sway, on X11 and Wayland.&lt;/p&gt;
@@ -408,10 +408,10 @@ The script is going to store the video in &lt;code&gt;/tmp/screencast.mp4&lt;/co
     
     <item>
       <title>About me</title>
-      <link>//localhost:1313/about/</link>
+      <link>/about/</link>
       <pubDate>Fri, 26 Apr 2024 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/about/</guid>
+      <guid>/about/</guid>
       <description>&lt;h2 id=&#34;about-me&#34;&gt;About me&lt;/h2&gt;
 &lt;p&gt;Greetings! I&amp;rsquo;m Javier Pacheco, a dedicated Industrial Maintenance Engineer with a rich academic foundation from the prestigious &lt;strong&gt;UTM&lt;/strong&gt; in &lt;strong&gt;H. Matamoros Tamaulipas,Mexico&lt;/strong&gt;. Over the span of 12 fruitful years, I&amp;rsquo;ve been an integral part of the automotive industry, contributing my expertise in a multitude of critical domains.&lt;/p&gt;
 &lt;p&gt;My journey began with a profound fascination for the intricate mechanisms that power manufacturing and industrial processes. At UTM, I honed my skills, diving deep into the realms of engineering, automation, and problem-solving. This foundation paved the way for my foray into the dynamic world of industrial maintenance.&lt;/p&gt;</description>
@@ -419,20 +419,20 @@ The script is going to store the video in &lt;code&gt;/tmp/screencast.mp4&lt;/co
     
     <item>
       <title>Efetch</title>
-      <link>//localhost:1313/posts/efetch/</link>
+      <link>/posts/efetch/</link>
       <pubDate>Sat, 20 May 2023 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/posts/efetch/</guid>
+      <guid>/posts/efetch/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Embrace a new level of Emacs mastery with &lt;code&gt;efetch.el&lt;/code&gt; – a powerful and user-friendly Emacs Fetching Tool. Designed for enthusiasts who crave insights into their Emacs environment, &lt;code&gt;efetch.el&lt;/code&gt; provides a seamless way to peek under the hood of your setup. With just a simple command, unlock a left-side buffer showcasing key details such as Emacs version, host information, user details, installed packages, active theme, and default font. Customizable and accessible, this tool not only delivers a quick snapshot of your Emacs configuration but also opens the door for collaborative enhancements. Join the community on &lt;a href=&#34;https://github.com/jpachecoxyz/efetch.el&#34;&gt;Github&lt;/a&gt; contribute your ideas, and elevate your Emacs experience with &lt;code&gt;efetch.el&lt;/code&gt; today!&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Void Linux Bootstrap</title>
-      <link>//localhost:1313/posts/void-linux-bootstrap/</link>
+      <link>/posts/void-linux-bootstrap/</link>
       <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/posts/void-linux-bootstrap/</guid>
+      <guid>/posts/void-linux-bootstrap/</guid>
       <description>&lt;p&gt;&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;This is the first post of the 2024, this is a project that I am working on in the last
@@ -446,10 +446,10 @@ this amazing GNU/Linux distribution.&lt;/p&gt;</description>
     
     <item>
       <title>Emacs configuration</title>
-      <link>//localhost:1313/posts/config/</link>
+      <link>/posts/config/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/posts/config/</guid>
+      <guid>/posts/config/</guid>
       <description>&lt;p&gt;&lt;/p&gt;
 &lt;h2 id=&#34;early-init-dot-el&#34;&gt;early-init.el&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -6737,10 +6737,10 @@ this amazing GNU/Linux distribution.&lt;/p&gt;</description>
     
     <item>
       <title>Search</title>
-      <link>//localhost:1313/search/</link>
+      <link>/search/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/search/</guid>
+      <guid>/search/</guid>
       <description></description>
     </item>
     

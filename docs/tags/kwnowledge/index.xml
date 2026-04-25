@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kwnowledge on (λ jpachecoxyz)</title>
-    <link>//localhost:1313/tags/kwnowledge/</link>
+    <link>/tags/kwnowledge/</link>
     <description>Recent content in Kwnowledge on (λ jpachecoxyz)</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <copyright>Made in emacs for (λ jpachecoxyz)</copyright>
+    <copyright>Made in emacs by (λ jpachecoxyz)</copyright>
     <lastBuildDate>Sat, 21 Mar 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1313/tags/kwnowledge/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/kwnowledge/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Custom Emacs Configuration</title>
-      <link>//localhost:1313/posts/custom-emacs-config/</link>
+      <link>/posts/custom-emacs-config/</link>
       <pubDate>Sat, 21 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/custom-emacs-config/</guid>
+      <guid>/posts/custom-emacs-config/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;For a long time, I used popular Emacs distributions like Doom Emacs (and Spacemacs). They are impressive projects, very polished, and extremely powerful out of the box. If someone wants a quick start with modern defaults, curated packages, and sensible keybindings, they are a solid option.&lt;/p&gt;&#xA;&lt;p&gt;However, after spending years refining my workflow, I eventually moved to a fully personal configuration. Not a fork. Not a heavily patched Doom setup. A clean, modular, self-designed Emacs configuration.&lt;/p&gt;</description>
     </item>
   </channel>

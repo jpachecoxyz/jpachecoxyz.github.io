@@ -4,7 +4,7 @@ languageCode: en-us
 
 title: (λ jpachecoxyz)
 
-copyright: "Made in emacs for (λ jpachecoxyz)"
+copyright: "Made in emacs by (λ jpachecoxyz)"
 
 googleAnalytics:
 
@@ -45,9 +45,14 @@ params:
     status: Maintenance Engineer
     avatar: https://avatars.githubusercontent.com/u/174582218?v=4
     description: |
-      I am maintenance engineer, I'm specialized in maintenance,
-      programming PLC, Robotics, I also like to code in python,
-      C, lisp, an emacs enjoyer, I use linux as my daily OS.
+        I am a Maintenance Engineer with a strong focus on industrial maintenance,
+        PLC programming, and robotics. Over the years, I’ve developed a solid technical
+        foundation while also cultivating a genuine passion for programming—particularly
+        in Python, C, and Elisp.
+
+        I’m also an Emacs enthusiast and a daily Linux user, as I value tools that offer
+        flexibility, efficiency, and long-term productivity. I enjoy continuously learning
+        and applying technology to solve real-world problems in industrial environments.
 
   social:
     - name: "email"
