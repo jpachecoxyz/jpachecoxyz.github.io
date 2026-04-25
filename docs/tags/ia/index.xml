@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ia on (λ jpachecoxyz)</title>
-    <link>/tags/ia/</link>
+    <link>//localhost:1313/tags/ia/</link>
     <description>Recent content in Ia on (λ jpachecoxyz)</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>Made in emacs for (λ jpachecoxyz)</copyright>
     <lastBuildDate>Sat, 25 Apr 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/ia/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/tags/ia/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Metodo CRISPE</title>
-      <link>/posts/metodo-crispe/</link>
+      <link>//localhost:1313/posts/metodo-crispe/</link>
       <pubDate>Sat, 25 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>/posts/metodo-crispe/</guid>
+      <guid>//localhost:1313/posts/metodo-crispe/</guid>
       <description>&lt;h2 id=&#34;introducción&#34;&gt;Introducción:&lt;/h2&gt;&#xA;&lt;p&gt;Que son los &lt;code&gt;Prompts&lt;/code&gt;?, un &lt;code&gt;prompt&lt;/code&gt; es lo que le pides a la &lt;code&gt;Inteligencia artificial&lt;/code&gt; de tal manera que empiezas a generar una conversación, el truco esta en que dependiendo el &lt;code&gt;prompt&lt;/code&gt; que hagas o como formules la pregunta o la solicitud, es la manera en la que la &lt;code&gt;inteligencia artificial&lt;/code&gt; te contestara, porque ella no te conoce, no puede asumir lo que estas requiriendo, aunque eso si lo piensas es lo mismo si empiezas a hablar con una persona desconocida, eventualmente conocerá tus gustos, las respuestas que esperas, de echo es así como funcionan las inteligencias artificiales, mientras mas información tengan de &lt;code&gt;entrada&lt;/code&gt; mejor sera la &lt;code&gt;salida&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
   </channel>

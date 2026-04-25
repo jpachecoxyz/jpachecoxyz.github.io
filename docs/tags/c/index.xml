@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>C on (λ jpachecoxyz)</title>
-    <link>/tags/c/</link>
+    <link>//localhost:1313/tags/c/</link>
     <description>Recent content in C on (λ jpachecoxyz)</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>Made in emacs for (λ jpachecoxyz)</copyright>
     <lastBuildDate>Wed, 15 Apr 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/c/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/tags/c/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linux Daemons</title>
-      <link>/posts/linux-daemons/</link>
+      <link>//localhost:1313/posts/linux-daemons/</link>
       <pubDate>Wed, 15 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>/posts/linux-daemons/</guid>
+      <guid>//localhost:1313/posts/linux-daemons/</guid>
       <description>&lt;h2 id=&#34;what-is-a-daemon-dot&#34;&gt;What is a daemon.&lt;/h2&gt;&#xA;&lt;p&gt;A daemon is a program or script that runs in an &amp;ldquo;astral plane&amp;rdquo;. It is not attached to a terminal nor to a regular job session. Its existence goes beyond a normal process job.&lt;/p&gt;&#xA;&lt;h3 id=&#34;run-in-the-background&#34;&gt;Run in the background&lt;/h3&gt;&#xA;&lt;p&gt;The process must not depend on an interactive terminal.&lt;/p&gt;&#xA;&lt;h3 id=&#34;perform-a-fork-and-terminate-the-parent-process&#34;&gt;Perform a fork() and terminate the parent process&lt;/h3&gt;&#xA;&lt;p&gt;This allows the daemon to continue running independently of the process that started it.&lt;/p&gt;</description>
     </item>
   </channel>

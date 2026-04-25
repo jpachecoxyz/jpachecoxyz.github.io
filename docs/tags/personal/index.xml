@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Personal on (λ jpachecoxyz)</title>
-    <link>/tags/personal/</link>
+    <link>//localhost:1313/tags/personal/</link>
     <description>Recent content in Personal on (λ jpachecoxyz)</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>Made in emacs for (λ jpachecoxyz)</copyright>
     <lastBuildDate>Thu, 11 Dec 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/personal/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/tags/personal/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My Technical Journey</title>
-      <link>/posts/my-technical-journey/</link>
+      <link>//localhost:1313/posts/my-technical-journey/</link>
       <pubDate>Thu, 11 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>/posts/my-technical-journey/</guid>
+      <guid>//localhost:1313/posts/my-technical-journey/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;The year 2025 has been one of constant learning, experimentation, and building.&#xA;Throughout the months, I explored a wide spectrum of topics—from industrial&#xA;hydraulics to Linux customization, Nix packaging, Emacs automation, Docker,&#xA;robotics, and more. This post summarizes my questions, discoveries, and&#xA;projects across this entire year.&lt;/p&gt;&#xA;&lt;h2 id=&#34;industrial-automation-hydraulics-and-plant-troubleshooting&#34;&gt;Industrial Automation, Hydraulics &amp;amp; Plant Troubleshooting&lt;/h2&gt;&#xA;&lt;h3 id=&#34;diagnosing-hydraulic-systems&#34;&gt;Diagnosing Hydraulic Systems&lt;/h3&gt;&#xA;&lt;p&gt;Early in the year, I worked through multiple hydraulic diagrams from injection&#xA;molding and die-casting machines. My questions focused on:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Should I use guix</title>
-      <link>/posts/should-i-use-guix/</link>
+      <link>//localhost:1313/posts/should-i-use-guix/</link>
       <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>/posts/should-i-use-guix/</guid>
+      <guid>//localhost:1313/posts/should-i-use-guix/</guid>
       <description>&lt;h2 id=&#34;what-is-gnu-guix-dot&#34;&gt;What is GNU/guix.&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;GNU/Guix&lt;/strong&gt; is a functional package manager and a complete operating system distribution, part of the GNU Project. It is designed to provide a reliable and customizable environment for managing software and configurations.&lt;/p&gt;&#xA;&lt;p&gt;It is basically &lt;code&gt;NixOS&lt;/code&gt; but instead of using nix it uses &lt;code&gt;Scheme Common Lisp&lt;/code&gt; as interpreter.&lt;/p&gt;&#xA;&lt;h2 id=&#34;why-use-gnu-guix&#34;&gt;Why Use GNU Guix?&lt;/h2&gt;&#xA;&lt;p&gt;Freedom and transparency in software management.&#xA;Avoids common issues like dependency hell or broken systems due to upgrades.&#xA;Ideal for developers, researchers, and system administrators who value reproducibility and control.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How I made my blog with emacs and hugo</title>
-      <link>/posts/how-i-made-my-blog-with-emacs-and-hugo/</link>
+      <link>//localhost:1313/posts/how-i-made-my-blog-with-emacs-and-hugo/</link>
       <pubDate>Wed, 14 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>/posts/how-i-made-my-blog-with-emacs-and-hugo/</guid>
+      <guid>//localhost:1313/posts/how-i-made-my-blog-with-emacs-and-hugo/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;I have been using emacs most of the time for writting, and of course when I started to make my blog I have been use it (emacs) since of it. In the beginig when I start writing I was using some scripts and tips from &lt;a href=&#34;https://systemcrafters.net/&#34;&gt;system crafters&lt;/a&gt; he use htmlize and some &lt;em&gt;lisp&lt;/em&gt; scripting. It was ok but then I have been watching some &lt;a href=&#34;https://www.youtube.com/@LukeSmithxyz&#34;&gt;lukesmith&lt;/a&gt; videos and see this &lt;a href=&#34;https://www.youtube.com/watch?v=jAXKSKb3etk&amp;amp;pp=ygUOaHVnbyBsdWtlc21pdGg%3D&#34;&gt;video&lt;/a&gt; about him switching to &lt;code&gt;HUGO&lt;/code&gt;, so I decided to check &lt;code&gt;HUGO&lt;/code&gt; too.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Emacs vs Neovim</title>
-      <link>/posts/emacs-vs-neovim/</link>
+      <link>//localhost:1313/posts/emacs-vs-neovim/</link>
       <pubDate>Tue, 13 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>/posts/emacs-vs-neovim/</guid>
+      <guid>//localhost:1313/posts/emacs-vs-neovim/</guid>
       <description>&lt;h2 id=&#34;neovim-for-programming&#34;&gt;Neovim for Programming&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Efficiency and Speed: Neovim is highly efficient for programming due to its lightweight nature and focus on speed. It starts up faster and can handle large files with ease.&lt;/li&gt;&#xA;&lt;li&gt;Plugin Ecosystem: Neovim has a rich plugin ecosystem, especially for programming-related tasks. Plugins like nvim-treesitter for syntax highlighting, telescope.nvim for fuzzy finding, and coc.nvim or nvim-lspconfig for Language Server Protocol (LSP) support make it a powerful choice for coding.&lt;/li&gt;&#xA;&lt;li&gt;Modal Editing: Neovim, like Vim, uses modal editing, which can be very powerful for code navigation and manipulation once you get used to it.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;emacs-for-writing-posts--and-beyond&#34;&gt;Emacs for Writing Posts (and Beyond)&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Org-mode: Emacs shines when it comes to writing and organizing content, especially with Org-mode. Org-mode is exceptional for note-taking, task management, and writing posts or documentation. It allows you to export your work to various formats (HTML, PDF, LaTeX, etc.) easily.&lt;/li&gt;&#xA;&lt;li&gt;Extensibility: Emacs is known for its extensibility. You can customize it to be a full-fledged IDE, text editor, or writing tool. For blog posts, especially if you&amp;rsquo;re using something like ox-hugo, Emacs can be incredibly powerful.&lt;/li&gt;&#xA;&lt;li&gt;Unified Environment: If you prefer an environment where you can write, code, manage tasks, and do everything in one place, Emacs offers that. It&amp;rsquo;s an all-in-one tool where you can manage your entire workflow.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;which-should-you-choose&#34;&gt;Which Should You Choose?&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;For Programming: Neovim might be better if you want a focused, fast, and highly efficient tool purely for coding. It&amp;rsquo;s especially suitable if you prefer modal editing and a streamlined environment.&lt;/p&gt;</description>
     </item>
   </channel>
