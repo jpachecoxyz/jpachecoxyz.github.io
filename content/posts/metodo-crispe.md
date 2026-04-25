@@ -4,7 +4,7 @@ author = ["Javier Pacheco"]
 description = "Como establecer una comunicacion ideal con la inteligencia artificial"
 date = 2026-04-25
 tags = ["tecnologia", "ia"]
-draft = true
+draft = false
 toc = true
 +++
 

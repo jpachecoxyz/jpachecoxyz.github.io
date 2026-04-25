@@ -7,8 +7,22 @@
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>Made in emacs for (λ jpachecoxyz)</copyright>
-    <lastBuildDate>Wed, 15 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Apr 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ia</title>
+      <link>/tags/ia/</link>
+      <pubDate>Sat, 25 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/ia/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tecnologia</title>
+      <link>/tags/tecnologia/</link>
+      <pubDate>Sat, 25 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/tecnologia/</guid>
+      <description></description>
+    </item>
     <item>
       <title>C</title>
       <link>/tags/c/</link>
